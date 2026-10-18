@@ -1,0 +1,58 @@
+{
+  "title": "解析タイトル",
+  "theme": "terminal-night",
+  "subtitle": "対象・期間・作成日",
+  "slides": [
+    {
+      "kind": "cover",
+      "label": "解析資料",
+      "accent": "解析",
+      "title": "結論が伝わるタイトル",
+      "body": "対象と期間を一文で示す",
+      "visual": "◉"
+    },
+    {
+      "kind": "takeaway",
+      "label": "結論",
+      "title": "最も重要な発見",
+      "body": "何が分かり、なぜ重要かを二文以内で示す",
+      "visual": "01"
+    },
+    {
+      "kind": "metrics",
+      "label": "主要な数字",
+      "title": "数字で見る結果",
+      "body": "数字の意味や比較条件を短く示す",
+      "metrics": [
+        {"value": "12%", "name": "指標A", "note": "比較対象を明記"},
+        {"value": "24件", "name": "指標B", "note": "集計期間を明記"}
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "比較",
+      "title": "何が変わったか",
+      "body": "比較に使った条件を示す",
+      "columns": [
+        {"heading": "以前", "text": "比較前の状態"},
+        {"heading": "今回", "text": "比較後の状態"}
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "根拠",
+      "title": "判断の根拠",
+      "body": "観測した事実と推測を分けて記す",
+      "sources": [
+        {"label": "出典名", "url": "https://example.com/"}
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "次の行動",
+      "title": "次にすること",
+      "body": "具体的な行動を一つに絞る",
+      "visual": "→"
+    }
+  ]
+}

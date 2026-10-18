@@ -1,0 +1,83 @@
+{
+  "title": "3D Fight Replay — 動画とコーチング",
+  "theme": "terminal-night",
+  "subtitle": "対象・期間・作成日",
+  "slides": [
+    {
+      "kind": "cover",
+      "label": "限定動画デモ",
+      "title": "元映像と3D配置を比較",
+      "accent": "3D",
+      "body": "3.2秒の戦闘を想定マップに配置。元動画・3D版・コーチングを公開デモとして共有。",
+      "visual": "03"
+    },
+    {
+      "kind": "takeaway",
+      "label": "結論",
+      "title": "まず映像で位置関係を見る",
+      "body": "水色が自分、赤が相手。地形寸法とカメラ条件は仮定。正確な3D位置を実証したものではありません。",
+      "visual": "01"
+    },
+    {
+      "kind": "metrics",
+      "label": "動画成果物",
+      "title": "同じ時刻で比較",
+      "body": "元動画・3D版・比較の尺を一致。全フレームをdecodeして確認。",
+      "metrics": [
+        {
+          "value": "3.2秒",
+          "name": "元動画・3D・比較",
+          "note": "192 / 96 / 96 frames"
+        },
+        {
+          "value": "6.4秒",
+          "name": "0.5倍速比較",
+          "note": "30fps / 192 frames"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "コーチング",
+      "title": "柱へ戻れる幅で戦う",
+      "body": "元映像で確認した観察と練習提案です。被弾回避を断定しません。",
+      "columns": [
+        {
+          "heading": "映像で確認",
+          "text": "柱の右端からADS射撃。命中と被弾方向表示が重なり、終盤にノックダウン表示。"
+        },
+        {
+          "heading": "次の練習",
+          "text": "出る幅を抑え、柱へ戻る経路を確保。ダウン後は別方向と回復を確認。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "根拠と制約",
+      "title": "手動画像点から概算",
+      "body": "柱の端・HUD方位・壁の縦span・相手の足元を手動指定。中間点は補間。前後移動なし・初期FOV100°・高さ1.6を仮定。相手不明区間は非表示。",
+      "sources": [
+        {
+          "label": "動画・コーチングを見る",
+          "url": "https://taaaaryu.github.io/share-hub/videos/fight-replay-20261018/"
+        },
+        {
+          "label": "時刻付きコーチング",
+          "url": "https://taaaaryu.github.io/share-hub/videos/fight-replay-20261018/coaching.json"
+        },
+        {
+          "label": "全動画の検証結果",
+          "url": "https://taaaaryu.github.io/share-hub/videos/fight-replay-20261018/verification.json"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "次の改善",
+      "title": "仮定を実測値へ置き換える",
+      "body": "測量地形とFOVを校正し、手動画像点を自動検出・追跡へ置き換える。長い連続戦闘でも精度を測る。",
+      "visual": "→"
+    }
+  ]
+}

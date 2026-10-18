@@ -1,0 +1,68 @@
+{
+  "videos": {
+    "original.mp4": {
+      "decoded_frames": 192,
+      "fps": 60.0,
+      "duration_sec": 3.2,
+      "width": 1920,
+      "height": 1080
+    },
+    "replay-3d.mp4": {
+      "decoded_frames": 96,
+      "fps": 30.0,
+      "duration_sec": 3.2,
+      "width": 1920,
+      "height": 1080
+    },
+    "comparison-coaching.mp4": {
+      "decoded_frames": 96,
+      "fps": 30.0,
+      "duration_sec": 3.2,
+      "width": 1920,
+      "height": 1080
+    },
+    "comparison-slow.mp4": {
+      "decoded_frames": 192,
+      "fps": 30.0,
+      "duration_sec": 6.4,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "source_composite_checks": [
+    {
+      "output_frame": 0,
+      "source_frame": 0,
+      "mean_pixel_error": 2.568256172839506
+    },
+    {
+      "output_frame": 30,
+      "source_frame": 60,
+      "mean_pixel_error": 2.7042894804526747
+    },
+    {
+      "output_frame": 60,
+      "source_frame": 120,
+      "mean_pixel_error": 2.621020447530864
+    },
+    {
+      "output_frame": 75,
+      "source_frame": 150,
+      "mean_pixel_error": 2.657869727366255
+    },
+    {
+      "output_frame": 90,
+      "source_frame": 180,
+      "mean_pixel_error": 2.69598058127572
+    }
+  ],
+  "mapping": {
+    "total_frames": 192,
+    "enemy_mapped_frames": 77,
+    "enemy_first_sec": 1.7333333333333334,
+    "enemy_last_sec": 3.0,
+    "metric_accuracy": null,
+    "mode": "manual_image_annotations_and_assumed_camera_map"
+  },
+  "coaching_interval_count": 3
+}

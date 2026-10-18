@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Fira+Code:wght@500;700&display=swap');
+
+:root{--tn-red:#ff171b;--tn-black:#080808;--tn-gray:#f0f0f0}
+.home{background:#f1f1f1;color:var(--tn-black);font-family:Poppins,'IBM Plex Sans JP',sans-serif}
+.home .eyebrow{color:var(--tn-red)}
+.home h1{font-weight:800}
+.home-lead{color:#3c3c3c}
+.home .section-head{border-color:#bcbcbc}
+.home .deck-card{border:0;border-radius:0;box-shadow:0 5px 15px #00000010}
+.home .deck-card:hover{outline:2px solid var(--tn-red)}
+.home .deck-card-icon{border-radius:0;background:var(--tn-red);color:#fff}
+.home .home-note{color:#666}
+
+.terminal-theme{background:#171717;color:var(--tn-black);font-family:Poppins,'IBM Plex Sans JP',sans-serif}
+.terminal-theme .deck-header,.terminal-theme .deck-footer{max-width:1120px;color:#fff}
+.terminal-theme .deck-title{font-weight:700}
+.terminal-theme .back-link,.terminal-theme .text-button{color:#fff}
+.terminal-theme .deck-main{padding:0 16px;min-height:0}
+.terminal-theme .slide{display:block;width:min(1120px,calc(100vw - 32px),calc((100dvh - 145px)*16/9));height:auto;min-height:0;max-height:none;aspect-ratio:16/9;padding:0;border:0;border-radius:0;background:#fff;box-shadow:0 12px 36px #0007;overflow:hidden}
+.terminal-theme .slide::before,.terminal-theme .slide::after{pointer-events:none}
+.terminal-theme .slide::after{display:none}
+.terminal-theme .slide-top{position:absolute;left:0;right:0;top:0;height:10.2%;display:flex;align-items:center;justify-content:space-between;padding:0 2.6% 0 3.6%;background:#fff;box-shadow:0 4px 12px #00000018;border-radius:0 0 32px 0;z-index:3}
+.terminal-theme .slide-top::before{content:'';position:absolute;left:-10px;top:30%;width:30px;height:30px;border-radius:50%;background:var(--tn-red)}
+.terminal-theme .slide-label{font-size:clamp(15px,2vw,27px);font-weight:800;letter-spacing:0;color:var(--tn-black)}
+.terminal-theme .brand{display:inline-flex;align-items:center;gap:7px;color:#000;font-size:clamp(14px,1.55vw,21px);font-weight:800;white-space:nowrap;letter-spacing:-.055em}
+.terminal-theme .brand-mark{width:21px;height:24px;display:inline-block;position:relative;background:linear-gradient(135deg,#ff686b,var(--tn-red) 55%,#e90006);border-radius:2px 8px 7px 2px}
+.terminal-theme .brand-mark::after{content:'';position:absolute;width:11px;height:14px;left:7px;bottom:-4px;background:#c6c6c6;border-radius:0 2px 6px 1px;z-index:-1}
+.terminal-theme .slide-content{position:absolute;top:16%;left:7%;right:7%;bottom:8%;max-width:none;z-index:2}
+.terminal-theme .slide h1{font-family:Poppins,'IBM Plex Sans JP',sans-serif;white-space:pre-line;color:var(--tn-black);font-size:clamp(27px,3.1vw,47px);line-height:1.24;letter-spacing:-.035em;font-weight:800;margin:0 0 2.5%}
+.terminal-theme .slide p{color:#292929;font-size:clamp(16px,1.8vw,24px);line-height:1.55;font-weight:500;max-width:90%}
+.terminal-theme .accent-word{color:var(--tn-red)}
+.terminal-theme .slide-chrome-footer{position:absolute;bottom:0;left:0;right:0;height:4.6%;padding:0 3.6% 1.1%;display:flex;justify-content:space-between;align-items:end;font-size:clamp(9px,.95vw,12px);font-weight:500;color:#151515;z-index:4}
+.terminal-theme .slide-chrome-footer::after{content:'';position:absolute;bottom:0;left:0;width:var(--progress);height:4px;background:var(--tn-red)}
+.terminal-theme .slide-chrome-footer strong{font-size:clamp(10px,1vw,13px);font-weight:700}
+.terminal-theme .slide.cover,.terminal-theme .slide.takeaway{background:linear-gradient(135deg,#f3f3f3,#e7e7e7)}
+.terminal-theme .slide.cover::before,.terminal-theme .slide.takeaway::before{content:'';position:absolute;width:47%;aspect-ratio:1;border:2px dotted #fff;border-radius:50%;top:13%;left:47%;opacity:.9;box-shadow:0 0 0 115px #ffffff00;z-index:0}
+.terminal-theme .slide.cover .slide-top,.terminal-theme .slide.takeaway .slide-top{background:transparent;box-shadow:none;border-radius:0;justify-content:flex-start;left:3.6%;padding:0}
+.terminal-theme .slide.cover .slide-top::before,.terminal-theme .slide.takeaway .slide-top::before{display:none}
+.terminal-theme .slide.cover .slide-label,.terminal-theme .slide.takeaway .slide-label{display:none}
+.terminal-theme .slide.cover .brand,.terminal-theme .slide.takeaway .brand{font-size:clamp(18px,2.2vw,30px)}
+.terminal-theme .slide.cover .brand-mark,.terminal-theme .slide.takeaway .brand-mark{width:28px;height:32px}
+.terminal-theme .slide.cover .slide-content{top:31%;left:7%;right:8%;bottom:auto}
+.terminal-theme .slide.cover h1{font-size:clamp(34px,5.1vw,74px);line-height:1.2;letter-spacing:-.05em;max-width:85%;margin-bottom:2.3%}
+.terminal-theme .slide.cover p{font-size:clamp(14px,1.8vw,25px);font-weight:700;padding-top:2%;border-top:1px solid #d0d0d0;max-width:59%}
+.terminal-theme .slide.cover .cover-art{position:absolute;width:42%;right:0;bottom:4%;z-index:1;filter:drop-shadow(0 16px 10px #0002)}
+.terminal-theme .slide.cover .slide-chrome-footer strong{display:none}
+.terminal-theme .slide.takeaway .slide-content{top:40%;left:10%;right:10%;bottom:auto;text-align:center}
+.terminal-theme .slide.takeaway h1{font-size:clamp(33px,4.1vw,60px)}
+.terminal-theme .slide.takeaway p{margin:auto;font-size:clamp(16px,1.9vw,25px);max-width:76%}
+.terminal-theme .slide.takeaway .slide-visual{position:absolute;top:29%;left:0;right:0;text-align:center;color:var(--tn-red);font-size:clamp(24px,2.8vw,40px);font-weight:800;line-height:1}
+.terminal-theme .slide.metrics .slide-content,.terminal-theme .slide.comparison .slide-content,.terminal-theme .slide.evidence .slide-content{top:17%}
+.terminal-theme .slide.metrics h1,.terminal-theme .slide.comparison h1,.terminal-theme .slide.evidence h1{font-size:clamp(29px,3.3vw,48px)}
+.terminal-theme .slide-metrics,.terminal-theme .slide-columns{margin-top:4%;gap:2%}
+.terminal-theme .metric-card,.terminal-theme .column-card{border-radius:0;background:#f3f3f3;border-top:5px solid var(--tn-red);padding:5%;min-height:145px}
+.terminal-theme .metric-card strong{color:var(--tn-red);font-size:clamp(38px,5vw,70px);font-weight:800}
+.terminal-theme .metric-card span,.terminal-theme .column-card strong{font-size:clamp(16px,1.8vw,24px);font-weight:800}
+.terminal-theme .metric-card small{color:#6c6c6c;font-size:clamp(12px,1.2vw,16px)}
+.terminal-theme .column-card:last-child{background:#ffecec}
+.terminal-theme .column-card span{font-size:clamp(15px,1.6vw,21px)}
+.terminal-theme .slide-sources{margin-top:4%}
+.terminal-theme .slide-sources a{color:var(--tn-red);font-size:clamp(15px,1.7vw,22px)}
+.terminal-theme .slide.steps .slide-steps{margin-top:5%}
+.terminal-theme .slide.steps .slide-step{background:#fff1f1;color:#db1015;border-radius:0;border-left:4px solid var(--tn-red)}
+.terminal-theme .slide.number .slide-visual{position:absolute;right:8%;bottom:11%;font-size:clamp(80px,15vw,190px);font-weight:800;color:var(--tn-red);opacity:.9}
+.terminal-theme .slide.closing{background:linear-gradient(110deg,#ff7578,#ff1016)}
+.terminal-theme .slide.closing .slide-top{background:transparent;box-shadow:none}
+.terminal-theme .slide.closing .slide-top::before{background:#fff}
+.terminal-theme .slide.closing .slide-label,.terminal-theme .slide.closing .brand,.terminal-theme .slide.closing h1,.terminal-theme .slide.closing p,.terminal-theme .slide.closing .slide-chrome-footer{color:#fff}
+.terminal-theme .slide.closing .slide-content{top:36%;left:8%;right:10%}
+.terminal-theme .slide.closing h1{font-size:clamp(40px,5vw,72px)}
+.terminal-theme .slide.closing .slide-visual{position:absolute;right:11%;bottom:10%;font-size:clamp(110px,20vw,270px);color:#fff;opacity:.75;line-height:1}
+.terminal-theme .slide.closing .slide-chrome-footer::after{background:#fff}
+.terminal-theme .nav-button{background:#252525;color:#fff;border:1px solid #777}
+.terminal-theme .deck-progress{color:#fff}
+.terminal-theme .progress-dots i{background:#686868}
+.terminal-theme .progress-dots i.active{background:var(--tn-red)}
+
+@media(max-width:600px){
+  .terminal-theme .deck-header{height:56px;min-height:56px;padding:8px 18px}
+  .terminal-theme .deck-footer{height:70px;padding:8px 18px max(10px,env(safe-area-inset-bottom))}
+  .terminal-theme .deck-main{padding:0 10px;align-items:stretch}
+  .terminal-theme .slide{width:100%;height:calc(100dvh - 126px);max-height:none;min-height:0;aspect-ratio:auto}
+  .terminal-theme .slide-top{height:62px;padding:0 15px 0 29px;border-radius:0 0 18px 0}
+  .terminal-theme .slide-top::before{top:17px;width:22px;height:22px}
+  .terminal-theme .slide-label{font-size:19px}
+  .terminal-theme .brand{font-size:14px}
+  .terminal-theme .brand-mark{width:16px;height:19px}
+  .terminal-theme .slide-content{top:99px;left:25px;right:25px;bottom:48px}
+  .terminal-theme .slide h1{font-size:clamp(31px,9.2vw,43px);line-height:1.23;margin:0 0 18px}
+  .terminal-theme .slide p{font-size:18px;line-height:1.55;max-width:100%}
+  .terminal-theme .slide-chrome-footer{height:28px;padding:0 16px 8px;font-size:10px}
+  .terminal-theme .slide-chrome-footer strong{font-size:11px}
+  .terminal-theme .slide.cover .slide-top,.terminal-theme .slide.takeaway .slide-top{left:20px}
+  .terminal-theme .slide.cover .brand,.terminal-theme .slide.takeaway .brand{font-size:22px}
+  .terminal-theme .slide.cover .brand-mark,.terminal-theme .slide.takeaway .brand-mark{width:24px;height:28px}
+  .terminal-theme .slide.cover .slide-content{top:25%;left:25px;right:25px}
+  .terminal-theme .slide.cover h1{font-size:clamp(40px,12vw,58px);max-width:100%}
+  .terminal-theme .slide.cover p{font-size:17px;max-width:100%;padding-top:15px}
+  .terminal-theme .slide.cover .cover-art{width:92%;right:-5%;bottom:30px;max-height:37%;object-fit:contain;object-position:right bottom}
+  .terminal-theme .slide.cover::before,.terminal-theme .slide.takeaway::before{width:100%;left:35%;top:25%}
+  .terminal-theme .slide.takeaway .slide-content{top:42%;left:25px;right:25px;transform:translateY(-25%)}
+  .terminal-theme .slide.takeaway .slide-visual{top:28%;font-size:30px}
+  .terminal-theme .slide.takeaway h1{font-size:37px}
+  .terminal-theme .slide.takeaway p{font-size:18px;max-width:100%}
+  .terminal-theme .slide.metrics .slide-content,.terminal-theme .slide.comparison .slide-content,.terminal-theme .slide.evidence .slide-content{top:94px}
+  .terminal-theme .slide.metrics h1,.terminal-theme .slide.comparison h1,.terminal-theme .slide.evidence h1{font-size:33px}
+  .terminal-theme .slide-metrics,.terminal-theme .slide-columns{grid-template-columns:1fr;gap:10px;margin-top:24px}
+  .terminal-theme .metric-card,.terminal-theme .column-card{min-height:0;padding:15px;border-top-width:4px}
+  .terminal-theme .metric-card strong{font-size:38px}
+  .terminal-theme .metric-card span,.terminal-theme .column-card strong{font-size:17px}
+  .terminal-theme .metric-card small,.terminal-theme .column-card span{font-size:14px}
+  .terminal-theme .slide-sources{margin-top:24px}
+  .terminal-theme .slide-sources a{font-size:16px}
+  .terminal-theme .slide.steps .slide-step{font-size:14px;padding:10px 12px}
+  .terminal-theme .slide.number .slide-visual{font-size:110px;right:8%;bottom:9%}
+  .terminal-theme .slide.closing .slide-content{top:34%;left:25px;right:25px}
+  .terminal-theme .slide.closing h1{font-size:44px}
+  .terminal-theme .slide.closing .slide-visual{right:7%;bottom:7%;font-size:140px}
+}
+@media(max-width:600px) and (max-height:650px){
+  .terminal-theme .slide.metrics .slide-content,.terminal-theme .slide.comparison .slide-content,.terminal-theme .slide.evidence .slide-content{top:78px;left:18px;right:18px}
+  .terminal-theme .slide.metrics h1,.terminal-theme .slide.comparison h1,.terminal-theme .slide.evidence h1{font-size:26px;margin-bottom:8px}
+  .terminal-theme .slide.metrics p,.terminal-theme .slide.comparison p,.terminal-theme .slide.evidence p{font-size:14px}
+  .terminal-theme .slide-metrics,.terminal-theme .slide-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:12px}
+  .terminal-theme .metric-card,.terminal-theme .column-card{padding:8px;gap:4px}
+  .terminal-theme .metric-card strong{font-size:25px}
+  .terminal-theme .metric-card span,.terminal-theme .column-card strong{font-size:13px}
+  .terminal-theme .metric-card small,.terminal-theme .column-card span{font-size:11px}
+}
