@@ -1,0 +1,43 @@
+{
+  "manual_landmark_count": 29,
+  "decoded_frames": 144,
+  "expected_frames": 144,
+  "fps": 12.0,
+  "elapsed_sec": 10.20236225,
+  "player_xy_samples": [
+    {
+      "timestamp_sec": 1.0,
+      "model_xy": [
+        167.55271130567417,
+        222.99977589752143
+      ]
+    },
+    {
+      "timestamp_sec": 14.0,
+      "model_xy": [
+        168.39606856920227,
+        222.5606439356012
+      ]
+    }
+  ],
+  "player_pin_z": "display_only_110_atlas_pixels_not_estimated",
+  "enemy_coordinates": null,
+  "rendering": "backface-culled painter overview; not used for visibility evaluation",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "12/1",
+        "nb_frames": "144"
+      }
+    ],
+    "format": {
+      "duration": "12.000000"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "fight_replay.collision_candidates.v1",
+  "mesh_file": "world-map.json",
+  "mesh_file_sha256": "6a31c5adee7338aabbd4c0e6625177c3c043be582ae66d771eb9be350f98a7ca",
+  "world_coordinate_system": {
+    "axis": "Z-up",
+    "unit": "atlas_pixel",
+    "origin": "atlas_center",
+    "atlas_size": [
+      2048,
+      2048
+    ],
+    "mapping": "X=u-width/2; Y=height/2-v",
+    "metric_scale": null
+  },
+  "triangle_groups": [
+    "terrain",
+    "rocks",
+    "buildings",
+    "landmarks"
+  ],
+  "geometry_fields": [
+    "vertices",
+    "triangles"
+  ],
+  "validated_against_game_collision": false,
+  "use_for_metric_coaching": false,
+  "limitations": [
+    "Ground baseline does not recover underground floors or lava depth.",
+    "Roof envelopes can fill entrances and interiors; collision is only a candidate."
+  ]
+}

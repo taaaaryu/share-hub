@@ -1,0 +1,11 @@
+newmtl terrain
+Kd 0.46 0.43 0.35
+
+newmtl building
+Kd 0.66 0.69 0.71
+
+newmtl landmark
+Kd 0.79 0.60 0.32
+
+newmtl rock
+Kd 0.51 0.44 0.27

@@ -1,0 +1,2063 @@
+{
+  "land_pixels": 3144453,
+  "covered_land_pixels": 3144453,
+  "terrain_land_coverage": 1.0,
+  "sectors": [
+    {
+      "sector": [
+        0,
+        0
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        0
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        2,
+        0
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        3,
+        0
+      ],
+      "land_pixels": 179,
+      "covered_land_pixels": 179
+    },
+    {
+      "sector": [
+        4,
+        0
+      ],
+      "land_pixels": 5224,
+      "covered_land_pixels": 5224
+    },
+    {
+      "sector": [
+        5,
+        0
+      ],
+      "land_pixels": 10442,
+      "covered_land_pixels": 10442
+    },
+    {
+      "sector": [
+        6,
+        0
+      ],
+      "land_pixels": 16256,
+      "covered_land_pixels": 16256
+    },
+    {
+      "sector": [
+        7,
+        0
+      ],
+      "land_pixels": 16369,
+      "covered_land_pixels": 16369
+    },
+    {
+      "sector": [
+        8,
+        0
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        0
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        0
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        0
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        0
+      ],
+      "land_pixels": 13505,
+      "covered_land_pixels": 13505
+    },
+    {
+      "sector": [
+        13,
+        0
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        14,
+        0
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        15,
+        0
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        0,
+        1
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        1
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        2,
+        1
+      ],
+      "land_pixels": 4659,
+      "covered_land_pixels": 4659
+    },
+    {
+      "sector": [
+        3,
+        1
+      ],
+      "land_pixels": 15336,
+      "covered_land_pixels": 15336
+    },
+    {
+      "sector": [
+        4,
+        1
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        1
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        1
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        1
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        1
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        1
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        1
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        1
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        1
+      ],
+      "land_pixels": 11570,
+      "covered_land_pixels": 11570
+    },
+    {
+      "sector": [
+        13,
+        1
+      ],
+      "land_pixels": 5802,
+      "covered_land_pixels": 5802
+    },
+    {
+      "sector": [
+        14,
+        1
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        15,
+        1
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        0,
+        2
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        2
+      ],
+      "land_pixels": 955,
+      "covered_land_pixels": 955
+    },
+    {
+      "sector": [
+        2,
+        2
+      ],
+      "land_pixels": 15039,
+      "covered_land_pixels": 15039
+    },
+    {
+      "sector": [
+        3,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        2
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        2
+      ],
+      "land_pixels": 16369,
+      "covered_land_pixels": 16369
+    },
+    {
+      "sector": [
+        14,
+        2
+      ],
+      "land_pixels": 10289,
+      "covered_land_pixels": 10289
+    },
+    {
+      "sector": [
+        15,
+        2
+      ],
+      "land_pixels": 184,
+      "covered_land_pixels": 184
+    },
+    {
+      "sector": [
+        0,
+        3
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        3
+      ],
+      "land_pixels": 3737,
+      "covered_land_pixels": 3737
+    },
+    {
+      "sector": [
+        2,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        3,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        3
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        15,
+        3
+      ],
+      "land_pixels": 5486,
+      "covered_land_pixels": 5486
+    },
+    {
+      "sector": [
+        0,
+        4
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        4
+      ],
+      "land_pixels": 3558,
+      "covered_land_pixels": 3558
+    },
+    {
+      "sector": [
+        2,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        3,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        4
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        15,
+        4
+      ],
+      "land_pixels": 7224,
+      "covered_land_pixels": 7224
+    },
+    {
+      "sector": [
+        0,
+        5
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        5
+      ],
+      "land_pixels": 10068,
+      "covered_land_pixels": 10068
+    },
+    {
+      "sector": [
+        2,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        3,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        5
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        15,
+        5
+      ],
+      "land_pixels": 7121,
+      "covered_land_pixels": 7121
+    },
+    {
+      "sector": [
+        0,
+        6
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        6
+      ],
+      "land_pixels": 12567,
+      "covered_land_pixels": 12567
+    },
+    {
+      "sector": [
+        2,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        3,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        6
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        15,
+        6
+      ],
+      "land_pixels": 4724,
+      "covered_land_pixels": 4724
+    },
+    {
+      "sector": [
+        0,
+        7
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        7
+      ],
+      "land_pixels": 13544,
+      "covered_land_pixels": 13544
+    },
+    {
+      "sector": [
+        2,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        3,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        7
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        7
+      ],
+      "land_pixels": 15640,
+      "covered_land_pixels": 15640
+    },
+    {
+      "sector": [
+        15,
+        7
+      ],
+      "land_pixels": 216,
+      "covered_land_pixels": 216
+    },
+    {
+      "sector": [
+        0,
+        8
+      ],
+      "land_pixels": 953,
+      "covered_land_pixels": 953
+    },
+    {
+      "sector": [
+        1,
+        8
+      ],
+      "land_pixels": 14989,
+      "covered_land_pixels": 14989
+    },
+    {
+      "sector": [
+        2,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        3,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        8
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        8
+      ],
+      "land_pixels": 16333,
+      "covered_land_pixels": 16333
+    },
+    {
+      "sector": [
+        15,
+        8
+      ],
+      "land_pixels": 5210,
+      "covered_land_pixels": 5210
+    },
+    {
+      "sector": [
+        0,
+        9
+      ],
+      "land_pixels": 508,
+      "covered_land_pixels": 508
+    },
+    {
+      "sector": [
+        1,
+        9
+      ],
+      "land_pixels": 13276,
+      "covered_land_pixels": 13276
+    },
+    {
+      "sector": [
+        2,
+        9
+      ],
+      "land_pixels": 15498,
+      "covered_land_pixels": 15498
+    },
+    {
+      "sector": [
+        3,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        9
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        15,
+        9
+      ],
+      "land_pixels": 6047,
+      "covered_land_pixels": 6047
+    },
+    {
+      "sector": [
+        0,
+        10
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        10
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        2,
+        10
+      ],
+      "land_pixels": 11899,
+      "covered_land_pixels": 11899
+    },
+    {
+      "sector": [
+        3,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        10
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        10
+      ],
+      "land_pixels": 16032,
+      "covered_land_pixels": 16032
+    },
+    {
+      "sector": [
+        15,
+        10
+      ],
+      "land_pixels": 5783,
+      "covered_land_pixels": 5783
+    },
+    {
+      "sector": [
+        0,
+        11
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        11
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        2,
+        11
+      ],
+      "land_pixels": 9791,
+      "covered_land_pixels": 9791
+    },
+    {
+      "sector": [
+        3,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        11
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        11
+      ],
+      "land_pixels": 8910,
+      "covered_land_pixels": 8910
+    },
+    {
+      "sector": [
+        15,
+        11
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        0,
+        12
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        12
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        2,
+        12
+      ],
+      "land_pixels": 9375,
+      "covered_land_pixels": 9375
+    },
+    {
+      "sector": [
+        3,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        4,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        12
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        12
+      ],
+      "land_pixels": 7162,
+      "covered_land_pixels": 7162
+    },
+    {
+      "sector": [
+        15,
+        12
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        0,
+        13
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        13
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        2,
+        13
+      ],
+      "land_pixels": 7722,
+      "covered_land_pixels": 7722
+    },
+    {
+      "sector": [
+        3,
+        13
+      ],
+      "land_pixels": 15833,
+      "covered_land_pixels": 15833
+    },
+    {
+      "sector": [
+        4,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        5,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        6,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        7,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        13,
+        13
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        14,
+        13
+      ],
+      "land_pixels": 9111,
+      "covered_land_pixels": 9111
+    },
+    {
+      "sector": [
+        15,
+        13
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        0,
+        14
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        14
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        2,
+        14
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        3,
+        14
+      ],
+      "land_pixels": 48,
+      "covered_land_pixels": 48
+    },
+    {
+      "sector": [
+        4,
+        14
+      ],
+      "land_pixels": 4483,
+      "covered_land_pixels": 4483
+    },
+    {
+      "sector": [
+        5,
+        14
+      ],
+      "land_pixels": 12323,
+      "covered_land_pixels": 12323
+    },
+    {
+      "sector": [
+        6,
+        14
+      ],
+      "land_pixels": 14839,
+      "covered_land_pixels": 14839
+    },
+    {
+      "sector": [
+        7,
+        14
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        8,
+        14
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        14
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        14
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        14
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        14
+      ],
+      "land_pixels": 14911,
+      "covered_land_pixels": 14911
+    },
+    {
+      "sector": [
+        13,
+        14
+      ],
+      "land_pixels": 12528,
+      "covered_land_pixels": 12528
+    },
+    {
+      "sector": [
+        14,
+        14
+      ],
+      "land_pixels": 3622,
+      "covered_land_pixels": 3622
+    },
+    {
+      "sector": [
+        15,
+        14
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        0,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        1,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        2,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        3,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        4,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        5,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        6,
+        15
+      ],
+      "land_pixels": 2312,
+      "covered_land_pixels": 2312
+    },
+    {
+      "sector": [
+        7,
+        15
+      ],
+      "land_pixels": 15895,
+      "covered_land_pixels": 15895
+    },
+    {
+      "sector": [
+        8,
+        15
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        9,
+        15
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        10,
+        15
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        11,
+        15
+      ],
+      "land_pixels": 16384,
+      "covered_land_pixels": 16384
+    },
+    {
+      "sector": [
+        12,
+        15
+      ],
+      "land_pixels": 8789,
+      "covered_land_pixels": 8789
+    },
+    {
+      "sector": [
+        13,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        14,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    },
+    {
+      "sector": [
+        15,
+        15
+      ],
+      "land_pixels": 0,
+      "covered_land_pixels": 0
+    }
+  ],
+  "boundary_error_bound_atlas_pixels": 22.627416997969522,
+  "rock_candidate_count": 65,
+  "rock_candidate_pixels": 1313560,
+  "building_candidate_count": 158,
+  "manual_landmark_components": 29,
+  "height_calibrated": false,
+  "metric_scale_calibrated": false,
+  "building_completeness_verified": false
+}
