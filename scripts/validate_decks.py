@@ -16,6 +16,13 @@ def main() -> None:
         assert re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug), slug
         assert slug not in seen, f"duplicate slug: {slug}"
         seen.add(slug)
+        if entry.get("kind") == "report":
+            page = ROOT / "reports" / slug / "index.html"
+            assert page.is_file(), f"missing report: {slug}"
+            content = page.read_text()
+            assert '<html lang="ja">' in content and '<h1>' in content and '<nav' in content, slug
+            assert entry["title"] in content, f"title mismatch: {slug}"
+            continue
         folder = ROOT / "slides" / slug
         assert (folder / "index.html").is_file(), f"missing page: {slug}"
         deck = json.loads((folder / "deck.json").read_text())

@@ -1,5 +1,11 @@
 [
   {
+    "slug": "fight-replay-explained",
+    "kind": "report",
+    "title": "3D復元は、何が分かっていなかったのか",
+    "description": "用語・旧デモの問題・検証結果・改善手順を説明するレポート"
+  },
+  {
     "slug": "fight-replay-precision-review",
     "title": "3Dマッピングの精度再調査",
     "description": "旧動画の精度監査・類似製品・校正手順 · 13枚"

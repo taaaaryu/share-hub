@@ -6,7 +6,7 @@ fetch('catalog.json').then(response => response.json()).then(decks => {
     if (!/^[a-z0-9-]+$/.test(deck.slug)) continue;
     const link = document.createElement('a');
     link.className = 'deck-card';
-    link.href = `slides/${deck.slug}/`;
+    link.href = `${deck.kind === 'report' ? 'reports' : 'slides'}/${deck.slug}/`;
     const icon = document.createElement('span');
     icon.className = 'deck-card-icon';
     icon.setAttribute('aria-hidden', 'true');
