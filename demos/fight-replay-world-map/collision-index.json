@@ -1,7 +1,7 @@
 {
   "schema_version": "fight_replay.collision_candidates.v1",
   "mesh_file": "world-map.json",
-  "mesh_file_sha256": "6a31c5adee7338aabbd4c0e6625177c3c043be582ae66d771eb9be350f98a7ca",
+  "mesh_file_sha256": "13d10f8e00d7a472fa828daea0d323c666b95899c549865f85e67dbe9bec2210",
   "world_coordinate_system": {
     "axis": "Z-up",
     "unit": "atlas_pixel",

@@ -2416,7 +2416,7 @@
       "boundary_edges": 0,
       "nonmanifold_edges": 0,
       "inconsistent_winding_edges": 0,
-      "signed_volume": 202791.60447890882,
+      "signed_volume": 70409.2450750776,
       "downward_triangles": null
     },
     {
@@ -6013,7 +6013,8 @@
       "height": 115,
       "base_height": 0,
       "source": "manual_atlas_outline_and_video_shape_unverified_dimensions",
-      "color": "#c59b58",
+      "color": "#c1e7f2",
+      "top_scale": 0.04,
       "height_source": "unverified_manual_video_reference",
       "observation_source": "manual_reference_proxy"
     },
