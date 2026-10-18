@@ -1,0 +1,201 @@
+{
+  "title": "3Dマッピングの精度再調査",
+  "subtitle": "2026-10-18 · 旧デモの再評価と類似製品調査",
+  "slides": [
+    {
+      "kind": "cover",
+      "label": "精度の再調査",
+      "title": "3D配置の土台を作り直す",
+      "accent": "精度",
+      "body": "旧デモを再評価。類似製品の入力データと校正方法を調べ、改善の順序を見直しました。",
+      "visual": "01"
+    },
+    {
+      "kind": "takeaway",
+      "label": "結論",
+      "title": "旧配置は位置コーチングに使えない",
+      "body": "寸法・FOV・床高が未校正。前後移動はゼロ固定でした。映像の正常再生を、位置精度の証明として扱ってはいけません。",
+      "visual": "NG"
+    },
+    {
+      "kind": "metrics",
+      "label": "同じ映像・仮定だけを変更",
+      "title": "条件変更で数m相当ずれる",
+      "body": "敵位置の変化の中央値。仮定モデル内の変化で、実際の正解との誤差ではありません。",
+      "metrics": [
+        {
+          "value": "3.35",
+          "name": "FOV 100° → 90°",
+          "note": "モデルm・共通76フレーム"
+        },
+        {
+          "value": "4.04",
+          "name": "床高 0.3 → 0",
+          "note": "モデルm・共通76フレーム"
+        }
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "旧デモ・192フレームの再計算",
+      "title": "補間と床の矛盾が大きい",
+      "body": "相手位置が出た77フレームの内訳を確認。補間を観測精度として数えません。",
+      "metrics": [
+        {
+          "value": "71/77",
+          "name": "画像点の補間から推定",
+          "note": "直接の手動画像点は6フレーム"
+        },
+        {
+          "value": "3",
+          "name": "描いた床の範囲外",
+          "note": "フレーム104–106"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "ゲーム分析製品の調査",
+      "title": "正しい状態を得てから再生する",
+      "body": "Skybox EDGEはdemoを扱う2Dリプレイ。Refrag Restratはゲーム内でdemoを同期再生します。MP4からの3D推定とは入力が違います。",
+      "columns": [
+        {
+          "heading": "取り入れる部分",
+          "text": "座標・イベント・時刻を先に揃え、タイムラインと視点切替を後から作る。"
+        },
+        {
+          "heading": "取り違えない点",
+          "text": "demoが持つ座標を、古い一人称MP4から同じ品質で復元できる証拠にはしない。"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "Apexでの状態取得",
+      "title": "Apexも録画と座標を分ける",
+      "body": "DGSは地図上のイベントやリプレイを提供。Overwolfは自分の座標を記録する候補です。今回の動画には同時収録データがありません。",
+      "columns": [
+        {
+          "heading": "DGSを参考にする",
+          "text": "選手・軌跡・イベントを同じ時刻で整理。APIや取得データの利用条件は別途確認する。"
+        },
+        {
+          "heading": "Overwolfの制約",
+          "text": "公式記述は自分の位置・最大2Hz・1m解像度。全敵の座標取得や実動作は未検証。"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "映像から校正する技術",
+      "title": "fSpyとhlocの手順を取り入れる",
+      "body": "未知のFOVと適当な箱配置から始めず、カメラと参照モデルを先に合わせます。実映像への適用精度はまだ未実証です。",
+      "columns": [
+        {
+          "heading": "fSpy型",
+          "text": "直交する方向の線からカメラを合わせる。ほぼ平行な線など不安定な入力は拒否する。"
+        },
+        {
+          "heading": "hloc型",
+          "text": "参照画像と3Dモデルを作り、特徴対応から映像のカメラ姿勢を求める。"
+        }
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "今回追加した検証処理",
+      "title": "使っていない点で確かめる",
+      "body": "校正に使った点だけを再投影しても独立した精度評価にはなりません。",
+      "items": [
+        "校正用と評価用の点を分離",
+        "既知の3D点と画像点から姿勢推定",
+        "評価用の点を元画像へ再投影",
+        "画像が合ってもm精度は別途検証"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "25テスト成功・合成試験",
+      "title": "fitが良くても評価点がずれれば拒否",
+      "body": "校正用の誤差がほぼ0でも、未使用の評価点を50pxずらす試験では不合格にします。実映像の精度改善を証明した試験ではありません。",
+      "columns": [
+        {
+          "heading": "合格させない条件",
+          "text": "評価点がない、点を使い回す、再投影がずれる、画面の狭い範囲に点が集まる。"
+        },
+        {
+          "heading": "生成の見直し",
+          "text": "旧方式の説明用動画は明示指定が必要。精度検証済みの復元として標準出力しない。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "計算結果",
+      "title": "旧デモの監査を公開",
+      "body": "位置列から出る速度も不安定です。グラフは仮定モデル上の数値で、実際の敵の距離・速度ではありません。",
+      "sources": [
+        {
+          "label": "監査JSON・分母と条件",
+          "url": "https://taaaaryu.github.io/share-hub/slides/fight-replay-precision-review/audit.json"
+        },
+        {
+          "label": "条件感度のグラフ",
+          "url": "https://taaaaryu.github.io/share-hub/slides/fight-replay-precision-review/sensitivity.png"
+        },
+        {
+          "label": "位置列の不安定性",
+          "url": "https://taaaaryu.github.io/share-hub/slides/fight-replay-precision-review/instability.png"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "公式一次資料・製品",
+      "title": "製品の機能と入力を確認",
+      "body": "公開情報を調査しました。有料製品を実使用したり、精度をベンチマークした結果ではありません。",
+      "sources": [
+        {
+          "label": "Skybox EDGE",
+          "url": "https://www.skybox.gg/edge/"
+        },
+        {
+          "label": "Refrag Restrat",
+          "url": "https://refrag.gg/blog/announcing-restrat-the-best-way-to-watch-demos-in-cs2/"
+        },
+        {
+          "label": "Apex DGSのリプレイ画面",
+          "url": "https://apexlegendsstatus.com/tournament-stable/game/edad93ed4211135bc60b1d6d91b894ce"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "公式一次資料・技術",
+      "title": "校正と参照モデルを優先",
+      "body": "特定製品のコードや地形アセットを複製せず、設計原則を参考にします。",
+      "sources": [
+        {
+          "label": "fSpyのカメラ校正",
+          "url": "https://fspy.io/basics/"
+        },
+        {
+          "label": "hlocの参照モデルと姿勢推定",
+          "url": "https://github.com/cvg/Hierarchical-Localization"
+        },
+        {
+          "label": "Overwolf Apex location",
+          "url": "https://dev.overwolf.com/ow-native/live-game-data-gep/supported-games/apex-legends/#location"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "次に精度を上げる順序",
+      "title": "同じ場所の参照モデルから",
+      "body": "参照撮影と尺度を用意 → カメラ校正 → 背景の独立再投影 → 敵の接地・床交差 → 正解座標で評価。高精度の新版動画はまだ未完成です。",
+      "visual": "→"
+    }
+  ],
+  "theme": "terminal-night"
+}

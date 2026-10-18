@@ -1,0 +1,133 @@
+{
+  "status": "illustration_rejected_for_position_coaching",
+  "units": "assumed_model_metres_not_measured_truth",
+  "frame_count": 192,
+  "mapped_frames": 77,
+  "manual_pixel_frames": 6,
+  "interpolated_pixel_frames": 71,
+  "unsupported_floor_frames": [
+    104,
+    105,
+    106
+  ],
+  "camera_forward_motion_is_fixed": true,
+  "implied_enemy_speed_p95": 119.6055750761578,
+  "implied_enemy_speed_max": 340.08086262176136,
+  "sensitivity": [
+    {
+      "field": "assumed_initial_horizontal_fov",
+      "value": 80,
+      "common_frame_count": 75,
+      "mapped_frame_count": 75,
+      "median_model_displacement": 7.337468184048257,
+      "p95_model_displacement": 8.602183903057949
+    },
+    {
+      "field": "assumed_initial_horizontal_fov",
+      "value": 90,
+      "common_frame_count": 76,
+      "mapped_frame_count": 76,
+      "median_model_displacement": 3.3519509835487256,
+      "p95_model_displacement": 3.9446713435537584
+    },
+    {
+      "field": "assumed_initial_horizontal_fov",
+      "value": 100,
+      "common_frame_count": 77,
+      "mapped_frame_count": 77,
+      "median_model_displacement": 0.0,
+      "p95_model_displacement": 0.0
+    },
+    {
+      "field": "assumed_initial_horizontal_fov",
+      "value": 110,
+      "common_frame_count": 77,
+      "mapped_frame_count": 78,
+      "median_model_displacement": 2.8970187851011677,
+      "p95_model_displacement": 3.501093320325552
+    },
+    {
+      "field": "assumed_camera_height",
+      "value": 1.4,
+      "common_frame_count": 77,
+      "mapped_frame_count": 78,
+      "median_model_displacement": 2.68916693694595,
+      "p95_model_displacement": 3.2487088979983167
+    },
+    {
+      "field": "assumed_camera_height",
+      "value": 1.6,
+      "common_frame_count": 77,
+      "mapped_frame_count": 77,
+      "median_model_displacement": 0.0,
+      "p95_model_displacement": 0.0
+    },
+    {
+      "field": "assumed_camera_height",
+      "value": 1.8,
+      "common_frame_count": 76,
+      "mapped_frame_count": 76,
+      "median_model_displacement": 2.6857307454669,
+      "p95_model_displacement": 3.1603108800677675
+    },
+    {
+      "field": "assumed_enemy_floor_height",
+      "value": 0,
+      "common_frame_count": 76,
+      "mapped_frame_count": 76,
+      "median_model_displacement": 4.039750837624805,
+      "p95_model_displacement": 4.749949768586311
+    },
+    {
+      "field": "assumed_enemy_floor_height",
+      "value": 0.3,
+      "common_frame_count": 77,
+      "mapped_frame_count": 77,
+      "median_model_displacement": 0.0,
+      "p95_model_displacement": 0.0
+    },
+    {
+      "field": "assumed_enemy_floor_height",
+      "value": 0.6,
+      "common_frame_count": 77,
+      "mapped_frame_count": 78,
+      "median_model_displacement": 4.044890892622114,
+      "p95_model_displacement": 4.882302254338185
+    },
+    {
+      "field": "assumed_pillar_depth",
+      "value": 2,
+      "common_frame_count": 77,
+      "mapped_frame_count": 77,
+      "median_model_displacement": 0.09215430740251884,
+      "p95_model_displacement": 0.11652869273450149
+    },
+    {
+      "field": "assumed_pillar_depth",
+      "value": 3,
+      "common_frame_count": 77,
+      "mapped_frame_count": 77,
+      "median_model_displacement": 0.0,
+      "p95_model_displacement": 0.0
+    },
+    {
+      "field": "assumed_pillar_depth",
+      "value": 4,
+      "common_frame_count": 77,
+      "mapped_frame_count": 77,
+      "median_model_displacement": 0.09215430740251884,
+      "p95_model_displacement": 0.11652869273450164
+    }
+  ],
+  "metric_accuracy": null,
+  "independent_reprojection_evaluation": null,
+  "failure_causes": [
+    "unmeasured_geometry_and_scale",
+    "unverified_initial_fov",
+    "depth_motion_confounded_with_zoom",
+    "fixed_forward_motion",
+    "most_target_pixels_interpolated",
+    "no_independent_heldout_landmarks"
+  ],
+  "scope": "Only existing assumed model evaluated; no true enemy speeds or measured metric accuracy are inferred."
+}
