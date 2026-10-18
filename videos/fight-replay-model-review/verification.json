@@ -1,0 +1,55 @@
+{
+  "videos": {
+    "review.mp4": {
+      "decoded_frames": 504,
+      "fps": 30.0,
+      "duration_sec": 16.8
+    },
+    "original.mp4": {
+      "decoded_frames": 72,
+      "fps": 60.0,
+      "duration_sec": 1.2
+    }
+  },
+  "source_sync": [
+    {
+      "output_frame": 90,
+      "source_frame": 120,
+      "mean_pixel_difference": 2.1121911938534277
+    },
+    {
+      "output_frame": 210,
+      "source_frame": 120,
+      "mean_pixel_difference": 2.112303486997636
+    },
+    {
+      "output_frame": 270,
+      "source_frame": 110,
+      "mean_pixel_difference": 2.2277312352245864
+    },
+    {
+      "output_frame": 294,
+      "source_frame": 122,
+      "mean_pixel_difference": 2.2005961879432623
+    },
+    {
+      "output_frame": 402,
+      "source_frame": 176,
+      "mean_pixel_difference": 2.225977393617021
+    }
+  ],
+  "tracking_summary": {
+    "total_frames": 72,
+    "valid_camera_frames": 6,
+    "camera_unknown_fraction": 0.9166666666666666,
+    "construction_frame_count": 1,
+    "validated_camera_frames_excluding_construction": 5,
+    "enemy_placed_frames": 6,
+    "heldout_frame_p95_median_px": 5.023147966826909,
+    "camera_forward_range_relative_units": 0.362944011024774,
+    "processing_sec": 6.393707833,
+    "metric_accuracy": null,
+    "use_for_metric_coaching": false,
+    "caveat": "Assumed background surface consistency only. Assumed focal, plane, scale and near cover remain unvalidated."
+  }
+}

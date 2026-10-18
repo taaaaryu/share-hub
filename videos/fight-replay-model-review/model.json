@@ -1,0 +1,199 @@
+{
+  "boxes": [
+    {
+      "name": "left_facade",
+      "min": [
+        -1.5366347574115462,
+        18.0,
+        0.3118111585133837
+      ],
+      "max": [
+        0.2894873010431133,
+        19.0,
+        3.1501593209540126
+      ],
+      "color": [
+        166,
+        158,
+        143
+      ]
+    },
+    {
+      "name": "blue_facade",
+      "min": [
+        1.2644238997979318,
+        18.0,
+        0.3118111585133837
+      ],
+      "max": [
+        2.4316933287621523,
+        19.0,
+        1.6798820521180082
+      ],
+      "color": [
+        88,
+        122,
+        166
+      ]
+    },
+    {
+      "name": "copper_facade",
+      "min": [
+        2.227402787221739,
+        16.5,
+        0.3691602286372683
+      ],
+      "max": [
+        5.012419008802056,
+        17.5,
+        3.6715329386874336
+      ],
+      "color": [
+        173,
+        121,
+        76
+      ]
+    },
+    {
+      "name": "door_lintel",
+      "min": [
+        0.2881190170146648,
+        18.0,
+        1.8720674514819007
+      ],
+      "max": [
+        1.2640183121745208,
+        19.0,
+        3.1501593209540126
+      ],
+      "color": [
+        110,
+        111,
+        115
+      ]
+    },
+    {
+      "name": "door_recess",
+      "min": [
+        0.28873514745103274,
+        19.0,
+        0.3118111585133837
+      ],
+      "max": [
+        1.2673110734554072,
+        19.2,
+        1.8720674514819007
+      ],
+      "color": [
+        42,
+        49,
+        59
+      ]
+    },
+    {
+      "name": "near_pillar",
+      "min": [
+        -2.0,
+        1.5,
+        0.0
+      ],
+      "max": [
+        -0.2915597634822916,
+        2.0,
+        3.8
+      ],
+      "color": [
+        131,
+        87,
+        59
+      ]
+    },
+    {
+      "name": "raised_floor",
+      "min": [
+        -3.0,
+        5.0,
+        0.0
+      ],
+      "max": [
+        7.0,
+        18.0,
+        0.3118111585133837
+      ],
+      "color": [
+        70,
+        83,
+        93
+      ]
+    }
+  ],
+  "floors": [
+    {
+      "z": 0.3118111585133837,
+      "xmin": -3.0,
+      "xmax": 7.0,
+      "ymin": 5.0,
+      "ymax": 18.0
+    },
+    {
+      "z": 0.0,
+      "xmin": -4.0,
+      "xmax": 8.0,
+      "ymin": -3.0,
+      "ymax": 5.0
+    }
+  ],
+  "units": "relative_model_units_not_metres",
+  "construction": "manual image-aligned front plane and assumed near pillar depth",
+  "reference_frame_id": 120,
+  "reference_K": [
+    [
+      2800.0,
+      0.0,
+      960.0
+    ],
+    [
+      0.0,
+      2800.0,
+      540.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "reference_R": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -0.02999550020249566,
+      -0.9995500337489875
+    ],
+    [
+      0.0,
+      0.9995500337489875,
+      -0.02999550020249566
+    ]
+  ],
+  "reference_C": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "assumptions": [
+    "focal 2800px is assumed, not calibrated",
+    "facade front plane at Y=18 is assumed",
+    "camera height 1 defines arbitrary scale",
+    "reference camera downward pitch 0.03rad is assumed",
+    "pillar back edge Y=2 is assumed",
+    "copper surface Y=16.5 and recess Y=19.2 are assumed",
+    "unseen thickness and surfaces are illustrative"
+  ],
+  "metric_accuracy": null,
+  "use_for_metric_coaching": false
+}
