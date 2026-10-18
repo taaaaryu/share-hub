@@ -1,0 +1,1216 @@
+{
+  "schema_version": "fight_replay.minimap_model.v1",
+  "units": "reference_minimap_pixels_not_metres",
+  "origin_pixel": [
+    122.5,
+    122.5
+  ],
+  "axes": "X=image right, Y=image up, Z=assumed height",
+  "location_hypothesis": "Worlds Edge / Monument museum",
+  "location_confirmed": false,
+  "components": [
+    {
+      "name": "museum_west_podium",
+      "min": [
+        -82.5,
+        -21.5,
+        -2
+      ],
+      "max": [
+        -52.5,
+        16.5,
+        2
+      ],
+      "color": [
+        166,
+        166,
+        156
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "museum_north_walkway",
+      "min": [
+        -52.5,
+        9.5,
+        -2
+      ],
+      "max": [
+        -12.5,
+        16.5,
+        0
+      ],
+      "color": [
+        143,
+        151,
+        160
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "museum_south_walkway_west",
+      "min": [
+        -52.5,
+        -21.5,
+        -2
+      ],
+      "max": [
+        -34.5,
+        -11.5,
+        0
+      ],
+      "color": [
+        143,
+        151,
+        160
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "museum_south_walkway_east",
+      "min": [
+        -25.5,
+        -21.5,
+        -2
+      ],
+      "max": [
+        -12.5,
+        -11.5,
+        0
+      ],
+      "color": [
+        143,
+        151,
+        160
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "museum_lower_floor",
+      "min": [
+        -53.5,
+        -11.5,
+        -10
+      ],
+      "max": [
+        -13.5,
+        9.5,
+        -9
+      ],
+      "color": [
+        78,
+        95,
+        111
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "museum_north_lower_wall",
+      "min": [
+        -53.5,
+        8.5,
+        -10
+      ],
+      "max": [
+        -14.5,
+        10.5,
+        0
+      ],
+      "color": [
+        70,
+        103,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "museum_south_lower_wall_west",
+      "min": [
+        -53.5,
+        -12.5,
+        -10
+      ],
+      "max": [
+        -34.5,
+        -10.5,
+        0
+      ],
+      "color": [
+        70,
+        103,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "museum_south_lower_wall_east",
+      "min": [
+        -25.5,
+        -12.5,
+        -10
+      ],
+      "max": [
+        -14.5,
+        -10.5,
+        0
+      ],
+      "color": [
+        70,
+        103,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "west_core_base",
+      "min": [
+        -75.5,
+        -5.5,
+        2
+      ],
+      "max": [
+        -59.5,
+        10.5,
+        8
+      ],
+      "color": [
+        83,
+        112,
+        151
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "west_core_tower",
+      "min": [
+        -72.5,
+        -2.5,
+        8
+      ],
+      "max": [
+        -62.5,
+        7.5,
+        28
+      ],
+      "color": [
+        178,
+        173,
+        155
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "west_core_gold_face",
+      "min": [
+        -62.5,
+        -1.5,
+        11
+      ],
+      "max": [
+        -61.5,
+        6.5,
+        23
+      ],
+      "color": [
+        181,
+        126,
+        63
+      ],
+      "xy_source": "landmark_correspondence_hypothesis",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "west_core_cap",
+      "min": [
+        -71.5,
+        -1.5,
+        28
+      ],
+      "max": [
+        -63.5,
+        6.5,
+        33
+      ],
+      "color": [
+        173,
+        128,
+        70
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "north_portal_pier",
+      "min": [
+        -21.5,
+        8.5,
+        0
+      ],
+      "max": [
+        -17.5,
+        13.5,
+        11
+      ],
+      "color": [
+        83,
+        113,
+        152
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_portal_pier",
+      "min": [
+        -21.5,
+        -14.5,
+        0
+      ],
+      "max": [
+        -17.5,
+        -9.5,
+        11
+      ],
+      "color": [
+        83,
+        113,
+        152
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "portal_north_gold",
+      "min": [
+        -17.5,
+        9.5,
+        3
+      ],
+      "max": [
+        -17.0,
+        12.5,
+        9
+      ],
+      "color": [
+        181,
+        126,
+        63
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "portal_south_gold",
+      "min": [
+        -17.5,
+        -13.5,
+        3
+      ],
+      "max": [
+        -17.0,
+        -10.5,
+        9
+      ],
+      "color": [
+        181,
+        126,
+        63
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_00",
+      "min": [
+        -13.5,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -12.599999999999994,
+        4.5,
+        -8.1
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_01",
+      "min": [
+        -12.599999999999994,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -11.700000000000003,
+        4.5,
+        -7.2
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_02",
+      "min": [
+        -11.700000000000003,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -10.799999999999997,
+        4.5,
+        -6.3
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_03",
+      "min": [
+        -10.799999999999997,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -9.900000000000006,
+        4.5,
+        -5.4
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_04",
+      "min": [
+        -9.900000000000006,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -9.0,
+        4.5,
+        -4.5
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_05",
+      "min": [
+        -9.0,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -8.099999999999994,
+        4.5,
+        -3.5999999999999996
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_06",
+      "min": [
+        -8.099999999999994,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -7.200000000000003,
+        4.5,
+        -2.7
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_07",
+      "min": [
+        -7.200000000000003,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -6.299999999999997,
+        4.5,
+        -1.7999999999999998
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_08",
+      "min": [
+        -6.299999999999997,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -5.400000000000006,
+        4.5,
+        -0.9000000000000004
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_step_09",
+      "min": [
+        -5.400000000000006,
+        -5.5,
+        -10
+      ],
+      "max": [
+        -4.5,
+        4.5,
+        0.0
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_00",
+      "min": [
+        -34.5,
+        -12.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -11.5,
+        -8.1
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_01",
+      "min": [
+        -34.5,
+        -13.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -12.5,
+        -7.2
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_02",
+      "min": [
+        -34.5,
+        -14.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -13.5,
+        -6.3
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_03",
+      "min": [
+        -34.5,
+        -15.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -14.5,
+        -5.4
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_04",
+      "min": [
+        -34.5,
+        -16.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -15.5,
+        -4.5
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_05",
+      "min": [
+        -34.5,
+        -17.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -16.5,
+        -3.5999999999999996
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_06",
+      "min": [
+        -34.5,
+        -18.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -17.5,
+        -2.7
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_07",
+      "min": [
+        -34.5,
+        -19.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -18.5,
+        -1.7999999999999998
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_08",
+      "min": [
+        -34.5,
+        -20.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -19.5,
+        -0.9000000000000004
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "south_entry_step_09",
+      "min": [
+        -34.5,
+        -21.5,
+        -10
+      ],
+      "max": [
+        -25.5,
+        -20.5,
+        0.0
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "east_entry_landing",
+      "min": [
+        -4.5,
+        -5.5,
+        -2
+      ],
+      "max": [
+        -3.5,
+        4.5,
+        0
+      ],
+      "color": [
+        121,
+        133,
+        145
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "near_cover_pillar",
+      "min": [
+        -4.5,
+        -4.5,
+        0
+      ],
+      "max": [
+        -2.5,
+        -2.5,
+        8
+      ],
+      "color": [
+        159,
+        111,
+        70
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "near_cover_hedge",
+      "min": [
+        -2.5,
+        -6.5,
+        0
+      ],
+      "max": [
+        3.5,
+        -4.5,
+        3
+      ],
+      "color": [
+        68,
+        104,
+        73
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "roof_crossbeam_0",
+      "min": [
+        -50.5,
+        -11.5,
+        0.2
+      ],
+      "max": [
+        -49.900000000000006,
+        9.5,
+        0.8
+      ],
+      "color": [
+        98,
+        121,
+        132
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "roof_crossbeam_1",
+      "min": [
+        -43.5,
+        -11.5,
+        0.2
+      ],
+      "max": [
+        -42.900000000000006,
+        9.5,
+        0.8
+      ],
+      "color": [
+        98,
+        121,
+        132
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "roof_crossbeam_2",
+      "min": [
+        -36.5,
+        -11.5,
+        0.2
+      ],
+      "max": [
+        -35.900000000000006,
+        9.5,
+        0.8
+      ],
+      "color": [
+        98,
+        121,
+        132
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "roof_crossbeam_3",
+      "min": [
+        -29.5,
+        -11.5,
+        0.2
+      ],
+      "max": [
+        -28.900000000000006,
+        9.5,
+        0.8
+      ],
+      "color": [
+        98,
+        121,
+        132
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "roof_crossbeam_4",
+      "min": [
+        -22.5,
+        -11.5,
+        0.2
+      ],
+      "max": [
+        -21.900000000000006,
+        9.5,
+        0.8
+      ],
+      "color": [
+        98,
+        121,
+        132
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "museum"
+    },
+    {
+      "name": "north_block",
+      "min": [
+        -77.5,
+        34.5,
+        0
+      ],
+      "max": [
+        -50.5,
+        55.5,
+        38
+      ],
+      "color": [
+        148,
+        151,
+        155
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "context"
+    },
+    {
+      "name": "north_east_block",
+      "min": [
+        -43.5,
+        33.5,
+        0
+      ],
+      "max": [
+        -24.5,
+        54.5,
+        33
+      ],
+      "color": [
+        148,
+        151,
+        155
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "context"
+    },
+    {
+      "name": "south_block",
+      "min": [
+        -75.5,
+        -74.5,
+        0
+      ],
+      "max": [
+        -47.5,
+        -34.5,
+        29
+      ],
+      "color": [
+        148,
+        151,
+        155
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "context"
+    },
+    {
+      "name": "east_small_a",
+      "min": [
+        46.5,
+        -55.5,
+        0
+      ],
+      "max": [
+        55.5,
+        -29.5,
+        16
+      ],
+      "color": [
+        148,
+        151,
+        155
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "context"
+    },
+    {
+      "name": "east_small_b",
+      "min": [
+        68.5,
+        -38.5,
+        0
+      ],
+      "max": [
+        77.5,
+        -30.5,
+        12
+      ],
+      "color": [
+        148,
+        151,
+        155
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "context"
+    },
+    {
+      "name": "east_small_c",
+      "min": [
+        66.5,
+        -55.5,
+        0
+      ],
+      "max": [
+        80.5,
+        -45.5,
+        14
+      ],
+      "color": [
+        148,
+        151,
+        155
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "context"
+    },
+    {
+      "name": "east_small_d",
+      "min": [
+        82.5,
+        -54.5,
+        0
+      ],
+      "max": [
+        90.5,
+        -35.5,
+        17
+      ],
+      "color": [
+        148,
+        151,
+        155
+      ],
+      "xy_source": "manual_minimap_trace",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "context"
+    },
+    {
+      "name": "east_plaza",
+      "min": [
+        -3.5,
+        -27.5,
+        -2
+      ],
+      "max": [
+        37.5,
+        27.5,
+        0
+      ],
+      "color": [
+        74,
+        80,
+        87
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "ground"
+    },
+    {
+      "name": "north_plaza",
+      "min": [
+        -87.5,
+        16.5,
+        -2
+      ],
+      "max": [
+        -3.5,
+        27.5,
+        0
+      ],
+      "color": [
+        74,
+        80,
+        87
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "ground"
+    },
+    {
+      "name": "south_plaza",
+      "min": [
+        -87.5,
+        -30.5,
+        -2
+      ],
+      "max": [
+        -3.5,
+        -21.5,
+        0
+      ],
+      "color": [
+        74,
+        80,
+        87
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "ground"
+    },
+    {
+      "name": "west_plaza",
+      "min": [
+        -90.5,
+        -21.5,
+        -2
+      ],
+      "max": [
+        -82.5,
+        16.5,
+        0
+      ],
+      "color": [
+        74,
+        80,
+        87
+      ],
+      "xy_source": "layout_hypothesis_from_video",
+      "height_source": "assumed_from_multiple_views",
+      "layer": "ground"
+    }
+  ],
+  "global_map_registration": null,
+  "metric_accuracy": null,
+  "sources": [
+    {
+      "id": "minimap",
+      "type": "user_video_frame",
+      "frame_id": 0,
+      "role": "manual XY footprint tracing"
+    },
+    {
+      "id": "views",
+      "type": "user_video_frames",
+      "file_times_sec": [
+        0,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44
+      ],
+      "role": "visible openings, stairs, blue/gold surfaces; heights and exact placement remain hypotheses"
+    },
+    {
+      "id": "ea",
+      "url": "https://www.ea.com/able/news/arsenal-season-game-updates",
+      "role": "Monument underground and glass roof design reference"
+    },
+    {
+      "id": "artist",
+      "url": "https://digitalguido604.artstation.com/projects/JvOa3a",
+      "role": "blue/gold museum architectural reference"
+    },
+    {
+      "id": "public_map",
+      "url": "https://apexlegendsstatus.com/interactive-map/mp_rr_desertlands_mu5",
+      "role": "local comparison only; image matching failed; no map image redistributed"
+    }
+  ],
+  "limitations": [
+    "Heights, floors and fine cover XY are hypotheses, not measured coordinates",
+    "Public atlas registration failed; local minimap XY only",
+    "Minimap hidden interiors are not observable",
+    "No enemy coordinates are created by map construction",
+    "Player Z and global metre coordinates remain unknown"
+  ]
+}

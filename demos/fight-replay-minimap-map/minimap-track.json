@@ -1,0 +1,1413 @@
+{
+  "schema_version": "fight_replay.minimap_xy.v1",
+  "source": {
+    "sha256": "0fb3b42a809ff80180d37380ed51787c656df647a7186c7149bfcf46e2ba8766",
+    "fps": 60.0,
+    "frame_count": 2915,
+    "edited_recording": true,
+    "file_time_is_not_game_time": true
+  },
+  "crop": [
+    48,
+    48,
+    245,
+    245
+  ],
+  "marker_pixel": [
+    122.5,
+    122.5
+  ],
+  "units": "reference_minimap_pixels_not_metres",
+  "global_map_registration": null,
+  "player_floor": null,
+  "rows": [
+    {
+      "frame_id": 0,
+      "file_timestamp": 0.0,
+      "player_xy": [
+        0.0,
+        -0.0
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.5,
+          122.5
+        ],
+        "current_to_reference": [
+          [
+            1.0,
+            -3.0312647752753442e-18,
+            -3.2029471775198424e-15
+          ],
+          [
+            3.0312647752753442e-18,
+            1.0,
+            1.3030083648640668e-15
+          ]
+        ],
+        "scale": 1.0,
+        "rotation_deg": 1.7367867820994916e-16,
+        "failure_reason": null,
+        "holdout_p95_px": 3.552713678800501e-15,
+        "holdout_median_px": 0.0,
+        "holdout_support_within_2px": 1.0,
+        "holdout_count": 89,
+        "fit_count": 176,
+        "fit_inliers": 176,
+        "holdout_coverage": 0.872094817716797
+      },
+      "source": "minimap_registration",
+      "reference_frame": true,
+      "center_marker_green_pixels": 74,
+      "interpolated": false
+    },
+    {
+      "frame_id": 60,
+      "file_timestamp": 1.0,
+      "player_xy": [
+        -0.10220121051042952,
+        0.7021406261717829
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.39779878948957,
+          121.79785937382822
+        ],
+        "current_to_reference": [
+          [
+            1.0000750745605649,
+            -0.0003979010056178572,
+            -0.06265497099143243
+          ],
+          [
+            0.0003979010056178572,
+            1.0000750745605649,
+            -0.7600801330291693
+          ]
+        ],
+        "scale": 1.0000751537172243,
+        "rotation_deg": 0.02279633565804461,
+        "failure_reason": null,
+        "holdout_p95_px": 1.9362972048282394,
+        "holdout_median_px": 0.6913554707796549,
+        "holdout_support_within_2px": 0.9622641509433962,
+        "holdout_count": 53,
+        "fit_count": 105,
+        "fit_inliers": 95,
+        "holdout_coverage": 0.8058287232287088
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 62,
+      "interpolated": false
+    },
+    {
+      "frame_id": 120,
+      "file_timestamp": 2.0,
+      "player_xy": [
+        0.04359362462396632,
+        0.4599313645068577
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.54359362462397,
+          122.04006863549314
+        ],
+        "current_to_reference": [
+          [
+            1.000958090563879,
+            -0.001046436049993213,
+            0.054415946672962796
+          ],
+          [
+            0.001046436049993213,
+            1.000958090563879,
+            -0.7054858747062186
+          ]
+        ],
+        "scale": 1.0009586375538668,
+        "rotation_deg": 0.05989895872505785,
+        "failure_reason": null,
+        "holdout_p95_px": 1.4587774753339968,
+        "holdout_median_px": 0.5663185053807933,
+        "holdout_support_within_2px": 1.0,
+        "holdout_count": 48,
+        "fit_count": 96,
+        "fit_inliers": 76,
+        "holdout_coverage": 0.8305441322047293
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 64,
+      "interpolated": false
+    },
+    {
+      "frame_id": 180,
+      "file_timestamp": 3.0,
+      "player_xy": [
+        0.03521026849190889,
+        0.27391725054562244
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.53521026849191,
+          122.22608274945438
+        ],
+        "current_to_reference": [
+          [
+            1.0003523163201566,
+            0.001299206621158193,
+            -0.16710129181914857
+          ],
+          [
+            -0.001299206621158193,
+            1.0003523163201566,
+            -0.15792318867293603
+          ]
+        ],
+        "scale": 1.0003531599914839,
+        "rotation_deg": -0.07441279741156537,
+        "failure_reason": null,
+        "holdout_p95_px": 2.6812047113259503,
+        "holdout_median_px": 0.7903201696542053,
+        "holdout_support_within_2px": 0.9117647058823529,
+        "holdout_count": 34,
+        "fit_count": 68,
+        "fit_inliers": 59,
+        "holdout_coverage": 0.8016033847060772
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 54,
+      "interpolated": false
+    },
+    {
+      "frame_id": 240,
+      "file_timestamp": 4.0,
+      "player_xy": [
+        -0.1270202329412058,
+        0.8010793027055314
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.3729797670588,
+          121.69892069729447
+        ],
+        "current_to_reference": [
+          [
+            1.000657975429667,
+            -0.0008544206054306246,
+            -0.1029556989101444
+          ],
+          [
+            0.0008544206054306246,
+            1.000657975429667,
+            -0.9863478170049763
+          ]
+        ],
+        "scale": 1.0006583402068714,
+        "rotation_deg": 0.04892249292467822,
+        "failure_reason": null,
+        "holdout_p95_px": 2.9680076439466334,
+        "holdout_median_px": 0.8377271607053728,
+        "holdout_support_within_2px": 0.8780487804878049,
+        "holdout_count": 41,
+        "fit_count": 82,
+        "fit_inliers": 59,
+        "holdout_coverage": 0.8233235205368772
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 58,
+      "interpolated": false
+    },
+    {
+      "frame_id": 300,
+      "file_timestamp": 5.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 3.099883944646677,
+        "holdout_median_px": 0.8067957318902644,
+        "holdout_support_within_2px": 0.8292682926829268,
+        "holdout_count": 41,
+        "fit_count": 82,
+        "fit_inliers": 60,
+        "holdout_coverage": 0.7787806473527114
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 57,
+      "interpolated": false
+    },
+    {
+      "frame_id": 360,
+      "file_timestamp": 6.0,
+      "player_xy": [
+        0.003547209753961056,
+        0.19666196014019022
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.50354720975396,
+          122.30333803985981
+        ],
+        "current_to_reference": [
+          [
+            0.9997269210958065,
+            0.0015202116959621556,
+            -0.1492265572377007
+          ],
+          [
+            -0.0015202116959621556,
+            0.9997269210958065,
+            0.023016138378883163
+          ]
+        ],
+        "scale": 0.9997280769325735,
+        "rotation_deg": -0.08712543912931342,
+        "failure_reason": null,
+        "holdout_p95_px": 1.6992128266696227,
+        "holdout_median_px": 0.7744239360885796,
+        "holdout_support_within_2px": 0.9705882352941176,
+        "holdout_count": 34,
+        "fit_count": 67,
+        "fit_inliers": 52,
+        "holdout_coverage": 0.7447117029985738
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 55,
+      "interpolated": false
+    },
+    {
+      "frame_id": 420,
+      "file_timestamp": 7.0,
+      "player_xy": [
+        -0.0011026980771475792,
+        0.19023616109419095
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.49889730192285,
+          122.30976383890581
+        ],
+        "current_to_reference": [
+          [
+            1.00241235030665,
+            -0.0036385175658960526,
+            0.14910279118049777
+          ],
+          [
+            0.0036385175658960526,
+            1.00241235030665,
+            -0.9314674754810642
+          ]
+        ],
+        "scale": 1.002418953760043,
+        "rotation_deg": 0.20796909036853703,
+        "failure_reason": null,
+        "holdout_p95_px": 1.5212767757248131,
+        "holdout_median_px": 0.7845565442203113,
+        "holdout_support_within_2px": 0.96875,
+        "holdout_count": 32,
+        "fit_count": 63,
+        "fit_inliers": 44,
+        "holdout_coverage": 0.7670105100982362
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 53,
+      "interpolated": false
+    },
+    {
+      "frame_id": 480,
+      "file_timestamp": 8.0,
+      "player_xy": [
+        0.022997600576971422,
+        0.15871215072405676
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.52299760057697,
+          122.34128784927594
+        ],
+        "current_to_reference": [
+          [
+            1.0018884405550674,
+            -0.0013494755311290118,
+            -0.04302561485549332
+          ],
+          [
+            0.0013494755311290118,
+            1.0018884405550674,
+            -0.5553568712831185
+          ]
+        ],
+        "scale": 1.0018893493804963,
+        "rotation_deg": 0.07717346822455824,
+        "failure_reason": null,
+        "holdout_p95_px": 2.484003035363786,
+        "holdout_median_px": 0.7445535943525925,
+        "holdout_support_within_2px": 0.8823529411764706,
+        "holdout_count": 34,
+        "fit_count": 66,
+        "fit_inliers": 51,
+        "holdout_coverage": 0.7839240258087607
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 58,
+      "interpolated": false
+    },
+    {
+      "frame_id": 540,
+      "file_timestamp": 9.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 3.7856749280431674,
+        "holdout_median_px": 0.6941138278614941,
+        "holdout_support_within_2px": 0.78125,
+        "holdout_count": 32,
+        "fit_count": 63,
+        "fit_inliers": 50,
+        "holdout_coverage": 0.7668888191814848
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 58,
+      "interpolated": false
+    },
+    {
+      "frame_id": 600,
+      "file_timestamp": 10.0,
+      "player_xy": [
+        0.040269196702197974,
+        0.12968161096877395
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.5402691967022,
+          122.37031838903123
+        ],
+        "current_to_reference": [
+          [
+            1.0013350499206168,
+            -0.0008159874230460557,
+            -0.02331595925021581
+          ],
+          [
+            0.0008159874230460557,
+            1.0013350499206168,
+            -0.39318368556747524
+          ]
+        ],
+        "scale": 1.0013353823944298,
+        "rotation_deg": 0.04669029125779175,
+        "failure_reason": null,
+        "holdout_p95_px": 2.4761311540772937,
+        "holdout_median_px": 0.7645769884859976,
+        "holdout_support_within_2px": 0.8571428571428571,
+        "holdout_count": 35,
+        "fit_count": 68,
+        "fit_inliers": 61,
+        "holdout_coverage": 0.7799702742296484
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 58,
+      "interpolated": false
+    },
+    {
+      "frame_id": 660,
+      "file_timestamp": 11.0,
+      "player_xy": [
+        -0.020350595328878285,
+        0.021035641925791992
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.47964940467112,
+          122.47896435807421
+        ],
+        "current_to_reference": [
+          [
+            1.0002677868875454,
+            -0.0019864059382415063,
+            0.1901802383814016
+          ],
+          [
+            0.0019864059382415063,
+            1.0002677868875454,
+            -0.29717426308468586
+          ]
+        ],
+        "scale": 1.0002697592617,
+        "rotation_deg": 0.11378205770402162,
+        "failure_reason": null,
+        "holdout_p95_px": 2.9254026723140987,
+        "holdout_median_px": 0.7772770503327602,
+        "holdout_support_within_2px": 0.8823529411764706,
+        "holdout_count": 34,
+        "fit_count": 68,
+        "fit_inliers": 55,
+        "holdout_coverage": 0.7325754928625108
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 58,
+      "interpolated": false
+    },
+    {
+      "frame_id": 720,
+      "file_timestamp": 12.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 2.8728875853132085,
+        "holdout_median_px": 0.928311056862216,
+        "holdout_support_within_2px": 0.8484848484848485,
+        "holdout_count": 33,
+        "fit_count": 65,
+        "fit_inliers": 52,
+        "holdout_coverage": 0.7246836424755115
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 58,
+      "interpolated": false
+    },
+    {
+      "frame_id": 780,
+      "file_timestamp": 13.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 2.943057895755504,
+        "holdout_median_px": 0.8769616227127432,
+        "holdout_support_within_2px": 0.8333333333333334,
+        "holdout_count": 36,
+        "fit_count": 72,
+        "fit_inliers": 56,
+        "holdout_coverage": 0.7375292775241725
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 58,
+      "interpolated": false
+    },
+    {
+      "frame_id": 840,
+      "file_timestamp": 14.0,
+      "player_xy": [
+        -0.4171243331121559,
+        0.5576425196121306
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          122.08287566688784,
+          121.94235748038787
+        ],
+        "current_to_reference": [
+          [
+            0.9989839213182942,
+            0.0005903278477567244,
+            -0.3649698559533954
+          ],
+          [
+            -0.0005903278477567244,
+            0.9989839213182942,
+            -0.36085771975295455
+          ]
+        ],
+        "scale": 0.998984095738988,
+        "rotation_deg": -0.03385769234792008,
+        "failure_reason": null,
+        "holdout_p95_px": 2.583755381682615,
+        "holdout_median_px": 0.9398328041910904,
+        "holdout_support_within_2px": 0.8620689655172413,
+        "holdout_count": 29,
+        "fit_count": 56,
+        "fit_inliers": 41,
+        "holdout_coverage": 0.8105903686626792
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 33,
+      "interpolated": false
+    },
+    {
+      "frame_id": 900,
+      "file_timestamp": 15.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 2.779184119869156,
+        "holdout_median_px": 1.0078313989555254,
+        "holdout_support_within_2px": 0.8636363636363636,
+        "holdout_count": 22,
+        "fit_count": 44,
+        "fit_inliers": 30,
+        "holdout_coverage": 0.7129352410530427
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 30,
+      "interpolated": false
+    },
+    {
+      "frame_id": 960,
+      "file_timestamp": 16.0,
+      "player_xy": [
+        -6.002216113998671,
+        2.6195484656049075
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          116.49778388600133,
+          119.88045153439509
+        ],
+        "current_to_reference": [
+          [
+            0.9976712600107326,
+            -0.0007372251148361482,
+            -5.62663538874598
+          ],
+          [
+            0.0007372251148361482,
+            0.9976712600107326,
+            -2.4245878934870917
+          ]
+        ],
+        "scale": 0.9976715323954437,
+        "rotation_deg": 0.042338475243306944,
+        "failure_reason": null,
+        "holdout_p95_px": 2.359601503662192,
+        "holdout_median_px": 0.7974079413961158,
+        "holdout_support_within_2px": 0.9130434782608695,
+        "holdout_count": 23,
+        "fit_count": 45,
+        "fit_inliers": 30,
+        "holdout_coverage": 0.698939619129057
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 65,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1020,
+      "file_timestamp": 17.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "insufficient_fit_support"
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 71,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1080,
+      "file_timestamp": 18.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "insufficient_fit_support"
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 75,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1140,
+      "file_timestamp": 19.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "insufficient_fit_support"
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 83,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1200,
+      "file_timestamp": 20.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 5.465208960767921,
+        "holdout_median_px": 1.0898983545985002,
+        "holdout_support_within_2px": 0.6666666666666666,
+        "holdout_count": 18,
+        "fit_count": 34,
+        "fit_inliers": 26,
+        "holdout_coverage": 0.5196447769600715
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 78,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1260,
+      "file_timestamp": 21.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 2.389905686559451,
+        "holdout_median_px": 1.2572751941946643,
+        "holdout_support_within_2px": 0.75,
+        "holdout_count": 16,
+        "fit_count": 31,
+        "fit_inliers": 22,
+        "holdout_coverage": 0.4982951004236489
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 60,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1320,
+      "file_timestamp": 22.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 11.547468862287538,
+        "holdout_median_px": 0.9338789417811323,
+        "holdout_support_within_2px": 0.7857142857142857,
+        "holdout_count": 14,
+        "fit_count": 28,
+        "fit_inliers": 20,
+        "holdout_coverage": 0.5593571285635771
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 72,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1380,
+      "file_timestamp": 23.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "insufficient_fit_support"
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 79,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1440,
+      "file_timestamp": 24.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 85.24159227081697,
+        "holdout_median_px": 1.662625718053725,
+        "holdout_support_within_2px": 0.5333333333333333,
+        "holdout_count": 15,
+        "fit_count": 29,
+        "fit_inliers": 21,
+        "holdout_coverage": 0.603898015799115
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 77,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1500,
+      "file_timestamp": 25.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 3.3615345730084636,
+        "holdout_median_px": 1.3593781200618626,
+        "holdout_support_within_2px": 0.75,
+        "holdout_count": 16,
+        "fit_count": 30,
+        "fit_inliers": 22,
+        "holdout_coverage": 0.6600083594967368
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 80,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1560,
+      "file_timestamp": 26.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 129.57400191728442,
+        "holdout_median_px": 1.2655858742448765,
+        "holdout_support_within_2px": 0.7142857142857143,
+        "holdout_count": 14,
+        "fit_count": 28,
+        "fit_inliers": 19,
+        "holdout_coverage": 0.5592531295861913
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 59,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1620,
+      "file_timestamp": 27.0,
+      "player_xy": [
+        -20.412175668331372,
+        1.2095078693092205
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          102.08782433166863,
+          121.29049213069078
+        ],
+        "current_to_reference": [
+          [
+            1.000351527279421,
+            -0.0017089831396429518,
+            -20.245887325454174
+          ],
+          [
+            0.0017089831396429518,
+            1.000351527279421,
+            -1.4619203956445483
+          ]
+        ],
+        "scale": 1.0003529870768826,
+        "rotation_deg": 0.09788301735018491,
+        "failure_reason": null,
+        "holdout_p95_px": 3.252421555820714,
+        "holdout_median_px": 0.9924311652470963,
+        "holdout_support_within_2px": 0.9375,
+        "holdout_count": 16,
+        "fit_count": 31,
+        "fit_inliers": 22,
+        "holdout_coverage": 0.48257379135271494
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 65,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1680,
+      "file_timestamp": 28.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 26.742354037414774,
+        "holdout_median_px": 1.1882273443890619,
+        "holdout_support_within_2px": 0.6666666666666666,
+        "holdout_count": 15,
+        "fit_count": 29,
+        "fit_inliers": 20,
+        "holdout_coverage": 0.6462777665043326
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 55,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1740,
+      "file_timestamp": 29.0,
+      "player_xy": [
+        -20.422334286762066,
+        -3.1335139884181302
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          102.07766571323793,
+          125.63351398841813
+        ],
+        "current_to_reference": [
+          [
+            1.0008953484479972,
+            -0.002649800374319889,
+            -20.207413925787552
+          ],
+          [
+            0.002649800374319889,
+            1.0008953484479972,
+            2.69923325768429
+          ]
+        ],
+        "scale": 1.0008988560223564,
+        "rotation_deg": 0.15168621128645535,
+        "failure_reason": null,
+        "holdout_p95_px": 16.928165988958987,
+        "holdout_median_px": 0.8518897703360316,
+        "holdout_support_within_2px": 0.9411764705882353,
+        "holdout_count": 17,
+        "fit_count": 32,
+        "fit_inliers": 24,
+        "holdout_coverage": 0.6151841137573434
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 54,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1800,
+      "file_timestamp": 30.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 4.032744856598805,
+        "holdout_median_px": 1.1103184889377018,
+        "holdout_support_within_2px": 0.9166666666666666,
+        "holdout_count": 12,
+        "fit_count": 23,
+        "fit_inliers": 18,
+        "holdout_coverage": 0.6096393850476796
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 55,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1860,
+      "file_timestamp": 31.0,
+      "player_xy": [
+        -20.442531750862344,
+        -2.6340879995511415
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          102.05746824913766,
+          125.13408799955114
+        ],
+        "current_to_reference": [
+          [
+            0.9976996116019988,
+            0.0008598228122717728,
+            -20.266062466610492
+          ],
+          [
+            -0.0008598228122717728,
+            0.9976996116019988,
+            3.021213872809586
+          ]
+        ],
+        "scale": 0.997699982101858,
+        "rotation_deg": -0.04937779418078386,
+        "failure_reason": null,
+        "holdout_p95_px": 3.285034137983413,
+        "holdout_median_px": 0.7741358044000981,
+        "holdout_support_within_2px": 0.875,
+        "holdout_count": 16,
+        "fit_count": 32,
+        "fit_inliers": 26,
+        "holdout_coverage": 0.5922922972109348
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 52,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1920,
+      "file_timestamp": 32.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 2.2870200027094323,
+        "holdout_median_px": 1.2234373060036887,
+        "holdout_support_within_2px": 0.9333333333333333,
+        "holdout_count": 15,
+        "fit_count": 29,
+        "fit_inliers": 22,
+        "holdout_coverage": 0.5511476445909339
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 57,
+      "interpolated": false
+    },
+    {
+      "frame_id": 1980,
+      "file_timestamp": 33.0,
+      "player_xy": [
+        -20.38120723566567,
+        -2.553139213867027
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          102.11879276433433,
+          125.05313921386703
+        ],
+        "current_to_reference": [
+          [
+            0.9980229815038337,
+            3.622539437442845e-05,
+            -20.143460080696165
+          ],
+          [
+            -3.622539437442845e-05,
+            0.9980229815038337,
+            2.799761590458263
+          ]
+        ],
+        "scale": 0.998022982161273,
+        "rotation_deg": -0.002079673761432543,
+        "failure_reason": null,
+        "holdout_p95_px": 2.295110308905685,
+        "holdout_median_px": 0.8472205389745046,
+        "holdout_support_within_2px": 0.8666666666666667,
+        "holdout_count": 15,
+        "fit_count": 29,
+        "fit_inliers": 23,
+        "holdout_coverage": 0.572932143421307
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 59,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2040,
+      "file_timestamp": 34.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 4.903995679989568,
+        "holdout_median_px": 1.019742622691969,
+        "holdout_support_within_2px": 0.7333333333333333,
+        "holdout_count": 15,
+        "fit_count": 29,
+        "fit_inliers": 23,
+        "holdout_coverage": 0.6017087567428807
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 55,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2100,
+      "file_timestamp": 35.0,
+      "player_xy": [
+        -20.489026082986143,
+        -2.3056459182258777
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          102.01097391701386,
+          124.80564591822588
+        ],
+        "current_to_reference": [
+          [
+            0.997116383836774,
+            -0.0029373348562059254,
+            -19.77595958310573
+          ],
+          [
+            0.0029373348562059254,
+            0.997116383836774,
+            2.2990653783358437
+          ]
+        ],
+        "scale": 0.9971207102712201,
+        "rotation_deg": 0.16878310915961708,
+        "failure_reason": null,
+        "holdout_p95_px": 4.313970167826798,
+        "holdout_median_px": 0.8064384145410557,
+        "holdout_support_within_2px": 0.875,
+        "holdout_count": 16,
+        "fit_count": 32,
+        "fit_inliers": 22,
+        "holdout_coverage": 0.5574349005537796
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 55,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2160,
+      "file_timestamp": 36.0,
+      "player_xy": [
+        -20.475942841661862,
+        -2.720558154265376
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          102.02405715833814,
+          125.22055815426538
+        ],
+        "current_to_reference": [
+          [
+            1.0003534679284338,
+            0.0009797656138205084,
+            -20.639263950588024
+          ],
+          [
+            -0.0009797656138205084,
+            1.0003534679284338,
+            2.7972796207252277
+          ]
+        ],
+        "scale": 1.0003539477290537,
+        "rotation_deg": -0.05611658122239745,
+        "failure_reason": null,
+        "holdout_p95_px": 2.2329983344201274,
+        "holdout_median_px": 0.9469704317206602,
+        "holdout_support_within_2px": 0.875,
+        "holdout_count": 16,
+        "fit_count": 30,
+        "fit_inliers": 23,
+        "holdout_coverage": 0.42957497739618383
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 52,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2220,
+      "file_timestamp": 37.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 45.92049846791769,
+        "holdout_median_px": 1.3323792707944269,
+        "holdout_support_within_2px": 0.625,
+        "holdout_count": 16,
+        "fit_count": 31,
+        "fit_inliers": 26,
+        "holdout_coverage": 0.6259933712664071
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 60,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2280,
+      "file_timestamp": 38.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 3.3875869359132276,
+        "holdout_median_px": 0.8805022623639664,
+        "holdout_support_within_2px": 0.7857142857142857,
+        "holdout_count": 14,
+        "fit_count": 26,
+        "fit_inliers": 21,
+        "holdout_coverage": 0.5240692356366443
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 65,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2340,
+      "file_timestamp": 39.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "insufficient_fit_support"
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 50,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2400,
+      "file_timestamp": 40.0,
+      "player_xy": [
+        -23.270731976270525,
+        0.7077499716827589
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          99.22926802372947,
+          121.79225002831724
+        ],
+        "current_to_reference": [
+          [
+            1.001219590281813,
+            -0.0007504613299212156,
+            -23.32820027287726
+          ],
+          [
+            0.0007504613299212156,
+            1.001219590281813,
+            -0.9490812941202021
+          ]
+        ],
+        "scale": 1.001219871534864,
+        "rotation_deg": 0.04294588245892947,
+        "failure_reason": null,
+        "holdout_p95_px": 1.8455076326638107,
+        "holdout_median_px": 0.6112521210336899,
+        "holdout_support_within_2px": 1.0,
+        "holdout_count": 17,
+        "fit_count": 33,
+        "fit_inliers": 26,
+        "holdout_coverage": 0.6199860568758305
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 74,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2460,
+      "file_timestamp": 41.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 3.469245689183553,
+        "holdout_median_px": 1.019033597502201,
+        "holdout_support_within_2px": 0.8823529411764706,
+        "holdout_count": 17,
+        "fit_count": 33,
+        "fit_inliers": 23,
+        "holdout_coverage": 0.571515183312793
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 51,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2520,
+      "file_timestamp": 42.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 52.25347028261618,
+        "holdout_median_px": 0.9938330892348892,
+        "holdout_support_within_2px": 0.7142857142857143,
+        "holdout_count": 14,
+        "fit_count": 28,
+        "fit_inliers": 23,
+        "holdout_coverage": 0.5227814896744247
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 69,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2580,
+      "file_timestamp": 43.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 2.426974316632405,
+        "holdout_median_px": 1.5683834132197136,
+        "holdout_support_within_2px": 0.8461538461538461,
+        "holdout_count": 13,
+        "fit_count": 26,
+        "fit_inliers": 19,
+        "holdout_coverage": 0.5055821623413941
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 87,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2640,
+      "file_timestamp": 44.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "insufficient_fit_support"
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 80,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2700,
+      "file_timestamp": 45.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "insufficient_fit_support"
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 91,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2760,
+      "file_timestamp": 46.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 3.153936047780547,
+        "holdout_median_px": 1.0487333486627999,
+        "holdout_support_within_2px": 0.7058823529411765,
+        "holdout_count": 17,
+        "fit_count": 34,
+        "fit_inliers": 24,
+        "holdout_coverage": 0.5675410381109965
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 87,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2820,
+      "file_timestamp": 47.0,
+      "player_xy": null,
+      "player_z": null,
+      "registration": {
+        "reference_pixel": null,
+        "failure_reason": "holdout_mismatch",
+        "holdout_p95_px": 1.8369706734477662,
+        "holdout_median_px": 1.0162147215166943,
+        "holdout_support_within_2px": 0.9333333333333333,
+        "holdout_count": 15,
+        "fit_count": 28,
+        "fit_inliers": 22,
+        "holdout_coverage": 0.5827433011594235
+      },
+      "source": "unknown",
+      "reference_frame": false,
+      "center_marker_green_pixels": 57,
+      "interpolated": false
+    },
+    {
+      "frame_id": 2880,
+      "file_timestamp": 48.0,
+      "player_xy": [
+        -19.32830904098674,
+        7.606480590125372
+      ],
+      "player_z": null,
+      "registration": {
+        "reference_pixel": [
+          103.17169095901326,
+          114.89351940987463
+        ],
+        "current_to_reference": [
+          [
+            1.0003353969889788,
+            -0.0012810951878929112,
+            -19.21246101161976
+          ],
+          [
+            0.0012810951878929112,
+            1.0003353969889788,
+            -7.804500881792146
+          ]
+        ],
+        "scale": 1.0003362173159474,
+        "rotation_deg": 0.07337669696897059,
+        "failure_reason": null,
+        "holdout_p95_px": 73.08726605437633,
+        "holdout_median_px": 0.9949739241655312,
+        "holdout_support_within_2px": 0.8666666666666667,
+        "holdout_count": 15,
+        "fit_count": 28,
+        "fit_inliers": 20,
+        "holdout_coverage": 0.6010010406973967
+      },
+      "source": "minimap_registration",
+      "reference_frame": false,
+      "center_marker_green_pixels": 102,
+      "interpolated": false
+    }
+  ],
+  "summary": {
+    "samples": 49,
+    "accepted": 20,
+    "accepted_excluding_reference": 19,
+    "median_holdout_p95_px": 2.484003035363786,
+    "processing_sec": 3.9087082079999997,
+    "metric_accuracy": null
+  }
+}
