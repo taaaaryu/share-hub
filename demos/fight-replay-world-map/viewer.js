@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const host=document.querySelector('#viewer'),status=document.querySelector('#status');
 try{
- const responses=await Promise.all([fetch('world-map.json'),fetch('matches.json')]);
+ const responses=await Promise.all([fetch('world-map.json?v=ice-frustum-v2'),fetch('matches.json')]);
  if(responses.some(r=>!r.ok))throw new Error('data');
  const [model,track]=await Promise.all(responses.map(r=>r.json()));
  const scene=new THREE.Scene();scene.background=new THREE.Color('#17212b');
