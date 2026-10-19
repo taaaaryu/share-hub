@@ -1,5 +1,16 @@
 [
   {
+    "slug": "apex-minimap-methods-20261020",
+    "kind": "report",
+    "title": "Apexミニマップ位置推定を速く、軽く、正確にするには",
+    "description": "既存ソフトの実装調査・方式別実測・失敗条件・実動画95%への評価計画"
+  },
+  {
+    "slug": "apex-minimap-methods-20261020-summary",
+    "title": "Apexミニマップ位置推定の改善案",
+    "description": "解析資料 · 6枚"
+  },
+  {
     "slug": "fight-replay-explained",
     "kind": "report",
     "title": "3D復元は、何が分かっていなかったのか",

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apexミニマップ位置推定を速く、軽く、正確にするには</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/report.css">
+<style>.mb-main{overflow-wrap:anywhere}.diagram{display:block;width:100%;max-width:420px;margin:auto;height:auto}.mb-glossary dt{font-weight:700;margin-top:16px}.mb-glossary dd{margin:4px 0 0}table{width:100%}caption{text-align:left;margin-bottom:10px}.evidence-note{font-size:.9em;color:var(--mb-muted)}svg text{font-family:inherit;fill:var(--mb-ink)}svg rect,svg path{stroke:var(--mb-ink)}svg rect{fill:var(--mb-surface)}@media(max-width:480px){th,td{padding:8px 6px}.mb-figure-frame{padding:12px}}</style>
+</head><body><main class="mb-page">
+<header class="mb-header"><div><a href="../../">共有資料一覧</a><h1>Apexミニマップ位置推定を速く、軽く、正確にするには</h1><p class="mb-meta-line">2026-10-20 · 公開実装の調査と比較実験</p></div></header>
+<p class="mb-lede">初回に全体マップを探し、捕捉後は前回位置の近くを照合し、疑わしいときだけ全体探索へ戻る構成が有望です。処理を軽くする効果は制御実験で確認できました。<strong>実動画で位置精度95%を達成した段階ではありません。</strong></p>
+<nav class="mb-toc" aria-label="目次"><ol><li><a href="#scope">調査・検証の範囲</a></li><li><a href="#software">既存ソフトから取り入れる考え方</a></li><li><a href="#initial">初回探索の実測</a></li><li><a href="#local">捕捉後の照合を小さくする実測</a></li><li><a href="#tracking">追跡成功と位置精度の違い</a></li><li><a href="#design">推奨構成と色の扱い</a></li><li><a href="#validation">実動画95%へ進むための評価</a></li><li><a href="#sources">出典・検証データ</a></li></ol></nav>
+<div class="mb-wrap"><article class="mb-main">
+<section id="scope"><h2>調査・検証の範囲</h2>
+<p>対象は動画に映るミニマップから位置を読む方法です。「絶対位置」は指定したマップ画像上の座標、「相対追跡」は前の画像からどれだけ動いたかの推定です。相対追跡だけでは、失った移動や積算誤差を修正できません。</p>
+<p>初回探索4方式、小領域照合4方式、フレーム間追跡2方式を試作比較しました。大半は公開マップ画像から正解位置が分かる画像を生成した実験です。同じ画像由来なので、ゲームの描画差やシーズン変更まで再現していません。</p>
+<p>実動画の異なる素材から先頭画像2枚も照合しましたが、既存18地図のどれも採用条件を満たしませんでした。正解座標がなく精度は計算していません。高速化だけで実動画の位置推定が解決したとは言えません。</p>
+<p class="evidence-note">環境：macOS・arm64、OpenCV 5.0.0、OpenCV計算スレッド1。時間は1回の逐次実行の分布で、動画の取得・デコードを除きます。初期化は別記。アプリ全体のCPU使用率・ピークRAM・GPU性能は未測定です。</p></section>
+<section id="software"><h2>既存ソフトから取り入れる考え方</h2>
+<h3>OverTrack：地図名・方位・縮尺で探索条件を減らす</h3>
+<p><a href="https://github.com/overtrack-gg/overtrack-cv/blob/master/overtrack_cv/games/apex/processors/map_loading/map_loading_processor.py">ロード画面の処理</a>は地図名の領域を二値化し、文字画像テンプレートで地図を認識します。<a href="https://github.com/overtrack-gg/overtrack-cv/blob/ed12c12c122461342f19ede5e36183bc5c8f81e8/overtrack_cv/games/apex/processors/minimap/minimap_processor.py">位置推定の処理</a>は輝度調整後の画像照合で、回転時にはコンパス数字の読取、縮尺には試合時刻を使います。位置照合は全体マップを探索しており、前回位置の近傍だけを探す実装ではありません。</p>
+<p>取り入れたいのは、未知の地図・角度・倍率を毎回すべて試さず、画面から読める情報で条件を絞る考え方です。ロード画面がない途中クリップでは別の初回探索が必要です。参照した位置推定ファイルの最終変更は2021年で、ズーム条件が現在も同じかは未確認です。リング分離モデルも含まれますが、位置照合に渡る画像は輝度画像でした。</p>
+<h3>StarRailCopilot：前回位置付近を探す</h3>
+<p>Apex以外ですが、<a href="https://github.com/LmeSzinc/StarRailCopilot/blob/master/tasks/map/minimap/minimap.py">前回位置を中心とする探索範囲、事前計算した地図の輪郭、少数倍率のテンプレート照合</a>が参考になります。テンプレート照合は、小さな画像が大きな画像のどこに最も似ているかを調べる方法です。「NCC」は明るさやコントラストを正規化して類似度を比較する計算です。</p>
+<p>作者の<a href="https://github.com/LmeSzinc/StarRailCopilot/wiki/MinimapTracking">解説</a>にはミリ秒単位の結果がありますが、別ゲーム・別条件です。以下の独自実験の値と混同していません。</p>
+<h3>MapbotとLiveAPI：入力情報の違いに注意する</h3>
+<p><a href="https://www.reddit.com/r/apexlegends/comments/17sv6px/i_made_an_app_to_capture_your_apex_games/">Mapbot作者の公開説明</a>は画面CVによる製品例です。再現可能な位置推定コードは見つからず、2023年の説明には回転設定や地図更新の制約がありました。今回導入して性能検証したわけではありません。</p>
+<p><a href="https://github.com/ndekopon/overlaytools">LiveAPIを使うoverlaytools</a>はゲームのイベントデータを受信します。画面からの推測とは入力が異なります。利用可能なカスタム試合で正解座標を記録する候補にはなりますが、過去のMP4に存在しないデータを読み出す方法ではありません。</p>
+<p class="evidence-note">各repoの記載はOverTrackがAGPL、StarRailCopilotがGPL-3.0、overlaytoolsがMITです。今回は第三者コードを取り込まず、OpenCVで独立した比較用処理を記述しました。</p></section>
+<section id="initial"><h2>初回探索の実測</h2>
+<p>従来処理はミニマップを各地図・最大13倍率で照合し、同じミニマップの特徴量も地図ごとに計算し直していました。倍率ごとの特徴量と、地図側の検索索引を再利用する方法を比較しました。「SIFT」は回転や大きさの違いに比較的強い画像特徴、「ORB」は短い二値特徴を使う方式です。</p>
+<table><caption>地図2枚を探す時間：中央値 / 95パーセンタイル</caption><thead><tr><th>方式</th><th>時間 ms</th><th>正解 / 正例</th></tr></thead><tbody><tr><td class="mb-rowlabel">従来SIFT</td><td>734 / 922</td><td>20 / 20</td></tr><tr><td class="mb-rowlabel">再利用SIFT</td><td>323 / 416</td><td>20 / 20</td></tr><tr><td class="mb-rowlabel">再利用ORB</td><td>435 / 482</td><td>20 / 20</td></tr><tr><td class="mb-rowlabel">3倍率SIFT</td><td>61 / 81</td><td>20 / 20</td></tr></tbody></table>
+<p>正例はE-DistrictとOlympusの各2地点を、通常・回転・JPEG圧縮・部分的オレンジ表示・固定HUDの5条件にした計20例です。正しい地図かつ中心誤差25px以内を正解としました。無地と乱数の負例2枚は全方式が拒否しましたが、これだけで実用上の誤捕捉率の低さは証明できません。</p>
+<p>再利用SIFTは中央値で約2.27倍速く、採用可否と成否は全22例で一致しました。ただし近似検索の結果は完全には同一でなく、一致点数が変わり、中心位置も最大0.1px変わりました。</p>
+<p>3倍率の約12倍高速という結果は、今回の切り出し範囲360マップpxを220画像pxへ縮小する条件に有利です。異なるズーム・解像度は未検証です。縮尺を別に推定してから倍率を狭める候補として扱います。</p>
+<p>地図2枚の特徴量配列はSIFT約3.07MB、ORB約0.192MBでした。ORBはこの部分だけなら1/16ですが、全探索型の照合では再利用SIFTより遅くなりました。画像・検索索引・一時領域を含む総RAMはこの数値より大きくなります。</p>
+<p>2地図の初期化は再利用SIFTで約0.91秒。別途行った実動画の照合では、18地図の初期化約8.49秒、画像1枚の照合約607msと585msでした。両方不採用で、永続キャッシュと、実画面に合う参照地図の確認が必要です。</p></section>
+<section id="local"><h2>捕捉後の照合を小さくする実測</h2>
+<p>最初の位置が分かれば、次の瞬間の移動範囲は通常限られます。前回位置の周囲32pxに絞ると、129pxテンプレートの照合候補は全体探索の約369万点から4,225点へ減ります。類似度配列だけなら約14.75MBから約16.9KBへ小さくなります。</p>
+<figure class="mb-figure"><div class="mb-figure-frame"><svg class="diagram" viewBox="0 0 320 385" role="img" aria-labelledby="roi-title roi-desc"><title id="roi-title">前回位置から探索範囲を絞る</title><desc id="roi-desc">全体を探す場合と、前回位置を中心とした小領域だけを探す場合を比較する模式図。瞬間移動やカットでは全体探索へ戻す。</desc><rect x="40" y="15" width="240" height="160" rx="5"/><text x="65" y="45" font-size="18">全体マップを探索</text><path d="M55 75H265M55 100H265M55 125H265M80 65V160M120 65V160M160 65V160M200 65V160M240 65V160" fill="none"/><rect x="130" y="105" width="35" height="35"/><text x="56" y="207" font-size="16">前回位置で範囲を絞る</text><path d="M160 218V246l-5-8m5 8l5-8" fill="none" stroke-width="2"/><rect x="40" y="260" width="240" height="110" rx="5"/><text x="68" y="288" font-size="18">局所範囲を探索</text><circle cx="160" cy="315" r="5"/><text x="67" y="350" font-size="16">前回位置の周囲32px</text></svg></div><figcaption>図1：地図・方位・縮尺が既知の場合の模式図。局所探索には前回位置の予測が正しい範囲にあるという条件が必要です。</figcaption></figure>
+<table><caption>同じ地図・方位・縮尺条件：中央値 / 95パーセンタイル</caption><thead><tr><th>方式</th><th>時間 ms</th><th>正解 / 正例</th></tr></thead><tbody><tr><td class="mb-rowlabel">全域・濃淡</td><td>65.18 / 67.22</td><td>28 / 32</td></tr><tr><td class="mb-rowlabel">局所・濃淡</td><td>0.54 / 0.58</td><td>24 / 32</td></tr><tr><td class="mb-rowlabel">局所・勾配</td><td>0.51 / 0.54</td><td>25 / 32</td></tr><tr><td class="mb-rowlabel">局所・マスク</td><td>1.50 / 1.54</td><td>28 / 32</td></tr></tbody></table>
+<p>初回探索の表とは前提が違います。<strong>正しい地図と基本の方位・縮尺を入力し、通常は位置予測を真値から横8px・縦7pxずらして与えています。</strong>4地点を、通常・圧縮・全体の人工的オレンジ着色・固定HUD・ノイズ・方位誤差2度・縮尺誤差4%・探索範囲外への移動の8条件にした32例です。前処理と角度補正は時間に含み、地図の事前処理と動画デコードは除きます。</p>
+<p>局所マスク方式には、人工HUDの固定位置を除外するマスクを入力しました。遮蔽物を自動認識した実験ではありません。探索範囲外の4例を除く28例はすべて25px以内で捕捉し、採用結果の誤差95パーセンタイルは約1.8pxでした。残る4例はすべて不採用で、全体再探索が必要です。</p>
+<p>マスクなしの全体照合は、HUDが重なる1例で約707px離れた場所を採用しました。高い類似度と次候補との差だけで安全とは言えません。局所照合は今回この誤捕捉を拒否しましたが、近傍に似た地形があれば別の誤りも起こり得ます。</p></section>
+<section id="tracking"><h2>追跡成功と位置精度の違い</h2>
+<p>フレーム間の特徴を毎回作り直す代わりに、前の画像の点を次の画像へ追うLucas–Kanade法も比較しました。追った点を元画像へ戻し、往復でずれる点を除外します。残った点から移動と回転を推定する、この確認をforward–backwardチェックと呼びます。</p>
+<p>参照マップ由来の20対ずつを、通常、人工着色、固定HUD、1ステップ12度旋回の4系列で比べました。移動誤差0.75px未満かつ角度誤差0.5度未満なら正解です。連続80対を独立した実動画80例とは見なしません。</p>
+<table><caption>条件別の正解フレーム対</caption><thead><tr><th>条件</th><th>現行方式</th><th>往復確認LK</th></tr></thead><tbody><tr><td class="mb-rowlabel">通常</td><td>20 / 20</td><td>20 / 20</td></tr><tr><td class="mb-rowlabel">人工着色</td><td>15 / 20</td><td>20 / 20</td></tr><tr><td class="mb-rowlabel">固定HUD</td><td>0 / 20</td><td>20 / 20</td></tr><tr><td class="mb-rowlabel">旋回12度</td><td>20 / 20</td><td>20 / 20</td></tr></tbody></table>
+<p>固定HUD系列では現行方式も全20対に成功を返しましたが、終点は約34.4pxずれました。往復確認LKは約1.07pxでした。成功率100%でも、位置の正しさは保証されません。</p>
+<p>通常時の中央値は現行約3.28ms、往復確認LK約1.68ms。ただし旋回系列の終点誤差は現行約0.47pxに対しLK約1.34pxでした。全条件でLKの方が高精度とは言えません。急旋回や点の少ない場合の別方式への切替、絶対位置への再照合を残します。</p></section>
+<section id="design"><h2>推奨構成と色の扱い</h2>
+<ol><li><strong>地図と版を先に絞る。</strong>ロード画面の地図名、既知の録画条件、版の一致した参照画像を使います。途中クリップは特徴を再利用するSIFTなどで候補を残し、複数時刻で整合を確認します。</li><li><strong>初回の位置・方位・縮尺を確定する。</strong>地形の離れた領域が一致するか確認し、変換に使わなかった特徴でも検査します。地図名の特定だけで位置を確定しません。</li><li><strong>通常は軽い追跡と局所地図照合を使う。</strong>LKで予測し、濃淡または勾配の局所照合で全体マップの座標へ戻します。照合頻度は実動画で誤差と費用を測って決めます。</li><li><strong>見失ったら範囲を広げる。</strong>低い類似度、複数候補の接近、特徴点の偏り、不自然な移動、HUD遮蔽、編集カットを検査します。再捕捉できない間は位置不明とします。</li></ol>
+<p>この全体構成を結合した実動画での評価はまだ行っていません。独立に試した構成要素の結果からの提案です。</p>
+<p>オレンジ色について、現行処理は外枠の形を認識せず、切り出し内のその色を一律に数えたり薄めたりしています。外枠だけなら形で除外し、中央の自分の矢印や固定HUDも位置に応じて避ける方が地形を残せます。着色地形まで消すと元の輪郭も失う可能性があります。</p>
+<p>色は邪魔なアイコンを分ける補助に使えますが、リング着色、色覚設定、圧縮、参照地図との描画差で変わります。今回は濃淡と勾配を測りました。色ヒストグラムによる候補絞り込みや学習型特徴は未検証です。モデルを増やす前に軽い方式との差を測る必要があります。</p></section>
+<section id="validation"><h2>実動画95%へ進むための評価</h2>
+<p>合成20/20や28/28を、実動画95%の証拠にはしません。同じ4地点を変形した小さい標本です。採用結果の正解率を上げても、難しい場面をすべて不明にするだけでは使い勝手は上がりません。</p>
+<p>次は地図の版が確認できる複数試合から、位置を独立に確認できる時刻を選びます。調整に使う試合と評価用を分け、隣接フレームを独立標本として数えすぎません。手動で正しく決められない箇所は真値にせず、利用可能なら座標を記録できる環境でマップ画像との対応も校正します。</p>
+<table><thead><tr><th>指標</th><th>定義</th><th>確認点</th></tr></thead><tbody><tr><td class="mb-rowlabel">位置正解率</td><td>誤差閾値内 / 全時刻</td><td>不明も分母に含める</td></tr><tr><td class="mb-rowlabel">採用内精度</td><td>誤差閾値内 / 採用時刻</td><td>誤った確信を抑える</td></tr><tr><td class="mb-rowlabel">位置誤差</td><td>中央値・95%点・最大</td><td>校正前は画像px</td></tr><tr><td class="mb-rowlabel">再捕捉</td><td>喪失から復帰までの秒数</td><td>カット・遮蔽・飛び</td></tr><tr><td class="mb-rowlabel">負荷</td><td>初期化・p50/p95・RAM</td><td>動画読取も測る</td></tr></tbody></table>
+<p>保存済み8動画の旧結果を再集計すると、正しい地図を選び全点が地図内座標を持つ条件を満たすのは4/8でした。これも真の位置誤差を測る指標ではありません。従来の元動画パスが現在存在しないため、8本を今回の高速版で再解析した結果にはしていません。既存の回転・追跡テスト19件は合格しました。</p>
+<p><strong>採用しやすい順は特徴量・索引の再利用、参照地図の版の確認、初回探索と局所追従の分離です。</strong>3倍率への固定やLK全面置換は、実動画の検証後に判断します。</p></section>
+<section id="sources"><h2>出典・検証データ</h2><ul>
+<li><a href="https://github.com/overtrack-gg/overtrack-cv/blob/ed12c12c122461342f19ede5e36183bc5c8f81e8/overtrack_cv/games/apex/processors/minimap/minimap_processor.py">OverTrack位置推定</a> / <a href="https://github.com/overtrack-gg/overtrack-cv/blob/master/overtrack_cv/games/apex/processors/map_loading/map_loading_processor.py">地図名認識</a> / <a href="https://github.com/overtrack-gg/overtrack-cv/blob/master/LICENSE">ライセンス</a></li>
+<li><a href="https://github.com/LmeSzinc/StarRailCopilot/blob/master/tasks/map/minimap/minimap.py">StarRailCopilot実装</a> / <a href="https://github.com/LmeSzinc/StarRailCopilot/wiki/MinimapTracking">作者解説</a> / <a href="https://github.com/LmeSzinc/StarRailCopilot/blob/master/LICENSE">ライセンス</a></li>
+<li><a href="https://www.reddit.com/r/apexlegends/comments/17sv6px/i_made_an_app_to_capture_your_apex_games/">Mapbot作者の説明</a>（旧公式ドメインは現在別用途のため参照しません）</li>
+<li><a href="https://github.com/ndekopon/overlaytools">overlaytoolsのLiveAPI利用例</a></li>
+<li><a href="https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html">OpenCVのLucas–Kanade解説</a></li>
+<li><a href="benchmark-summary.json">公開可能な集計値JSON</a> / <a href="../../slides/apex-minimap-methods-20261020-summary/">共通テンプレートの短い要約</a></li></ul>
+<p class="evidence-note">公開内容は出典、実験の集計、模式図に限定しています。元動画・実プレイヤー画像・参照マップ画像・非公開コードは含めていません。</p></section>
+</article><aside class="mb-glossary"><h2>用語</h2><dl><dt>絶対位置</dt><dd>全体マップ画像上の座標。</dd><dt>相対追跡</dt><dd>前の画像に対する移動と回転。</dd><dt>アンカー</dt><dd>画像の時刻と全体マップの位置を対応させる基準。</dd><dt>キャッシュ</dt><dd>計算済みの特徴や検索索引の再利用。</dd><dt>RANSAC</dt><dd>誤った対応点の影響を減らす変換推定。</dd><dt>マスク</dt><dd>照合に使わない画素の指定。</dd><dt>p50 / p95</dt><dd>値を並べたときの50%点と95%点。</dd><dt>25px</dt><dd>比較用の誤差閾値。25メートルではない。</dd></dl></aside></div>
+<footer class="mb-footer">2026-10-20 · share-hub · 実動画95%は未実証。</footer>
+</main></body></html>
