@@ -1,0 +1,80 @@
+{
+  "schema_version": "fight_replay.interior_review_video.v2",
+  "model_sha256": "7af32bd09e84724aa153d14ed44ad5dfc2d8655f9be99c60b7df5721d0cd0e01",
+  "decoded_frames": 168,
+  "expected_frames": 168,
+  "fps": 12.0,
+  "duration_sec": 14.0,
+  "size": [
+    1280,
+    720
+  ],
+  "all_frames_decoded": true,
+  "elapsed_sec": 2.51060625,
+  "source_images_included": false,
+  "main_components_total": 82,
+  "main_components_rendered": 69,
+  "shop_components_total": 11,
+  "shop_components_rendered": 11,
+  "hidden_roles": [
+    "glass",
+    "roof"
+  ],
+  "hidden_id_prefixes": [
+    "roof_beam_"
+  ],
+  "hidden_component_ids": [
+    "east_wall_north",
+    "east_wall_south",
+    "entry_lintel",
+    "north_hall_wall",
+    "shop_side_wall",
+    "south_hall_wall"
+  ],
+  "camera_source": "illustrative_world_coordinate_views_not_recovered_from_video",
+  "view_intervals_sec": {
+    "overhead": [
+      0,
+      3
+    ],
+    "provisional_east_entry": [
+      3,
+      5.5
+    ],
+    "near_hall_floor": [
+      5.5,
+      8
+    ],
+    "two_connected_transitions": [
+      8,
+      11
+    ],
+    "connected_shop": [
+      11,
+      14
+    ]
+  },
+  "shop_placement": "connected_in_shared_world_coordinates; S17_connection_observed, placement_and_dimensions_proxy",
+  "geometry": "all connected model components in shared world coordinates; cameras transformed from illustrative local viewpoints; no original imagery",
+  "height_calibrated": false,
+  "room_placement_measured": false,
+  "visibility_accuracy_evaluated": false,
+  "rendering": "backface culled painter rendering, intentionally cut away; not a visibility evaluation",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "12/1",
+        "nb_frames": "168"
+      }
+    ],
+    "format": {
+      "duration": "14.000000"
+    }
+  }
+}

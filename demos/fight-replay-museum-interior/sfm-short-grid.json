@@ -1,0 +1,312 @@
+{
+  "schema_version": "fight_replay.sfm_predeclared_short_grid.v1",
+  "fixed_result_sha256": "fc811b6bfe64a61c9beba4a5a8d2698db7ed77eb9a84b5ea3e111b1b40570b40",
+  "grid_interval_sec": 0.05,
+  "grid_start_sec": 432.8,
+  "grid_end_sec": 433.2,
+  "all_grid_frames_retained": true,
+  "focal_hypothesis_px": 340.9,
+  "mask_scenario": "broad",
+  "unit": "arbitrary_relative_baseline_one",
+  "metric_accuracy": null,
+  "world_registration": null,
+  "rows": [
+    {
+      "frame_id": 25968,
+      "file_timestamp": 432.8,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": true,
+      "fit_count": 64,
+      "holdout_count": 32,
+      "surviving_points": 96,
+      "position": [
+        0.003795420569616828,
+        0.0044213627412097055,
+        0.0009827571518558587
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 0.31259862953019085,
+      "holdout_bbox_fraction": 0.24107812161188652,
+      "fit_inliers": 64,
+      "world_to_camera_R": [
+        [
+          0.9999999152234983,
+          -0.0003069138655013139,
+          0.0002745120680465596
+        ],
+        [
+          0.00030677295067051477,
+          0.9999998212461099,
+          0.0005132232506153163
+        ],
+        [
+          -0.00027466953430816364,
+          -0.0005131389942289391,
+          0.9999998306224954
+        ]
+      ],
+      "world_to_camera_t": [
+        -0.0037943330490228045,
+        -0.004423030657061134,
+        -0.0009794457253683988
+      ],
+      "failure_reason": null
+    },
+    {
+      "frame_id": 25971,
+      "file_timestamp": 432.85,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": false,
+      "fit_count": 60,
+      "holdout_count": 30,
+      "surviving_points": 90,
+      "position": [
+        -0.021014866973103296,
+        -0.002066631941475535,
+        0.258021671645291
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 0.6867128887694455,
+      "holdout_bbox_fraction": 0.1696647001605106,
+      "fit_inliers": 60,
+      "world_to_camera_R": [
+        [
+          0.9999801963962596,
+          -0.0014559971157289573,
+          -0.006122653648302575
+        ],
+        [
+          0.0014772969043151947,
+          0.9999928682939325,
+          0.0034757668405893663
+        ],
+        [
+          0.006117549276841555,
+          -0.0034847429851610004,
+          0.9999752157714574
+        ]
+      ],
+      "world_to_camera_t": [
+        0.022591219122099212,
+        0.0012008392303297975,
+        -0.25789391897411873
+      ],
+      "failure_reason": null
+    },
+    {
+      "frame_id": 25974,
+      "file_timestamp": 432.9,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": false,
+      "fit_count": 59,
+      "holdout_count": 28,
+      "surviving_points": 87,
+      "position": [
+        -0.021138628469590214,
+        0.025116185238834125,
+        0.4885815525393752
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 0.9488886161657547,
+      "holdout_bbox_fraction": 0.16843638864578528,
+      "fit_inliers": 58,
+      "world_to_camera_R": [
+        [
+          0.9999722944389307,
+          -0.0011815579552873403,
+          -0.007349440477944551
+        ],
+        [
+          0.001236000065619748,
+          0.9999718000187191,
+          0.007407528006066759
+        ],
+        [
+          0.00734048080021606,
+          -0.007416406685260228,
+          0.9999455556446563
+        ]
+      ],
+      "world_to_camera_t": [
+        0.02475852007951352,
+        -0.02870853115038802,
+        -0.48821351249117695
+      ],
+      "failure_reason": null
+    },
+    {
+      "frame_id": 25977,
+      "file_timestamp": 432.95,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": false,
+      "fit_count": 59,
+      "holdout_count": 28,
+      "surviving_points": 87,
+      "position": [
+        -0.030401417748253945,
+        0.0028364881572839427,
+        0.7350906097318797
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 1.8891665735540693,
+      "holdout_bbox_fraction": 0.1794489069036596,
+      "fit_inliers": 57,
+      "world_to_camera_R": [
+        [
+          0.9999900595888758,
+          -0.0015461294276548755,
+          -0.004182129508942704
+        ],
+        [
+          0.0015895976826018328,
+          0.9999445454624851,
+          0.010410532120478065
+        ],
+        [
+          0.004165801560815951,
+          -0.010417076538884518,
+          0.999937063326357
+        ]
+      ],
+      "world_to_camera_t": [
+        0.03347974525418033,
+        -0.010440689242020115,
+        -0.7348881513863342
+      ],
+      "failure_reason": null
+    },
+    {
+      "frame_id": 25980,
+      "file_timestamp": 433.0,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": true,
+      "fit_count": 59,
+      "holdout_count": 28,
+      "surviving_points": 87,
+      "position": [
+        -0.016896044089430545,
+        0.0012303557457657057,
+        0.9949194567501477
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 2.7576908702270084,
+      "holdout_bbox_fraction": 0.2002145061167625,
+      "fit_inliers": 52,
+      "world_to_camera_R": [
+        [
+          0.9992044053238366,
+          -0.0005245654513359435,
+          -0.03987833011204598
+        ],
+        [
+          0.0014294244170009165,
+          0.999742085666013,
+          0.022665367722727783
+        ],
+        [
+          0.03985615545024545,
+          -0.022704338335605676,
+          0.9989474460117851
+        ]
+      ],
+      "world_to_camera_t": [
+        0.056558973620001694,
+        -0.02375610214314947,
+        -0.9931709045351451
+      ],
+      "failure_reason": null
+    },
+    {
+      "frame_id": 25983,
+      "file_timestamp": 433.05,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": false,
+      "fit_count": 54,
+      "holdout_count": 25,
+      "surviving_points": 79,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 4.257247813151186,
+      "holdout_bbox_fraction": 0.18961823523719154,
+      "fit_inliers": 44,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "frame_id": 25986,
+      "file_timestamp": 433.1,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": false,
+      "fit_count": 50,
+      "holdout_count": 20,
+      "surviving_points": 70,
+      "position": [
+        0.0479264895863671,
+        0.10193511272192561,
+        1.5202857313897171
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 2.0083794755088435,
+      "holdout_bbox_fraction": 0.12839808321148968,
+      "fit_inliers": 45,
+      "world_to_camera_R": [
+        [
+          0.9970112107408499,
+          0.007665144652095093,
+          0.07687581683811276
+        ],
+        [
+          -0.01204615378274668,
+          0.9983193032986113,
+          0.05668737814026835
+        ],
+        [
+          -0.07631209495294322,
+          -0.05744400942515951,
+          0.9954278727989564
+        ]
+      ],
+      "world_to_camera_t": [
+        -0.16543780222111598,
+        -0.1873674729869369,
+        -1.5038218592438424
+      ],
+      "failure_reason": null
+    },
+    {
+      "frame_id": 25989,
+      "file_timestamp": 433.15,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": false,
+      "fit_count": 48,
+      "holdout_count": 20,
+      "surviving_points": 68,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 5.081867512870544,
+      "holdout_bbox_fraction": 0.1428436031783551,
+      "fit_inliers": 36,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "frame_id": 25992,
+      "file_timestamp": 433.2,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_construction_frame": false,
+      "fit_count": 39,
+      "holdout_count": 15,
+      "surviving_points": 54,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 3.215492220857869,
+      "holdout_bbox_fraction": 0.10482147059671762,
+      "fit_inliers": 26,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    }
+  ],
+  "independent_frames": 7,
+  "accepted_independent_frames": 4,
+  "limitations": [
+    "Short grid was declared before observing its intermediate outcomes. Original longer-interval failures remain separately recorded.",
+    "Acceptance is 2D support for a relative sparse model, not 3D truth or doorway/world registration."
+  ]
+}

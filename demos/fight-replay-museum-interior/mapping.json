@@ -1,0 +1,1414 @@
+{
+  "schema_version": "fight_replay.interior_mapping.v1",
+  "model_sha256": "7af32bd09e84724aa153d14ed44ad5dfc2d8655f9be99c60b7df5721d0cd0e01",
+  "source_video_sha256": "2fdbfc15017ca7843dc409d33da1b55a5e90521199f5d4957dfde40eb963e655",
+  "source_fps": 60.0080274516233,
+  "image_size": [
+    1280,
+    720
+  ],
+  "frame_id_convention": "zero_based_ffprobe_decoded_frame_index_supplied_by_annotation",
+  "reference_decoded_pts_msec": 434000.0,
+  "frame_pts_sec": {
+    "26028": 433.8,
+    "26031": 433.85,
+    "26034": 433.9,
+    "26037": 433.95,
+    "26040": 434.0,
+    "26043": 434.05,
+    "26046": 434.1,
+    "26049": 434.15,
+    "26052": 434.2,
+    "26055": 434.25,
+    "26058": 434.3,
+    "26061": 434.35,
+    "26064": 434.4,
+    "26067": 434.45,
+    "26070": 434.5
+  },
+  "reference_frame_id": 26040,
+  "landmark_ids": [
+    "left_stair_front_outer",
+    "left_stair_front_inner",
+    "left_stair_back_outer",
+    "left_stair_back_inner",
+    "right_stair_front_inner",
+    "right_stair_front_outer",
+    "right_stair_back_inner",
+    "right_stair_back_outer",
+    "portal_top_left_virtual",
+    "portal_top_right_virtual"
+  ],
+  "world_points": [
+    [
+      88.72589466851358,
+      203.11473641683367,
+      -17.16060865352082
+    ],
+    [
+      88.65900522583496,
+      215.32069721961489,
+      -17.16060865352082
+    ],
+    [
+      77.59404226803774,
+      203.05373315661683,
+      -11.440405774734081
+    ],
+    [
+      77.52715282535912,
+      215.25969395939805,
+      -11.440405774734081
+    ],
+    [
+      88.61515334679326,
+      223.32277191596086,
+      -17.16060865352082
+    ],
+    [
+      88.54826390411463,
+      235.52873271874205,
+      -17.16060865352082
+    ],
+    [
+      77.48330094631743,
+      223.26176865574402,
+      -11.440405774734081
+    ],
+    [
+      77.4164115036388,
+      235.46772945852524,
+      -11.440405774734081
+    ],
+    [
+      77.49870698479681,
+      203.05321071319216,
+      1.3242375977590477
+    ],
+    [
+      77.32107622039787,
+      235.46720701510054,
+      1.3242375977590477
+    ]
+  ],
+  "intrinsics": {
+    "K": [
+      [
+        340.90853978349185,
+        0,
+        640
+      ],
+      [
+        0,
+        340.90853978349185,
+        360
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "source": "joint_geometry_training_frames_25968_26010_fixed_rise_hypothesis",
+    "measured": false
+  },
+  "K": [
+    [
+      340.90853978349185,
+      0.0,
+      640.0
+    ],
+    [
+      0.0,
+      340.90853978349185,
+      360.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "tracking_mode": "sequential_LK",
+  "rows": [
+    {
+      "frame_id": 26028,
+      "file_timestamp": 433.8,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 433800.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          541.4388427734375,
+          459.43487548828125
+        ],
+        [
+          702.7213745117188,
+          462.2468566894531
+        ],
+        [
+          569.4559936523438,
+          374.2952575683594
+        ],
+        [
+          688.3068237304688,
+          372.5644226074219
+        ],
+        [
+          815.6383666992188,
+          467.0620422363281
+        ],
+        [
+          989.4319458007812,
+          466.0928955078125
+        ],
+        [
+          762.8628540039062,
+          377.87841796875
+        ],
+        [
+          884.4131469726562,
+          377.9666748046875
+        ],
+        [
+          573.1671142578125,
+          264.6127624511719
+        ],
+        [
+          870.53515625,
+          255.80992126464844
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 4.645354116513646
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26031,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26031,
+      "file_timestamp": 433.85,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 433850.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          491.021484375,
+          464.1219177246094
+        ],
+        [
+          664.2991943359375,
+          464.51226806640625
+        ],
+        [
+          525.151123046875,
+          373.135986328125
+        ],
+        [
+          650.3013305664062,
+          373.2427062988281
+        ],
+        [
+          775.5350952148438,
+          467.79705810546875
+        ],
+        [
+          931.6835327148438,
+          463.8096923828125
+        ],
+        [
+          722.3524169921875,
+          378.7018737792969
+        ],
+        [
+          835.99755859375,
+          380.3537902832031
+        ],
+        [
+          530.5955810546875,
+          256.7262268066406
+        ],
+        [
+          825.4904174804688,
+          262.762451171875
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 4.684434971960509
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26034,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26034,
+      "file_timestamp": 433.9,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 433900.00000000006,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          483.7402038574219,
+          466.4818420410156
+        ],
+        [
+          662.9354248046875,
+          466.5409240722656
+        ],
+        [
+          520.3106079101562,
+          372.79107666015625
+        ],
+        [
+          648.3775024414062,
+          373.5118713378906
+        ],
+        [
+          778.41064453125,
+          469.60394287109375
+        ],
+        [
+          936.0250244140625,
+          464.67340087890625
+        ],
+        [
+          720.9639282226562,
+          378.0199279785156
+        ],
+        [
+          835.7057495117188,
+          379.70263671875
+        ],
+        [
+          525.4717407226562,
+          253.47413635253906
+        ],
+        [
+          826.4148559570312,
+          260.3198547363281
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 4.587868686903269
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26037,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26037,
+      "file_timestamp": 433.95,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 433950.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          470.566650390625,
+          466.4315185546875
+        ],
+        [
+          659.0175170898438,
+          465.26629638671875
+        ],
+        [
+          510.8404235839844,
+          368.3905029296875
+        ],
+        [
+          643.5250244140625,
+          369.6231689453125
+        ],
+        [
+          779.67529296875,
+          468.3575439453125
+        ],
+        [
+          940.720703125,
+          462.5380554199219
+        ],
+        [
+          717.156982421875,
+          373.6231384277344
+        ],
+        [
+          833.5239868164062,
+          375.56573486328125
+        ],
+        [
+          515.49609375,
+          244.43849182128906
+        ],
+        [
+          826.3607177734375,
+          253.6836395263672
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 4.82711856846797
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26040,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26040,
+      "file_timestamp": 434.0,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434000.0,
+      "is_construction_reference": true,
+      "independent_evaluation_eligible": false,
+      "observed_pixels": [
+        [
+          456.0,
+          467.0
+        ],
+        [
+          654.0,
+          465.0
+        ],
+        [
+          500.0,
+          365.0
+        ],
+        [
+          638.0,
+          367.0
+        ],
+        [
+          779.0,
+          467.0
+        ],
+        [
+          940.0,
+          460.0
+        ],
+        [
+          712.0,
+          370.0
+        ],
+        [
+          829.0,
+          372.0
+        ],
+        [
+          504.0,
+          236.0
+        ],
+        [
+          824.0,
+          248.0
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 4.911995572048071
+      },
+      "observation_source": "manual_annotation",
+      "tracking_parent_frame_id": null,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26043,
+      "file_timestamp": 434.05,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434050.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          464.61944580078125,
+          465.3894958496094
+        ],
+        [
+          666.4365234375,
+          464.16412353515625
+        ],
+        [
+          509.53863525390625,
+          362.1492004394531
+        ],
+        [
+          649.510986328125,
+          363.35003662109375
+        ],
+        [
+          798.7161254882812,
+          466.7828674316406
+        ],
+        [
+          970.51318359375,
+          459.7540588378906
+        ],
+        [
+          724.728515625,
+          365.32379150390625
+        ],
+        [
+          846.7239379882812,
+          367.4430236816406
+        ],
+        [
+          512.591552734375,
+          230.7373809814453
+        ],
+        [
+          842.904541015625,
+          238.47726440429688
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 4.987738114706457
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26040,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26046,
+      "file_timestamp": 434.1,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434100.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          418.9488830566406,
+          473.4335021972656
+        ],
+        [
+          640.3568725585938,
+          469.1242370605469
+        ],
+        [
+          474.15264892578125,
+          361.7578125
+        ],
+        [
+          623.3834228515625,
+          364.86529541015625
+        ],
+        [
+          775.0949096679688,
+          469.6292419433594
+        ],
+        [
+          935.5425415039062,
+          459.63818359375
+        ],
+        [
+          698.4979858398438,
+          366.2964782714844
+        ],
+        [
+          816.3833618164062,
+          369.8691711425781
+        ],
+        [
+          477.8943786621094,
+          222.64955139160156
+        ],
+        [
+          814.488037109375,
+          243.17062377929688
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 5.48875468288601
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26043,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26049,
+      "file_timestamp": 434.15,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434150.00000000006,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          417.1301574707031,
+          473.4095153808594
+        ],
+        [
+          646.814697265625,
+          468.5296936035156
+        ],
+        [
+          476.3337707519531,
+          358.33172607421875
+        ],
+        [
+          628.9742431640625,
+          361.8345642089844
+        ],
+        [
+          789.5983276367188,
+          469.54644775390625
+        ],
+        [
+          957.5794067382812,
+          458.42340087890625
+        ],
+        [
+          705.3552856445312,
+          361.65478515625
+        ],
+        [
+          826.9940795898438,
+          365.23712158203125
+        ],
+        [
+          478.3516845703125,
+          215.93930053710938
+        ],
+        [
+          826.269775390625,
+          234.25802612304688
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 5.87255901645184
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26046,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26052,
+      "file_timestamp": 434.2,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434200.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          372.7624206542969,
+          477.19171142578125
+        ],
+        [
+          626.8152465820312,
+          468.9825744628906
+        ],
+        [
+          445.4393005371094,
+          352.5066223144531
+        ],
+        [
+          609.4967651367188,
+          358.05267333984375
+        ],
+        [
+          774.736328125,
+          468.2173156738281
+        ],
+        [
+          935.3885498046875,
+          454.5265197753906
+        ],
+        [
+          686.2781372070312,
+          357.17919921875
+        ],
+        [
+          806.5636596679688,
+          362.0024108886719
+        ],
+        [
+          446.5030822753906,
+          197.67140197753906
+        ],
+        [
+          808.2950439453125,
+          230.65406799316406
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 6.177926634908933
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26049,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26055,
+      "file_timestamp": 434.25,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434250.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          285.54730224609375,
+          485.5564880371094
+        ],
+        [
+          584.5397338867188,
+          467.72894287109375
+        ],
+        [
+          383.03692626953125,
+          342.6500549316406
+        ],
+        [
+          568.5374755859375,
+          351.90032958984375
+        ],
+        [
+          735.0765380859375,
+          463.1177673339844
+        ],
+        [
+          879.4378662109375,
+          446.1144714355469
+        ],
+        [
+          647.2252197265625,
+          351.554931640625
+        ],
+        [
+          762.65185546875,
+          358.03082275390625
+        ],
+        [
+          381.8020324707031,
+          166.4954376220703
+        ],
+        [
+          767.4306640625,
+          229.27381896972656
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 6.706136760106079
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26052,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26058,
+      "file_timestamp": 434.3,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434300.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          234.55010986328125,
+          490.0953369140625
+        ],
+        [
+          569.6290893554688,
+          466.2835693359375
+        ],
+        [
+          353.8841247558594,
+          333.1126403808594
+        ],
+        [
+          554.791748046875,
+          344.46466064453125
+        ],
+        [
+          729.35205078125,
+          459.6991882324219
+        ],
+        [
+          873.7527465820312,
+          439.96826171875
+        ],
+        [
+          636.7924194335938,
+          343.02703857421875
+        ],
+        [
+          753.4114990234375,
+          350.4498291015625
+        ],
+        [
+          348.7845153808594,
+          139.89865112304688
+        ],
+        [
+          760.4982299804688,
+          218.66073608398438
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 7.27796531818153
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26055,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26061,
+      "file_timestamp": 434.35,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434350.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        [
+          194.5196990966797,
+          495.464111328125
+        ],
+        [
+          559.1800537109375,
+          467.1998291015625
+        ],
+        [
+          333.4626770019531,
+          327.3436584472656
+        ],
+        [
+          546.1054077148438,
+          340.3502502441406
+        ],
+        [
+          726.8485107421875,
+          459.50360107421875
+        ],
+        [
+          871.5552368164062,
+          437.9052429199219
+        ],
+        [
+          630.4556884765625,
+          338.4350280761719
+        ],
+        [
+          747.9518432617188,
+          346.98297119140625
+        ],
+        [
+          325.6803283691406,
+          121.48465728759766
+        ],
+        [
+          756.5911865234375,
+          213.1101837158203
+        ]
+      ],
+      "tracking_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fit_ids": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "reprojection_error",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit",
+        "reprojection_rmse_px": 7.839758177370476
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26058,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26064,
+      "file_timestamp": 434.4,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434400.00000000006,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        null,
+        [
+          501.23974609375,
+          469.1150207519531
+        ],
+        null,
+        [
+          491.3690490722656,
+          327.6846618652344
+        ],
+        [
+          684.9422607421875,
+          454.6134338378906
+        ],
+        [
+          820.1583251953125,
+          427.7297668457031
+        ],
+        [
+          585.3125610351562,
+          328.4085693359375
+        ],
+        [
+          702.7783813476562,
+          338.6543273925781
+        ],
+        null,
+        [
+          713.9522094726562,
+          203.8818359375
+        ]
+      ],
+      "tracking_valid": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "fit_ids": [
+        5,
+        7,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "insufficient_independent_landmarks",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit"
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26061,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26067,
+      "file_timestamp": 434.45,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434450.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        null,
+        [
+          485.6863708496094,
+          472.7494201660156
+        ],
+        null,
+        [
+          479.8721923828125,
+          323.54974365234375
+        ],
+        [
+          681.8241577148438,
+          456.28436279296875
+        ],
+        [
+          818.2869262695312,
+          426.0951843261719
+        ],
+        [
+          578.7744140625,
+          325.643310546875
+        ],
+        [
+          697.5215454101562,
+          335.4275817871094
+        ],
+        null,
+        [
+          709.5611572265625,
+          198.40615844726562
+        ]
+      ],
+      "tracking_valid": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "fit_ids": [
+        5,
+        7,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "insufficient_independent_landmarks",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit"
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26064,
+      "interpolated": false
+    },
+    {
+      "frame_id": 26070,
+      "file_timestamp": 434.5,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "decoded_pts_msec": 434500.0,
+      "is_construction_reference": false,
+      "independent_evaluation_eligible": true,
+      "observed_pixels": [
+        null,
+        [
+          483.4388122558594,
+          472.2014465332031
+        ],
+        null,
+        [
+          483.1539001464844,
+          315.2016296386719
+        ],
+        [
+          692.4158325195312,
+          454.9417724609375
+        ],
+        [
+          834.9114990234375,
+          423.1802673339844
+        ],
+        [
+          585.0523681640625,
+          318.47528076171875
+        ],
+        [
+          706.3894653320312,
+          327.7666015625
+        ],
+        null,
+        [
+          720.1242065429688,
+          185.73721313476562
+        ]
+      ],
+      "tracking_valid": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "fit_ids": [
+        5,
+        7,
+        9
+      ],
+      "holdout_ids": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "camera_pose": {
+        "position": null,
+        "failure_reason": "insufficient_independent_landmarks",
+        "observation_source": "unknown",
+        "metric_accuracy": null,
+        "solver": "sqpnp_all_fit"
+      },
+      "observation_source": "bidirectional_LK_sequential",
+      "tracking_parent_frame_id": 26067,
+      "interpolated": false
+    }
+  ],
+  "summary": {
+    "independent_frames": 14,
+    "accepted_independent_frames": 0,
+    "unknown_fraction": 1.0,
+    "processing_sec": 2.012470042,
+    "camera_error_m": null,
+    "camera_rotation_error_deg": null
+  },
+  "limitations": [
+    "Model and numerical heights are hypotheses. Reprojection agreement is not metric accuracy.",
+    "Reference frame is excluded from independent success counts. No pose interpolation or carry.",
+    "Edited freezes and repeated frames require separate evidence and cannot count as independent movement."
+  ]
+}

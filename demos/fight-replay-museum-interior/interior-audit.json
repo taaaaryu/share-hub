@@ -1,0 +1,2553 @@
+{
+  "schema_version": "fight_replay.interior_geometry_audit.v1",
+  "passed": true,
+  "scope": "Internal geometry and hypothetical model navigation only. Does not validate game routes, room measurements or promo-to-gameplay identity.",
+  "main_component_meshes": [
+    {
+      "id": "lower_hall_floor",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 5078.466402279187,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "north_gallery",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 1357.741482282223,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 0.0
+    },
+    {
+      "id": "south_gallery",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 1357.7414822822275,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "west_gallery",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 1005.952819835046,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 0.0
+    },
+    {
+      "id": "north_hall_wall",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 2575.716786409139,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5987211554602254e-14
+    },
+    {
+      "id": "south_hall_wall",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 2575.7167864091207,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5987211554602254e-14
+    },
+    {
+      "id": "east_wall_north",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 502.1584141848871,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "east_wall_south",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 620.3220039021702,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "entry_lintel",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 204.97856007969585,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "rear_platform",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 24.79277798325529,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5987211554602254e-14
+    },
+    {
+      "id": "rear_north_step_00",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 113.34978155776548,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.509903313490213e-14
+    },
+    {
+      "id": "rear_north_step_01",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 161.9282593404423,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.509903313490213e-14
+    },
+    {
+      "id": "rear_north_step_02",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 210.50673712312664,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 8.659739592076221e-15
+    },
+    {
+      "id": "rear_north_step_03",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 259.0852149058551,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "rear_south_step_00",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 113.34978155775336,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.0658141036401503e-14
+    },
+    {
+      "id": "rear_south_step_01",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 161.9282593404308,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.0658141036401503e-14
+    },
+    {
+      "id": "rear_south_step_02",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 210.5067371231418,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.993605777301127e-15
+    },
+    {
+      "id": "rear_south_step_03",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 259.08521490583115,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.993605777301127e-15
+    },
+    {
+      "id": "central_display_base",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 129.30251119233267,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.244205235679146e-15
+    },
+    {
+      "id": "central_display_panel",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 9.387808936516578,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5671491881974475e-14
+    },
+    {
+      "id": "north_wall_display_0",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 112.86847947570512,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "north_wall_display_1",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 112.86847947570664,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 0.0
+    },
+    {
+      "id": "north_wall_display_2",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 112.86847947572646,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "south_wall_display_0",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 112.86847947571584,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "south_wall_display_1",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 112.86847947574468,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.105427357601002e-15
+    },
+    {
+      "id": "south_wall_display_2",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 112.86847947568633,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "north_blue_pillar_78",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 123.35360188227203,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 0.0
+    },
+    {
+      "id": "north_blue_pillar_101",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 84.51388071746396,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "south_blue_pillar_78",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 123.35360188225741,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5987211554602254e-14
+    },
+    {
+      "id": "south_blue_pillar_101",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 84.51388071748534,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "glass_roof",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 809.471944228947,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "roof_beam_0",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.15287207030807318,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "roof_beam_1",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 37.93157358129088,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "roof_beam_2",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 25.988251953404113,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "roof_beam_3",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 25.988251953409872,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "roof_beam_4",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 25.98825195340396,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "roof_beam_5",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 25.988251953393956,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "east_court_north",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 548.983162765097,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 6.661338147750939e-15
+    },
+    {
+      "id": "east_court_south",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 612.643740363353,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.993605777301127e-15
+    },
+    {
+      "id": "entry_vestibule_floor",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 723.3720885699513,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.509903313490213e-14
+    },
+    {
+      "id": "first_transition_central_ramp",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 330.2697512904674,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4654943925052066e-14
+    },
+    {
+      "id": "first_lobby_floor",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 1674.552342132052,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.105427357601002e-15
+    },
+    {
+      "id": "second_north_step_00",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 65.59728531444016,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.509903313490213e-14
+    },
+    {
+      "id": "second_north_step_01",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 86.81747784718407,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "second_north_step_02",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 108.03767037994847,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "second_north_step_03",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 129.2578629126871,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "second_south_step_00",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 65.59728531445315,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.993605777301127e-15
+    },
+    {
+      "id": "second_south_step_01",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 86.81747784718375,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.993605777301127e-15
+    },
+    {
+      "id": "second_south_step_02",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 108.03767037995044,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.993605777301127e-15
+    },
+    {
+      "id": "second_south_step_03",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 129.257862912694,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.993605777301127e-15
+    },
+    {
+      "id": "second_transition_central_ramp",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 177.0733961635094,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4654943925052066e-14
+    },
+    {
+      "id": "shop_approach_floor",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 835.3366699308639,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_approach_roof",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 682.2735095288273,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5987211554602254e-14
+    },
+    {
+      "id": "first_portal_north",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 69.41405177615964,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5987211554602254e-14
+    },
+    {
+      "id": "first_portal_south",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 69.41405177618026,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.0658141036401503e-14
+    },
+    {
+      "id": "second_portal_north",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 69.41405177617123,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "second_portal_south",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 69.41405177618215,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.105427357601002e-15
+    },
+    {
+      "id": "first_portal_header",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 18.7840256465945,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.0658141036401503e-14
+    },
+    {
+      "id": "second_portal_header",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 18.78402564659247,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.105427357601002e-15
+    },
+    {
+      "id": "outdoor_north_step_00",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 113.5196195106061,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 0.0
+    },
+    {
+      "id": "outdoor_north_step_01",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 157.71732691438007,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.105427357601002e-15
+    },
+    {
+      "id": "outdoor_north_step_02",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 201.9150343181218,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.105427357601002e-15
+    },
+    {
+      "id": "outdoor_north_step_03",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 246.11274172186836,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5987211554602254e-14
+    },
+    {
+      "id": "outdoor_north_step_04",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 290.310449125604,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.7763568394002505e-14
+    },
+    {
+      "id": "outdoor_north_step_05",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 334.5081565293546,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 3.197442310920451e-14
+    },
+    {
+      "id": "outdoor_south_step_00",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 113.51961951060782,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "outdoor_south_step_01",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 157.71732691436463,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.5987211554602254e-14
+    },
+    {
+      "id": "outdoor_south_step_02",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 201.9150343181158,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "outdoor_south_step_03",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 246.11274172185995,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.105427357601002e-15
+    },
+    {
+      "id": "outdoor_south_step_04",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 290.31044912561117,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.105427357601002e-15
+    },
+    {
+      "id": "outdoor_south_step_05",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 334.5081565293503,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_floor",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 1277.3137439683537,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 3.552713678800501e-15
+    },
+    {
+      "id": "shop_back_wall",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 360.6532924146022,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 3.552713678800501e-15
+    },
+    {
+      "id": "shop_north_wall",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 577.1892368907295,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 7.993605777301127e-15
+    },
+    {
+      "id": "shop_south_wall",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 577.1892368907421,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_entry_north",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 113.17436017465032,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_entry_south",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 113.17436017465593,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_entry_lintel",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 13.911691874284353,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_counter",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 116.85821174399298,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_shelf_0",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 7.318716907744711,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_shelf_1",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 7.318716907744744,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    },
+    {
+      "id": "shop_shelf_2",
+      "vertex_count": 8,
+      "triangle_count": 12,
+      "finite_vertices": true,
+      "valid_indices": true,
+      "requires_closed_mesh": true,
+      "passed": true,
+      "degenerate_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 7.318716907744772,
+      "downward_triangles": null,
+      "local_bounds_consistency_error": 1.4210854715202004e-14
+    }
+  ],
+  "nodes": [
+    {
+      "id": "court",
+      "supporting_parts": [
+        "entry_vestibule_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "flat_entry",
+      "supporting_parts": [
+        "entry_vestibule_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "entry_bottom",
+      "supporting_parts": [
+        "lower_hall_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "hall_near",
+      "supporting_parts": [
+        "lower_hall_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "aisle_north",
+      "supporting_parts": [
+        "lower_hall_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "aisle_far",
+      "supporting_parts": [
+        "lower_hall_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "aisle_far_south",
+      "supporting_parts": [
+        "lower_hall_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_north_landing",
+      "supporting_parts": [
+        "rear_platform"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_south_landing",
+      "supporting_parts": [
+        "rear_platform"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_lobby",
+      "supporting_parts": [
+        "first_lobby_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "shop_approach",
+      "supporting_parts": [
+        "shop_approach_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "shop_entry",
+      "supporting_parts": [
+        "shop_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "shop_counter_front",
+      "supporting_parts": [
+        "shop_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_north_tread_0",
+      "supporting_parts": [
+        "rear_north_step_00"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_north_tread_1",
+      "supporting_parts": [
+        "rear_north_step_01"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_north_tread_2",
+      "supporting_parts": [
+        "rear_north_step_02"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_north_tread_3",
+      "supporting_parts": [
+        "rear_north_step_03"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_south_tread_0",
+      "supporting_parts": [
+        "rear_south_step_00"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_south_tread_1",
+      "supporting_parts": [
+        "rear_south_step_01"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_south_tread_2",
+      "supporting_parts": [
+        "rear_south_step_02"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "rear_south_tread_3",
+      "supporting_parts": [
+        "rear_south_step_03"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_north_start",
+      "supporting_parts": [
+        "first_lobby_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_north_tread_0",
+      "supporting_parts": [
+        "second_north_step_00"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_north_tread_1",
+      "supporting_parts": [
+        "second_north_step_01"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_north_tread_2",
+      "supporting_parts": [
+        "second_north_step_02"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_north_tread_3",
+      "supporting_parts": [
+        "second_north_step_03"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_north_landing",
+      "supporting_parts": [
+        "shop_approach_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_south_start",
+      "supporting_parts": [
+        "first_lobby_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_south_tread_0",
+      "supporting_parts": [
+        "second_south_step_00"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_south_tread_1",
+      "supporting_parts": [
+        "second_south_step_01"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_south_tread_2",
+      "supporting_parts": [
+        "second_south_step_02"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_south_tread_3",
+      "supporting_parts": [
+        "second_south_step_03"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_south_landing",
+      "supporting_parts": [
+        "shop_approach_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_start",
+      "supporting_parts": [
+        "lower_hall_floor",
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_1",
+      "supporting_parts": [
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_2",
+      "supporting_parts": [
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_3",
+      "supporting_parts": [
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_4",
+      "supporting_parts": [
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_5",
+      "supporting_parts": [
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_6",
+      "supporting_parts": [
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_7",
+      "supporting_parts": [
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "first_ramp_8",
+      "supporting_parts": [
+        "rear_platform",
+        "first_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_start",
+      "supporting_parts": [
+        "first_lobby_floor",
+        "second_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_1",
+      "supporting_parts": [
+        "second_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_2",
+      "supporting_parts": [
+        "second_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_3",
+      "supporting_parts": [
+        "second_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_4",
+      "supporting_parts": [
+        "second_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_5",
+      "supporting_parts": [
+        "second_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_6",
+      "supporting_parts": [
+        "second_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_7",
+      "supporting_parts": [
+        "second_transition_central_ramp"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "second_ramp_8",
+      "supporting_parts": [
+        "second_transition_central_ramp",
+        "shop_approach_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_north_start",
+      "supporting_parts": [
+        "first_lobby_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_north_tread_0",
+      "supporting_parts": [
+        "outdoor_north_step_00"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_north_tread_1",
+      "supporting_parts": [
+        "outdoor_north_step_01"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_north_tread_2",
+      "supporting_parts": [
+        "outdoor_north_step_02"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_north_tread_3",
+      "supporting_parts": [
+        "outdoor_north_step_03"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_north_tread_4",
+      "supporting_parts": [
+        "outdoor_north_step_04"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_north_tread_5",
+      "supporting_parts": [
+        "outdoor_north_step_05"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_south_start",
+      "supporting_parts": [
+        "first_lobby_floor"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_south_tread_0",
+      "supporting_parts": [
+        "outdoor_south_step_00"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_south_tread_1",
+      "supporting_parts": [
+        "outdoor_south_step_01"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_south_tread_2",
+      "supporting_parts": [
+        "outdoor_south_step_02"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_south_tread_3",
+      "supporting_parts": [
+        "outdoor_south_step_03"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_south_tread_4",
+      "supporting_parts": [
+        "outdoor_south_step_04"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    },
+    {
+      "id": "outdoor_south_tread_5",
+      "supporting_parts": [
+        "outdoor_south_step_05"
+      ],
+      "body_or_head_blockers": [],
+      "world_position_error": 0.0,
+      "passed": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "court",
+      "to": "flat_entry",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "flat_entry",
+      "to": "entry_bottom",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "entry_bottom",
+      "to": "hall_near",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "hall_near",
+      "to": "aisle_north",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "aisle_north",
+      "to": "aisle_far",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "aisle_far",
+      "to": "aisle_far_south",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "shop_approach",
+      "to": "shop_entry",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "shop_entry",
+      "to": "shop_counter_front",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "aisle_far",
+      "to": "rear_north_tread_0",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_north_tread_0",
+      "to": "rear_north_tread_1",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_north_tread_1",
+      "to": "rear_north_tread_2",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_north_tread_2",
+      "to": "rear_north_tread_3",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_north_tread_3",
+      "to": "rear_north_landing",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_north_landing",
+      "to": "first_lobby",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "aisle_far_south",
+      "to": "rear_south_tread_0",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_south_tread_0",
+      "to": "rear_south_tread_1",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_south_tread_1",
+      "to": "rear_south_tread_2",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_south_tread_2",
+      "to": "rear_south_tread_3",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_south_tread_3",
+      "to": "rear_south_landing",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "rear_south_landing",
+      "to": "first_lobby",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_lobby",
+      "to": "second_north_start",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_north_start",
+      "to": "second_north_tread_0",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_north_tread_0",
+      "to": "second_north_tread_1",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_north_tread_1",
+      "to": "second_north_tread_2",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_north_tread_2",
+      "to": "second_north_tread_3",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_north_tread_3",
+      "to": "second_north_landing",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_north_landing",
+      "to": "shop_approach",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_lobby",
+      "to": "second_south_start",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_south_start",
+      "to": "second_south_tread_0",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_south_tread_0",
+      "to": "second_south_tread_1",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_south_tread_1",
+      "to": "second_south_tread_2",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_south_tread_2",
+      "to": "second_south_tread_3",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_south_tread_3",
+      "to": "second_south_landing",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_south_landing",
+      "to": "shop_approach",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "aisle_far",
+      "to": "first_ramp_start",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_start",
+      "to": "first_ramp_1",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_1",
+      "to": "first_ramp_2",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_2",
+      "to": "first_ramp_3",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_3",
+      "to": "first_ramp_4",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_4",
+      "to": "first_ramp_5",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_5",
+      "to": "first_ramp_6",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_6",
+      "to": "first_ramp_7",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_7",
+      "to": "first_ramp_8",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_ramp_8",
+      "to": "first_lobby",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_lobby",
+      "to": "second_ramp_start",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_start",
+      "to": "second_ramp_1",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_1",
+      "to": "second_ramp_2",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_2",
+      "to": "second_ramp_3",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_3",
+      "to": "second_ramp_4",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_4",
+      "to": "second_ramp_5",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_5",
+      "to": "second_ramp_6",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_6",
+      "to": "second_ramp_7",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_7",
+      "to": "second_ramp_8",
+      "kind": "ramp",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "second_ramp_8",
+      "to": "shop_approach",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_lobby",
+      "to": "outdoor_north_start",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_north_start",
+      "to": "outdoor_north_tread_0",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_north_tread_0",
+      "to": "outdoor_north_tread_1",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_north_tread_1",
+      "to": "outdoor_north_tread_2",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_north_tread_2",
+      "to": "outdoor_north_tread_3",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_north_tread_3",
+      "to": "outdoor_north_tread_4",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_north_tread_4",
+      "to": "outdoor_north_tread_5",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "first_lobby",
+      "to": "outdoor_south_start",
+      "kind": "walk",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_south_start",
+      "to": "outdoor_south_tread_0",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_south_tread_0",
+      "to": "outdoor_south_tread_1",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_south_tread_1",
+      "to": "outdoor_south_tread_2",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_south_tread_2",
+      "to": "outdoor_south_tread_3",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_south_tread_3",
+      "to": "outdoor_south_tread_4",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    },
+    {
+      "from": "outdoor_south_tread_4",
+      "to": "outdoor_south_tread_5",
+      "kind": "stair",
+      "basis": "geometric_model_connection_not_verified_game_route",
+      "body_blockers": [],
+      "continuous_floor_support": true,
+      "passed": true
+    }
+  ],
+  "reachable_route_targets": {
+    "entry_bottom": true,
+    "hall_near": true,
+    "rear_north_landing": true,
+    "rear_south_landing": true,
+    "first_lobby": true,
+    "shop_approach": true,
+    "shop_entry": true,
+    "shop_counter_front": true
+  },
+  "outdoor_destinations_unknown": true,
+  "shop_connected_in_S17_proxy": true,
+  "evidence_consistency": true,
+  "superseded_v1_audit_validates_v2": false,
+  "transform_roundtrip_max_error": 1.0658141036401503e-14,
+  "context_cutout": {
+    "checked": true,
+    "remaining_context_triangles_in_room_region": {
+      "terrain": 0,
+      "rocks": 0,
+      "buildings": 0,
+      "landmarks": 0
+    },
+    "passed": true,
+    "note": "Context cutout opens the hypothetical room region; no whole-map coverage claim applies to context."
+  },
+  "validated_game_route": false,
+  "height_and_layout_calibrated": false,
+  "support_check": "foot-centre support; body radius retained for walls/exhibits; ramp joints permit up to radius-height contact with adjacent supporting floor"
+}

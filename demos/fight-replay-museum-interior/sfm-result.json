@@ -1,0 +1,1053 @@
+{
+  "schema_version": "fight_replay.interior_sfm.v1",
+  "source_video_sha256": "2fdbfc15017ca7843dc409d33da1b55a5e90521199f5d4957dfde40eb963e655",
+  "frame_pts_sha256": "5ea7215f903aaf29357c36062c7f6ee025ff063e291bc6da116493389aaf4855",
+  "trials": [
+    {
+      "focal_hypothesis_px": 340.9,
+      "two_view_matches": 139,
+      "training_frame_ids": [
+        25968,
+        25980
+      ],
+      "heldout_frame_id": 26052,
+      "essential_cheirality_inliers": 129,
+      "accepted_sparse_points": 96,
+      "minimum_parallax_deg": 1.0,
+      "accepted_median_parallax_deg": 2.5208536787835656,
+      "training_reprojection_p95_px": 0.4890091468302017,
+      "failure_reason": null
+    },
+    {
+      "focal_hypothesis_px": 400,
+      "two_view_matches": 139,
+      "training_frame_ids": [
+        25968,
+        25980
+      ],
+      "heldout_frame_id": 26052,
+      "essential_cheirality_inliers": 129,
+      "accepted_sparse_points": 94,
+      "minimum_parallax_deg": 1.0,
+      "accepted_median_parallax_deg": 2.31558824889414,
+      "training_reprojection_p95_px": 0.4984533840864557,
+      "failure_reason": null
+    },
+    {
+      "focal_hypothesis_px": 600,
+      "two_view_matches": 139,
+      "training_frame_ids": [
+        25968,
+        25980
+      ],
+      "heldout_frame_id": 26052,
+      "essential_cheirality_inliers": 129,
+      "accepted_sparse_points": 66,
+      "minimum_parallax_deg": 1.0,
+      "accepted_median_parallax_deg": 2.4510943184626792,
+      "training_reprojection_p95_px": 0.4963641823839319,
+      "failure_reason": null
+    }
+  ],
+  "selection_uses_heldout": false,
+  "mask_scenario": "broad",
+  "input_frames": [
+    {
+      "frame_id": 25968,
+      "pts_sec": 432.8
+    },
+    {
+      "frame_id": 25980,
+      "pts_sec": 433.0
+    },
+    {
+      "frame_id": 25992,
+      "pts_sec": 433.2
+    },
+    {
+      "frame_id": 26010,
+      "pts_sec": 433.5
+    },
+    {
+      "frame_id": 26028,
+      "pts_sec": 433.8
+    },
+    {
+      "frame_id": 26040,
+      "pts_sec": 434.0
+    },
+    {
+      "frame_id": 26052,
+      "pts_sec": 434.2
+    }
+  ],
+  "training_homography_inliers": 75,
+  "mask_policy": "strict: original conservative rectangle; broad: environment_mask() ROI plus per-time image-only label boxes, kill-feed/minimap/crosshair/weapon exclusions, LK mask enforcement every step",
+  "unit": "arbitrary_relative_baseline_one",
+  "metric_accuracy": null,
+  "world_registration": null,
+  "limitations": [
+    "Relative camera/points only; no metres or minimap/world attachment.",
+    "Focal is an assumption. Static ROI cannot guarantee all HUD/dynamic content is absent.",
+    "2D holdout checks an estimated structure, not independent 3D truth.",
+    "Two triangulation source frames are construction evidence; their PnP acceptance is not independent success."
+  ],
+  "selected": {
+    "focal_hypothesis_px": 340.9,
+    "two_view_matches": 139,
+    "training_frame_ids": [
+      25968,
+      25980
+    ],
+    "heldout_frame_id": 26052,
+    "essential_cheirality_inliers": 129,
+    "accepted_sparse_points": 96,
+    "minimum_parallax_deg": 1.0,
+    "accepted_median_parallax_deg": 2.5208536787835656,
+    "training_reprojection_p95_px": 0.4890091468302017,
+    "failure_reason": null
+  },
+  "points_relative": [
+    [
+      13.030098520604021,
+      -7.972966372845125,
+      10.529197266352803
+    ],
+    [
+      12.778839396895368,
+      -7.9324649993388,
+      10.62458163573217
+    ],
+    [
+      12.6333596934959,
+      -7.968444239205398,
+      10.675438022246114
+    ],
+    [
+      12.499716231624399,
+      -8.073092850521771,
+      10.690800787415366
+    ],
+    [
+      -7.887936832937335,
+      -0.14518787474013375,
+      7.817948137089827
+    ],
+    [
+      -6.87308061595751,
+      -1.3736805784442925,
+      6.99325279863325
+    ],
+    [
+      -7.307950201565077,
+      0.83121057759357,
+      7.490446682373137
+    ],
+    [
+      -6.630461825208729,
+      -0.8900820200336903,
+      6.883772401784649
+    ],
+    [
+      -6.739653262443072,
+      -1.123774634534852,
+      7.184683390969196
+    ],
+    [
+      -6.254216273423131,
+      -4.0174794968407515,
+      6.9156116484499845
+    ],
+    [
+      -6.089000849388251,
+      -3.979278272369734,
+      6.863528586614867
+    ],
+    [
+      -6.494095203243429,
+      -2.0816308034954347,
+      7.36961639461325
+    ],
+    [
+      -6.050858519439565,
+      -3.94045521396912,
+      6.895820349972618
+    ],
+    [
+      -6.513857241421014,
+      0.9831355457028838,
+      7.486173892321154
+    ],
+    [
+      -6.215129517725898,
+      0.7685178777816937,
+      7.396410886570438
+    ],
+    [
+      -6.138649301866693,
+      0.8035105610166643,
+      7.533317189429159
+    ],
+    [
+      -5.898484040470302,
+      0.9291872082274857,
+      7.287088294083639
+    ],
+    [
+      -5.990165974373287,
+      -3.8027394859695143,
+      7.985713870457948
+    ],
+    [
+      -5.881360069011706,
+      -4.255557257180442,
+      7.927009245952253
+    ],
+    [
+      8.948444281202248,
+      -4.318792850938022,
+      14.735015410525678
+    ],
+    [
+      8.662484470907499,
+      -4.858187389885877,
+      14.522409618093901
+    ],
+    [
+      -6.430447736266372,
+      -4.618360258399677,
+      9.020377228332737
+    ],
+    [
+      -6.402118592212803,
+      -0.9046912043862074,
+      9.269571882477516
+    ],
+    [
+      -6.262201766242884,
+      0.17811746735468248,
+      9.075082188758095
+    ],
+    [
+      -6.484317689854035,
+      -0.7709953698893274,
+      9.439895231955107
+    ],
+    [
+      -6.484317689854035,
+      -0.7709953698893274,
+      9.439895231955107
+    ],
+    [
+      -6.31229488410006,
+      -0.06508183693215921,
+      9.217759001864042
+    ],
+    [
+      -6.362469080952035,
+      -0.6242131310101918,
+      9.320467296931715
+    ],
+    [
+      -6.428571279468074,
+      -0.9874360586025394,
+      9.443589500053456
+    ],
+    [
+      -6.428571279468074,
+      -0.9874360586025394,
+      9.443589500053456
+    ],
+    [
+      -6.388768777171669,
+      -0.7431704737161045,
+      9.438557141687237
+    ],
+    [
+      -6.3864316379690385,
+      -1.0675175197999003,
+      9.486802570816048
+    ],
+    [
+      -6.416366778400304,
+      -0.5013666622715991,
+      9.551842293301785
+    ],
+    [
+      -6.496103359753906,
+      -1.5462992086359737,
+      9.779769597249302
+    ],
+    [
+      -7.266971278297917,
+      -2.0437345923305834,
+      11.036273244439313
+    ],
+    [
+      -6.334194228904467,
+      -1.0697175050915713,
+      9.652247398838075
+    ],
+    [
+      -6.261150637536579,
+      -0.9558118378877897,
+      9.613657601754484
+    ],
+    [
+      -5.215715435671294,
+      -5.28162819601133,
+      8.006193190059431
+    ],
+    [
+      -6.351390274849736,
+      -0.4366733587378189,
+      9.782005926517142
+    ],
+    [
+      -6.433855101624652,
+      -0.7485328165603873,
+      9.911262317126981
+    ],
+    [
+      8.29178214644467,
+      -5.321661447882148,
+      14.777219903599743
+    ],
+    [
+      -6.3416739155523665,
+      -0.40731420960571085,
+      9.892736964447716
+    ],
+    [
+      -6.419860583290612,
+      -1.2874830287167667,
+      10.313867104977051
+    ],
+    [
+      -6.419860583290612,
+      -1.2874830287167667,
+      10.313867104977051
+    ],
+    [
+      -6.323890023383773,
+      -1.3961815943902292,
+      10.28056016976275
+    ],
+    [
+      -6.3774631981808945,
+      -0.8164654142179868,
+      10.491764254849992
+    ],
+    [
+      -6.1964664944865415,
+      -1.152270000061637,
+      10.206520080141221
+    ],
+    [
+      -6.426596998601676,
+      -0.9742426989072597,
+      10.757486506971597
+    ],
+    [
+      -6.221770006069862,
+      -0.7739354317368344,
+      10.461222214746678
+    ],
+    [
+      -6.110813970020247,
+      0.9522660114945879,
+      10.680269956776918
+    ],
+    [
+      -6.683009114648417,
+      0.010974856751097545,
+      11.694989216736861
+    ],
+    [
+      -6.20599553331641,
+      0.7415032805679234,
+      10.861282106843696
+    ],
+    [
+      -6.481788522808198,
+      -1.1348275295708194,
+      11.394003037892341
+    ],
+    [
+      -6.127590343216606,
+      -1.413250925744315,
+      10.83677142316158
+    ],
+    [
+      7.350279939121259,
+      -2.9383840967736834,
+      14.819337511832172
+    ],
+    [
+      -6.369971561724765,
+      -0.9677812429034481,
+      11.288851675247063
+    ],
+    [
+      -6.438875589628615,
+      -0.7553422735138966,
+      11.45033311622766
+    ],
+    [
+      7.468635807785387,
+      0.5325022166795224,
+      15.233175213977386
+    ],
+    [
+      -6.3801103047855445,
+      -1.2253046749561651,
+      11.409148106548887
+    ],
+    [
+      7.172861759457881,
+      -2.439245467612401,
+      14.767815993161197
+    ],
+    [
+      7.232447764809881,
+      -2.176544962349126,
+      14.966281007391789
+    ],
+    [
+      7.276064032206971,
+      -3.2950418581286334,
+      15.089331865314174
+    ],
+    [
+      7.191709474475217,
+      -2.929909060609321,
+      14.923201017188074
+    ],
+    [
+      7.191709474475217,
+      -2.929909060609321,
+      14.923201017188074
+    ],
+    [
+      7.191709474475217,
+      -2.929909060609321,
+      14.923201017188074
+    ],
+    [
+      -6.841535623152735,
+      0.7897787666210131,
+      13.698889966937088
+    ],
+    [
+      6.894509792798409,
+      -1.7159482477176151,
+      14.571817125264804
+    ],
+    [
+      5.8968717073563095,
+      0.6716796895616616,
+      12.653501214208672
+    ],
+    [
+      6.77606984923179,
+      -2.4665363342711335,
+      14.561752758177885
+    ],
+    [
+      6.688923669312007,
+      -3.513188633193714,
+      14.52308272741823
+    ],
+    [
+      -7.352137295214814,
+      1.4287065547339846,
+      15.814927443846464
+    ],
+    [
+      -6.146174210788507,
+      -4.16876593853488,
+      13.246731582389872
+    ],
+    [
+      -6.13186935413176,
+      -4.92077227138566,
+      13.395526408411579
+    ],
+    [
+      6.446817705975089,
+      -1.8096903212548296,
+      14.226090288745247
+    ],
+    [
+      6.615072268658805,
+      -1.5399124492965386,
+      14.608060082886539
+    ],
+    [
+      6.82772147184923,
+      -2.1533654143539858,
+      15.151410193959064
+    ],
+    [
+      6.489328881691265,
+      -1.7878892170856893,
+      14.660989830202103
+    ],
+    [
+      6.130853072499393,
+      0.2663429158665541,
+      14.836605109539718
+    ],
+    [
+      -5.106271421685185,
+      0.5580117097706662,
+      14.394979707361326
+    ],
+    [
+      6.130853072499393,
+      0.2663429158665541,
+      14.836605109539718
+    ],
+    [
+      -4.945899516285217,
+      -3.697551632564292,
+      14.051382286075302
+    ],
+    [
+      -4.761657312310875,
+      -3.565888456296352,
+      14.018248177218078
+    ],
+    [
+      5.939802449987302,
+      -0.007445388118975138,
+      14.91966388805421
+    ],
+    [
+      5.925602275371616,
+      -0.3877194881478874,
+      15.214923673554464
+    ],
+    [
+      -4.653527616691038,
+      0.5799636490213623,
+      15.005734703699344
+    ],
+    [
+      -3.9401746853608737,
+      0.7311703267780069,
+      13.847669641131366
+    ],
+    [
+      -3.569557866844206,
+      0.9995813281835485,
+      13.518692956747856
+    ],
+    [
+      -3.46053495990185,
+      0.32046656296463577,
+      13.443115393679596
+    ],
+    [
+      -3.5237177399787307,
+      0.216385150423111,
+      14.077288817479184
+    ],
+    [
+      4.373438740051219,
+      -4.150811433474976,
+      14.577669446661533
+    ],
+    [
+      -3.3272731482444455,
+      -4.946182343530336,
+      18.070436108821507
+    ],
+    [
+      2.015715301966285,
+      1.0832234654871418,
+      10.134937666273213
+    ],
+    [
+      1.4637782152924863,
+      1.0068499128025878,
+      7.379357007108086
+    ],
+    [
+      1.4494594785229176,
+      -5.502381450885364,
+      10.419398127788078
+    ],
+    [
+      7.957549282685872,
+      -5.052155300709618,
+      14.478864229059866
+    ],
+    [
+      -6.375897126966978,
+      -0.5554232080254468,
+      10.575984305836544
+    ]
+  ],
+  "reference_feature_ids": [
+    14,
+    17,
+    18,
+    19,
+    176,
+    207,
+    214,
+    217,
+    231,
+    241,
+    247,
+    251,
+    255,
+    256,
+    270,
+    276,
+    277,
+    291,
+    292,
+    293,
+    294,
+    296,
+    302,
+    303,
+    307,
+    308,
+    310,
+    311,
+    313,
+    314,
+    315,
+    316,
+    317,
+    326,
+    327,
+    328,
+    332,
+    333,
+    336,
+    337,
+    339,
+    341,
+    349,
+    350,
+    357,
+    359,
+    361,
+    365,
+    367,
+    372,
+    373,
+    374,
+    377,
+    379,
+    380,
+    382,
+    384,
+    387,
+    388,
+    390,
+    393,
+    397,
+    398,
+    399,
+    400,
+    406,
+    408,
+    409,
+    411,
+    413,
+    421,
+    422,
+    423,
+    426,
+    427,
+    431,
+    434,
+    443,
+    444,
+    445,
+    448,
+    453,
+    454,
+    455,
+    459,
+    468,
+    472,
+    474,
+    476,
+    478,
+    500,
+    544,
+    546,
+    582,
+    670,
+    673
+  ],
+  "rows": [
+    {
+      "tracking_mode": "fresh_reference_SIFT",
+      "is_construction_frame": true,
+      "frame_id": 25968,
+      "file_timestamp": 432.8,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 96,
+      "track_survival_fraction": 1.0,
+      "fit_count": 64,
+      "holdout_count": 32,
+      "position": [
+        0.003795420569616828,
+        0.0044213627412097055,
+        0.0009827571518558587
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 0.31259862953019085,
+      "holdout_bbox_fraction": 0.24107812161188652,
+      "fit_inliers": 64,
+      "world_to_camera_R": [
+        [
+          0.9999999152234983,
+          -0.0003069138655013139,
+          0.0002745120680465596
+        ],
+        [
+          0.00030677295067051477,
+          0.9999998212461099,
+          0.0005132232506153163
+        ],
+        [
+          -0.00027466953430816364,
+          -0.0005131389942289391,
+          0.9999998306224954
+        ]
+      ],
+      "world_to_camera_t": [
+        -0.0037943330490228045,
+        -0.004423030657061134,
+        -0.0009794457253683988
+      ],
+      "failure_reason": null
+    },
+    {
+      "tracking_mode": "fresh_reference_SIFT",
+      "is_construction_frame": true,
+      "frame_id": 25980,
+      "file_timestamp": 433.0,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 96,
+      "track_survival_fraction": 1.0,
+      "fit_count": 64,
+      "holdout_count": 32,
+      "position": [
+        -0.002036204151072415,
+        0.020728731341291325,
+        0.9989189587835992
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 0.37651259584298435,
+      "holdout_bbox_fraction": 0.2819508388259533,
+      "fit_inliers": 64,
+      "world_to_camera_R": [
+        [
+          0.9992435580570964,
+          -0.0006051075746578865,
+          -0.03888374372687572
+        ],
+        [
+          0.0015655142620383555,
+          0.9996943311136113,
+          0.024673741191896
+        ],
+        [
+          0.038856927908541734,
+          -0.024715949994535972,
+          0.9989390676960122
+        ]
+      ],
+      "world_to_camera_t": [
+        0.040888915790454894,
+        -0.045366275367131816,
+        -0.997267722465973
+      ],
+      "failure_reason": null
+    },
+    {
+      "tracking_mode": "fresh_reference_SIFT",
+      "is_construction_frame": false,
+      "frame_id": 25992,
+      "file_timestamp": 433.2,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 41,
+      "track_survival_fraction": 0.4270833333333333,
+      "fit_count": 31,
+      "holdout_count": 10,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 215.45081896518798,
+      "holdout_bbox_fraction": 0.2705805675474418,
+      "fit_inliers": 24,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "fresh_reference_SIFT",
+      "is_construction_frame": false,
+      "frame_id": 26010,
+      "file_timestamp": 433.5,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 24,
+      "track_survival_fraction": 0.25,
+      "fit_count": 17,
+      "holdout_count": 7,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 66.49976972471408,
+      "holdout_bbox_fraction": 0.2697041048696269,
+      "fit_inliers": 11,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "fresh_reference_SIFT",
+      "is_construction_frame": false,
+      "frame_id": 26028,
+      "file_timestamp": 433.8,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 20,
+      "track_survival_fraction": 0.20833333333333334,
+      "fit_count": 13,
+      "holdout_count": 7,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 226.18939983674483,
+      "holdout_bbox_fraction": 0.19991184689831748,
+      "fit_inliers": 7,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "fresh_reference_SIFT",
+      "is_construction_frame": false,
+      "frame_id": 26040,
+      "file_timestamp": 434.0,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 13,
+      "track_survival_fraction": 0.13541666666666666,
+      "fit_count": 9,
+      "holdout_count": 4,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 48.87529899724576,
+      "holdout_bbox_fraction": 0.06808126031270452,
+      "fit_inliers": 6,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "fresh_reference_SIFT",
+      "is_construction_frame": false,
+      "frame_id": 26052,
+      "file_timestamp": 434.2,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": true,
+      "matched_3d_points": 17,
+      "track_survival_fraction": 0.17708333333333334,
+      "fit_count": 11,
+      "holdout_count": 6,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 520.288985639131,
+      "holdout_bbox_fraction": 0.24598965333919448,
+      "fit_inliers": 6,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "sequential_LK_50ms",
+      "is_construction_frame": true,
+      "frame_id": 25968,
+      "file_timestamp": 432.8,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 96,
+      "track_survival_fraction": 1.0,
+      "fit_count": 64,
+      "holdout_count": 32,
+      "position": [
+        0.003795420569616828,
+        0.0044213627412097055,
+        0.0009827571518558587
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 0.31259862953019085,
+      "holdout_bbox_fraction": 0.24107812161188652,
+      "fit_inliers": 64,
+      "world_to_camera_R": [
+        [
+          0.9999999152234983,
+          -0.0003069138655013139,
+          0.0002745120680465596
+        ],
+        [
+          0.00030677295067051477,
+          0.9999998212461099,
+          0.0005132232506153163
+        ],
+        [
+          -0.00027466953430816364,
+          -0.0005131389942289391,
+          0.9999998306224954
+        ]
+      ],
+      "world_to_camera_t": [
+        -0.0037943330490228045,
+        -0.004423030657061134,
+        -0.0009794457253683988
+      ],
+      "failure_reason": null
+    },
+    {
+      "tracking_mode": "sequential_LK_50ms",
+      "is_construction_frame": true,
+      "frame_id": 25980,
+      "file_timestamp": 433.0,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 87,
+      "track_survival_fraction": 0.90625,
+      "fit_count": 59,
+      "holdout_count": 28,
+      "position": [
+        -0.016896044089430545,
+        0.0012303557457657057,
+        0.9949194567501477
+      ],
+      "interpolated": false,
+      "holdout_p95_px": 2.7576908702270084,
+      "holdout_bbox_fraction": 0.2002145061167625,
+      "fit_inliers": 52,
+      "world_to_camera_R": [
+        [
+          0.9992044053238366,
+          -0.0005245654513359435,
+          -0.03987833011204598
+        ],
+        [
+          0.0014294244170009165,
+          0.999742085666013,
+          0.022665367722727783
+        ],
+        [
+          0.03985615545024545,
+          -0.022704338335605676,
+          0.9989474460117851
+        ]
+      ],
+      "world_to_camera_t": [
+        0.056558973620001694,
+        -0.02375610214314947,
+        -0.9931709045351451
+      ],
+      "failure_reason": null
+    },
+    {
+      "tracking_mode": "sequential_LK_50ms",
+      "is_construction_frame": false,
+      "frame_id": 25992,
+      "file_timestamp": 433.2,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 54,
+      "track_survival_fraction": 0.5625,
+      "fit_count": 39,
+      "holdout_count": 15,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 3.215492220857869,
+      "holdout_bbox_fraction": 0.10482147059671762,
+      "fit_inliers": 26,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "sequential_LK_50ms",
+      "is_construction_frame": false,
+      "frame_id": 26010,
+      "file_timestamp": 433.5,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 52,
+      "track_survival_fraction": 0.5416666666666666,
+      "fit_count": 37,
+      "holdout_count": 15,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 3.5885178438538743,
+      "holdout_bbox_fraction": 0.12005528054580888,
+      "fit_inliers": 17,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "sequential_LK_50ms",
+      "is_construction_frame": false,
+      "frame_id": 26028,
+      "file_timestamp": 433.8,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 35,
+      "track_survival_fraction": 0.3645833333333333,
+      "fit_count": 22,
+      "holdout_count": 13,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 6.573235902718235,
+      "holdout_bbox_fraction": 0.1295823254187255,
+      "fit_inliers": 8,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "sequential_LK_50ms",
+      "is_construction_frame": false,
+      "frame_id": 26040,
+      "file_timestamp": 434.0,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": false,
+      "matched_3d_points": 30,
+      "track_survival_fraction": 0.3125,
+      "fit_count": 17,
+      "holdout_count": 13,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 44.97351646061865,
+      "holdout_bbox_fraction": 0.18785672694686154,
+      "fit_inliers": 7,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    },
+    {
+      "tracking_mode": "sequential_LK_50ms",
+      "is_construction_frame": false,
+      "frame_id": 26052,
+      "file_timestamp": 434.2,
+      "timestamp_source": "ffprobe_frame_pts_seek",
+      "is_heldout_frame": true,
+      "matched_3d_points": 25,
+      "track_survival_fraction": 0.2604166666666667,
+      "fit_count": 13,
+      "holdout_count": 12,
+      "position": null,
+      "interpolated": false,
+      "holdout_p95_px": 276.3699637879281,
+      "holdout_bbox_fraction": 0.20779176901266208,
+      "fit_inliers": 6,
+      "failure_reason": "holdout_or_depth_gate_failed"
+    }
+  ],
+  "accepted_frames": 0,
+  "independent_acceptance_by_mode": {
+    "fresh_reference_SIFT": 0,
+    "sequential_LK_50ms": 0
+  }
+}
