@@ -1,0 +1,91 @@
+{
+  "schema": "minimap.sparse-route.public-summary.v1",
+  "task": "select one well-supported frame in each 150/300-frame window at actual FPS",
+  "notes": [
+    "All real runs reuse the same 48.6-second clip; not independent trials.",
+    "Accepted anchor counts are not ground-truth accuracy.",
+    "Interpolation is display-only and never added to observed anchor counts.",
+    "Reference features 16000 per map, query features 3000; memory excludes indices and image arrays.",
+    "No private frames, route coordinates, source file names or development code exported."
+  ],
+  "real_runs": [
+    {
+      "interval_sec": 5.0,
+      "fps": 60.0,
+      "duration_sec": 48.583333333333336,
+      "initial_map_count": 18,
+      "summary": {
+        "bucket_count": 10,
+        "observed_anchors": 10,
+        "interpolated_display_points": 39,
+        "unavailable_display_points": 3
+      },
+      "timing": {
+        "candidate_decode_ms": 1141.6649160000002,
+        "map_setup_ms": 11874.647167000001,
+        "matching_ms": 5016.386750000001,
+        "total_ms": 18032.984791
+      },
+      "map_descriptor_bytes": 147458560,
+      "query_calls": 29,
+      "source_revision_verified": false,
+      "independent_position_truth_available": false
+    },
+    {
+      "interval_sec": 5.0,
+      "fps": 60.0,
+      "duration_sec": 48.583333333333336,
+      "initial_map_count": 3,
+      "summary": {
+        "bucket_count": 10,
+        "observed_anchors": 10,
+        "interpolated_display_points": 38,
+        "unavailable_display_points": 5
+      },
+      "timing": {
+        "candidate_decode_ms": 1214.191,
+        "map_setup_ms": 2132.361583,
+        "matching_ms": 2902.5002919999997,
+        "total_ms": 6249.080916999999
+      },
+      "map_descriptor_bytes": 24576512,
+      "query_calls": 29,
+      "source_revision_verified": false,
+      "independent_position_truth_available": false
+    },
+    {
+      "interval_sec": 2.5,
+      "fps": 60.0,
+      "duration_sec": 48.583333333333336,
+      "initial_map_count": 3,
+      "summary": {
+        "bucket_count": 20,
+        "observed_anchors": 18,
+        "interpolated_display_points": 38,
+        "unavailable_display_points": 2
+      },
+      "timing": {
+        "candidate_decode_ms": 1203.3859999999997,
+        "map_setup_ms": 2351.026875,
+        "matching_ms": 7132.88475,
+        "total_ms": 10687.339999999998
+      },
+      "map_descriptor_bytes": 24576512,
+      "query_calls": 64,
+      "source_revision_verified": false,
+      "independent_position_truth_available": false
+    }
+  ],
+  "synthetic": {
+    "label": "controlled same-reference crop test; not gameplay accuracy",
+    "bucket_count": 6,
+    "matchable_bucket_count": 5,
+    "observed_anchor_count": 5,
+    "observations_within_25px": 5,
+    "max_observed_error_px": 0.6260093704172065,
+    "unmatchable_candidates_rejected": 13,
+    "interpolated_missing_bucket": true,
+    "missing_bucket_interpolation_error_px": 0.4371387499517381,
+    "interpolated_display_points": 21
+  }
+}
