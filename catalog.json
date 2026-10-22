@@ -1,5 +1,11 @@
 [
   {
+    "slug": "photo-usb-guide-20261022",
+    "kind": "report",
+    "title": "スマホの写真をMacのUSBへ保存する",
+    "description": "起動手順・Googleフォトの取り込み・保存の仕組み・検証範囲"
+  },
+  {
     "slug": "apex-enemy-local-20261022",
     "kind": "report",
     "title": "Apexの敵検出を速く、軽くするローカル実験",
