@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thumaster 3Dマップ制作の成果報告</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/report.css">
+<style>.mb-wrap{display:block}.mb-main{min-width:0;overflow-wrap:anywhere}.mb-figure-frame img{display:block;width:100%;height:auto}.mb-page aside.mb-glossary{position:static;max-height:none;overflow:visible;break-before:auto;page-break-before:auto;margin:24px 0;padding:22px;background:var(--mb-surface);border:1px solid var(--mb-rule);border-radius:12px}.mb-glossary dt{font-weight:700}.mb-glossary dd{margin:4px 0 16px}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}.result-grid div{border:1px solid var(--mb-rule);background:white;padding:20px;border-radius:12px}.result-grid strong{display:block;font-size:28px}.result-grid span{display:block;font-size:15px}.actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:24px 0}button{font:inherit;padding:10px 16px;background:white;border:1px solid #111;border-radius:6px;cursor:pointer}.status-note{border-left:4px solid var(--mb-accent);padding:14px 22px;background:white;margin:28px 0}video{display:block;width:100%;background:#17212b}section{margin-top:48px}table{width:100%}caption{text-align:left;margin-bottom:12px}.step{padding:12px 0 16px;border-bottom:1px solid var(--mb-rule)}.step h3{margin-bottom:8px}.source-note{font-size:14px;color:var(--mb-muted)}@media(max-width:650px){.result-grid{grid-template-columns:1fr}.mb-figure-frame{padding:6px}th,td{padding:10px 6px}}@media print{.actions,.mb-toc{display:none}video{display:none}.mb-page{max-width:none;padding:0}.mb-figure,table,.result-grid{break-inside:avoid}h2,h3{break-after:avoid}section{margin-top:28px}details{display:block}a{color:inherit}}
+</style></head><body><main class="mb-page">
+<header class="mb-header"><div><a href="../../">共有資料一覧へ</a><h1>Thumaster 3Dマップ制作の成果報告</h1><p class="mb-meta-line">資料作成：2026-10-22 ／ 対象：World’s Edge・Monument博物館 ／ 実験結果：2026-10-20時点</p></div></header>
+<p class="mb-lede">プレイ映像を3D空間で振り返るために、World’s Edgeの全域粗モデルと、博物館1棟の内部モデルを作成しました。映像からカメラの位置を求める実験も行い、短い区間で相対的な3D位置を取得しました。本資料は、作成したモデル、制作手順、検証結果、残る課題を説明します。</p>
+<div class="actions"><a href="../../demos/fight-replay-museum-interior/">操作できる内部モデル</a><a href="../../demos/fight-replay-world-map/">操作できる全域モデル</a><a href="../../videos/fight-replay-museum-interior/">14秒のレビュー動画</a><button type="button" id="print-report">この資料を印刷</button></div>
+<figure class="mb-figure"><div class="mb-figure-frame"><img src="assets/interior-overview.png" width="1280" height="720" alt="屋根と一部の壁を外した博物館内部モデル。展示室から階段を経て売店までが接続している"></div><figcaption>図1：内部82部品の全体像。右側が入口・展示室、左奥が売店です。内部を見せるために屋根・梁・一部の壁を外しています。部屋のつながりは映像を参考にし、長さや高さは仮定を残しています。</figcaption></figure>
+<nav class="mb-toc" aria-label="目次"><ol><li><a href="#summary">成果の要約</a></li><li><a href="#world">全域モデルの成果</a></li><li><a href="#interior">博物館内部の成果</a></li><li><a href="#process">モデルを作った手順</a></li><li><a href="#video-mapping">実映像から位置を求める手順</a></li><li><a href="#validation">検証結果と現在の到達点</a></li><li><a href="#next">今後の進め方と参照先</a></li></ol></nav>
+<div class="mb-wrap"><article class="mb-main">
+<aside class="mb-glossary" aria-label="用語の説明"><h2>この資料で使う言葉</h2><dl><dt>粗モデル</dt><dd>地形や建物を簡単な形で表したモデル。全体の位置関係を把握するためのもので、実寸を測った模型ではありません。</dd><dt>点群</dt><dd>壁や展示物などの位置を、多数の3Dの点で表したデータ。点だけでは床や壁の面、歩ける場所は確定しません。</dd><dt>カメラ姿勢・投影</dt><dd>カメラ姿勢は、撮影した場所と向きの組合せです。投影は、そのカメラから3Dモデルを見たときの形を、2D画像上へ描く処理です。</dd><dt>相対座標</dt><dd>最初のカメラなどを基準にした位置。距離の尺度が未確定なら、1単位が1メートルとは限りません。</dd></dl></aside>
+
+<section id="summary"><h2>1. 成果の要約</h2><p>最終目標は、プレイ動画から自分・敵・遮蔽物の位置関係を復元し、戦闘を振り返れるようにすることです。今回、その土台となる静的なマップと、映像の位置をマップへ対応させる検証処理を用意しました。</p>
+<div class="result-grid"><div><strong>253形状</strong><span>全域モデルの地面・岩域候補・屋根候補・施設など</span></div><div><strong>82部品</strong><span>別データとして作成した博物館内部。売店11部品を含む</span></div><div><strong>96点</strong><span>見学映像の2枚から取得した相対的な3D点群</span></div></div>
+<p>全域モデルと博物館内部は、同じ平面座標で表示できる構成です。一方、映像から得た96点の点群は別の相対座標にあり、建物モデルへ正確に接続する作業は残っています。253形状と82部品を、そのまま足して完成した全域モデルの数とはしていません。</p>
+<div class="status-note"><p><strong>今回の到達点は「モデルの作成と、映像対応の限定実験」です。</strong>実動画の人物移動をマップ全域で安定して追跡する段階、敵の3D配置、被弾を防ぐ位置の判断は未完成です。モデルが表示できることと、実際の位置を正確に復元できることを分けて報告します。</p></div></section>
+
+<section id="world"><h2>2. 全域モデルの成果</h2><p>World’s EdgeのMU4／Season 17の地図を参照し、地面、岩域の候補、建物の屋根候補、目立つ施設や橋を独自の簡易形状にしました。ゲームから3Dアセットを抽出したものではありません。</p>
+<figure class="mb-figure"><div class="mb-figure-frame"><img src="assets/world-overview.png" width="1280" height="720" alt="World’s Edge全域の独自簡易モデル。地面、岩稜、建物候補が配置されている"></div><figcaption>図2：保存済みの全域モデルから作成した形状確認図。水平の配置には地図の情報を使い、高さには未検証の仮定が含まれます。表示カメラは説明用です。</figcaption></figure>
+<table><caption>全域モデルの内訳。候補数は実在する建物や岩の正解数ではありません。</caption><thead><tr><th>対象</th><th>形状数</th><th>作成内容</th></tr></thead><tbody><tr><td>地面</td><td>1</td><td>地図の陸域に対応する面</td></tr><tr><td>岩域候補</td><td>65</td><td>地図の輪郭を基にした立体候補</td></tr><tr><td>屋根候補</td><td>158</td><td>建物らしい領域を基にした立体候補</td></tr><tr><td>施設・橋など</td><td>29</td><td>目立つ構造を手で補った簡易部品</td></tr></tbody></table>
+<p>地図の横・縦の位置をモデルの平面位置へ変換できるようにしました。ミニマップ照合で得た地点を、この座標へ対応させられます。ただし、建物の高さ、全建物の網羅性、地下や屋内の形状、正確な衝突形状は、全域モデルだけでは確定していません。</p></section>
+
+<section id="interior"><h2>3. 博物館内部の成果</h2><p>Monumentの博物館1棟を詳細化しました。Season 17の見学映像で確認した、水平な東入口、展示室、二段階の階段と中央の斜路、中間の部屋、売店を接続しています。ガラス屋根や壁は個別に非表示にでき、内部を確認できます。</p>
+
+<figure class="mb-figure"><div class="mb-figure-frame"><img src="assets/interior-stairs.png" width="1280" height="720" alt="展示室と売店の間にある二段階の階段、中央斜路、中間の床を示すモデル"></div><figcaption>図3：二段階の階段と中央の斜路。床の高さが途中で切れたり、周囲の粗い地面が室内を埋めたりしないことを、モデル内で検査しました。実際の段差の高さを測定できたという意味ではありません。</figcaption></figure>
+<p>壁・床・段・斜路・展示台・出入口を別々の部品として保存しました。各部品には根拠となる映像や仮定を記録し、部屋同士の接続もデータ化しています。見えていない屋外階段の行き先は、不明のまま保持しています。</p>
+<h3>14秒の形状確認動画</h3><video controls playsinline preload="metadata" poster="assets/interior-overview.png"><source src="../../videos/fight-replay-museum-interior/interior-review.mp4" type="video/mp4"></video><p class="source-note">全景、水平な入口、展示室、階段・斜路、売店を順に表示します。動画のカメラは説明用に配置しており、実際のプレイヤー視点を復元したものではありません。</p>
+<details><summary>展示室・売店と、全域の真上の図も見る</summary><figure class="mb-figure"><div class="mb-figure-frame"><img loading="lazy" src="assets/interior-hall.png" width="1280" height="720" alt="展示室の床に近い高さから見た簡易内部モデル"></div><figcaption>補足図A：展示室の中央展示と奥への接続。展示の絵柄は使わず、独自の簡略形状にしています。</figcaption></figure><figure class="mb-figure"><div class="mb-figure-frame"><img loading="lazy" src="assets/interior-shop.png" width="1280" height="720" alt="前の通路から入口を通して見た売店モデル"></div><figcaption>補足図B：入口から売店の室内への接続。カウンターや棚を簡略化しています。</figcaption></figure><figure class="mb-figure"><div class="mb-figure-frame"><img loading="lazy" src="assets/world-top.png" width="1280" height="720" alt="World’s Edgeの全域簡易モデルを真上から見た図"></div><figcaption>補足図C：ミニマップと対応させる平面方向の表示。高さや実寸の検証図ではありません。</figcaption></figure></details>
+</section>
+
+<section id="process"><h2>4. モデルを作った手順</h2>
+<div class="step"><h3>手順1：素材と対象範囲を決める</h3><p>全域はWorld’s Edge MU4／Season 17を基準にし、内部は見学映像のある博物館1棟に限定しました。ユーザーの戦闘素材、編集された紹介映像、見学映像を区別し、同じ部屋を別の方向から確認できる場面を探しました。</p><p>Season 17の見学映像と2026年のユーザー素材で、内部が同じ構造のままかは未確認です。年代の違う映像を混ぜて、同一の測量結果とは扱っていません。</p></div>
+<div class="step"><h3>手順2：全域の平面輪郭を、簡単な立体へ変える</h3><p>地図から陸域、岩らしい領域、屋根らしい領域を候補として取り出しました。それぞれの平面輪郭に仮の高さを与え、地面や箱に近い形へ変換します。橋や塔などは、映像や地図の位置関係を参考に手で補いました。</p><p>この段階で作るのは、場所を把握するための粗いモデルです。色や輪郭から見つけた候補が、本当に一つの建物かどうかは別途確認が必要です。</p></div>
+<div class="step"><h3>手順3：複数の場面から、内部の接続を確認する</h3><p>展示室から売店へ歩いて進む場面を確認し、部屋と出入口、左右の階段、中央の斜路を整理しました。連続映像を確認したことで、初期に仮置きした「東入口の長い下降階段」を撤回し、売店を独立した部屋から接続済みの部屋へ更新しました。</p><p>映像で確認したのは接続の順序と構造です。部屋の長さや階段の高さを測れたわけではないため、数値の寸法は仮定として保存しました。</p></div>
+<div class="step"><h3>手順4：床・壁・階段を部品にし、全域と同じ座標へ置く</h3><p>内部を82部品へ分け、どの床からどの部屋へ進めるかを記録しました。ミニマップの画像同士の変換を組み合わせ、局所モデルを全域モデルと同じ平面座標へ移しています。この配置は大まかな対応で、実際の内部の向きや位置精度まで確定していません。</p><p>内部に重なる粗い地面・岩・屋根候補は、表示用の周辺モデルから切り取りました。切り取った面は開いた形になるため、そのまま正確な衝突判定に使える形状とはしていません。</p></div>
+<div class="step"><h3>手順5：部品と経路を検査し、再利用できるデータで保存する</h3><p>立体の面が壊れていないか、床が人物の足を支えるか、階段と床がつながるか、通路が壁や展示物で塞がっていないかを検査しました。形状はJSONとOBJ、色はMTL、部屋の接続や根拠は構造化データとして保存しています。ブラウザでの表示と14秒の確認動画も作成しました。</p></div>
+</section>
+
+<section id="video-mapping"><h2>5. 実映像から位置を求める手順</h2><p>静的な建物モデルの作成と、動画の中の人物をそこへ配置する処理は別の工程です。今回は、手動で選んだ構造の角を使う方法と、画像の模様を自動で探す方法を試しました。</p>
+<h3>方法A：モデル上の角と、画像上の角を対応させる</h3><ol><li>階段や開口部の角に、画像上で印を付けます。同じ角の3D位置をモデルから取り出します。</li><li>その対応から、画像を撮ったカメラの位置と向きを逆算します。カメラの画角、つまり画面に映る範囲の広さも仮定を記録します。</li><li>計算に使わなかった点や、別時刻の画像へモデルを投影し、位置がずれていないか確認します。</li><li>一致しないフレームは位置不明とし、前後をつないで座標を作りません。</li></ol>
+<p>結果として、複数画像で寸法を調整した版は、別時刻14フレームで受理基準を通りませんでした。画像の「階段の内角」が手前の台座で隠れた見かけの境界である可能性や、開口部と階段を同じ幅にする未支持の仮定が見つかりました。見えない角は未使用に訂正し、元の注釈と負の結果も残しています。</p>
+<h3>方法B：画像の特徴から、相対的な3Dを作る</h3><ol><li>ミニマップ、味方名、銃などの動く表示を避け、壁や展示物の模様を画像間で照合します。</li><li>別の位置から撮った2枚の見え方の違いを使い、3Dの点とカメラ同士の相対位置を求めます。</li><li>得られた点を次の画像へ追い、その3D位置と画像上の位置から、各時刻のカメラ姿勢を計算します。</li><li>確認用の点とのずれが大きい場合や、必要な点が足りない場合は不明にします。</li></ol>
+<figure class="mb-figure"><div class="mb-figure-frame"><img loading="lazy" src="assets/sparse-points.png" width="1200" height="1050" alt="見学映像から復元した96個の相対3D点と、短い区間のカメラ位置を示す散布図"></div><figcaption>図4：水色が映像から取得した点。黒い印は短区間で受理されたカメラ位置を含みます。最初のカメラを基準にした任意の尺度で、実際のメートル座標やマップの座標ではありません。点を結んで建物の面を復元した図でもありません。</figcaption></figure>
+<p>環境として使う画像領域を広げることで、照合できた特徴の対応は44組から139組へ、取得できた3D点は35点から96点へ増えました。ただし、点数が増えたことだけで、長時間の追跡が成功したとは判断していません。</p>
+</section>
+
+<section id="validation"><h2>6. 検証結果と現在の到達点</h2>
+<figure class="mb-figure"><div class="mb-figure-frame"><img loading="lazy" src="assets/frame-validation.png" width="1650" height="615" alt="432.8秒から433.2秒を50ミリ秒間隔で検査した結果。作成用2枚、別時刻で通過4枚、不明3枚"></div><figcaption>図5：短区間の全9枚を保存した結果。点群の作成に使った2枚は、別時刻の成功数から除外しています。残る7枚中4枚が画像上の確認を通り、3枚は位置不明です。途中に失敗があるため、連続した移動の復元とはしていません。</figcaption></figure>
+<table><caption>異なる検証条件を分けて報告します（2026-10-20時点）。</caption><thead><tr><th>確認対象</th><th>結果</th><th>この結果が意味すること</th></tr></thead><tbody><tr><td>全域モデル</td><td>253形状のデータ整合性検査に合格</td><td>座標や面の構成の検査。地形の実寸精度ではない</td></tr><tr><td>博物館内部</td><td>82部品の床・階段・経路などの検査に合格</td><td>作成モデル内での整合性。実ゲームの寸法一致ではない</td></tr><tr><td>建物モデルへの映像対応</td><td>別時刻14枚中0枚を受理</td><td>建物の仮寸法や対応点の見直しが必要</td></tr><tr><td>相対点群への短時間の映像対応</td><td>作成用を除く7枚中4枚を受理</td><td>0.4秒の区間内の画像整合。連続追跡や全域配置の成功ではない</td></tr><tr><td>相対点群への長い区間の映像対応</td><td>別時刻の受理0枚</td><td>先の434.2秒の姿勢も不明</td></tr><tr><td>実装・動画</td><td>84テスト合格、168フレームを全て読み出し</td><td>処理と14秒動画の動作確認。実映像の3D精度の証明ではない</td></tr></tbody></table>
+<p>画像上のずれはピクセルで測っています。確認用の点のずれが小さくても、仮寸法のモデルならメートル単位で正しいとは限りません。実映像には正解の3D位置がないため、カメラ位置のメートル誤差、向きの角度誤差、敵位置の誤差、遮蔽判定の正解率は未実証です。</p>
+<p>また、カメラ姿勢の計算に使わない確認点も、別時刻の形状調整では使っている場合があります。この検証は「時刻の異なる画像で整合するか」の確認であり、未知の形状への精度試験ではありません。</p>
+<p>自分の戦闘素材には、展示室内を連続して歩く区間がありません。そのため、見学動画での限定実験と、自分の室内移動・敵の配置ができたことを混同していません。人物の視界外の位置も生成していません。</p>
+</section>
+
+<section id="next"><h2>7. 今後の進め方と参照先</h2><p>次の重点は、相対点群と内部モデルを、信頼できる共通の目印で接続することです。隠れた角を除外し、階段と開口部の幅などの仮定を見直したうえで、作成に使っていない時刻で検査します。</p><p>全域へ広げる際は、同じマップ版の見学素材から場所ごとの参照データを作り、完成したマップを動画ごとに再利用する構成を目指します。まず室内・屋外・上下階をまたぐ場所で工程を確かめ、人の修正にかかった時間も含めて効率を評価します。これは次の実装方針であり、比較実験がすべて完了したという意味ではありません。</p>
+<h3>報告時に使える説明文</h3><blockquote><p>World’s Edgeの全域粗モデルと、博物館1棟の内部モデルを作成しました。内部は展示室から売店までを接続し、床や階段の整合性を検査しています。映像からの位置推定では、短区間の相対3Dを取得できましたが、建物モデルへの安定した対応と人物追跡は引き続き検証中です。</p></blockquote>
+<h3>モデル・動画・検証データ</h3><ul><li><a href="../../demos/fight-replay-world-map/">全域モデル：操作・データのダウンロード</a></li><li><a href="../../demos/fight-replay-museum-interior/">内部モデル：操作・原動画へのリンク・映像対応・点群</a></li><li><a href="../../videos/fight-replay-museum-interior/">内部モデルのレビュー動画</a></li><li><a href="../../reports/fight-replay-map-production/">全域化の手法と制作上の注意点</a></li><li><a href="../../reports/apex-minimap-methods-20261020/">別資料：ミニマップの2D位置推定の改善</a>。本資料の3D実験とは条件を分けています。</li><li><a href="evidence.json">本資料の数値・元データのハッシュ</a></li></ul>
+<p class="source-note">内部の接続の参考：<a href="https://www.youtube.com/watch?v=wJGk8oiqysw&amp;t=434s">The Apex Legends Museum (Full Tour) の7分14秒〜7分25秒</a>。この区間の移動を確認しましたが、動画全編が編集のない連続撮影とはしていません。本資料の図は独自の簡易モデルと数値データから作成し、第三者の元動画・地図画像・ゲームアセットは転載していません。</p>
+</section>
+</article></div></main><script src="report.js"></script></body></html>

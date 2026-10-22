@@ -1,0 +1,34 @@
+{
+  "report_created": "2026-10-22",
+  "experiment_snapshot": "2026-10-20",
+  "world_meshes": 253,
+  "world_rock_candidates": 65,
+  "world_roof_candidates": 158,
+  "world_manual_parts": 29,
+  "interior_components": 82,
+  "shop_components": 11,
+  "relative_points": 96,
+  "short_grid_independent_frames": 7,
+  "short_grid_accepted": 4,
+  "model_mapping_summary": {
+    "independent_frames": 14,
+    "accepted_independent_frames": 0,
+    "unknown_fraction": 1.0,
+    "processing_sec": 2.012470042,
+    "camera_error_m": null,
+    "camera_rotation_error_deg": null
+  },
+  "inputs": {
+    "world-map.json": "13d10f8e00d7a472fa828daea0d323c666b95899c549865f85e67dbe9bec2210",
+    "interior.json": "7af32bd09e84724aa153d14ed44ad5dfc2d8655f9be99c60b7df5721d0cd0e01",
+    "sfm-short-grid.json": "1050c51d58550e3edf7d0a995180e55129d7725e9376f2bbe8bc31815bdc8fce",
+    "mapping.json": "5a5cc3845ea97985e89f9fc932475b5704e56b7e85dd7c448b716e4d706c0bbf",
+    "sfm-result.json": "fc811b6bfe64a61c9beba4a5a8d2698db7ed77eb9a84b5ea3e111b1b40570b40"
+  },
+  "limits": [
+    "No measured metric accuracy for real footage",
+    "Relative sparse map is not registered to the primitive interior",
+    "Independent frames share physical landmarks; not independent geometry truth",
+    "Figures render original simplified geometry, no third-party source raster or video pixels"
+  ]
+}
