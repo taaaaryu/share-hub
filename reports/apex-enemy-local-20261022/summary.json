@@ -1,0 +1,634 @@
+{
+  "date": "2026-10-22",
+  "hardware": "Apple M4",
+  "local_inference_only": true,
+  "model_parameters": 3011043,
+  "input": "1920x1080, 60fps, approximately 49 seconds",
+  "reference": "current",
+  "repetitions": 3,
+  "sampled_frames": 97,
+  "versions": {
+    "torch": "2.8.0",
+    "opencv": "5.0.0"
+  },
+  "conditions": [
+    {
+      "name": "baseline",
+      "label": "比較用・推論4スレッド",
+      "config": {
+        "mode": "read",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 4,
+        "device": "cpu",
+        "decoder_threads": 0
+      },
+      "median": {
+        "wall_s": 3.571168458,
+        "cpu_s": 17.986147000000003,
+        "infer_s": 1.4662276239999974
+      },
+      "runs": [
+        {
+          "wall_s": 3.572991708,
+          "cpu_s": 17.969693,
+          "infer_s": 1.467338952
+        },
+        {
+          "wall_s": 3.571168458,
+          "cpu_s": 17.987775000000003,
+          "infer_s": 1.4662276239999974
+        },
+        {
+          "wall_s": 3.556915333000001,
+          "cpu_s": 17.986147000000003,
+          "infer_s": 1.4650364899999992
+        }
+      ],
+      "peak_rss_mb": 493.518848,
+      "load_s": 0.013057165999999953,
+      "warmup_s": 0.419880291,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    },
+    {
+      "name": "grab640",
+      "label": "画像化省略・推論4スレッド",
+      "config": {
+        "mode": "grab",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 4,
+        "device": "cpu",
+        "decoder_threads": 0
+      },
+      "median": {
+        "wall_s": 2.507341792000001,
+        "cpu_s": 11.785544999999999,
+        "infer_s": 1.4573875879999987
+      },
+      "runs": [
+        {
+          "wall_s": 2.5065071669999996,
+          "cpu_s": 11.812558000000001,
+          "infer_s": 1.461598004
+        },
+        {
+          "wall_s": 2.508242375,
+          "cpu_s": 11.723685000000001,
+          "infer_s": 1.4569530769999992
+        },
+        {
+          "wall_s": 2.507341792000001,
+          "cpu_s": 11.785544999999999,
+          "infer_s": 1.4573875879999987
+        }
+      ],
+      "peak_rss_mb": 503.693312,
+      "load_s": 0.013444791999999928,
+      "warmup_s": 0.42905625000000003,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    },
+    {
+      "name": "size480",
+      "label": "入力480・推論2スレッド",
+      "config": {
+        "mode": "grab",
+        "imgsz": 480,
+        "step": 30,
+        "threads": 2,
+        "device": "cpu",
+        "decoder_threads": 0
+      },
+      "median": {
+        "wall_s": 2.2430470000000002,
+        "cpu_s": 10.381839,
+        "infer_s": 1.1977627439999996
+      },
+      "runs": [
+        {
+          "wall_s": 2.2430470000000002,
+          "cpu_s": 10.402975999999999,
+          "infer_s": 1.1977627439999996
+        },
+        {
+          "wall_s": 2.2499591659999996,
+          "cpu_s": 10.381839,
+          "infer_s": 1.199905664
+        },
+        {
+          "wall_s": 2.242557917,
+          "cpu_s": 10.375824999999999,
+          "infer_s": 1.196428958000002
+        }
+      ],
+      "peak_rss_mb": 480.968704,
+      "load_s": 0.012584791999999956,
+      "warmup_s": 0.421880041,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 24,
+          "unmatched_candidate_boxes": 11,
+          "mean_matched_iou": 0.7766186958033173
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 4,
+          "unmatched_candidate_boxes": 5,
+          "mean_matched_iou": 0.8585617192979526
+        }
+      }
+    },
+    {
+      "name": "size320",
+      "label": "入力320・推論2スレッド",
+      "config": {
+        "mode": "grab",
+        "imgsz": 320,
+        "step": 30,
+        "threads": 2,
+        "device": "cpu",
+        "decoder_threads": 0
+      },
+      "median": {
+        "wall_s": 1.73520225,
+        "cpu_s": 9.58041,
+        "infer_s": 0.6941545060000043
+      },
+      "runs": [
+        {
+          "wall_s": 1.7313997909999999,
+          "cpu_s": 9.594888,
+          "infer_s": 0.693690876999999
+        },
+        {
+          "wall_s": 1.73520225,
+          "cpu_s": 9.540469,
+          "infer_s": 0.6941545060000043
+        },
+        {
+          "wall_s": 1.7352672920000005,
+          "cpu_s": 9.58041,
+          "infer_s": 0.696016250999997
+        }
+      ],
+      "peak_rss_mb": 456.704,
+      "load_s": 0.012887458000000018,
+      "warmup_s": 0.4278216250000001,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 9,
+          "unmatched_candidate_boxes": 22,
+          "mean_matched_iou": 0.684805449298787
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 5,
+          "unmatched_candidate_boxes": 3,
+          "mean_matched_iou": 0.6881092965059228
+        }
+      }
+    },
+    {
+      "name": "step60",
+      "label": "60フレーム間隔・推論2スレッド",
+      "config": {
+        "mode": "grab",
+        "imgsz": 640,
+        "step": 60,
+        "threads": 2,
+        "device": "cpu",
+        "decoder_threads": 0
+      },
+      "median": {
+        "wall_s": 1.987797042,
+        "cpu_s": 10.035698,
+        "infer_s": 0.9241466240000005
+      },
+      "runs": [
+        {
+          "wall_s": 1.987797042,
+          "cpu_s": 10.035698,
+          "infer_s": 0.9225122119999991
+        },
+        {
+          "wall_s": 1.984386958,
+          "cpu_s": 10.034092999999999,
+          "infer_s": 0.9241466240000005
+        },
+        {
+          "wall_s": 2.0077095830000005,
+          "cpu_s": 10.099512,
+          "infer_s": 0.9345730010000013
+        }
+      ],
+      "peak_rss_mb": 502.00576,
+      "load_s": 0.012787041999999915,
+      "warmup_s": 0.437844958,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 21,
+          "matched_iou50": 21,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 15,
+          "matched_iou50": 15,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    },
+    {
+      "name": "mps640",
+      "label": "Mac内蔵GPU",
+      "config": {
+        "mode": "grab",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 2,
+        "device": "mps",
+        "decoder_threads": 0
+      },
+      "median": {
+        "wall_s": 2.324735458,
+        "cpu_s": 9.267434999999999,
+        "infer_s": 1.2843333789999978
+      },
+      "runs": [
+        {
+          "wall_s": 2.54494225,
+          "cpu_s": 9.447473,
+          "infer_s": 1.5039838299999977
+        },
+        {
+          "wall_s": 2.3222176249999995,
+          "cpu_s": 9.24355,
+          "infer_s": 1.271126129999998
+        },
+        {
+          "wall_s": 2.324735458,
+          "cpu_s": 9.267434999999999,
+          "infer_s": 1.2843333789999978
+        }
+      ],
+      "peak_rss_mb": 696.48384,
+      "load_s": 0.012972167000000034,
+      "warmup_s": 0.7215734160000001,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 0.9999987896731313
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 0.9999992439003133
+        }
+      }
+    },
+    {
+      "name": "decoder1",
+      "label": "デコード1・推論4スレッド",
+      "config": {
+        "mode": "grab",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 4,
+        "device": "cpu",
+        "decoder_threads": 1
+      },
+      "median": {
+        "wall_s": 6.968973875,
+        "cpu_s": 8.742603,
+        "infer_s": 1.4331775360000014
+      },
+      "runs": [
+        {
+          "wall_s": 6.969459249999999,
+          "cpu_s": 8.742603,
+          "infer_s": 1.4331775360000014
+        },
+        {
+          "wall_s": 6.968973875,
+          "cpu_s": 8.746249,
+          "infer_s": 1.4375314569999968
+        },
+        {
+          "wall_s": 6.959840625000002,
+          "cpu_s": 8.734608999999999,
+          "infer_s": 1.429810168000003
+        }
+      ],
+      "peak_rss_mb": 416.776192,
+      "load_s": 0.013199333999999951,
+      "warmup_s": 0.432380458,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    },
+    {
+      "name": "decoder2",
+      "label": "デコード2・推論4スレッド",
+      "config": {
+        "mode": "grab",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 4,
+        "device": "cpu",
+        "decoder_threads": 2
+      },
+      "median": {
+        "wall_s": 4.674588333,
+        "cpu_s": 9.25071,
+        "infer_s": 1.5107360369999956
+      },
+      "runs": [
+        {
+          "wall_s": 4.674588333,
+          "cpu_s": 9.261856000000002,
+          "infer_s": 1.510869834000001
+        },
+        {
+          "wall_s": 4.680668959,
+          "cpu_s": 9.25071,
+          "infer_s": 1.5107360369999956
+        },
+        {
+          "wall_s": 4.610138375,
+          "cpu_s": 9.163510000000002,
+          "infer_s": 1.465909875999989
+        }
+      ],
+      "peak_rss_mb": 426.47552,
+      "load_s": 0.01319658300000004,
+      "warmup_s": 0.4341461670000001,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    },
+    {
+      "name": "decoder1cpu2",
+      "label": "デコード1・推論2スレッド",
+      "config": {
+        "mode": "grab",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 2,
+        "device": "cpu",
+        "decoder_threads": 1
+      },
+      "median": {
+        "wall_s": 7.290188208,
+        "cpu_s": 8.231791,
+        "infer_s": 1.7477951190000063
+      },
+      "runs": [
+        {
+          "wall_s": 7.309882375,
+          "cpu_s": 8.256104,
+          "infer_s": 1.7561213740000021
+        },
+        {
+          "wall_s": 7.290188208,
+          "cpu_s": 8.231791,
+          "infer_s": 1.7477951190000063
+        },
+        {
+          "wall_s": 7.283514374999999,
+          "cpu_s": 8.222210999999998,
+          "infer_s": 1.742498541000007
+        }
+      ],
+      "peak_rss_mb": 417.234944,
+      "load_s": 0.015909375000000003,
+      "warmup_s": 0.5569201669999999,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    },
+    {
+      "name": "current",
+      "label": "旧処理・標準8スレッド",
+      "config": {
+        "mode": "read",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 8,
+        "device": "cpu",
+        "decoder_threads": 0
+      },
+      "median": {
+        "wall_s": 3.712758791999999,
+        "cpu_s": 18.966274999999996,
+        "infer_s": 1.620945752000007
+      },
+      "runs": [
+        {
+          "wall_s": 3.70969,
+          "cpu_s": 18.977952000000002,
+          "infer_s": 1.6222244179999994
+        },
+        {
+          "wall_s": 3.715323875,
+          "cpu_s": 18.966274999999996,
+          "infer_s": 1.620945752000007
+        },
+        {
+          "wall_s": 3.712758791999999,
+          "cpu_s": 18.930868999999994,
+          "infer_s": 1.619333580000001
+        }
+      ],
+      "peak_rss_mb": 514.850816,
+      "load_s": 0.013010708000000037,
+      "warmup_s": 0.41945025,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    },
+    {
+      "name": "current_grab",
+      "label": "画像化を必要なフレームだけに限定",
+      "config": {
+        "mode": "grab",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 8,
+        "device": "cpu",
+        "decoder_threads": 0
+      },
+      "median": {
+        "wall_s": 2.669300334,
+        "cpu_s": 12.674466000000002,
+        "infer_s": 1.6277255470000007
+      },
+      "runs": [
+        {
+          "wall_s": 2.6746592089999996,
+          "cpu_s": 12.694027,
+          "infer_s": 1.6303827069999999
+        },
+        {
+          "wall_s": 2.6344269580000006,
+          "cpu_s": 12.609382,
+          "infer_s": 1.5993259540000024
+        },
+        {
+          "wall_s": 2.669300334,
+          "cpu_s": 12.674466000000002,
+          "infer_s": 1.6277255470000007
+        }
+      ],
+      "peak_rss_mb": 498.64704,
+      "load_s": 0.013879583000000029,
+      "warmup_s": 0.43174112499999995,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    },
+    {
+      "name": "current_decoder1",
+      "label": "動画デコードを1スレッドに制限",
+      "config": {
+        "mode": "grab",
+        "imgsz": 640,
+        "step": 30,
+        "threads": 8,
+        "device": "cpu",
+        "decoder_threads": 1
+      },
+      "median": {
+        "wall_s": 7.156317792000001,
+        "cpu_s": 10.093419999999998,
+        "infer_s": 1.656271499999992
+      },
+      "runs": [
+        {
+          "wall_s": 7.164359458,
+          "cpu_s": 10.104054,
+          "infer_s": 1.656271499999992
+        },
+        {
+          "wall_s": 7.152965875000001,
+          "cpu_s": 10.083706999999999,
+          "infer_s": 1.6579766220000067
+        },
+        {
+          "wall_s": 7.156317792000001,
+          "cpu_s": 10.093419999999998,
+          "infer_s": 1.654367542000001
+        }
+      ],
+      "peak_rss_mb": 417.120256,
+      "load_s": 0.01380833299999995,
+      "warmup_s": 0.4321458330000001,
+      "agreement_not_accuracy": {
+        "0.25": {
+          "baseline_boxes": 48,
+          "matched_iou50": 48,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        },
+        "0.5": {
+          "baseline_boxes": 28,
+          "matched_iou50": 28,
+          "unmatched_candidate_boxes": 0,
+          "mean_matched_iou": 1.0
+        }
+      }
+    }
+  ],
+  "verification": {
+    "sampled_frames_per_decoder": 140,
+    "single_thread_decoder_pixels_identical": true,
+    "bbox_tolerance": 1e-05,
+    "unit_tests_passed": 7
+  }
+}

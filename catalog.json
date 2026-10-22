@@ -1,5 +1,11 @@
 [
   {
+    "slug": "apex-enemy-local-20261022",
+    "kind": "report",
+    "title": "Apexの敵検出を速く、軽くするローカル実験",
+    "description": "ローカル実測・CPUとメモリの交換条件・検出出力を保つ改善"
+  },
+  {
     "slug": "apex-minimap-methods-20261020",
     "kind": "report",
     "title": "Apexミニマップ位置推定を速く、軽く、正確にするには",
