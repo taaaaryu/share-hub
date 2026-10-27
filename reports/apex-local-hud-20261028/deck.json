@@ -1,0 +1,75 @@
+{
+  "title": "APEX HUD読取のローカル検証と未測定の範囲",
+  "theme": "terminal-night",
+  "subtitle": "2026-10-28 · 集計と検証範囲",
+  "slides": [
+    {
+      "kind": "cover",
+      "label": "解析資料",
+      "accent": "解析",
+      "title": "既存HUD読取の小規模検証",
+      "body": "13本・約505 MBを取得。選択フレームの弾数とHPを既存ローカル処理で比較しました。MVP受入完了を示す結果ではありません。",
+      "visual": "◉"
+    },
+    {
+      "kind": "takeaway",
+      "label": "結論",
+      "title": "探索と別映像を分ける",
+      "body": "候補条件を探索素材で固定後、別映像へ適用。GPT視覚ラベルを予測前に作成しましたが、独立した人手正解ではありません。",
+      "visual": "01"
+    },
+    {
+      "kind": "metrics",
+      "label": "主要な数字",
+      "title": "弾数は選択各16件で比較",
+      "body": "候補は両群16/16一致。イベントのPrecision・Recall・F1や、動画全体の精度ではありません。",
+      "metrics": [
+        {
+          "value": "34",
+          "name": "選択フレーム",
+          "note": "各群16件を採点"
+        },
+        {
+          "value": "0回",
+          "name": "有料モデル呼出し",
+          "note": "全パイプライン費用は未測定"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "比較",
+      "title": "HPは棄権を含めて読む",
+      "body": "候補は両群で15/16件がラベル許容範囲内、各1件棄権。MAEは予測が得られた各15件だけの値です。",
+      "columns": [
+        {
+          "heading": "予測あり",
+          "text": "各15件をMAE算出に使用"
+        },
+        {
+          "heading": "棄権",
+          "text": "各1件を分離し、0で埋めない"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "根拠",
+      "title": "Shieldは分母が未確定",
+      "body": "装備が満タンでも固定画像領域に対する割合とは一致し得ません。全件未採点、被ダメージ量へ換算しません。",
+      "sources": [
+        {
+          "label": "GameplayQA",
+          "url": "https://huggingface.co/datasets/wangyz1999/GameplayQA"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "次の行動",
+      "title": "有料モデル呼出し0回",
+      "body": "発砲・与ダメージ・敵・戦闘境界の精度と、動画1分の全解析コストは未測定。公開デモの既定値を維持します。",
+      "visual": "→"
+    }
+  ]
+}

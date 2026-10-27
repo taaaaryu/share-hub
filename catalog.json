@@ -1,5 +1,11 @@
 [
   {
+    "slug": "apex-local-hud-20261028",
+    "title": "APEX HUD読取のローカル検証と未測定の範囲",
+    "description": "13本の取得素材・探索と別映像の比較・棄権と未測定項目",
+    "kind": "report"
+  },
+  {
     "slug": "apex-analyst-needs-20261027",
     "title": "競技APEXアナリストの業務と戦闘レビューの検証仮説",
     "description": "公開一次情報6件・9分類の業務・MVP仮説と未検証事項",
