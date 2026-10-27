@@ -1,0 +1,95 @@
+{
+  "title": "競技APEXアナリストの業務と戦闘レビューの検証仮説",
+  "theme": "terminal-night",
+  "subtitle": "公開一次情報による探索調査 · 2026-10-27",
+  "slides": [
+    {
+      "kind": "cover",
+      "label": "解析資料",
+      "accent": "解析",
+      "title": "公開業務と導入意向を分ける",
+      "body": "スクリム集計、武器別ダメージ、POI・安置、VODレビューの実務を公開資料で確認。支払い意向は未検証です。",
+      "visual": "◉"
+    },
+    {
+      "kind": "takeaway",
+      "label": "結論",
+      "title": "映像へ戻れる価値を検証する",
+      "body": "戦闘一覧から根拠映像へ戻り、観測できた値を確認する流れを初期仮説にします。顧客合意や実装完了の報告ではありません。",
+      "visual": "01"
+    },
+    {
+      "kind": "metrics",
+      "label": "主要な数字",
+      "title": "公開一次情報6件・ヒアリング0名",
+      "body": "本人記事・インタビュー・コミュニティ原投稿を参照。頻度不明は不明とし、公開閲覧をヒアリングに数えません。",
+      "metrics": [
+        {
+          "value": "6件",
+          "name": "一次情報",
+          "note": "探索的調査"
+        },
+        {
+          "value": "0名",
+          "name": "ヒアリング",
+          "note": "未実施"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "比較",
+      "title": "利用者像を分ける",
+      "body": "競技チーム、個人コーチ、統計分析者で用途は異なります。ファンの要求をB2Bの購入意思へ置き換えません。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "公開資料で語られた業務"
+        },
+        {
+          "heading": "未検証",
+          "text": "自動化需要と支払い意向"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "根拠",
+      "title": "根拠は公開URLで確認する",
+      "body": "詳細レポートで一次URL、役割、観測した業務、代替手段と限界を確認できます。",
+      "sources": [
+        {
+          "label": "sigluss：これまでの資料公開",
+          "url": "https://note.com/sigluss00/n/n5bda1ad6baf8"
+        },
+        {
+          "label": "しょーへー：個人的アナリスト業務について",
+          "url": "https://note.com/long_parrot1543/n/n6d654b2327d4"
+        },
+        {
+          "label": "Raven本人インタビュー",
+          "url": "https://esports.gg/news/apex-legends/tsm-raven-champs-2023/"
+        },
+        {
+          "label": "ALGS Year 6 Stat Dump：原投稿とコメント",
+          "url": "https://www.reddit.com/r/CompetitiveApex/comments/1uuspdo/algs_year_6_split_1_playoffs_stat_dump/"
+        },
+        {
+          "label": "ALGSスクリム統計を探す原投稿",
+          "url": "https://www.reddit.com/r/apexlegends/comments/1rrd1wy/is_there_any_way_to_see_stats_of_algs_scrims/"
+        },
+        {
+          "label": "District：コーチングの本人サービス説明",
+          "url": "https://thedistrict.pro/en-eur/pages/coaching"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "次の行動",
+      "title": "次は実際のレビューを比較する",
+      "body": "連絡承認と本人の同意後に3〜5名の業務を観察し、時間、誤り許容度、導入条件を測ります。",
+      "visual": "→"
+    }
+  ]
+}

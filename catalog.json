@@ -1,5 +1,11 @@
 [
   {
+    "slug": "apex-analyst-needs-20261027",
+    "title": "競技APEXアナリストの業務と戦闘レビューの検証仮説",
+    "description": "公開一次情報6件・9分類の業務・MVP仮説と未検証事項",
+    "kind": "report"
+  },
+  {
     "slug": "fight-replay-progress-20261022",
     "kind": "report",
     "title": "Thumaster 3Dマップ制作の成果報告",
