@@ -1,0 +1,25 @@
+body.home{margin:0;background:#fff;color:#161616;font-family:"IBM Plex Sans",system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;font-size:18px;line-height:1.85;-webkit-font-smoothing:antialiased}
+body.home .home-wrap{max-width:1100px;margin:0 auto;padding:clamp(40px,7vw,80px) 24px 96px}
+body.home .eyebrow{color:#0f62fe;font-size:12px;font-weight:500;letter-spacing:.16em}
+body.home h1{margin:24px 0;color:#161616;font-size:clamp(40px,6vw,64px);font-weight:400;line-height:1.12;letter-spacing:-.02em}
+body.home .home-lead{max-width:720px;margin:0;color:#393939;font-size:18px;line-height:1.85}
+body.home .home-section{margin-top:56px}
+body.home .section-head{padding-bottom:12px;border-bottom:1px solid #e0e0e0}
+body.home .section-head h2{margin:0;color:#161616;font-size:20px;font-weight:500;letter-spacing:0}
+body.home .section-head span,body.home .home-note{color:#525252;font-size:13px;line-height:1.7}
+
+body.home .deck-card{display:flex;align-items:center;gap:16px;margin:0;padding:16px 8px;border:0;border-bottom:1px solid #e0e0e0;border-radius:0;background:transparent;box-shadow:none;color:#161616;text-decoration:none}
+body.home .deck-card:hover{outline:none;background:#edf4ff}
+body.home .deck-card-icon{display:grid;place-items:center;width:20px;height:auto;border-radius:0;background:none;color:#0f62fe;font-size:14px}
+body.home .deck-card-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
+body.home .deck-card-copy strong{color:#161616;font-size:18px;font-weight:500;line-height:1.5}
+body.home .deck-card-copy small{color:#525252;font-size:14px;line-height:1.65}
+body.home .deck-card-arrow{margin-left:auto;color:#0f62fe;font-size:18px}
+body.home .home-note{margin-top:40px;padding-top:16px;border-top:1px solid #e0e0e0}
+
+@media(max-width:600px){
+  body.home .home-wrap{padding:40px 20px 72px}
+  body.home h1{font-size:clamp(40px,11vw,52px)}
+  body.home .deck-card{gap:12px;padding:16px 4px}
+  body.home .deck-card-copy strong{font-size:17px}
+}

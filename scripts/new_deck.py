@@ -24,11 +24,12 @@ def main() -> None:
     (folder / "index.html").write_text(shell)
     deck = json.loads((ROOT / "templates" / "analysis.json").read_text())
     deck["title"] = title
-    deck["slides"][0]["title"] = title
+    if deck.get("layout") != "reading":
+        deck["slides"][0]["title"] = title
     (folder / "deck.json").write_text(json.dumps(deck, ensure_ascii=False, indent=2) + "\n")
     catalog_path = ROOT / "catalog.json"
     catalog = json.loads(catalog_path.read_text())
-    catalog.insert(0, {"slug": slug, "title": title, "description": f"解析資料 · {len(deck['slides'])}枚"})
+    catalog.insert(0, {"slug": slug, "title": title, "description": ("背景・全体像・変更・効果・検証を説明" if deck.get("layout") == "reading" else f"解析資料 · {len(deck['slides'])}枚")})
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n")
     print(f"作成しました: slides/{slug}/")
 

@@ -3,7 +3,7 @@
 ユーザーへの公開可能な成果物の共有先は、この `share-hub` リポジトリと https://taaaaryu.github.io/share-hub/ を使う。
 ローカルの標準パスは `/Users/taaaaryu/Desktop/share-hub`。
 
-- 調査・解析資料は `scripts/new_deck.py` と `templates/analysis.json` の共通テンプレートを使う。共通デザインは `assets/theme-terminal.css`。
+- 調査・解析資料は `scripts/new_deck.py` と `templates/analysis.json` の共通テンプレートを使う。新しい資料の共通デザインはIBM Carbonを参考にした `assets/presentation.css`、閲覧処理は `assets/presentation.js`。旧資料のtheme-terminalは互換用に維持する。
 - 動画・デモは必要に応じて `videos/<slug>/` / `demos/<slug>/` に置き、トップからリンクする。
 - 秘密情報・個人情報・未承認の非公開データを公開しない。該当する資料や動画の公開方法はユーザーと先に決める。公開許可は元の素材全体への包括的な許可と解釈しない。
 - `python3 scripts/validate_decks.py` と対象JSの構文検査を行う。動画は全フレームdecode、尺、ブラウザ再生を確認する。
@@ -12,3 +12,6 @@
 
 ## 説明資料の読みやすさ
 2026-10-18のユーザー指定により、文字数に合わせて説明を無理に短縮しない。専門用語や仮定は意味と具体例を説明し、確認済みの事実・仮定・未検証事項を分ける。スライドに収まらない場合は読みやすいHTMLレポートを優先する。共有先は引き続きshare-hub。
+
+## 機能説明資料の前提
+2026-10-29のユーザー指定。資料は「なぜやるのか」「全体の仕組みと今回の対象」を先に示し、その後に変更内容・具体的な改善・検証と制約を説明する。固定スライド比率に合わせて文字や画像を小さくせず、縦スクロールと目次を基本に、スマホでも読める大きさで配置する。

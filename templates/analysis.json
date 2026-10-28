@@ -1,58 +1,81 @@
 {
   "title": "解析タイトル",
-  "theme": "terminal-night",
+  "theme": "carbon-reading",
   "subtitle": "対象・期間・作成日",
   "slides": [
     {
-      "kind": "cover",
-      "label": "解析資料",
-      "accent": "解析",
-      "title": "結論が伝わるタイトル",
-      "body": "対象と期間を一文で示す",
-      "visual": "◉"
-    },
-    {
       "kind": "takeaway",
-      "label": "結論",
-      "title": "最も重要な発見",
-      "body": "何が分かり、なぜ重要かを二文以内で示す",
-      "visual": "01"
+      "label": "PURPOSE / 背景と目的",
+      "title": "なぜこの変更を行うのか",
+      "body": "対象の利用者と、いま困っていること、この変更でできるようにしたいことを説明する。",
+      "paragraphs": [
+        "前提となる状況を説明する。初めて読む人にも目的が分かるように書く。"
+      ]
     },
     {
-      "kind": "metrics",
-      "label": "主要な数字",
-      "title": "数字で見る結果",
-      "body": "数字の意味や比較条件を短く示す",
-      "metrics": [
-        {"value": "12%", "name": "指標A", "note": "比較対象を明記"},
-        {"value": "24件", "name": "指標B", "note": "集計期間を明記"}
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "全体の流れと今回の対象",
+      "body": "全体の仕組みの中で、今回どこを変えるのかを示す。実装済みと構想を分ける。",
+      "flow": [
+        {
+          "title": "入力",
+          "body": "何を受け取るか。"
+        },
+        {
+          "title": "今回の変更",
+          "body": "何をする部分か。"
+        },
+        {
+          "title": "結果の確認",
+          "body": "何を確かめるか。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "必要な用語",
+          "meaning": "初めて読む人にも伝わる意味と具体例を書く。"
+        }
       ]
     },
     {
       "kind": "comparison",
-      "label": "比較",
-      "title": "何が変わったか",
-      "body": "比較に使った条件を示す",
+      "label": "CHANGE / 変更内容",
+      "title": "何をどう変えたか",
+      "body": "同じ利用場面で、変更前と変更後の違いを画像や操作例で説明する。",
       "columns": [
-        {"heading": "以前", "text": "比較前の状態"},
-        {"heading": "今回", "text": "比較後の状態"}
+        {
+          "heading": "以前",
+          "text": "利用者は何をしていたか。"
+        },
+        {
+          "heading": "今回",
+          "text": "どの操作ができるようになったか。"
+        }
       ]
     },
     {
       "kind": "evidence",
-      "label": "根拠",
-      "title": "判断の根拠",
-      "body": "観測した事実と推測を分けて記す",
-      "sources": [
-        {"label": "出典名", "url": "https://example.com/"}
-      ]
+      "label": "VALUE / 具体的な効果",
+      "title": "具体的にどのように良くなったか",
+      "body": "実際に確認できた操作や測定結果を示す。まだ測っていない効果は、未測定と明記する。"
     },
     {
-      "kind": "closing",
-      "label": "次の行動",
-      "title": "次にすること",
-      "body": "具体的な行動を一つに絞る",
-      "visual": "→"
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "確認済みと未検証の範囲",
+      "body": "試した条件、うまくいかなかったこと、残る課題を説明する。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "確認した事実を具体的に示す。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "まだ確かめていないことと、必要な次の作業を書く。"
+        }
+      ]
     }
-  ]
+  ],
+  "layout": "reading"
 }
