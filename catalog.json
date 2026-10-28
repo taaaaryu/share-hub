@@ -1,5 +1,10 @@
 [
   {
+    "slug": "software-factory-ui-20261029",
+    "title": "AIの工場画面とLinear課題選択",
+    "description": "工場風景・タスク詳細・Linear候補選択のBefore/After · 5枚"
+  },
+  {
     "slug": "thumaster-hud-change-20261028",
     "title": "画面の変化を見つける共通部品",
     "description": "仕組み・失敗時の扱い・実動画比較を図解 · 6枚"
