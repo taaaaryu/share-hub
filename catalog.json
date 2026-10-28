@@ -1,5 +1,10 @@
 [
   {
+    "slug": "thumaster-hud-change-20261028",
+    "title": "画面の変化を見つける共通部品",
+    "description": "仕組み・失敗時の扱い・実動画比較を図解 · 6枚"
+  },
+  {
     "slug": "apex-local-hud-20261028",
     "title": "APEX HUD読取のローカル検証と未測定の範囲",
     "description": "13本の取得素材・探索と別映像の比較・棄権と未測定項目",

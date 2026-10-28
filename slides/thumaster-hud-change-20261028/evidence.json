@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28",
+  "tests_passed": 60,
+  "videos_compared": 2,
+  "frames_compared": 2877,
+  "transitions_matched": 87,
+  "transitions_total": 87,
+  "implementation_commit": "a6c0c1874ed536a60fb3c033766c7f0c6196ca9f",
+  "measurement": "local CPU, single run per clip",
+  "not_measured": [
+    "human-labeled accuracy",
+    "cloud cost",
+    "production integration"
+  ],
+  "elapsed_seconds": [
+    {
+      "clip": "A",
+      "reference": 0.979620333,
+      "refactor": 0.9862609160000002
+    },
+    {
+      "clip": "B",
+      "reference": 0.970658791,
+      "refactor": 0.9659045000000002
+    }
+  ]
+}

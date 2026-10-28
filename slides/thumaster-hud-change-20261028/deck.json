@@ -1,0 +1,61 @@
+{
+  "title": "画面の変化を見つける共通部品",
+  "theme": "terminal-night",
+  "subtitle": "技術探索の初回報告 · 2026-10-28",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "今回の変更",
+      "title": "画面の変化を見つける共通部品",
+      "body": "ダメージ数字や武器名など、表示を比較する処理を交換できる形にします。これは文字を読む前段の部品です。",
+      "image": "mechanism.svg",
+      "image_alt": "表示領域を切り出し、文字の形を比較し、変化候補を返す仕組み",
+      "mobile_image": "mechanism-mobile.svg"
+    },
+    {
+      "kind": "takeaway",
+      "label": "何を比べるか",
+      "title": "見たいのは、背景よりも数字の変化",
+      "body": "表示領域を小さく切り、明るい文字を白黒の形にします。以下は仕組みを説明する模式図で、実動画の測定例ではありません。",
+      "image": "digits.svg",
+      "image_alt": "模式図の45から60への変化と、比較対象の赤枠",
+      "mobile_image": "digits-mobile.svg"
+    },
+    {
+      "kind": "comparison",
+      "label": "二つの比較方法",
+      "title": "変化率と形の類似度を分けて扱う",
+      "body": "画素差分は変わった点の割合、テンプレート照合は形の似かよりを見ます。既存の比較方法と基準値を保ち、後から比較できます。",
+      "image": "methods.svg",
+      "image_alt": "画素差分とテンプレート照合の物差しの違い",
+      "mobile_image": "methods-mobile.svg"
+    },
+    {
+      "kind": "takeaway",
+      "label": "失敗時の扱い",
+      "title": "読めない状態を、変化と混同しない",
+      "body": "画像が空、領域が範囲外、比較する形が違う場合は「判定不能」を返します。理由を残し、正常な変化として数えない設計です。",
+      "image": "unknown.svg",
+      "image_alt": "空領域、サイズ違い、読み込み失敗を判定不能として扱う図",
+      "mobile_image": "unknown-mobile.svg"
+    },
+    {
+      "kind": "evidence",
+      "label": "ローカル検証の結果",
+      "title": "同じ入力から、同じ変化候補が得られた",
+      "body": "訓練場動画2本を同じ領域・同じ基準で比較しました。87件の一致は既存処理との一致であり、人手の正解に対する認識精度ではありません。",
+      "image": "results.svg",
+      "image_alt": "60テスト成功、2877フレーム比較、87候補一致と各動画1回の処理秒数",
+      "mobile_image": "results-mobile.svg"
+    },
+    {
+      "kind": "evidence",
+      "label": "検証の範囲",
+      "title": "部品の検証と、効果の検証を分ける",
+      "body": "今回の結果は、この後の実験の土台です。実動画での精度向上や費用削減は、同じ評価素材と正解ラベルを用意して別に測ります。",
+      "image": "scope.svg",
+      "image_alt": "今回の検証範囲と未検証の精度・コストの比較",
+      "mobile_image": "scope-mobile.svg"
+    }
+  ]
+}
