@@ -146,6 +146,10 @@
         {
           "label": "OpenCV：Top-hatなどの形態学的処理（一次情報）",
           "url": "https://docs.opencv.org/4.10.0/d3/dbe/tutorial_opening_closing_hats.html"
+        },
+        {
+          "label": "実施後の小規模PoC結果（合成80ペア）",
+          "url": "https://taaaaryu.github.io/share-hub/slides/thumaster-hud-poc-20261029/"
         }
       ]
     },

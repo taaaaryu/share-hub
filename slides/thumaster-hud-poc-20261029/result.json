@@ -1,0 +1,1939 @@
+{
+  "meta": {
+    "title": "Synthetic HUD change-candidate extraction PoC (CPU, Top-hat)",
+    "created_at": "2026-10-29T13:21:36",
+    "script": "reproduce.py",
+    "script_sha256": "73415de59d0757d0bba2e5f3c9e64bd61cafb51b83b9d091e94a2eb7a51f576c",
+    "seed": 20261029,
+    "synthetic_only": true,
+    "real_video_accuracy_claimed": false,
+    "linear_updated": false,
+    "issue_completed": false,
+    "notes": [
+      "Synthetic OpenCV HUD only; not a real-video accuracy claim.",
+      "Frame-level columns and detection latency were not measured.",
+      "Thresholds and kernel were fixed before the single run and not tuned afterwards.",
+      "The three methods are independent implementations for CPU-time comparison; C recomputes Top-hat."
+    ]
+  },
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "system": "Darwin",
+    "machine": "arm64",
+    "python_version": "3.9.6",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.0.2",
+    "cv2_threads": 10
+  },
+  "parameters": {
+    "frame_width": 640,
+    "frame_height": 300,
+    "hud_roi": {
+      "x": 40,
+      "y": 100,
+      "w": 240,
+      "h": 100
+    },
+    "control_roi": {
+      "x": 340,
+      "y": 100,
+      "w": 240,
+      "h": 100
+    },
+    "pairs_per_condition": 20,
+    "method_a": {
+      "gray_threshold": 190,
+      "change_threshold_fraction": 0.005
+    },
+    "method_b": {
+      "tophat_kernel_shape": "ellipse",
+      "tophat_kernel_size": [
+        15,
+        15
+      ],
+      "tophat_threshold": 40,
+      "change_threshold_fraction": 0.004
+    },
+    "method_c": {
+      "tophat_kernel_shape": "ellipse",
+      "tophat_kernel_size": [
+        15,
+        15
+      ],
+      "tophat_threshold": 40,
+      "change_threshold_score": 0.003,
+      "score": "hud_xor_fraction - control_xor_fraction"
+    },
+    "font": "FONT_HERSHEY_SIMPLEX",
+    "font_scale": 2.4,
+    "font_thickness": 5
+  },
+  "dataset": {
+    "conditions": [
+      {
+        "id": "digits_same_bg_change",
+        "label_ja": "数字不変 + 背景変化",
+        "digit_changed": false,
+        "bg_changed": true,
+        "pairs": 20
+      },
+      {
+        "id": "digits_change_bg_same",
+        "label_ja": "数字変化 + 背景不変",
+        "digit_changed": true,
+        "bg_changed": false,
+        "pairs": 20
+      },
+      {
+        "id": "both_change",
+        "label_ja": "数字変化 + 背景変化",
+        "digit_changed": true,
+        "bg_changed": true,
+        "pairs": 20
+      },
+      {
+        "id": "neither",
+        "label_ja": "数字不変 + 背景不変",
+        "digit_changed": false,
+        "bg_changed": false,
+        "pairs": 20
+      }
+    ],
+    "positive_conditions": [
+      "digits_change_bg_same",
+      "both_change"
+    ],
+    "negative_conditions": [
+      "digits_same_bg_change",
+      "neither"
+    ],
+    "positive_transition_coverage": {
+      "1<->7": 4,
+      "0<->8": 4,
+      "6<->8": 4,
+      "digit_increase": 4
+    }
+  },
+  "metrics": {
+    "A": {
+      "tp": 40,
+      "fp": 19,
+      "tn": 21,
+      "fn": 0,
+      "positives": 40,
+      "negatives": 40,
+      "recall": 1.0,
+      "false_positive_rate": 0.475
+    },
+    "B": {
+      "tp": 40,
+      "fp": 2,
+      "tn": 38,
+      "fn": 0,
+      "positives": 40,
+      "negatives": 40,
+      "recall": 1.0,
+      "false_positive_rate": 0.05
+    },
+    "C": {
+      "tp": 40,
+      "fp": 2,
+      "tn": 38,
+      "fn": 0,
+      "positives": 40,
+      "negatives": 40,
+      "recall": 1.0,
+      "false_positive_rate": 0.05
+    }
+  },
+  "per_condition": {
+    "digits_same_bg_change": {
+      "label_ja": "数字不変 + 背景変化",
+      "pairs": 20,
+      "digit_changed": false,
+      "bg_changed": true,
+      "detected": {
+        "A": 19,
+        "B": 2,
+        "C": 2
+      }
+    },
+    "digits_change_bg_same": {
+      "label_ja": "数字変化 + 背景不変",
+      "pairs": 20,
+      "digit_changed": true,
+      "bg_changed": false,
+      "detected": {
+        "A": 20,
+        "B": 20,
+        "C": 20
+      }
+    },
+    "both_change": {
+      "label_ja": "数字変化 + 背景変化",
+      "pairs": 20,
+      "digit_changed": true,
+      "bg_changed": true,
+      "detected": {
+        "A": 20,
+        "B": 20,
+        "C": 20
+      }
+    },
+    "neither": {
+      "label_ja": "数字不変 + 背景不変",
+      "pairs": 20,
+      "digit_changed": false,
+      "bg_changed": false,
+      "detected": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    }
+  },
+  "positive_by_transition": {
+    "1<->7": {
+      "pairs": 8,
+      "detected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      }
+    },
+    "0<->8": {
+      "pairs": 8,
+      "detected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      }
+    },
+    "6<->8": {
+      "pairs": 8,
+      "detected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      }
+    },
+    "digit_increase": {
+      "pairs": 8,
+      "detected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      }
+    },
+    "other": {
+      "pairs": 8,
+      "detected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      }
+    }
+  },
+  "timing": {
+    "generation_cpu_s": 0.49064600000000064,
+    "method_cpu_s": {
+      "A": 0.004973999999998896,
+      "B": 0.08442300000000066,
+      "C": 0.08404800000000012
+    },
+    "method_cpu_ms_per_pair": {
+      "A": 0.0621749999999862,
+      "B": 1.0552875000000084,
+      "C": 1.0506000000000015
+    },
+    "total_cpu_s": 0.664973,
+    "total_wall_s": 1.194563791
+  },
+  "memory": {
+    "max_rss_raw": 88571904,
+    "max_rss_unit": "bytes",
+    "max_rss_mib": 84.46875
+  },
+  "pairs": [
+    {
+      "pair_id": "c1_p01",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 1,
+      "digits_frame1": "1",
+      "digits_frame2": "1",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.11808333333333333,
+        "B": 4.1666666666666665e-05,
+        "C": 4.1666666666666665e-05
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p02",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 2,
+      "digits_frame1": "7",
+      "digits_frame2": "7",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.006666666666666667,
+        "B": 0.000375,
+        "C": 0.000375
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p03",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 3,
+      "digits_frame1": "0",
+      "digits_frame2": "0",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.17645833333333333,
+        "B": 0.0005833333333333334,
+        "C": 0.0005833333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p04",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 4,
+      "digits_frame1": "8",
+      "digits_frame2": "8",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.104875,
+        "B": 0.00125,
+        "C": 0.00125
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p05",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 5,
+      "digits_frame1": "6",
+      "digits_frame2": "6",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.027541666666666666,
+        "B": 0.0004166666666666667,
+        "C": 0.0004166666666666667
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p06",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 6,
+      "digits_frame1": "9",
+      "digits_frame2": "9",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.036833333333333336,
+        "B": 0.000625,
+        "C": 0.000625
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p07",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 7,
+      "digits_frame1": "10",
+      "digits_frame2": "10",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.009208333333333334,
+        "B": 0.0018333333333333333,
+        "C": 0.0018333333333333333
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p08",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 8,
+      "digits_frame1": "12",
+      "digits_frame2": "12",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.187,
+        "B": 0.009333333333333334,
+        "C": 0.009333333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c1_p09",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 9,
+      "digits_frame1": "99",
+      "digits_frame2": "99",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.053125,
+        "B": 0.0013333333333333333,
+        "C": 0.0013333333333333333
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p10",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 10,
+      "digits_frame1": "100",
+      "digits_frame2": "100",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.08729166666666667,
+        "B": 0.0022083333333333334,
+        "C": 0.0022083333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p11",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 11,
+      "digits_frame1": "1",
+      "digits_frame2": "1",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.228,
+        "B": 0.014666666666666666,
+        "C": 0.014666666666666666
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c1_p12",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 12,
+      "digits_frame1": "7",
+      "digits_frame2": "7",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.08133333333333333,
+        "B": 0.0010833333333333333,
+        "C": 0.0010833333333333333
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p13",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 13,
+      "digits_frame1": "0",
+      "digits_frame2": "0",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.06695833333333333,
+        "B": 0.000875,
+        "C": 0.000875
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p14",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 14,
+      "digits_frame1": "8",
+      "digits_frame2": "8",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.19108333333333333,
+        "B": 0.001125,
+        "C": 0.001125
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p15",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 15,
+      "digits_frame1": "6",
+      "digits_frame2": "6",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.12058333333333333,
+        "B": 0.0010833333333333333,
+        "C": 0.0010833333333333333
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p16",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 16,
+      "digits_frame1": "9",
+      "digits_frame2": "9",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.10391666666666667,
+        "B": 0.0011666666666666668,
+        "C": 0.0011666666666666668
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p17",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 17,
+      "digits_frame1": "10",
+      "digits_frame2": "10",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.026708333333333334,
+        "B": 0.00016666666666666666,
+        "C": 0.00016666666666666666
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p18",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 18,
+      "digits_frame1": "12",
+      "digits_frame2": "12",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.011,
+        "B": 0.000875,
+        "C": 0.000875
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p19",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 19,
+      "digits_frame1": "99",
+      "digits_frame2": "99",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.0005416666666666666,
+        "B": 0.0004166666666666667,
+        "C": 0.0004166666666666667
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c1_p20",
+      "condition": "digits_same_bg_change",
+      "condition_index": 1,
+      "pair_index": 20,
+      "digits_frame1": "100",
+      "digits_frame2": "100",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.00875,
+        "B": 0.0005,
+        "C": 0.0005
+      },
+      "detected": {
+        "A": true,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c2_p01",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 1,
+      "digits_frame1": "1",
+      "digits_frame2": "7",
+      "transition": "1<->7",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.030458333333333334,
+        "B": 0.03075,
+        "C": 0.03075
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p02",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 2,
+      "digits_frame1": "7",
+      "digits_frame2": "1",
+      "transition": "1<->7",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.030666666666666665,
+        "B": 0.031,
+        "C": 0.031
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p03",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 3,
+      "digits_frame1": "1",
+      "digits_frame2": "7",
+      "transition": "1<->7",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.02975,
+        "B": 0.03075,
+        "C": 0.03075
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p04",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 4,
+      "digits_frame1": "7",
+      "digits_frame2": "1",
+      "transition": "1<->7",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.030583333333333334,
+        "B": 0.030708333333333334,
+        "C": 0.030708333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p05",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 5,
+      "digits_frame1": "0",
+      "digits_frame2": "8",
+      "transition": "0<->8",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.015083333333333334,
+        "B": 0.01775,
+        "C": 0.01775
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p06",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 6,
+      "digits_frame1": "8",
+      "digits_frame2": "0",
+      "transition": "0<->8",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0165,
+        "B": 0.016625,
+        "C": 0.016625
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p07",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 7,
+      "digits_frame1": "0",
+      "digits_frame2": "8",
+      "transition": "0<->8",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.016708333333333332,
+        "B": 0.01633333333333333,
+        "C": 0.01633333333333333
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p08",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 8,
+      "digits_frame1": "8",
+      "digits_frame2": "0",
+      "transition": "0<->8",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0165,
+        "B": 0.017166666666666667,
+        "C": 0.017166666666666667
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p09",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 9,
+      "digits_frame1": "6",
+      "digits_frame2": "8",
+      "transition": "6<->8",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.024,
+        "B": 0.0235,
+        "C": 0.0235
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p10",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 10,
+      "digits_frame1": "8",
+      "digits_frame2": "6",
+      "transition": "6<->8",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.024041666666666666,
+        "B": 0.023708333333333335,
+        "C": 0.023708333333333335
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p11",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 11,
+      "digits_frame1": "6",
+      "digits_frame2": "8",
+      "transition": "6<->8",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.023125,
+        "B": 0.023666666666666666,
+        "C": 0.023666666666666666
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p12",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 12,
+      "digits_frame1": "8",
+      "digits_frame2": "6",
+      "transition": "6<->8",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.023625,
+        "B": 0.023666666666666666,
+        "C": 0.023666666666666666
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p13",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 13,
+      "digits_frame1": "9",
+      "digits_frame2": "10",
+      "transition": "digit_increase",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.06670833333333333,
+        "B": 0.06579166666666666,
+        "C": 0.06579166666666666
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p14",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 14,
+      "digits_frame1": "99",
+      "digits_frame2": "100",
+      "transition": "digit_increase",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.09295833333333334,
+        "B": 0.09533333333333334,
+        "C": 0.09533333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p15",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 15,
+      "digits_frame1": "7",
+      "digits_frame2": "12",
+      "transition": "digit_increase",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.05733333333333333,
+        "B": 0.063,
+        "C": 0.063
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p16",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 16,
+      "digits_frame1": "8",
+      "digits_frame2": "10",
+      "transition": "digit_increase",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.05445833333333333,
+        "B": 0.05470833333333333,
+        "C": 0.05470833333333333
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p17",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 17,
+      "digits_frame1": "2",
+      "digits_frame2": "3",
+      "transition": "other",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.019625,
+        "B": 0.03775,
+        "C": 0.03775
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p18",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 18,
+      "digits_frame1": "5",
+      "digits_frame2": "6",
+      "transition": "other",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.018583333333333334,
+        "B": 0.019208333333333334,
+        "C": 0.019208333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p19",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 19,
+      "digits_frame1": "3",
+      "digits_frame2": "9",
+      "transition": "other",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.03575,
+        "B": 0.042458333333333334,
+        "C": 0.042458333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c2_p20",
+      "condition": "digits_change_bg_same",
+      "condition_index": 2,
+      "pair_index": 20,
+      "digits_frame1": "4",
+      "digits_frame2": "0",
+      "transition": "other",
+      "digit_changed": true,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.034291666666666665,
+        "B": 0.03904166666666667,
+        "C": 0.03904166666666667
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p01",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 1,
+      "digits_frame1": "1",
+      "digits_frame2": "7",
+      "transition": "1<->7",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.103375,
+        "B": 0.030958333333333334,
+        "C": 0.030958333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p02",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 2,
+      "digits_frame1": "7",
+      "digits_frame2": "1",
+      "transition": "1<->7",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.03054166666666667,
+        "B": 0.030583333333333334,
+        "C": 0.030583333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p03",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 3,
+      "digits_frame1": "1",
+      "digits_frame2": "7",
+      "transition": "1<->7",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.09529166666666666,
+        "B": 0.030833333333333334,
+        "C": 0.030833333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p04",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 4,
+      "digits_frame1": "7",
+      "digits_frame2": "1",
+      "transition": "1<->7",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.06254166666666666,
+        "B": 0.030791666666666665,
+        "C": 0.030791666666666665
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p05",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 5,
+      "digits_frame1": "0",
+      "digits_frame2": "8",
+      "transition": "0<->8",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.0505,
+        "B": 0.017125,
+        "C": 0.017125
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p06",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 6,
+      "digits_frame1": "8",
+      "digits_frame2": "0",
+      "transition": "0<->8",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.14304166666666668,
+        "B": 0.016791666666666667,
+        "C": 0.016791666666666667
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p07",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 7,
+      "digits_frame1": "0",
+      "digits_frame2": "8",
+      "transition": "0<->8",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.13779166666666667,
+        "B": 0.017208333333333332,
+        "C": 0.017208333333333332
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p08",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 8,
+      "digits_frame1": "8",
+      "digits_frame2": "0",
+      "transition": "0<->8",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.059083333333333335,
+        "B": 0.018208333333333333,
+        "C": 0.018208333333333333
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p09",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 9,
+      "digits_frame1": "6",
+      "digits_frame2": "8",
+      "transition": "6<->8",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.15066666666666667,
+        "B": 0.023625,
+        "C": 0.023625
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p10",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 10,
+      "digits_frame1": "8",
+      "digits_frame2": "6",
+      "transition": "6<->8",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.035666666666666666,
+        "B": 0.023875,
+        "C": 0.023875
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p11",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 11,
+      "digits_frame1": "6",
+      "digits_frame2": "8",
+      "transition": "6<->8",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.023625,
+        "B": 0.023708333333333335,
+        "C": 0.023708333333333335
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p12",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 12,
+      "digits_frame1": "8",
+      "digits_frame2": "6",
+      "transition": "6<->8",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.22233333333333333,
+        "B": 0.025083333333333332,
+        "C": 0.025083333333333332
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p13",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 13,
+      "digits_frame1": "9",
+      "digits_frame2": "10",
+      "transition": "digit_increase",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.07941666666666666,
+        "B": 0.06675,
+        "C": 0.06675
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p14",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 14,
+      "digits_frame1": "99",
+      "digits_frame2": "100",
+      "transition": "digit_increase",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.09608333333333334,
+        "B": 0.095375,
+        "C": 0.095375
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p15",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 15,
+      "digits_frame1": "7",
+      "digits_frame2": "12",
+      "transition": "digit_increase",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.17466666666666666,
+        "B": 0.06683333333333333,
+        "C": 0.06683333333333333
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p16",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 16,
+      "digits_frame1": "8",
+      "digits_frame2": "10",
+      "transition": "digit_increase",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.14645833333333333,
+        "B": 0.055375,
+        "C": 0.055375
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p17",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 17,
+      "digits_frame1": "2",
+      "digits_frame2": "3",
+      "transition": "other",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.225375,
+        "B": 0.033666666666666664,
+        "C": 0.033666666666666664
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p18",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 18,
+      "digits_frame1": "5",
+      "digits_frame2": "6",
+      "transition": "other",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.04579166666666667,
+        "B": 0.01875,
+        "C": 0.01875
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p19",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 19,
+      "digits_frame1": "3",
+      "digits_frame2": "9",
+      "transition": "other",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.12633333333333333,
+        "B": 0.042583333333333334,
+        "C": 0.042583333333333334
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c3_p20",
+      "condition": "both_change",
+      "condition_index": 3,
+      "pair_index": 20,
+      "digits_frame1": "4",
+      "digits_frame2": "0",
+      "transition": "other",
+      "digit_changed": true,
+      "bg_changed": true,
+      "scores": {
+        "A": 0.098375,
+        "B": 0.039875,
+        "C": 0.039875
+      },
+      "detected": {
+        "A": true,
+        "B": true,
+        "C": true
+      }
+    },
+    {
+      "pair_id": "c4_p01",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 1,
+      "digits_frame1": "1",
+      "digits_frame2": "1",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p02",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 2,
+      "digits_frame1": "7",
+      "digits_frame2": "7",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p03",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 3,
+      "digits_frame1": "0",
+      "digits_frame2": "0",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p04",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 4,
+      "digits_frame1": "8",
+      "digits_frame2": "8",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p05",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 5,
+      "digits_frame1": "6",
+      "digits_frame2": "6",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p06",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 6,
+      "digits_frame1": "9",
+      "digits_frame2": "9",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p07",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 7,
+      "digits_frame1": "10",
+      "digits_frame2": "10",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p08",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 8,
+      "digits_frame1": "12",
+      "digits_frame2": "12",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p09",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 9,
+      "digits_frame1": "99",
+      "digits_frame2": "99",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p10",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 10,
+      "digits_frame1": "100",
+      "digits_frame2": "100",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p11",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 11,
+      "digits_frame1": "1",
+      "digits_frame2": "1",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p12",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 12,
+      "digits_frame1": "7",
+      "digits_frame2": "7",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p13",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 13,
+      "digits_frame1": "0",
+      "digits_frame2": "0",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p14",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 14,
+      "digits_frame1": "8",
+      "digits_frame2": "8",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p15",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 15,
+      "digits_frame1": "6",
+      "digits_frame2": "6",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p16",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 16,
+      "digits_frame1": "9",
+      "digits_frame2": "9",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p17",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 17,
+      "digits_frame1": "10",
+      "digits_frame2": "10",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p18",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 18,
+      "digits_frame1": "12",
+      "digits_frame2": "12",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p19",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 19,
+      "digits_frame1": "99",
+      "digits_frame2": "99",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    },
+    {
+      "pair_id": "c4_p20",
+      "condition": "neither",
+      "condition_index": 4,
+      "pair_index": 20,
+      "digits_frame1": "100",
+      "digits_frame2": "100",
+      "transition": "same",
+      "digit_changed": false,
+      "bg_changed": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      },
+      "detected": {
+        "A": false,
+        "B": false,
+        "C": false
+      }
+    }
+  ]
+}
