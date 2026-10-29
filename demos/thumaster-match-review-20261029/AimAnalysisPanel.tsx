@@ -197,7 +197,7 @@ export function AimAnalysisPanel({
               <small>累積 {point.cumulativeDamage}</small>
             </button>)}
           </div>
-        </> : <p className="damage-empty">表示できるダメージ時刻がありません。</p>}
+        </> : <p className="damage-empty">命中単位のダメージ時刻は未取得です。下にHUD読み取りを表示しています。</p>}
       </div>
       {aim ? (
         <>
