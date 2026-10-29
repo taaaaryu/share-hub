@@ -1,5 +1,10 @@
 [
   {
+    "slug": "thumaster-weekly-20261029",
+    "title": "サマスター週次報告：解析結果を画面で確かめる",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-next-pick-20261029",
     "title": "次にTodoへ移す1件の選び方",
     "description": "後続を動かす本数の比較・2本の作業の流れ・次に選ぶ1件 · 6枚"
