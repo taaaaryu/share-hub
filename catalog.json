@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-next-pick-20261029",
+    "title": "次にTodoへ移す1件の選び方",
+    "description": "後続を動かす本数の比較・2本の作業の流れ・次に選ぶ1件 · 6枚"
+  },
+  {
     "slug": "factory-iphone-ui-20261029",
     "title": "AIの工場を、iPhoneで使いやすく",
     "description": "iPhone向けUI・IBM Plex・下部ナビ・詳細シート・検証範囲"
