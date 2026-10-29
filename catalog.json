@@ -1,5 +1,15 @@
 [
   {
+    "slug": "issue-worker-unblock-map-20261029",
+    "title": "止まっている理由と、次に動かせる計画",
+    "description": "着手の4条件・計画15件の内訳・次に動かせる計画 · 5枚"
+  },
+  {
+    "slug": "thumaster-hud-poc-20261029",
+    "title": "HUDの背景ノイズを分ける：小規模PoCの結果",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "thumaster-analysis-review-20261029",
     "title": "解析結果をレビュー画面へ：できたことと次の改善",
     "description": "48秒の実解析・レビュー画面・確認済みの操作・改善案"
