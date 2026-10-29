@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-no-issue-20261029",
+    "title": "今日のAI作業者が課題を選ばなかった理由",
+    "description": "着手の4条件・課題16件の内訳・次に必要な操作を図解 · 5枚"
+  },
+  {
     "slug": "software-factory-ui-20261029",
     "title": "AIの工場画面とLinear課題選択",
     "description": "目的と開発全体像・工場画面・課題選択・確認済みと未検証の範囲"
