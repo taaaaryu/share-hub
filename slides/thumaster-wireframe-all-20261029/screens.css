@@ -1,0 +1,17 @@
+.slide-controls { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0; border-block:1px solid var(--pub-line); }
+.slide-controls button { min-height:44px; min-width:98px; border:1px solid #b8b8b8; border-radius:4px; background:#fff; color:#161616; font:inherit; cursor:pointer; }
+.slide-controls button:disabled { opacity:.42; cursor:default; }
+.slide-controls span { font-variant-numeric:tabular-nums; }
+.wireframe-link { display:inline-block; margin-top:16px; }
+#chapters .publication-chapter { border:0; padding:32px 0; }
+#chapters .chapter-content.has-portrait { display:block; }
+#chapters .chapter-content.has-portrait .chapter-figure { max-width:100%; margin-top:24px; }
+#chapters .chapter-figure img { max-width:100%; }
+#chapters .chapter-figure.panel-image { max-width:560px; }
+.viewing-screen .publication-intro { display:none; }
+@media print { .slide-controls, .publication-sidebar { display:none; } }
+@media (max-width: 600px) {
+  #chapters .chapter-figure-link { display:block; overflow-x:auto; }
+  #chapters .chapter-figure img { width:900px; max-width:none; }
+  #chapters .chapter-figure.panel-image img { width:560px; }
+}

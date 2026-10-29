@@ -1,0 +1,339 @@
+{
+  "source": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/",
+  "main_screens": 25,
+  "auxiliary_screens": 8,
+  "count": 33,
+  "capture": "静的ワイヤーフレームの架空データをブラウザで撮影。主画面は全体、補助画面は内容が切れないようパネルの全高を撮影。",
+  "items": [
+    {
+      "id": "SCR-AUTH-01",
+      "name": "ログイン",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-AUTH-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "414608efaa876b3cd43456232bf7f2689847f9c982a2f2e83af0538f3ce00c9f"
+    },
+    {
+      "id": "SCR-AUTH-02",
+      "name": "パスワード再設定の申請",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-AUTH-02.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "8e56100df679effe49ca30c0c9d0008617a244e320b888c5852dbd6e8e5cb8c2"
+    },
+    {
+      "id": "SCR-AUTH-03",
+      "name": "パスワード再設定",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-AUTH-03.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "0e8895e4787df1d6a840340d13a04ac0047ff9abe72e6b5e62fe855763749c9f"
+    },
+    {
+      "id": "SCR-AUTH-04",
+      "name": "メールアドレス確認",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-AUTH-04.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "e5e2c2e72c62523471bf31e9f6640c531c9fbcc1d36ad3dc9c3e2fa57a270b17"
+    },
+    {
+      "id": "SCR-AUTH-05",
+      "name": "チーム招待",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-AUTH-05.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "79a94b0c9c8d649e7d726904e6d1f00bd1256eb09adb4f068129812a83794158"
+    },
+    {
+      "id": "SCR-AUTH-06",
+      "name": "初期設定",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-AUTH-06.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "665ef9d962056abc4ce92fe6fcabab55aa301f708176a7c95ddbbac189f2e332"
+    },
+    {
+      "id": "SCR-DASH-01",
+      "name": "振り返りを始める",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-DASH-01.png",
+      "width": 1600,
+      "height": 1174,
+      "sha256": "6bf79ed2c4afe6890d9989a6d4bb79b56148c563406e6cf86a62f0ffeb6fa2a0"
+    },
+    {
+      "id": "SCR-SESSION-01",
+      "name": "振り返る試合を選ぶ",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-SESSION-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "7c12c475ba1f05fae6521fa2bd9f015aef1d24196fba7abb69611f72efbfbaad"
+    },
+    {
+      "id": "SCR-SESSION-02",
+      "name": "試合情報を登録・編集",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-SESSION-02.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "1891fa01974235ed97bb4de9ac9d525dd62438c3fdd96109b0996fac357c402f"
+    },
+    {
+      "id": "SCR-INGEST-01",
+      "name": "視点映像を揃える",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-INGEST-01.png",
+      "width": 1600,
+      "height": 1200,
+      "sha256": "c3b265a79d5c27d9af93eaf81b0f5cd765bedbb60d29d6b375d116d740f019cc"
+    },
+    {
+      "id": "SCR-REVIEW-01",
+      "name": "映像から事実を確認",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-REVIEW-01.png",
+      "width": 1600,
+      "height": 1654,
+      "sha256": "f38bc54fbd6081882d123d405c9ee5905fd700127f2ff114003d65948c7acdd7"
+    },
+    {
+      "id": "SCR-MAP-01",
+      "name": "位置と時刻を照合",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-MAP-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "e60d64cf20f89df92fab56c584ece4e264716aae5971f616e8059bb8fc89da3a"
+    },
+    {
+      "id": "SCR-TREND-01",
+      "name": "改善行動の効果を確認",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-TREND-01.png",
+      "width": 1600,
+      "height": 1573,
+      "sha256": "7f028e1c51afae0c98a10b0500a233d53dd56d4a5fcb0b6360a6f15abdaec054"
+    },
+    {
+      "id": "SCR-OPP-01",
+      "name": "対戦相手の動きを調べる",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-OPP-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "35ce7ca35c9e3669d1e054e7c8233b97a9ea84f252f07cdaab6fead3c37b75eb"
+    },
+    {
+      "id": "SCR-ROSTER-01",
+      "name": "出場メンバーを比較",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-ROSTER-01.png",
+      "width": 1600,
+      "height": 1143,
+      "sha256": "637b8c1ff6232a1302c7636d4230fb80d5291b07ca30d618881897696263baf5"
+    },
+    {
+      "id": "SCR-REPORT-01",
+      "name": "選手向け資料を選ぶ",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-REPORT-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "259bdb817fa389edafc5a55c663679b1677280c4215cb7185cebe6fbbb896628"
+    },
+    {
+      "id": "SCR-REPORT-02",
+      "name": "事実と次回行動をまとめる",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-REPORT-02.png",
+      "width": 1600,
+      "height": 1602,
+      "sha256": "73889b51a0eb6beb792287eb26b392d2f49f3ef44f938c839af075255d4a0bc6"
+    },
+    {
+      "id": "SCR-SHARE-01",
+      "name": "共有された改善行動を見る",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-SHARE-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "f6cfe98bf6406b4f40958ed066f95ff9b524637eb1453263f843197c0ea19da1"
+    },
+    {
+      "id": "SCR-TEAM-01",
+      "name": "チーム基本情報を設定",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-TEAM-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "aae2aa4ca107a39b876b5181392a7d35a0d88d80358e75b28b6498e5fa94358b"
+    },
+    {
+      "id": "SCR-MEMBER-01",
+      "name": "メンバーと権限を管理",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-MEMBER-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "c854c1ceecb1589f00baf127baa23f6aacf5bc6009124e0236a7993326a8364f"
+    },
+    {
+      "id": "SCR-ACCOUNT-01",
+      "name": "自分の表示設定を変更",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-ACCOUNT-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "d66551cd0f18546bd487e55fec8e8301038b4bff6724238b55e109b48db01a37"
+    },
+    {
+      "id": "SCR-USAGE-01",
+      "name": "利用量と上限を確認",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-USAGE-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "fedbfbb043f34f87adec8a2a66e3f27c0b1b007538571f08b185622f2f1e96bb"
+    },
+    {
+      "id": "SCR-ERROR-01",
+      "name": "アクセス権限なし",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-ERROR-01.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "5bd3d8eaa5b380fad7c7b9f49934f0af7611340b44863b3dad415c6ea15f1193"
+    },
+    {
+      "id": "SCR-ERROR-02",
+      "name": "資料が見つかりません",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-ERROR-02.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "23c38dad8dc7498b22ea519a5a4614d4249e30c8ba4c17a617e137e8df4f9f7f"
+    },
+    {
+      "id": "SCR-ERROR-03",
+      "name": "サービス利用不可",
+      "type": "screen",
+      "parent_screen": null,
+      "file": "SCR-ERROR-03.png",
+      "width": 1600,
+      "height": 1142,
+      "sha256": "5a0dfa58ba3ae8eec9df9d7915a1c6ef22f1c047e6af56d84c6246cd79f83bb5"
+    },
+    {
+      "id": "SCR-SEARCH-01",
+      "name": "横断検索",
+      "type": "panel",
+      "parent_screen": "SCR-DASH-01",
+      "file": "SCR-SEARCH-01.png",
+      "width": 560,
+      "height": 534,
+      "sha256": "92959ea0d0ccd051f2309d49ff5ca98ed219d54f1b62cddcbdef51903b19b492"
+    },
+    {
+      "id": "SCR-NOTIFY-01",
+      "name": "通知",
+      "type": "panel",
+      "parent_screen": "SCR-DASH-01",
+      "file": "SCR-NOTIFY-01.png",
+      "width": 560,
+      "height": 456,
+      "sha256": "aea809c6ae1a04d6c3c3818141bfcb4e2e75c39f4043575bcf78826e4bd350fc"
+    },
+    {
+      "id": "SCR-INGEST-02",
+      "name": "録画登録",
+      "type": "panel",
+      "parent_screen": "SCR-INGEST-01",
+      "file": "SCR-INGEST-02.png",
+      "width": 560,
+      "height": 688,
+      "sha256": "e69e189792c6a8e6d5e88a613d728d1f7e1957e1fef811398635bd18b41db3ef"
+    },
+    {
+      "id": "SCR-INGEST-03",
+      "name": "録画の処理詳細",
+      "type": "panel",
+      "parent_screen": "SCR-INGEST-01",
+      "file": "SCR-INGEST-03.png",
+      "width": 560,
+      "height": 643,
+      "sha256": "47279942c2c526195dc805d83c2253075b1ae3abfe497a1dce167b027ffde03d"
+    },
+    {
+      "id": "SCR-REVIEW-02",
+      "name": "根拠映像の編集",
+      "type": "panel",
+      "parent_screen": "SCR-REVIEW-01",
+      "file": "SCR-REVIEW-02.png",
+      "width": 560,
+      "height": 746,
+      "sha256": "60ff9cc7070a9cd8dc2c886ebd4c757ede3340a8a1159e2f14db380a3d1790da"
+    },
+    {
+      "id": "SCR-OPP-02",
+      "name": "対戦相手の観測元",
+      "type": "panel",
+      "parent_screen": "SCR-OPP-01",
+      "file": "SCR-OPP-02.png",
+      "width": 560,
+      "height": 622,
+      "sha256": "1e987b36e32682c645909d3c28191024df18f9d164f2a5a3e40593ee3c961465"
+    },
+    {
+      "id": "SCR-OPP-03",
+      "name": "対戦相手の比較",
+      "type": "panel",
+      "parent_screen": "SCR-OPP-01",
+      "file": "SCR-OPP-03.png",
+      "width": 560,
+      "height": 588,
+      "sha256": "c4bebfc666ef61ecaf8f7e3db430c246283a9ecb13491b965394dd79fc060828"
+    },
+    {
+      "id": "SCR-SHARE-02",
+      "name": "共有設定",
+      "type": "panel",
+      "parent_screen": "SCR-REPORT-02",
+      "file": "SCR-SHARE-02.png",
+      "width": 560,
+      "height": 773,
+      "sha256": "be424d6e04b83ec22ed0b17b24bb14c8bee51fe8c5badbe63940143336531ccf"
+    }
+  ]
+}

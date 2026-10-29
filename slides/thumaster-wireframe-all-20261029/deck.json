@@ -1,0 +1,579 @@
+{
+  "title": "Thumaster ワイヤーフレーム 全画面集",
+  "theme": "carbon-reading",
+  "layout": "reading",
+  "subtitle": "主画面25件・補助画面8件 ／ 2026年10月29日",
+  "slides": [
+    {
+      "label": "使い方",
+      "kind": "cover",
+      "title": "33画面を1枚ずつ確認",
+      "body": "主画面25件と補助画面8件を、画面ごとに確認できます。下の「次へ」や画面一覧から移動してください。",
+      "paragraphs": [
+        "画面内の名前・数値は架空です。認証、動画送信、保存、チーム共有などの実処理は行いません。",
+        "画像を選ぶと拡大できます。スマートフォンでは画像内を横にスクロールできます。"
+      ]
+    },
+    {
+      "label": "主画面 / SCR-AUTH-01",
+      "kind": "evidence",
+      "title": "ログイン",
+      "body": "設計上の用途：メールアドレスとパスワードで本人確認し、許可されたチームの作業へ進む。",
+      "image": "screens/SCR-AUTH-01.png",
+      "image_alt": "ログイン（SCR-AUTH-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-AUTH-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-AUTH-02",
+      "kind": "evidence",
+      "title": "パスワード再設定の申請",
+      "body": "設計上の用途：登録したメールアドレスを入力し、パスワードを再設定するための案内を受け取る。",
+      "image": "screens/SCR-AUTH-02.png",
+      "image_alt": "パスワード再設定の申請（SCR-AUTH-02）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-AUTH-02"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-AUTH-03",
+      "kind": "evidence",
+      "title": "パスワード再設定",
+      "body": "設計上の用途：再設定リンクから新しいパスワードを登録し、ログインへ戻る。",
+      "image": "screens/SCR-AUTH-03.png",
+      "image_alt": "パスワード再設定（SCR-AUTH-03）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-AUTH-03"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-AUTH-04",
+      "kind": "evidence",
+      "title": "メールアドレス確認",
+      "body": "設計上の用途：メールアドレスの確認状態を確かめ、未確認なら確認メールを再送する。",
+      "image": "screens/SCR-AUTH-04.png",
+      "image_alt": "メールアドレス確認（SCR-AUTH-04）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-AUTH-04"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-AUTH-05",
+      "kind": "evidence",
+      "title": "チーム招待",
+      "body": "設計上の用途：招待されたチームと権限を確認し、自分のアカウントで参加する。",
+      "image": "screens/SCR-AUTH-05.png",
+      "image_alt": "チーム招待（SCR-AUTH-05）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-AUTH-05"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-AUTH-06",
+      "kind": "evidence",
+      "title": "初期設定",
+      "body": "設計上の用途：表示名、言語、通知を設定して最初の作業を始める。",
+      "image": "screens/SCR-AUTH-06.png",
+      "image_alt": "初期設定（SCR-AUTH-06）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-AUTH-06"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-DASH-01",
+      "kind": "evidence",
+      "title": "振り返りを始める",
+      "body": "設計上の用途：未確認のシーンを映像で確かめ、次回の改善行動を選手に共有する。",
+      "image": "screens/SCR-DASH-01.png",
+      "image_alt": "振り返りを始める（SCR-DASH-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1174,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-DASH-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-SESSION-01",
+      "kind": "evidence",
+      "title": "振り返る試合を選ぶ",
+      "body": "設計上の用途：分析するセッションと試合を登録し、対象の試合を選ぶ。",
+      "image": "screens/SCR-SESSION-01.png",
+      "image_alt": "振り返る試合を選ぶ（SCR-SESSION-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-SESSION-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-SESSION-02",
+      "kind": "evidence",
+      "title": "試合情報を登録・編集",
+      "body": "設計上の用途：セッションと試合の日時、地図、出場選手を登録・修正し、録画との対応を確認する。",
+      "image": "screens/SCR-SESSION-02.png",
+      "image_alt": "試合情報を登録・編集（SCR-SESSION-02）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-SESSION-02"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-INGEST-01",
+      "kind": "evidence",
+      "title": "視点映像を揃える",
+      "body": "設計上の用途：試合ごとの録画の有無と解析状態を確認し、不足・失敗に対応する。",
+      "image": "screens/SCR-INGEST-01.png",
+      "image_alt": "視点映像を揃える（SCR-INGEST-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1200,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-INGEST-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-REVIEW-01",
+      "kind": "evidence",
+      "title": "映像から事実を確認",
+      "body": "設計上の用途：複数視点の同じ場面を照合し、確認した事実と解釈を分けて記録する。",
+      "image": "screens/SCR-REVIEW-01.png",
+      "image_alt": "映像から事実を確認（SCR-REVIEW-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1654,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-REVIEW-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-MAP-01",
+      "kind": "evidence",
+      "title": "位置と時刻を照合",
+      "body": "設計上の用途：試合中の移動と接敵位置を地図と時間で確認し、元映像へ戻る。",
+      "image": "screens/SCR-MAP-01.png",
+      "image_alt": "位置と時刻を照合（SCR-MAP-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-MAP-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-TREND-01",
+      "kind": "evidence",
+      "title": "改善行動の効果を確認",
+      "body": "設計上の用途：決めた行動を次回試合で実行できたか、結果が変わったかを比較する。",
+      "image": "screens/SCR-TREND-01.png",
+      "image_alt": "改善行動の効果を確認（SCR-TREND-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1573,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-TREND-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-OPP-01",
+      "kind": "evidence",
+      "title": "対戦相手の動きを調べる",
+      "body": "設計上の用途：公開資料から対戦相手の動きと出典を確認し、自チームの仮説と照合する。",
+      "image": "screens/SCR-OPP-01.png",
+      "image_alt": "対戦相手の動きを調べる（SCR-OPP-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-OPP-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-ROSTER-01",
+      "kind": "evidence",
+      "title": "出場メンバーを比較",
+      "body": "設計上の用途：出場編成案の実績と不確実な点を比較し、採用理由を残す。",
+      "image": "screens/SCR-ROSTER-01.png",
+      "image_alt": "出場メンバーを比較（SCR-ROSTER-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1143,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-ROSTER-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-REPORT-01",
+      "kind": "evidence",
+      "title": "選手向け資料を選ぶ",
+      "body": "設計上の用途：選手向け資料の下書きと共有済みの版を確認し、作成または編集する。",
+      "image": "screens/SCR-REPORT-01.png",
+      "image_alt": "選手向け資料を選ぶ（SCR-REPORT-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-REPORT-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-REPORT-02",
+      "kind": "evidence",
+      "title": "事実と次回行動をまとめる",
+      "body": "設計上の用途：確認した事実、解釈、次回の行動を選手向け資料にまとめ、共有前に点検する。",
+      "image": "screens/SCR-REPORT-02.png",
+      "image_alt": "事実と次回行動をまとめる（SCR-REPORT-02）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1602,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-REPORT-02"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-SHARE-01",
+      "kind": "evidence",
+      "title": "共有された改善行動を見る",
+      "body": "設計上の用途：自分に共有された資料で根拠映像と次回の行動を確認する。",
+      "image": "screens/SCR-SHARE-01.png",
+      "image_alt": "共有された改善行動を見る（SCR-SHARE-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-SHARE-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-TEAM-01",
+      "kind": "evidence",
+      "title": "チーム基本情報を設定",
+      "body": "設計上の用途：チーム名、言語、データの扱い方を確認して変更する。",
+      "image": "screens/SCR-TEAM-01.png",
+      "image_alt": "チーム基本情報を設定（SCR-TEAM-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-TEAM-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-MEMBER-01",
+      "kind": "evidence",
+      "title": "メンバーと権限を管理",
+      "body": "設計上の用途：メンバーを招待し、役割とアクセス権を確認・変更する。",
+      "image": "screens/SCR-MEMBER-01.png",
+      "image_alt": "メンバーと権限を管理（SCR-MEMBER-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-MEMBER-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-ACCOUNT-01",
+      "kind": "evidence",
+      "title": "自分の表示設定を変更",
+      "body": "設計上の用途：自分のプロフィール、パスワード、通知、ログイン状態を管理する。",
+      "image": "screens/SCR-ACCOUNT-01.png",
+      "image_alt": "自分の表示設定を変更（SCR-ACCOUNT-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-ACCOUNT-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-USAGE-01",
+      "kind": "evidence",
+      "title": "利用量と上限を確認",
+      "body": "設計上の用途：メンバー数、保存容量、解析量の使用状況と上限を確認する。",
+      "image": "screens/SCR-USAGE-01.png",
+      "image_alt": "利用量と上限を確認（SCR-USAGE-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-USAGE-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-ERROR-01",
+      "kind": "evidence",
+      "title": "アクセス権限なし",
+      "body": "設計上の用途：アクセスできない理由と必要な権限を確認し、管理者に相談する。",
+      "image": "screens/SCR-ERROR-01.png",
+      "image_alt": "アクセス権限なし（SCR-ERROR-01）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-ERROR-01"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-ERROR-02",
+      "kind": "evidence",
+      "title": "資料が見つかりません",
+      "body": "設計上の用途：指定した資料が見つからない理由を確認し、別の資料へ戻る。",
+      "image": "screens/SCR-ERROR-02.png",
+      "image_alt": "資料が見つかりません（SCR-ERROR-02）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-ERROR-02"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "主画面 / SCR-ERROR-03",
+      "kind": "evidence",
+      "title": "サービス利用不可",
+      "body": "設計上の用途：障害の影響と保存状態の確認方法を把握し、復旧を待つ。",
+      "image": "screens/SCR-ERROR-03.png",
+      "image_alt": "サービス利用不可（SCR-ERROR-03）。架空データで表示したワイヤーフレーム。",
+      "image_width": 1600,
+      "image_height": 1142,
+      "sources": [
+        {
+          "label": "操作できる画面を開く",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-ERROR-03"
+        }
+      ],
+      "image_kind": "screen"
+    },
+    {
+      "label": "補助画面 / SCR-SEARCH-01",
+      "kind": "evidence",
+      "title": "横断検索",
+      "body": "設計上の用途：試合、シーン、選手、レポートを検索して目的の資料を開く。",
+      "image": "screens/SCR-SEARCH-01.png",
+      "image_alt": "横断検索（SCR-SEARCH-01）。架空データで表示した補助パネル。",
+      "image_width": 560,
+      "image_height": 534,
+      "sources": [
+        {
+          "label": "操作できる画面を開く（元画面から補助パネルを選択）",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-DASH-01"
+        }
+      ],
+      "image_kind": "panel"
+    },
+    {
+      "label": "補助画面 / SCR-NOTIFY-01",
+      "kind": "evidence",
+      "title": "通知",
+      "body": "設計上の用途：解析完了、失敗、確認待ちの通知から該当作業へ戻る。",
+      "image": "screens/SCR-NOTIFY-01.png",
+      "image_alt": "通知（SCR-NOTIFY-01）。架空データで表示した補助パネル。",
+      "image_width": 560,
+      "image_height": 456,
+      "sources": [
+        {
+          "label": "操作できる画面を開く（元画面から補助パネルを選択）",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-DASH-01"
+        }
+      ],
+      "image_kind": "panel"
+    },
+    {
+      "label": "補助画面 / SCR-INGEST-02",
+      "kind": "evidence",
+      "title": "録画登録",
+      "body": "設計上の用途：録画ファイルに試合と撮影者の視点を指定して登録する。",
+      "image": "screens/SCR-INGEST-02.png",
+      "image_alt": "録画登録（SCR-INGEST-02）。架空データで表示した補助パネル。",
+      "image_width": 560,
+      "image_height": 688,
+      "sources": [
+        {
+          "label": "操作できる画面を開く（元画面から補助パネルを選択）",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-INGEST-01"
+        }
+      ],
+      "image_kind": "panel"
+    },
+    {
+      "label": "補助画面 / SCR-INGEST-03",
+      "kind": "evidence",
+      "title": "録画の処理詳細",
+      "body": "設計上の用途：録画の処理工程と失敗理由を確認し、対象だけを再試行する。",
+      "image": "screens/SCR-INGEST-03.png",
+      "image_alt": "録画の処理詳細（SCR-INGEST-03）。架空データで表示した補助パネル。",
+      "image_width": 560,
+      "image_height": 643,
+      "sources": [
+        {
+          "label": "操作できる画面を開く（元画面から補助パネルを選択）",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-INGEST-01"
+        }
+      ],
+      "image_kind": "panel"
+    },
+    {
+      "label": "補助画面 / SCR-REVIEW-02",
+      "kind": "evidence",
+      "title": "根拠映像の編集",
+      "body": "設計上の用途：根拠となる映像の開始・終了時刻、視点、共有範囲を編集する。",
+      "image": "screens/SCR-REVIEW-02.png",
+      "image_alt": "根拠映像の編集（SCR-REVIEW-02）。架空データで表示した補助パネル。",
+      "image_width": 560,
+      "image_height": 746,
+      "sources": [
+        {
+          "label": "操作できる画面を開く（元画面から補助パネルを選択）",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-REVIEW-01"
+        }
+      ],
+      "image_kind": "panel"
+    },
+    {
+      "label": "補助画面 / SCR-OPP-02",
+      "kind": "evidence",
+      "title": "対戦相手の観測元",
+      "body": "設計上の用途：相手チームについて観測した事実、出典、更新日時を確かめる。",
+      "image": "screens/SCR-OPP-02.png",
+      "image_alt": "対戦相手の観測元（SCR-OPP-02）。架空データで表示した補助パネル。",
+      "image_width": 560,
+      "image_height": 622,
+      "sources": [
+        {
+          "label": "操作できる画面を開く（元画面から補助パネルを選択）",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-OPP-01"
+        }
+      ],
+      "image_kind": "panel"
+    },
+    {
+      "label": "補助画面 / SCR-OPP-03",
+      "kind": "evidence",
+      "title": "対戦相手の比較",
+      "body": "設計上の用途：一覧の相手チームを同じ地図・期間・資料条件で比較する。",
+      "image": "screens/SCR-OPP-03.png",
+      "image_alt": "対戦相手の比較（SCR-OPP-03）。架空データで表示した補助パネル。",
+      "image_width": 560,
+      "image_height": 588,
+      "sources": [
+        {
+          "label": "操作できる画面を開く（元画面から補助パネルを選択）",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-OPP-01"
+        }
+      ],
+      "image_kind": "panel"
+    },
+    {
+      "label": "補助画面 / SCR-SHARE-02",
+      "kind": "evidence",
+      "title": "共有設定",
+      "body": "設計上の用途：選手向け表示を確認し、共有相手、期限、閲覧条件を決める。",
+      "image": "screens/SCR-SHARE-02.png",
+      "image_alt": "共有設定（SCR-SHARE-02）。架空データで表示した補助パネル。",
+      "image_width": 560,
+      "image_height": 773,
+      "sources": [
+        {
+          "label": "操作できる画面を開く（元画面から補助パネルを選択）",
+          "url": "https://taaaaryu.github.io/share-hub/demos/thumaster-wireframe/#SCR-REPORT-02"
+        }
+      ],
+      "image_kind": "panel"
+    }
+  ]
+}
