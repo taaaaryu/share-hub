@@ -1,5 +1,11 @@
 [
   {
+    "slug": "google-photos-usb-migration-20261102",
+    "kind": "report",
+    "title": "GoogleフォトをUSBへ退避して、Googleの容量を整理する",
+    "description": "Takeoutの直接取り込み・途中再試行・検証結果・削除前の確認"
+  },
+  {
     "slug": "issue-worker-no-issue-20261102",
     "title": "着手できるTodoが0件：実装せず停止した日",
     "description": "背景・全体像・変更・効果・検証を説明"
