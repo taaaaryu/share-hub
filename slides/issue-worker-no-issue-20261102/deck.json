@@ -1,0 +1,107 @@
+{
+  "title": "着手できるTodoが0件：実装せず停止した日",
+  "theme": "carbon-reading",
+  "subtitle": "選定の条件・課題の内訳・今回変えたこと / 2026年11月2日",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "RESULT / 今日の結果",
+      "title": "着手できるTodoが0件で停止",
+      "body": "Todoが無いため、実装・ブランチ・PRは作成していません。Linearの読み取りと条件確認だけを行いました。",
+      "paragraphs": [
+        "この作業者（worker）は、Linearの課題から1件だけ選んで実装します。今日は選べるTodoが無かったため、何も変更せずに止まりました。",
+        "止まることも正しい結果です。計画段階のBacklogを勝手に実装へ進めないための門を、今日も通らなかっただけです。"
+      ],
+      "items": [
+        "対象はTodoの課題だけ",
+        "Backlogは計画案だけ",
+        "状態を変えるのは人の操作"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "GATE / 選ぶ条件",
+      "title": "確認は4段階、1つ目で0件",
+      "body": "Todoか→依存→担当→既存PRの順に確認しました。1つ目で対象0件となり、そこで止まりました。",
+      "image": "gate.png",
+      "image_alt": "着手前に確認する4つの条件を左から並べ、1つ目のTodo確認で0件になり停止したことを示す図",
+      "image_width": 1280,
+      "image_height": 720,
+      "paragraphs": [
+        "1つ目は「Todo（やると決めた課題）になっているか」。計画だけのBacklogは、workerが自分でTodoへ動かしません。",
+        "2つ目は依存です。先に終えるべき課題が残っている間は順番を飛ばしません。3つ目は担当、4つ目は同じ変更のPRが無いかを見ます。"
+      ],
+      "terms": [
+        {
+          "term": "Todo / Backlog",
+          "meaning": "Todoは「やると決めた課題」、Backlogは「まだ決めていない計画」。状態を変えるのは人の判断です。"
+        },
+        {
+          "term": "依存（blockedBy）",
+          "meaning": "「Aが終わらないとBを始められない」関係。Aが残る間、Bは選ばれません。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 課題の内訳",
+      "title": "16件中Todo 0、レビュー待ち1、Backlog 15",
+      "body": "前回計画を書いたTAA-43もBacklogのままです。Backlogは計画案だけを書き、実装はしません。",
+      "image": "counts.png",
+      "image_alt": "課題16件の内訳をTodo 0件、In Review 1件、Backlog 15件として示す棒と数字の図",
+      "image_width": 1280,
+      "image_height": 720,
+      "paragraphs": [
+        "レビュー待ちの1件（TAA-44）は、変更を作って確認をお願いしている段階です。ここが終わるまで、依存する計画は動きません。",
+        "Todoが0件なので、選べる課題も0件でした。チーム全体で見てもTodoは0件で、対象プロジェクト以外に回す作業もありません。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "DID / やったこと・やらなかったこと",
+      "title": "読み取りは実施、変更はしていない",
+      "body": "本日はLinearの読み取りと条件確認のみ。課題の状態・コメント・コード・PRは変更していません。",
+      "columns": [
+        {
+          "heading": "やったこと",
+          "text": "チームとプロジェクトの一致確認。課題16件の状態・担当・依存の読み取り。着手条件に照らした選定。"
+        },
+        {
+          "heading": "やらなかったこと",
+          "text": "BacklogのTodo化、実装、ブランチ作成、コミット、PR作成、Linearへの状態変更やコメント追加。"
+        }
+      ],
+      "paragraphs": [
+        "作業対象が決まっていない状態でコードを書き始めると、何のための変更か説明できません。選定で止める方が安全です。",
+        "次の実装は、人が対象を1件Todoにした時点で始まります。依存が残っていれば、その課題は引き続き選ばれません。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと残ること",
+      "title": "確認済みと、まだ塞がっていること",
+      "body": "接続と内訳は確認済み。資料の公開は実行環境の権限設定で拒否され、公開URLはまだありません。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "Team TAAと指定プロジェクトの一致。課題16件（Todo 0・In Review 1・Backlog 15）。依存なしの計画は8件。"
+        },
+        {
+          "heading": "未完了・残ること",
+          "text": "実装はTodo化の後に開始。計画の採否は人の判断。資料はローカル検証までで、共有サイトへの反映は未完了。"
+        }
+      ],
+      "paragraphs": [
+        "資料の公開は、この実行環境の権限設定（configuration policy）で push が拒否されています。権限を回避する操作はしていません。",
+        "公開できるようになるまで、閲覧URLは用意できません。ローカルでは表示と検証を確認済みです。"
+      ],
+      "sources": [
+        {
+          "label": "デザイン参照：Carbonの文字組み",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/typography/overview"
+        }
+      ]
+    }
+  ],
+  "layout": "reading"
+}
