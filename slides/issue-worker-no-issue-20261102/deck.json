@@ -79,23 +79,27 @@
     {
       "kind": "evidence",
       "label": "STATUS / 確認済みと残ること",
-      "title": "確認済みと、まだ塞がっていること",
-      "body": "接続と内訳は確認済み。資料の公開は実行環境の権限設定で拒否され、公開URLはまだありません。",
+      "title": "確認済みと、次に必要なこと",
+      "body": "接続と内訳は確認済み。資料は公開済みで、閲覧URLから開けます。実装はTodo化の後に始まります。",
       "columns": [
         {
           "heading": "確認済み",
-          "text": "Team TAAと指定プロジェクトの一致。課題16件（Todo 0・In Review 1・Backlog 15）。依存なしの計画は8件。"
+          "text": "Team TAAと指定プロジェクトの一致。課題16件（Todo 0・In Review 1・Backlog 15）。ページ・deck.json・画像2枚・カタログの公開応答。"
         },
         {
           "heading": "未完了・残ること",
-          "text": "実装はTodo化の後に開始。計画の採否は人の判断。資料はローカル検証までで、共有サイトへの反映は未完了。"
+          "text": "実装はTodo化の後に開始。計画の採否は人の判断。TAA-44のレビュー完了が依存課題の前提。"
         }
       ],
       "paragraphs": [
-        "資料の公開は、この実行環境の権限設定（configuration policy）で git push が拒否されています。2026-11-02 00:20 UTC と 00:33 UTC の2回、再試行しても同じ結果でした。権限を回避する操作はしていません。",
-        "公開できるようになるまで、閲覧URLは用意できません。ローカルでは表示と検証を確認済みです。"
+        "当初はこの実行環境の権限設定（configuration policy）で git push が拒否されていましたが、その後公開され、2026-11-02 の再確認でページ・deck.json・画像2枚・カタログがすべて HTTP 200 で応答しました。",
+        "実装の着手には、人が対象課題を1件Todoにすることが必要です。workerはBacklogの状態を自分で変えません。"
       ],
       "sources": [
+        {
+          "label": "この資料の閲覧URL",
+          "url": "https://taaaaryu.github.io/share-hub/slides/issue-worker-no-issue-20261102/"
+        },
         {
           "label": "デザイン参照：Carbonの文字組み",
           "url": "https://www.carbondesignsystem.com/building-blocks/foundations/typography/overview"
