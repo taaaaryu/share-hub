@@ -11,7 +11,7 @@
       "paragraphs": [
         "この作業者（worker）は、Linearの課題から1件だけ選んで実装します。今日は選べるTodoが0件だったため、何も変更せずに止まりました。",
         "止まること自体は正しい結果です。計画段階のBacklogを勝手に実装へ進めないための門を、今日も通らなかっただけです。",
-        "2回目の確認でもTodoは0件で、TAA-44の状態にも変化はありませんでした。"
+        "時間をおいて再確認してもTodoは0件で、TAA-44の状態にも変化はありませんでした。"
       ],
       "items": [
         "対象はTodoの課題だけ",
@@ -47,7 +47,7 @@
       "kind": "evidence",
       "label": "EVIDENCE / 課題の内訳",
       "title": "16件中Todo 0、レビュー待ち1、Backlog 15",
-      "body": "同日2回目の確認でも16件中Todo 0、レビュー待ち1、Backlog 15で変わりませんでした。",
+      "body": "同日に時間をおいて再確認しても、16件中Todo 0、レビュー待ち1、Backlog 15で変わりませんでした。",
       "image": "counts.png",
       "image_alt": "課題16件の内訳をTodo 0件、In Review 1件、Backlog 15件として示す棒と数字の図",
       "image_width": 2560,
@@ -100,7 +100,7 @@
       "columns": [
         {
           "heading": "確認済み",
-          "text": "TAAと指定プロジェクトの一致。16件の内訳（Todo 0・In Review 1・Backlog 15）を2回確認。TAA-44にPRが無いこと。ページと画像の公開応答。"
+          "text": "TAAと指定プロジェクトの一致。16件の内訳（Todo 0・In Review 1・Backlog 15）を時間をおいて複数回確認。TAA-44にPRが無いこと。ページと画像の公開応答。"
         },
         {
           "heading": "未完了・残ること",
