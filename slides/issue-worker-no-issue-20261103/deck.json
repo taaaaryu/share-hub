@@ -1,0 +1,125 @@
+{
+  "title": "Todoが0件のまま4回目：止まった理由と動かす1手",
+  "theme": "carbon-reading",
+  "subtitle": "選定の条件・課題の内訳・レビュー待ちのPR欠落 / 2026年11月3日",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "RESULT / 今日の結果",
+      "title": "Todoが0件で、今日も実装に進めず",
+      "body": "選べるTodoが無いため、コード・ブランチ・PRは作っていません。加えて、レビュー待ちの1件にPRが無いことも分かりました。",
+      "paragraphs": [
+        "この作業者（worker）は、Linearの課題から1件だけ選んで実装します。今日は選べるTodoが0件だったため、何も変更せずに止まりました。",
+        "止まること自体は正しい結果です。計画段階のBacklogを勝手に実装へ進めないための門を、今日も通らなかっただけです。"
+      ],
+      "items": [
+        "対象はTodoの課題だけ",
+        "Backlogは計画案だけ",
+        "状態を変えるのは人の操作"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "GATE / 選ぶ条件",
+      "title": "確認は4段階、1つ目で0件",
+      "body": "Todoか→依存→担当→既存PRの順に確認しました。1つ目で対象0件となり、そこで止まりました。",
+      "image": "gate.png",
+      "image_alt": "着手前に確認する4つの条件を左から並べ、1つ目のTodo確認で0件になり停止したことを示す図",
+      "image_width": 2560,
+      "image_height": 1440,
+      "paragraphs": [
+        "1つ目は「Todo（やると決めた課題）になっているか」。計画だけのBacklogは、workerが自分でTodoへ動かしません。",
+        "2つ目は依存、3つ目は担当、4つ目は同じ変更のPRが無いかを見ます。順番を飛ばして先の課題には進みません。"
+      ],
+      "terms": [
+        {
+          "term": "Todo / Backlog",
+          "meaning": "Todoは「やると決めた課題」、Backlogは「まだ決めていない計画」。状態を変えるのは人の判断です。"
+        },
+        {
+          "term": "依存（blockedBy）",
+          "meaning": "「Aが終わらないとBを始められない」関係。Aが残る間、Bは選ばれません。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 課題の内訳",
+      "title": "16件中Todo 0、レビュー待ち1、Backlog 15",
+      "body": "チーム全体で見てもTodoは0件でした。対象プロジェクトの外に回せる作業もありません。",
+      "image": "counts.png",
+      "image_alt": "課題16件の内訳をTodo 0件、In Review 1件、Backlog 15件として示す棒と数字の図",
+      "image_width": 2560,
+      "image_height": 1440,
+      "paragraphs": [
+        "内訳は前回と同じです。着手できる状態の課題が増えていないため、今日も選定は0件で終わりました。",
+        "Backlogの15件は計画段階のままです。workerは状態を変えないので、人が1件をTodoにしない限り実装は始まりません。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "FINDING / 今日わかったこと",
+      "title": "レビュー待ちの1件に、PRが無い",
+      "body": "TAA-44はIn Reviewですが、リモートにPRがありません。レビューの入り口が無いまま5日以上たっています。",
+      "image": "chain.png",
+      "image_alt": "TAA-44がPR無しのままレビュー待ちで止まり、TAA-45・46・48・49、その先のTAA-47・50も動かない依存関係を示す図",
+      "image_width": 2560,
+      "image_height": 1440,
+      "paragraphs": [
+        "TAA-44のブランチには2コミットあり、mainとの差は13ファイル・1317行です。しかしPRが無いため、レビューもマージも始められません。",
+        "この1件がTAA-45・46・48・49を止めており、その先のTAA-47・50も動きません。依存の根っこがここにあります。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "DID / やったこと・やらなかったこと",
+      "title": "読み取りは実施、変更はしていない",
+      "body": "Linearの読み取りと条件確認のみ。課題の状態・コメント・コード・PRは変更していません。",
+      "columns": [
+        {
+          "heading": "やったこと",
+          "text": "チームとプロジェクトの一致確認。課題16件の状態・依存・PR有無の確認。git logとgh pr listによるTAA-44の確認。"
+        },
+        {
+          "heading": "やらなかったこと",
+          "text": "BacklogのTodo化、実装、ブランチ作成、コミット、PR作成、Linearへの状態変更やコメント追加。"
+        }
+      ],
+      "paragraphs": [
+        "対象が決まっていない状態でコードを書き始めると、何のための変更か説明できません。選定で止める方が安全です。",
+        "TAA-44にPRを作ることも、レビュー待ちの課題を動かすこともしませんでした。担当は人で、workerの役割を越えるためです。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと残ること",
+      "title": "確認済みと、次に必要な1手",
+      "body": "状態の確認と資料の公開は完了。実装はTodo化の後、TAA-44のレビューはPR作成の後に始まります。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "TAAと指定プロジェクトの一致。16件の内訳（Todo 0・In Review 1・Backlog 15）。TAA-44にPRが無いこと。ページと画像の公開応答。"
+        },
+        {
+          "heading": "未完了・残ること",
+          "text": "TAA-44のPR作成とレビュー。着手する1件のTodo化。Backlogの採否は人の判断で、workerはどちらも代行しません。"
+        }
+      ],
+      "paragraphs": [
+        "次に進める道は2つです。TAA-44のブランチからPRを作ってレビューを終えるか、別の1件をTodoに上げて実装を始めるかです。",
+        "どちらも人の操作が起点になります。workerはBacklogの状態もレビュー待ちの課題も、自分では変えません。"
+      ],
+      "sources": [
+        {
+          "label": "この資料の閲覧URL",
+          "url": "https://taaaaryu.github.io/share-hub/slides/issue-worker-no-issue-20261103/"
+        },
+        {
+          "label": "デザイン参照：Carbonの文字組み",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/typography/overview"
+        }
+      ]
+    }
+  ],
+  "layout": "reading"
+}

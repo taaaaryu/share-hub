@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-no-issue-20261103",
+    "title": "Todoが0件のまま4回目：止まった理由と動かす1手",
+    "description": "選定4条件・16件の内訳・レビュー待ちのPR欠落を図解 · 6枚"
+  },
+  {
     "slug": "google-photos-usb-migration-20261102",
     "kind": "report",
     "title": "GoogleフォトをUSBへ退避して、Googleの容量を整理する",
