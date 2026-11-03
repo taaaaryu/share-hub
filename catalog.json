@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-no-issue-20261104",
+    "title": "Todoは0件のまま：今日も動かない根っこを確かめる",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-no-issue-20261103",
     "title": "Todoが0件のまま再確認：止まった理由と動かす1手",
     "description": "選定4条件・16件の内訳・レビュー待ちのPR欠落を図解 · 6枚"
