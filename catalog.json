@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-no-issue-20261104-2",
+    "title": "選べるTodoが0件：止まる理由と、解除の順番",
+    "description": "選定の条件・課題の内訳・依存の根を図解"
+  },
+  {
     "slug": "issue-worker-no-issue-20261104",
     "title": "Todoは0件のまま：今日も動かない根っこを確かめる",
     "description": "背景・全体像・変更・効果・検証を説明"

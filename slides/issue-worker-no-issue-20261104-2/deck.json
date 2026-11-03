@@ -1,0 +1,146 @@
+{
+  "title": "選べるTodoが0件：止まる理由と、解除の順番",
+  "theme": "carbon-reading",
+  "subtitle": "選定の4条件・16件の内訳・2つの依存の根 / 2026年11月4日 再確認",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "RESULT / 今日の結果",
+      "title": "今日もTodoが0件で、実装には入らなかった",
+      "body": "対象16件はTodo 0・レビュー待ち1・計画15。コード、ブランチ、PRは作っていません。",
+      "paragraphs": [
+        "この作業者（worker）は、LinearのTodoから1件だけ選んで実装します。Todoが無ければ、実装も状態変更もしません。",
+        "直前の資料（11月2日・3日・4日）でも同じ結論でした。毎回同じ場所で止まるのは、選定の不具合ではなく、上流の状態が変わっていないためです。",
+        "止まること自体は設計どおりです。ただし、解析改善の課題が1件も動き出さないまま時間が過ぎている点は、人の判断で解く必要があります。"
+      ],
+      "items": [
+        "対象はTodoの課題だけ",
+        "Backlogは計画案だけ",
+        "状態を変えるのは人の操作"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "GATE / 選ぶ条件",
+      "title": "4つの門の1つ目で0件になり、止まる",
+      "body": "Todoか→依存→担当→既存PRの順に確認し、1つ目で対象0件でした。",
+      "image": "gate.png",
+      "image_alt": "着手前に確認する4つの条件を左から並べ、1つ目のTodo確認で0件になり停止したことを示す図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "paragraphs": [
+        "1つ目は「Todo（やると決めた課題）になっているか」。計画だけのBacklogは、workerが自分でTodoへ動かしません。",
+        "2つ目は未完了の依存、3つ目は担当、4つ目は同じ変更のPRが無いかを見ます。順番を飛ばして先の課題には進みません。",
+        "チームTAA全体をTodoで絞っても0件でした。別プロジェクトのIn Progressは担当が自分以外のため、選ぶ対象になりません。"
+      ],
+      "terms": [
+        {
+          "term": "Todo / Backlog",
+          "meaning": "Todoは「やると決めた課題」、Backlogは「まだ決めていない計画」。状態を変えるのは人の判断です。"
+        },
+        {
+          "term": "依存（blockedBy）",
+          "meaning": "「Aが終わらないとBを始められない」関係。Aが残る間、Bは選ばれません。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 課題の内訳",
+      "title": "16件の内訳はTodo 0・レビュー待ち1・計画15",
+      "body": "件数は前回の確認から変わっていません。チーム全体でもTodoは0件でした。",
+      "image": "counts.png",
+      "image_alt": "課題16件を16マスで表し、Todo 0件、In Review 1件、Backlog 15件の内訳を示す図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "対象課題",
+          "value": "16",
+          "note": "すべてこのプロジェクト"
+        },
+        {
+          "name": "Todo",
+          "value": "0",
+          "note": "着手できる課題"
+        },
+        {
+          "name": "レビュー待ち",
+          "value": "1",
+          "note": "TAA-44"
+        }
+      ],
+      "paragraphs": [
+        "Backlogの15件は計画段階のままです。workerは状態を変えないので、人が1件をTodoにしない限り実装は始まりません。",
+        "件数が同じである以上、選定の結果も同じになります。ここを動かせるのは人だけです。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "FINDING / 依存の根",
+      "title": "依存の根は2つ。PR作成とTodo化でほどける",
+      "body": "TAA-44のPR作成で4件、TAA-43のTodo化でTAA-45が動き出します。",
+      "image": "chain.png",
+      "image_alt": "TAA-44とTAA-43を根として、TAA-45・46・48・49、TAA-47、TAA-50へ続く依存関係を示す図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "paragraphs": [
+        "TAA-44はIn Reviewのままですが、リモートにPRがありません。ブランチ feature/taa-44-hud-change は2コミット・13ファイル・1317行のままです。",
+        "TAA-44がTAA-45・46・48・49を止め、TAA-45とTAA-46がTAA-47を、TAA-47・48・49がTAA-50を止めています。",
+        "TAA-43はBacklogのままで、TAA-45への依存が残っています。根を1つ解くだけで、下流の連鎖がまとめて動き出します。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "DID / やったこと・やらなかったこと",
+      "title": "読み取りと資料作成だけを行った",
+      "body": "課題・コード・PR・Linearの状態は一切変更していません。",
+      "columns": [
+        {
+          "heading": "やったこと",
+          "text": "チームとプロジェクトの一致確認。課題16件の状態・依存・担当の再取得。git status、gh pr list、git diffによるTAA-44の確認。公開用の図解資料の作成。"
+        },
+        {
+          "heading": "やらなかったこと",
+          "text": "BacklogのTodo化、実装、ブランチ作成、コミット、PR作成、Linearへのコメント追加や状態変更、merge、deploy。"
+        }
+      ],
+      "paragraphs": [
+        "対象が決まらないままコードを書くと、何のための変更か説明できません。選定の門で止める方が安全です。",
+        "レビュー待ちの課題を動かすのも、BacklogをTodoにするのも人の役割です。workerはどちらも代行しません。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと残ること",
+      "title": "解除の順番と、解除後に始まること",
+      "body": "先にTAA-44のPR、次にTAA-43のTodo化。どちらも人の操作が起点です。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "TAAと指定プロジェクトの一致。16件の内訳（Todo 0・In Review 1・Backlog 15）。チーム全体でもTodo 0件。TAA-44にPRが無いこと（2コミット・13ファイル・1317行）。作業ツリーに未コミット変更が無いこと。"
+        },
+        {
+          "heading": "未完了・残ること",
+          "text": "TAA-44のPR作成とレビュー。TAA-43のTodo化と着手。Backlogの採否は人の判断で、workerは代行しません。"
+        }
+      ],
+      "paragraphs": [
+        "TAA-44のPRを作ればレビューが始まり、4件の依存が外れます。そのあとTAA-43をTodoにすると、Spikeの連鎖が動きます。",
+        "順番を逆にすると、TAA-45はTAA-44待ちのまま止まります。先にPRを片付けるのが最短です。",
+        "図はすべて説明用に描いた模式図で、課題本文や実データは転載していません。"
+      ],
+      "sources": [
+        {
+          "label": "この資料の閲覧URL",
+          "url": "https://taaaaryu.github.io/share-hub/slides/issue-worker-no-issue-20261104-2/"
+        },
+        {
+          "label": "デザイン参照：Carbonの文字組み",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/typography/overview"
+        }
+      ]
+    }
+  ],
+  "layout": "reading"
+}
