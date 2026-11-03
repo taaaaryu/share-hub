@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-unblock-next-20261104",
+    "title": "今日の実行枠を使い切った：明日の1回目で実装に入る3手順",
+    "description": "6回の空振り・16件の内訳・解除の3手順を図解 · 6枚"
+  },
+  {
     "slug": "issue-worker-cost-plan-20261104",
     "title": "1動画いくらで解析するか：費用の基準を測る計画",
     "description": "費用の基準・計測点・前後比較・残作業 · 6枚"
