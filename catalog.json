@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-review-gate-20261105",
+    "title": "8日間で0歩：止めているのは1レビューと1クリック",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-ready7-20261105",
     "title": "7件は今すぐ着手できる：止めているのはレビュー1件とTodo 0件",
     "description": "着手可能7件・レビュー待ちで停止4件・解除の1操作 · 6枚"
