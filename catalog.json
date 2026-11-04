@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-promote-one-20261105",
+    "title": "Backlogを1件Todoへ：次の起動で実装が動く3ステップ",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-selection-20261105",
     "title": "Todo 0件でも壊れない：workerの選定条件と次の1手",
     "description": "選定の漏斗・計画と実行の境界・人の1操作 · 5枚"

@@ -1,0 +1,133 @@
+{
+  "title": "Backlogを1件Todoへ：次の起動で実装が動く3ステップ",
+  "theme": "carbon-reading",
+  "subtitle": "選べる候補0件の内訳・人がやる1操作・次の起動の流れ / 2026年11月5日",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "RESULT / 今日の結果",
+      "title": "今日も実装0件。足りないのはコードではなくTodo 1件",
+      "body": "対象プロジェクトに未着手のTodoが無いため、branch・実装・テスト・PR・Linear更新は行っていません。",
+      "paragraphs": [
+        "この作業者（worker）は、起動のたびにLinearのTodoから1件だけ選んで実装し、草案PRまで進めます。今日はその最初の確認で候補が0件でした。",
+        "止まった原因は不具合ではありません。計画（Backlog）は人が優先順位を決めるまで実装しない、という決まりを守った結果です。"
+      ],
+      "items": [
+        "候補 0件（Todoのみ対象）",
+        "コード・PR・Linearは変更なし",
+        "作業ツリーは開始時からクリーン"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "ACTION / 人がやる3ステップ",
+      "title": "1分でできる：Backlogから1件だけTodoへ",
+      "body": "課題を1件選び、状態をTodoへ変え、担当を空けたまま保存する。これだけで次の起動が実装へ進みます。",
+      "flow": [
+        {
+          "title": "1. 1件だけ選ぶ",
+          "body": "計画の中から、いま価値が大きいものを1件だけ選ぶ。まとめて動かさない。"
+        },
+        {
+          "title": "2. 状態をTodoへ",
+          "body": "BacklogからTodoへ変更する。これが「やる」という人の意思表示になる。"
+        },
+        {
+          "title": "3. 担当は空けたまま",
+          "body": "担当が他人だと「他人の作業」として候補から外れる。空欄のまま保存する。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo / Backlog",
+          "meaning": "Todoは「やると決めた課題」、Backlogは「まだ決めていない計画」。状態を変えるのは人の判断です。"
+        },
+        {
+          "term": "依存（blockedBy）",
+          "meaning": "先に終える必要がある課題。未完了が1つでも残っていると、Todoでも選ばれません。"
+        },
+        {
+          "term": "草案PR",
+          "meaning": "レビューに出す前の提案。mergeと本番反映は人が行います。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "BEFORE / AFTER",
+      "title": "盤面は1枚動くだけ。戻すのも1操作",
+      "body": "計画15・レビュー待ち1・Todo 0の盤面が、計画14・レビュー待ち1・Todo 1になります。",
+      "image": "board.png",
+      "image_alt": "変更前は計画15件・レビュー待ち1件・Todo 0件、変更後は計画14件・未着手Todo 1件・レビュー待ち1件になることを並べて示した模式図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        { "name": "計画", "value": "15 → 14", "note": "1件だけ減る" },
+        { "name": "Todo", "value": "0 → 1", "note": "選べる候補" },
+        { "name": "レビュー待ち", "value": "1 → 1", "note": "変更なし" }
+      ],
+      "paragraphs": [
+        "増やすのは1件だけです。たくさんTodoへ上げると、workerは選んだ1件しか進めないため、残りは順番待ちのままになります。",
+        "やっぱり止めたいときは、状態をBacklogへ戻すだけです。コードもデータも変わっていないので、戻す作業はありません。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "NEXT / 次の起動",
+      "title": "次の起動では、選定から草案PRまで一直線に進む",
+      "body": "Todoが1件あれば、branch作成→実装→ローカルテスト→コミット→草案PRまで自動で進み、レビュー待ちで止まります。",
+      "image": "pipeline.png",
+      "image_alt": "Todo 1件が選定・branch・実装・テスト・コミット・草案PR・レビュー待ちの順に流れ、mergeと本番反映は人の工程として分かれていることを示す模式図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "columns": [
+        {
+          "heading": "workerが行うこと",
+          "text": "1件の選定、branch作成、実装、ローカルテスト、コミット、private remoteへのpush、草案PR、Linearをレビュー待ちへ更新。"
+        },
+        {
+          "heading": "人が行うこと",
+          "text": "計画の優先順位づけ、PRのレビューとmerge、本番反映の判断。workerはどれも代行しない。"
+        }
+      ],
+      "paragraphs": [
+        "作業は必ず1件ずつです。複数の課題を同時に進めると、レビュー待ちが増えて人の確認が追いつかなくなります。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと残り",
+      "title": "確認できたこと、まだ決まっていないこと",
+      "body": "今日の範囲はここまで。mergeも本番反映もしていません。",
+      "columns": [
+        {
+          "heading": "確認済み（2026-11-05 時点）",
+          "text": "チームTAAと指定プロジェクトの一致。対象16件の内訳は計画15・レビュー待ち1・Todo 0。チーム全体をTodoで絞っても0件。作業ツリーに未コミットの変更は無い。"
+        },
+        {
+          "heading": "未完了・残ること",
+          "text": "計画を1件Todoへ上げる判断。レビュー待ち1件の扱い。いずれも人の操作で、workerは代行しない。実装の成果物は今回無い。"
+        }
+      ],
+      "paragraphs": [
+        "図はすべて説明用の模式図で、課題の本文・識別子・社内URLは転載していません。",
+        "精度・速度・費用の改善は未測定です。今回の資料でも改善を主張しません。"
+      ],
+      "sources": [
+        {
+          "label": "この資料の閲覧URL",
+          "url": "https://taaaaryu.github.io/share-hub/slides/issue-worker-promote-one-20261105/"
+        },
+        {
+          "label": "前回の資料（選定条件の確認）",
+          "url": "https://taaaaryu.github.io/share-hub/slides/issue-worker-selection-20261105/"
+        },
+        {
+          "label": "デザイン参照：Carbonの文字組み",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/typography/overview"
+        }
+      ]
+    }
+  ]
+}
