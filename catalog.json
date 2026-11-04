@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-selection-20261105",
+    "title": "Todo 0件でも壊れない：workerの選定条件と次の1手",
+    "description": "選定の漏斗・計画と実行の境界・人の1操作 · 5枚"
+  },
+  {
     "slug": "issue-worker-review-gate-20261105",
     "title": "8日間で0歩：止めているのは1レビューと1クリック",
     "description": "背景・全体像・変更・効果・検証を説明"
