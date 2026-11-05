@@ -1,0 +1,143 @@
+{
+  "title": "Todo 0件の日は動かない：21件の内訳と次の1手",
+  "theme": "carbon-reading",
+  "subtitle": "team TAA・対象21件の内訳と選定の停止位置 / 2026年11月6日",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "RESULT / 今日の結果",
+      "title": "今日もTodo 0件で、実装には入らなかった",
+      "body": "対象21件はTodo 0・進行中4・レビュー待ち1・計画16。コードもbranchもPRも作っていません。",
+      "paragraphs": [
+        "このworkerはLinearのTodo（やると決めた課題）から1件だけ選び、実装して草案PRまで進めます。Todoが無ければ、状態もコードも変えません。",
+        "今日の対象プロジェクトは21件でしたが、Todoは0件でした。進行中の4件はすでに草案PRがあり、レビュー待ちが1件、残る16件は計画段階です。",
+        "そこで今日は、接続と状態の確認、そしてこの説明資料の作成だけを行いました。"
+      ],
+      "items": [
+        "対象はTodoの課題だけ",
+        "計画（Backlog）は動かさない",
+        "状態を変えるのは人の操作"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 課題の内訳",
+      "title": "21件あっても、今日着手できるのは0件",
+      "body": "Todo 0・進行中4（草案PRあり）・レビュー待ち1・計画16。",
+      "image": "board.png",
+      "image_alt": "課題21件をマスで表し、Todo 0件、進行中4件、レビュー待ち1件、計画16件の内訳を示す図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "対象課題",
+          "value": "21",
+          "note": "このプロジェクト全体"
+        },
+        {
+          "name": "Todo",
+          "value": "0",
+          "note": "着手できる課題"
+        },
+        {
+          "name": "進行中",
+          "value": "4",
+          "note": "すべて草案PRあり"
+        },
+        {
+          "name": "レビュー待ち",
+          "value": "1",
+          "note": "人の確認待ち"
+        },
+        {
+          "name": "計画",
+          "value": "16",
+          "note": "Backlogのまま"
+        }
+      ],
+      "paragraphs": [
+        "進行中の4件はどれも草案PRが開いていて、まだ作業が残っている課題です。workerは進行中の課題に割り込みません。",
+        "計画の16件はテーマ別に並んでいますが、状態をTodoへ上げるかどうかは人の判断です。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "GATE / 選ぶ条件",
+      "title": "4つの門を順に確認し、1つ目で0件になる",
+      "body": "Todoか→依存→担当→既存PR。今日は1つ目のTodo確認で対象0件でした。",
+      "flow": [
+        {
+          "title": "① Todo",
+          "body": "やると決めた課題か。計画のままなら選ばない。"
+        },
+        {
+          "title": "② 依存",
+          "body": "未完了のblockedByが無いか。"
+        },
+        {
+          "title": "③ 担当",
+          "body": "自分以外の作業でないか。"
+        },
+        {
+          "title": "④ 既存PR",
+          "body": "同じ変更のbranchやPRが無いか。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo / Backlog",
+          "meaning": "Todoは「やると決めた課題」、Backlogは「まだ決めていない計画」。状態を変えるのは人の判断です。"
+        },
+        {
+          "term": "blockedBy",
+          "meaning": "「Aが終わらないとBを始められない」依存関係。Aが残る間、Bは選ばれません。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "FINDING / 止まっている場所",
+      "title": "止まっているのは1つ目の門と、人のレビュー",
+      "body": "Todo確認で0件。進行中4件もレビュー待ち1件も、人の確認で止まっています。",
+      "image": "gate.png",
+      "image_alt": "選定の4条件を並べ、1つ目のTodo確認で0件になり停止し、残りは未到達であることを示す図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "paragraphs": [
+        "選定はTodoかどうかを最初に確認します。計画のままの16件は、ここで対象外になります。",
+        "進行中の4件は草案PRが開いていて、レビューが終わるまで次の作業に進めません。",
+        "レビュー待ちの1件も同じく人の確認待ちです。workerは他人のPRをmergeしません。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "STATUS / 確認済みと残ること",
+      "title": "確認できたこと、まだ決まっていないこと",
+      "body": "接続・件数・作業ツリーは確認済み。次の1件を決めるのは人です。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "team TAAと対象プロジェクトの一致。課題21件の内訳（Todo 0・進行中4・レビュー待ち1・計画16）。進行中4件すべてに草案PR。experimentsのtracked変更0件。図はすべて説明用の模式図。"
+        },
+        {
+          "heading": "未完了・残ること",
+          "text": "草案PRのレビュー。計画から1件をTodoへ上げる判断。Todoができた後の実装・テスト・PRは次回のworkerが担当。"
+        }
+      ],
+      "paragraphs": [
+        "この資料には課題本文・識別子・内部URLを載せていません。件数は2026年11月6日時点の確認結果です。"
+      ],
+      "sources": [
+        {
+          "label": "この資料の閲覧URL",
+          "url": "https://taaaaryu.github.io/share-hub/slides/issue-worker-no-issue-20261106/"
+        },
+        {
+          "label": "デザイン参照：Carbonの文字組み",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/typography/overview"
+        }
+      ]
+    }
+  ],
+  "layout": "reading"
+}
