@@ -1,0 +1,173 @@
+{
+  "title": "Todo 0件の理由：計画16件のうち5件は今すぐ動かせる",
+  "theme": "carbon-reading",
+  "subtitle": "team TAA・対象21件の状態と依存の確認 / 2026年11月6日",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "RESULT / 今日の結果",
+      "title": "今日もTodoが0件で、実装には入らなかった",
+      "body": "対象21件はTodo 0・進行中4・レビュー待ち1・計画16。コードもbranchもPRも作っていません。",
+      "paragraphs": [
+        "このworkerは、LinearでTodo（やると決めた課題）になっているものから1件だけ選び、実装して草案PRまで進めます。Todoが無ければ、状態もコードも変えません。",
+        "今日の対象プロジェクトは21件でしたが、Todoは0件でした。進行中の4件はすべて草案PRが開いていて、レビュー待ちが1件、残る16件は計画のままです。",
+        "そこで今日は、接続と状態の確認、計画16件の依存関係の整理、この説明資料の作成だけを行いました。"
+      ],
+      "items": [
+        "対象はTodoの課題だけ",
+        "計画は動かさない",
+        "状態を変えるのは人の操作"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 課題の内訳",
+      "title": "21件を状態で分けると、着手できる課題は0件",
+      "body": "Todo 0・進行中4（草案PRあり）・レビュー待ち1・計画16。",
+      "image": "board.png",
+      "image_alt": "課題21件をマスで表し、Todo 0件、進行中4件、レビュー待ち1件、計画16件の内訳を示す図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "対象課題",
+          "value": "21",
+          "note": "このプロジェクト全体"
+        },
+        {
+          "name": "Todo",
+          "value": "0",
+          "note": "着手できる課題"
+        },
+        {
+          "name": "進行中",
+          "value": "4",
+          "note": "4件とも草案PRあり"
+        },
+        {
+          "name": "レビュー待ち",
+          "value": "1",
+          "note": "人の確認待ち"
+        },
+        {
+          "name": "計画",
+          "value": "16",
+          "note": "Backlogのまま"
+        }
+      ],
+      "paragraphs": [
+        "進行中の4件はどれも草案PRが開いていて、まだ作業が残っている課題です。workerは進行中の課題に割り込みません。",
+        "計画の16件は、状態をTodoへ上げるかどうかを人が決めるまで動きません。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "GATE / 選ぶ条件",
+      "title": "4つの門を順に確認し、1つ目で0件になる",
+      "body": "Todoか→依存→担当→既存PR。今日は1つ目のTodo確認で対象0件でした。",
+      "flow": [
+        {
+          "title": "① Todo",
+          "body": "やると決めた課題か。計画のままなら選ばない。"
+        },
+        {
+          "title": "② 依存",
+          "body": "未完了のblockedByが無いか。"
+        },
+        {
+          "title": "③ 担当",
+          "body": "自分以外の作業でないか。"
+        },
+        {
+          "title": "④ 既存PR",
+          "body": "同じ変更のbranchやPRが無いか。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo / Backlog",
+          "meaning": "Todoは「やると決めた課題」、Backlogは「まだ決めていない計画」。状態を変えるのは人の判断です。"
+        },
+        {
+          "term": "blockedBy",
+          "meaning": "「Aが終わらないとBを始められない」依存関係。Aが残る間、Bは選ばれません。"
+        },
+        {
+          "term": "草案PR",
+          "meaning": "Draft Pull Request。変更を共有してレビューを受ける段階のPRで、まだmergeされません。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "FINDING / 計画16件の分解",
+      "title": "計画16件のうち、依存なしは8件。候補は5件",
+      "body": "依存待ち8件のうち6件は、レビュー待ち1件が終われば道が開く。",
+      "image": "tree.png",
+      "image_alt": "計画16件を依存なし8件に絞り、Epicと低優先の研究を除いた実装候補5件を示す図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "計画",
+          "value": "16",
+          "note": "Backlog全体"
+        },
+        {
+          "name": "依存なし",
+          "value": "8",
+          "note": "未完了のblockedByが無い"
+        },
+        {
+          "name": "実装候補",
+          "value": "5",
+          "note": "高優先3件・中優先2件"
+        },
+        {
+          "name": "依存待ち",
+          "value": "8",
+          "note": "他課題の完了が前提"
+        },
+        {
+          "name": "レビューで解除",
+          "value": "6",
+          "note": "レビュー待ち1件の完了で外れる"
+        }
+      ],
+      "paragraphs": [
+        "未完了のblockedByが無い計画は8件でした。そのうち親のEpic 1件と低優先の研究2件を除くと、実装候補は5件（高優先3件・中優先2件）です。",
+        "依存で止まっている8件のうち6件は、レビュー待ちの共通課題が完了すると依存が外れます。残り2件は、進行中1件と計画2件の完了が前提です。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "STATUS / 確認済みと残ること",
+      "title": "確認できたこと、まだ決まっていないこと",
+      "body": "接続・件数・依存・作業ツリーは確認済み。次の1件を決めるのは人です。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "team TAAと対象プロジェクトの一致。課題21件の内訳（Todo 0・進行中4・レビュー待ち1・計画16）。進行中4件すべてに草案PR。計画16件の依存を取得し、依存なし8件・実装候補5件と整理。experimentsのtracked変更0件。図は説明用に作成。"
+        },
+        {
+          "heading": "未完了・残ること",
+          "text": "草案PRのレビュー。計画から1件をTodoへ上げる判断。Todoができた後の実装・テスト・PRは次回のworkerが担当。"
+        }
+      ],
+      "paragraphs": [
+        "この資料には課題本文・識別子・内部URLを載せていません。件数は2026年11月6日時点の確認結果です。"
+      ],
+      "sources": [
+        {
+          "label": "この資料の閲覧URL",
+          "url": "https://taaaaryu.github.io/share-hub/slides/issue-worker-no-issue-20261106-2/"
+        },
+        {
+          "label": "デザイン参照：Carbonの文字組み",
+          "url": "https://www.carbondesignsystem.com/building-blocks/foundations/typography/overview"
+        }
+      ]
+    }
+  ],
+  "layout": "reading"
+}
