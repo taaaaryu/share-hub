@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-no-issue-20261107",
+    "title": "Todo 0件が続く理由：今すぐ動かせる計画は5件",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-no-issue-20261106-2",
     "title": "Todo 0件の理由：計画16件のうち5件は今すぐ動かせる",
     "description": "背景・全体像・変更・効果・検証を説明"
