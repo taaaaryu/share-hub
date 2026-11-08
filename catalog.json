@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-budget-limit-20261109",
+    "title": "今日6回目で上限：Todo 0件のため実装せず、残る操作は1つ",
+    "description": "Todo 0件で実装せず停止した6回目の記録と、次に人が行う1操作を説明"
+  },
+  {
     "slug": "issue-worker-selection-gate-20261109",
     "title": "Todo 0件の日に、workerが選ばない理由",
     "description": "背景・全体像・変更・効果・検証を説明"
