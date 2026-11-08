@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-selection-gate-20261109",
+    "title": "Todo 0件の日に、workerが選ばない理由",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-run-budget-20261109",
     "title": "5回目の実行、Todoは0件：止めている関門を1枚で見る",
     "description": "背景・全体像・変更・効果・検証を説明"

@@ -1,0 +1,144 @@
+{
+  "title": "Todo 0件の日に、workerが選ばない理由",
+  "theme": "carbon-reading",
+  "subtitle": "team TAA・対象21件を2026年11月9日に再取得 / 実装なし・状態変更なし",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "RESULT / 今回の結果",
+      "title": "Todoが0件だったので、今回は何も変えていません",
+      "body": "対象projectの21件を再取得。着手できるTodoが0件のため、コード・branch・PR・Linearの状態を変えずに終了しました。",
+      "paragraphs": [
+        "このworkerは、LinearでTodo（やると決めた課題）になっているものを1件だけ選び、実装して草案PRまで進めます。",
+        "Todoが無いときは、計画（Backlog）を勝手にTodoへ変えず、実装も始めません。今回もそのルールに従いました。",
+        "進行中の4件はすべて草案PRが開いており、レビュー待ちの1件も人の確認待ちです。workerは割り込みません。"
+      ],
+      "items": [
+        "Todo 0件",
+        "計画は動かさない",
+        "今回の変更なし"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "ROLE / 仕事の境界",
+      "title": "workerがする仕事と、しない仕事",
+      "body": "同じ「課題を進める」でも、決められた範囲の外は触りません。",
+      "columns": [
+        {
+          "heading": "する",
+          "text": "Todoを1件選ぶ / ローカルテスト / 草案PRの作成 / Linearへの記録"
+        },
+        {
+          "heading": "しない",
+          "text": "BacklogのTodo化 / merge / production deploy / レビュー中PRへの追加コミット"
+        }
+      ],
+      "paragraphs": [
+        "範囲を広げると、人の判断より先に状態が変わり、レビューの前提が崩れます。今回はその境界を守った結果、変更0件でした。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "GATE / 選ぶ前の関門",
+      "title": "選ぶ前の4つの関門。今回は最初で止まりました",
+      "body": "21件のうちTodoは0件。関門1を通る課題が無いため、関門2以降は評価していません。",
+      "image": "gates.png",
+      "image_alt": "Todoか、依存がないか、担当が自分か、既存branchやPRがないかの4つの関門を並べ、関門1で0件となり停止、その先は未評価であることを示す図",
+      "image_width": 2000,
+      "image_height": 1125,
+      "paragraphs": [
+        "関門は、①Todoか ②未完了の依存がないか ③担当が自分か ④既存branchやPRがないか、の順です。",
+        "関門1で0件なので、関門2〜4は判定していません。通過しなかったのではなく、そもそも候補がいない状態です。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "CANDIDATES / すぐ動かせる計画",
+      "title": "計画16件のうち、すぐTodoにできるのは5件",
+      "body": "依存が無く、担当もPRも無い候補。ただし状態を変えるのは人の判断です。",
+      "metrics": [
+        {
+          "name": "TAA-35",
+          "value": "基準",
+          "note": "現行の精度・実費を動画単位で記録"
+        },
+        {
+          "name": "TAA-36",
+          "value": "OCR",
+          "note": "CPU OCRを既存ROIへ適用"
+        },
+        {
+          "name": "TAA-39",
+          "value": "追跡",
+          "note": "ByteTrackとBoT-SORTを比較"
+        },
+        {
+          "name": "TAA-38",
+          "value": "検出",
+          "note": "RF-DETRと現行検出器を比較"
+        },
+        {
+          "name": "TAA-43",
+          "value": "正解",
+          "note": "HUD変化を区別するクリップ作成"
+        }
+      ],
+      "paragraphs": [
+        "5件はすべてBacklogのまま。workerが代わりにTodoへ上げることはしません。",
+        "推奨の先頭はTAA-35。ベースラインが後続2件の比較前提になります。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "NEXT / 次の1手",
+      "title": "次の1手は、計画から1件をTodoへ上げること",
+      "body": "Todoになれば、次回のworkerがその1件だけを実装し、草案PRまで進めます。",
+      "flow": [
+        {
+          "title": "① Todoへ",
+          "body": "TAA-35をTodoに上げる。workerは次回1件だけ選ぶ。"
+        },
+        {
+          "title": "② 基準を記録",
+          "body": "同じ動画・同じROIで精度・時間・実費を残す。"
+        },
+        {
+          "title": "③ 比較へ",
+          "body": "TAA-36などの候補を、この基準と比べる。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "ベースライン",
+          "meaning": "変更する前の成績。これが無いと、新しい方法が良くなったか判断できない。"
+        },
+        {
+          "term": "ROI",
+          "meaning": "画面のうち、数字や武器名を読み取るために切り出す矩形のこと。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと残ること",
+      "title": "確認できたことと、まだ決めていないこと",
+      "body": "接続・状態・依存・既存PRは再取得済み。次へ進む判断は人に残っています。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "team TAAと対象projectの一致、21件の状態、候補5件の依存と担当、オープン草案PR 8件、作業ツリーがcleanであることを確認した。"
+        },
+        {
+          "heading": "未検証・残ること",
+          "text": "候補5件の難易度・所要時間・費用対効果は未測定。今回の推奨は依存と優先度にもとづく判断で、成果を実測したものではない。"
+        }
+      ],
+      "paragraphs": [
+        "今回の実行では、コード変更・コミット・PR作成・Linearの状態変更は行っていません。",
+        "人がTodoを1件用意すれば、次回のworkerが実装と草案PRまで進めます。"
+      ]
+    }
+  ],
+  "layout": "reading"
+}
