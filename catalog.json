@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-review-order-20261110",
+    "title": "草案PR8件、確認は小さい順が近道",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-stuck-in-progress-20261110",
     "title": "止まっている5件は、すべて確認待ち",
     "description": "背景・全体像・変更・効果・検証を説明"
