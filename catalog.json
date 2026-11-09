@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-flow-block-20261110",
+    "title": "実装0件が続く理由：流れのどこで止まっているか",
+    "description": "Todo 0件で停止した理由を流れ図で示し、人が今日できる1操作を2案に絞る"
+  },
+  {
     "slug": "issue-worker-budget-limit-20261109",
     "title": "今日6回目で上限：Todo 0件のため実装せず、残る操作は1つ",
     "description": "Todo 0件で実装せず停止した6回目の記録と、次に人が行う1操作を説明"
