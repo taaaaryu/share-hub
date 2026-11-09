@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-stuck-in-progress-20261110",
+    "title": "止まっている5件は、すべて確認待ち",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-loop-diagnosis-20261110",
     "title": "62回動いてDone 0件：詰まりは入口と出口の2点",
     "description": "12日間の実行回数・草案PR・完了件数を集計し、止まっている入口と出口を図で説明"
