@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-ready-backlog-20261110",
+    "title": "Todoが空でも、計画16件のうち8件は今すぐ着手できる",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-flow-block-20261110",
     "title": "実装0件が続く理由：流れのどこで止まっているか",
     "description": "Todo 0件で停止した理由を流れ図で示し、人が今日できる1操作を2案に絞る"
