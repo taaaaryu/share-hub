@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-backlog-plan-20261111",
+    "title": "Todoが0件の日に、次の実装を1件ぶん具体化する",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-pr-dependency-20261111",
     "title": "草案PR8件は独立ではない：3段の積み木と単独2件",
     "description": "草案8件の共有ファイル数とbaseブランチを実測し、3段に積まれた依存関係を図で説明"
