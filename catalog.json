@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-queue-aging-20261111",
+    "title": "Todo 0件の間、草案PRは最長14日待っている",
+    "description": "直近4日の実行21回と草案PR8件の待ち時間を集計し、入口と出口の停滞を図で説明"
+  },
+  {
     "slug": "issue-worker-backlog-plan-20261111",
     "title": "Todoが0件の日に、次の実装を1件ぶん具体化する",
     "description": "背景・全体像・変更・効果・検証を説明"
