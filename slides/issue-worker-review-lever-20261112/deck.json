@@ -1,0 +1,129 @@
+{
+  "title": "In Review 1件が6件の入口をふさいでいる",
+  "theme": "carbon-reading",
+  "subtitle": "team TAA / 対象プロジェクト21件・草案PR8件を2026-11-12に再取得 ・ 実装なし・状態変更なし",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / なぜこの資料か",
+      "title": "Todoが0件でも、止まっている理由は測れる",
+      "body": "今日もTodoは0件で実装なし。同じ空振りを繰り返さないよう、今回は依存関係を数えた。",
+      "paragraphs": [
+        "workerが実装してよいのはTodoの課題だけです。今回も0件だったので、コード変更・PR作成・Linear更新は行っていません。",
+        "ただ『在庫がありません』を繰り返しても前に進みません。そこで、Backlogの課題が何にせき止められているかを関係線で数えました。",
+        "たとえると、倉庫の棚は埋まっているのに、棚卸しの1枚が止まっているせいで8箱が出せない状態です。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "workerが動かせるのは、Todoの1件だけ",
+      "body": "4段の流れのうち、workerが触れるのは入口と実装だけ。レビューと取り込みは人が行います。",
+      "flow": [
+        {
+          "title": "選ぶ（入口）",
+          "body": "Todoを1件だけ選ぶ。Todoが0件なら、ここで止まる。"
+        },
+        {
+          "title": "実装する",
+          "body": "mainからissue番号のブランチを作り、テストしてコミットする。"
+        },
+        {
+          "title": "確認する（出口）",
+          "body": "Draft PRを作り、課題をIn Reviewへ移す。正しさの判断は人。"
+        },
+        {
+          "title": "取り込む",
+          "body": "人がレビューしてmergeし、Doneにする。ここが開かないと次が動かない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "workerが実装してよい唯一の状態。『今日の作業台』に置かれた課題。"
+        },
+        {
+          "term": "Backlog",
+          "meaning": "計画だけがある状態。workerは勝手にTodoへ移さない。"
+        },
+        {
+          "term": "blockedBy",
+          "meaning": "『この課題が終わるまで着手できない』というLinearの依存関係。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "変更を確認してもらう下書き。mergeされるまで本流には入らない。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "LEVER / 依存関係",
+      "title": "レビュー待ち1件が、6件の前提になっている",
+      "body": "草案PRのまま15日たつ1件が、Backlog 4件の直接の前提。連鎖すると6件に影響する。",
+      "image": "dependency_chain.png",
+      "image_alt": "In Review 1件から Backlog 4件へ矢印が伸び、そのうち2件からさらに2件へつながる依存関係図。直接の下流4件、連鎖を含む6件。最後の1件には別の前提も残る。",
+      "image_width": 1400,
+      "image_height": 900,
+      "paragraphs": [
+        "In Reviewの1件は10月28日に作られた草案PRのままです。この1件が終わっていないため、Backlogの4件は『前提が未完了』で着手できません。",
+        "さらにその先に2件あります。合計6件が、この1件の完了を待っています。",
+        "ただし最後の1件は別の前提も残ります。レビュー1件を片付けても、6件すべてが同時に動くわけではありません。"
+      ],
+      "metrics": [
+        {
+          "name": "レビュー待ち",
+          "value": "1件",
+          "note": "草案PR・作成15日"
+        },
+        {
+          "name": "直接の下流",
+          "value": "4件",
+          "note": "この1件が前提"
+        },
+        {
+          "name": "連鎖を含む",
+          "value": "6件",
+          "note": "Backlog全体の38%"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "NUMBERS / 在庫の内訳",
+      "title": "Backlog 16件の半分は、前提待ちで動けない",
+      "body": "未完了の前提があるのは8件。残る8件は前提なしだが、Todoではないのでworkerは選べない。",
+      "image": "issue_composition.png",
+      "image_alt": "全21件の状態を四角1つ＝1件で示す。Todo 0件、Backlog 16件、In Progress 4件、In Review 1件。Backlogの内訳は未完了の前提あり8件、前提なし8件。",
+      "image_width": 1400,
+      "image_height": 780,
+      "paragraphs": [
+        "全21件のうち、workerが選べるTodoは0件でした。In Progress 4件とIn Review 1件は選択の対象外です。",
+        "Backlog 16件のうち8件は、未完了の前提があるため着手できません。残る8件は前提がありませんが、Todoへ移すのは人の判断です。",
+        "つまり『材料がない』のではなく、『作業台に1つも置かれていない』状態です。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと未検証",
+      "title": "確認したのは関係と件数だけ",
+      "body": "レビューの速さや変更の正しさは測っていない。次の一手は人が決める必要があります。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "Linearの21件は Backlog 16・In Progress 4・In Review 1・Todo 0・Done 0。blockedByの関係から、直接4件・連鎖6件がレビュー待ち1件を前提にしている。草案PRは8件で、すべて草案のまま。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "各PRの正しさ、テストの合否、レビュー所要時間、優先度との対応は未確認。依存関係はLinearの登録内容であり、実際の作業順序を保証しない。"
+        }
+      ],
+      "paragraphs": [
+        "この資料は公開可能な集計値だけで作り、課題本文・コメント・コードは載せていません。課題名はA〜Gに置き換えています。",
+        "人が次に1つ動かすなら、レビュー待ち1件の確認か、前提のないBacklogを1件Todoへ移すかのどちらかです。どちらを選ぶかはこの資料では決めていません。",
+        "merge・production deploy・Linearのステータス変更は行っていません。"
+      ]
+    }
+  ],
+  "layout": "reading"
+}

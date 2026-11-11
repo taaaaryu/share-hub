@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-review-lever-20261112",
+    "title": "In Review 1件が6件の入口をふさいでいる",
+    "description": "Todo 0件の裏側を依存関係で説明。レビュー待ち1件がBacklog 6件の前提になっていることを図で示す"
+  },
+  {
     "slug": "thumaster-weekly-20261112",
     "title": "11/12週例レポート：解析を速く試すための土台づくり",
     "description": "背景・全体像・変更・効果・検証を説明"
