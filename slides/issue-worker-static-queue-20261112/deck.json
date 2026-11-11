@@ -1,0 +1,145 @@
+{
+  "title": "キューは32分で動かず、中央値14日停止していた",
+  "theme": "carbon-reading",
+  "subtitle": "team TAA / 対象プロジェクト21件を2026-11-12 00:19・00:51 JSTに再取得 ・ 実装なし・状態変更なし",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / なぜこの資料か",
+      "title": "32分後の再確認でも、Todoは0件だった",
+      "body": "前回の確認から32分。21件の状態は1件も変わらず、実装できる課題はありませんでした。",
+      "paragraphs": [
+        "workerは、LinearのTodoに置かれた課題だけを実装します。今回もTodoは0件だったため、コード変更・ブランチ・PR作成・Linearの状態変更は行っていません。",
+        "同じ『在庫なし』を繰り返すだけでは改善につながらないので、今回は2つのことを測りました。1つは、21件が最後の更新からどれだけ経っているか。もう1つは、32分あけて2回読んだときに数字が動くかです。",
+        "たとえると、店の棚は商品で埋まっているのに、『今日売る分』の札が1枚も付いていない状態です。棚卸しの日付を見ると、多くが2週間前のままでした。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "workerが動けるのは、Todoに置かれた1件だけ",
+      "body": "4段の流れのうち、workerが触れるのは選択と実装。レビューと取り込みは人が行います。",
+      "flow": [
+        {
+          "title": "選ぶ（入口）",
+          "body": "Todoを1件だけ選ぶ。Todoが0件なら、ここで止まる。"
+        },
+        {
+          "title": "実装する",
+          "body": "mainからissue番号のブランチを作り、テストしてコミットする。"
+        },
+        {
+          "title": "確認する（出口）",
+          "body": "Draft PRを作り、課題をIn Reviewへ移す。正しさの判断は人。"
+        },
+        {
+          "title": "取り込む",
+          "body": "人がレビューしてmergeし、Doneにする。ここが開かないと次が動かない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "workerが実装してよい唯一の状態。『今日の作業台』に置かれた課題。"
+        },
+        {
+          "term": "Backlog",
+          "meaning": "計画だけがある状態。workerは勝手にTodoへ移さない。"
+        },
+        {
+          "term": "updatedAt",
+          "meaning": "Linearが記録する『最後に更新された時刻』。状態変更やコメントでも動く。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "変更を確認してもらう下書き。mergeされるまで本流には入らない。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 停滞の測り方",
+      "title": "21件の中央値は、14日間更新されていない",
+      "body": "11件は10月28日から、4件のIn Progressも11月5日から更新がありません。",
+      "image": "queue_aging.png",
+      "image_alt": "状態ごとに、最後の更新からの日数を3つの期間に分けた表。Backlog 16件は0-2日が3件、3-10日が3件、11日以上が10件。In Progress 4件はすべて3-10日。In Review 1件は11日以上。",
+      "image_width": 1400,
+      "image_height": 860,
+      "paragraphs": [
+        "LinearのupdatedAtを基準に、21件を『最後の更新から0-2日・3-10日・11日以上』に分けました。中央値は14.2日です。",
+        "11日以上動いていないのは11件で、うち10件がBacklog、1件がIn Reviewです。In Progressの4件も、最後の更新は11月5日で6日前でした。",
+        "ただしupdatedAtは機械的な一括更新でも変わります。『6日間だれも見ていない』とまでは言えず、ここで分かるのは『記録が動いていない』ことだけです。"
+      ],
+      "metrics": [
+        {
+          "name": "更新からの中央値",
+          "value": "14.2日",
+          "note": "21件・2026-11-12 00:51 JST時点"
+        },
+        {
+          "name": "11日以上",
+          "value": "11件",
+          "note": "Backlog 10・In Review 1"
+        },
+        {
+          "name": "In Progressの最終更新",
+          "value": "6日前",
+          "note": "4件とも11月5日"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 2回の確認",
+      "title": "00:19と00:51、5つの数字はすべて同じ",
+      "body": "Todo 0・Backlog 16・In Progress 4・In Review 1・Done 0。差分は0件でした。",
+      "image": "two_checks.png",
+      "image_alt": "2026-11-12 00:19と00:51の2回の読み取りを並べた表。Todo 0、Backlog 16、In Progress 4、In Review 1、Done 0が両方で同じ。差分は0件。",
+      "image_width": 1400,
+      "image_height": 760,
+      "paragraphs": [
+        "1回目は前回の実行が終わった直後、2回目は今回の実行開始時です。どちらも読み取りだけで、状態は書き換えていません。",
+        "32分の間にTodoが増えることも、Backlogが減ることもありませんでした。workerが止まっている原因は、workerの処理速度ではなく入口の在庫です。",
+        "この比較で分かるのは『この32分間は動かなかった』ことだけです。人が同時に作業していた可能性は否定できません。"
+      ],
+      "metrics": [
+        {
+          "name": "確認の間隔",
+          "value": "32分",
+          "note": "00:19 → 00:51 JST"
+        },
+        {
+          "name": "5項目の差分",
+          "value": "0件",
+          "note": "Todo/Backlog/進行中/確認待ち/Done"
+        },
+        {
+          "name": "workerの書き込み",
+          "value": "0件",
+          "note": "読み取りのみ"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと未検証",
+      "title": "確認したのは件数と更新時刻だけ",
+      "body": "実装もLinearの状態変更もしていない。次の一手は人が決める必要があります。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "21件はBacklog 16・In Progress 4・In Review 1・Todo 0・Done 0。32分あけた2回の読み取りで差分は0件。最後の更新からの日数の中央値は14.2日で、11件が11日以上動いていない。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "課題の優先度、依存関係の妥当性、各草案PRの正しさ、レビュー所要時間は未確認。updatedAtは機械的な更新も含む。BacklogをTodoへ移す判断は人だけができる。"
+        }
+      ],
+      "paragraphs": [
+        "人が今日できる1手は2つです。Backlogから1件だけTodoへ移すか、In Reviewの草案PRを確認して次の状態へ進めるか。どちらもworkerの権限外です。",
+        "workerは次回もTodo 0件なら同じ場所で止まります。自動でBacklogをTodoへ上げることはしません。"
+      ]
+    }
+  ],
+  "layout": "reading"
+}
