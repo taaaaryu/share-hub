@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-branch-no-pr-20261112",
+    "title": "着手済み5件にPRが0本：出口が見えない",
+    "description": "Todo 0件の日に出口を実測。着手済み5件のブランチは5本あるがPRは0本、最終コミットは14日前と6日前であることを図で示す"
+  },
+  {
     "slug": "issue-worker-static-queue-20261112",
     "title": "キューは32分で動かず、中央値14日停止していた",
     "description": "背景・全体像・変更・効果・検証を説明"
