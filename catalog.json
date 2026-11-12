@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-ready-backlog-20261113",
+    "title": "Todo 0件でも、今日動かせる候補は7件あった",
+    "description": "TAAプロジェクト21件を依存関係で分解。Backlog 16件のうち依存が空は7件、レビュー待ち1件が連鎖で6件を止めていることを図で説明"
+  },
+  {
     "slug": "taa49-cost-breakdown-20261113",
     "title": "デコードが処理時間の95%を占めていた",
     "description": "TAA-49の事前計測。720pクリップ2本で処理時間の内訳（デコード95%）とfps間引きの代償、読み方によるCPU差を実測した結果"
