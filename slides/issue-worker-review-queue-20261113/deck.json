@@ -1,0 +1,141 @@
+{
+  "title": "3回動いて0行、止めているのは確認の列",
+  "theme": "carbon-reading",
+  "subtitle": "issue worker 2026-11-13 02:10 JST ・ 実装なし／ブランチ・コミット・PR・状態変更なし",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "今日3回目の実行も、コードは0行だった",
+      "body": "workerは「着手してよいTodo」が無いと実装に入れません。今日は3回動いて、実装0件、今回も同じ結論でした。",
+      "paragraphs": [
+        "対象は TAA チームのプロジェクト「Thumaster｜最新解析技術の適用・検証」。2026-11-13 02:10 JST に課題21件を取り直し、Todo が0件であることを確認しました。",
+        "選定のルールでは、Backlog は計画案までで実装しません。In Progress・In Review は着手中として除外します。結果、実装できる課題がありません。",
+        "止まっているのは worker の速度ではなく、入口（Todo）と出口（レビュー）の2か所です。今回は出口の詰まり方を数字で確かめました。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "workerの1回と、今日止まった場所",
+      "body": "選ぶ → 実装する → Draft PR → 人が確認 → merge。今日は最初の「選ぶ」で0件になり、先へ進めませんでした。",
+      "flow": [
+        {
+          "title": "課題を選ぶ",
+          "body": "未着手のTodoから1件だけ選ぶ。今回は0件で停止。"
+        },
+        {
+          "title": "実装する",
+          "body": "mainからブランチを切り、テストを通す。今回は未着手。"
+        },
+        {
+          "title": "Draft PR",
+          "body": "private remoteへpushし、下書きPRを作る。今回は未着手。"
+        },
+        {
+          "title": "人の確認",
+          "body": "レビューしてmergeする。workerはmergeもdeployもしない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "未着手で、実装してよい状態の課題。Backlog は計画までで、実装の対象外。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "下書きのまま出したPR。レビューされない限りmergeされない。"
+        },
+        {
+          "term": "mergeable: clean",
+          "meaning": "GitHub 上で競合が無く、その気になれば merge できる状態。中身の正しさは別問題。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "MEASURE / 入口",
+      "title": "入口：着手できる Todo は 0 件",
+      "body": "課題は21件ありますが、Todo は0件。16件は Backlog に置かれたままで、実装の対象になりません。",
+      "image": "issue_states.png",
+      "image_alt": "横棒に課題21件を状態別に積み上げた図。Backlog 16件、In Progress 4件、In Review 1件で、その下に赤い破線で囲んだ Todo 0件の行がある。",
+      "image_width": 1440,
+      "image_height": 840,
+      "metrics": [
+        {
+          "name": "Todo",
+          "value": "0 件",
+          "note": "実装してよい課題"
+        },
+        {
+          "name": "Backlog",
+          "value": "16 件",
+          "note": "計画のみ・実装しない"
+        },
+        {
+          "name": "着手中・確認待ち",
+          "value": "5 件",
+          "note": "すべてDraft PRを持つ"
+        }
+      ],
+      "paragraphs": [
+        "内訳は Backlog 16 / In Progress 4 / In Review 1 / Todo 0 / Done 0（計21件、追加ページなし）。",
+        "Backlog の16件のうち、未完了の依存が無いものは7件あります。ただし状態が Backlog である限り、worker は実装に進みません。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "MEASURE / 出口",
+      "title": "出口：Draft PR 8本が、レビュー0件で待っている",
+      "body": "8本とも競合なし。4本はCIも通過済み。それでもレビューが0件なので、mergeされずに最長15.3日たっています。",
+      "image": "pr_wait.png",
+      "image_alt": "Draft PR 8本の作成からの経過日数を横棒で示した図。上位3本が15.3日、4本目が7.3日、残り4本が7.2日。CI通過は4本、未設定が4本で、すべてレビュー0件。",
+      "image_width": 1440,
+      "image_height": 840,
+      "metrics": [
+        {
+          "name": "open の Draft PR",
+          "value": "8 本",
+          "note": "すべて draft=true"
+        },
+        {
+          "name": "レビュー",
+          "value": "0 件",
+          "note": "コメントも0件"
+        },
+        {
+          "name": "CI 通過",
+          "value": "4 本",
+          "note": "残り4本はCI未設定"
+        }
+      ],
+      "paragraphs": [
+        "8本とも mergeable は clean。つまり「直せば通る」状態ではなく、単に確認されていないだけです。",
+        "CI が未設定の4本は、テストが走っていないだけで、失敗しているわけではありません。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "STATUS / 確認済みと未検証",
+      "title": "確認できたこと、まだ分からないこと",
+      "body": "今回確かめたのは件数と状態だけです。解析の精度・速度・費用は測っていません。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "課題21件の状態（Todo 0件）、Draft PR 8本がすべて open・レビュー0件・競合なし、うち4本はCI通過。Draft PRの最長待ちは15.3日。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "8本のPRの中身が正しいかは未確認。Backlog 16件を実装した場合の精度・処理時間・費用も未測定。BacklogをTodoへ移す判断は人が行う必要がある。"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "NEXT / 次の行動",
+      "title": "人が1つ動かせば、次は実装に入れる",
+      "body": "依存の無いBacklogを1件Todoへ移すか、Draft PRを1本レビューする。どちらかで次の実行は前へ進みます。",
+      "visual": "NEXT"
+    }
+  ]
+}
