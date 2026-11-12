@@ -1,0 +1,137 @@
+{
+  "title": "Todo 0件・Done 0件：21件の在庫を状態ボードで見る",
+  "theme": "carbon-reading",
+  "subtitle": "team TAA / 対象プロジェクト21件を2026-11-12 02:08 JSTに取得 ・ 実装なし・状態変更なし・在庫の確認のみ",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / なぜこの資料か",
+      "title": "作業台が空なので、今日も実装できなかった",
+      "body": "課題は21件あります。でもworkerが手を付けられる『Todo』は0件でした。在庫を状態ごとに並べて、どこで止まっているかを見ます。",
+      "paragraphs": [
+        "workerはLinearのTodoに置かれた課題だけを実装します。今回はTodoが0件だったため、ブランチ作成・コード変更・コミット・PR作成・Linearの状態変更は行っていません。",
+        "課題が無いわけではありません。Backlogに16件、In Progressに4件、In Reviewに1件あります。ただしworkerのルールでは、そのどれも勝手に動かせません。",
+        "たとえると、冷蔵庫に食材はたくさんあるのに、今日の献立欄が空の状態です。workerは献立欄に書かれた料理しか作れません。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "workerの仕事は『選ぶ』から始まる",
+      "body": "流れは4段。今回止まったのは、いちばん最初の『選ぶ』です。",
+      "flow": [
+        {
+          "title": "選ぶ（入口）",
+          "body": "Todoを1件だけ選ぶ。Todoが0件ならここで止まる。"
+        },
+        {
+          "title": "実装する",
+          "body": "mainからissue番号のブランチを作り、テストしてコミットする。"
+        },
+        {
+          "title": "渡す",
+          "body": "private remoteへpushし、Draft PRにして課題をIn Reviewへ移す。"
+        },
+        {
+          "title": "確認して取り込む",
+          "body": "人がレビューしてmergeし、Doneにする。workerはここを進めない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "workerが実装してよい唯一の状態。『今日の作業台』に置かれた課題。"
+        },
+        {
+          "term": "Backlog",
+          "meaning": "まだ作業台に載せていない計画の置き場。workerはTodoへ移せない。"
+        },
+        {
+          "term": "In Progress / In Review",
+          "meaning": "すでに誰かが着手した、または確認待ちの状態。workerは横から取らない。"
+        },
+        {
+          "term": "Done",
+          "meaning": "レビューと取り込みが終わった状態。今回は0件。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 在庫の内訳",
+      "title": "21件のうち、動かせる状態は0件",
+      "body": "Todo 0・Done 0。残りはBacklog 16・In Progress 4・In Review 1です。",
+      "image": "board.png",
+      "image_alt": "21件の課題を状態ごとの横棒で示した図。Backlog 16件、In Progress 4件、In Review 1件、Todo 0件、Done 0件。Todoの棒だけが空で、workerが動ける状態に印が付いている。",
+      "image_width": 1400,
+      "image_height": 860,
+      "paragraphs": [
+        "Linearから対象プロジェクトの課題を全件取得しました（21件、続きのページ無し）。状態の内訳はBacklog 16・In Progress 4・In Review 1・Todo 0・Done 0です。",
+        "workerが選べるのはTodoだけなので、入口の件数は0。つまり今日は1件も実装を始められません。",
+        "Doneが0件ということは、このプロジェクトでは取り込み完了まで到達した課題がまだ無い、という意味です。"
+      ],
+      "metrics": [
+        {
+          "name": "Todo（workerが動ける）",
+          "value": "0件",
+          "note": "入口が空"
+        },
+        {
+          "name": "Backlog（計画の置き場）",
+          "value": "16件",
+          "note": "workerはTodoへ移せない"
+        },
+        {
+          "name": "Done（取り込み完了）",
+          "value": "0件",
+          "note": "出口も空"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "CHANGE / 誰が何をできるか",
+      "title": "入口を開けられるのは人だけ",
+      "body": "workerの権限と、人の判断が要る作業を分けて並べます。",
+      "image": "gate.png",
+      "image_alt": "左右2列の図。左はworkerができること5つ（Todoを選ぶ、ブランチ作成、実装とテスト、Draft PR、In Reviewへ移動）。右は人だけができること5つ（BacklogをTodoへ移す、担当者を決める、ブランチをPRにする、レビューとmerge、Doneにする）。下部に今回はTodo 0件で最初の1手で止まったと表示。",
+      "image_width": 1400,
+      "image_height": 760,
+      "columns": [
+        {
+          "heading": "workerができること",
+          "text": "Todoを1件選ぶ／mainからissue番号のブランチを作る／実装してローカルテストを走らせる／今回の変更だけをstageしてコミットする／private remoteへpushしてDraft PRを作る／課題をIn Progress→In Reviewへ移す。"
+        },
+        {
+          "heading": "人だけができること",
+          "text": "Backlogの課題をTodoへ移す／担当者を決める／着手済みブランチをPRにしてレビューの列へ載せる／PRをレビューしてmergeする／課題をDoneにする。workerはこれらを自動でやらない。"
+        }
+      ],
+      "paragraphs": [
+        "今回の停止は『作業が失敗した』のではなく、『作業を始める合図が無かった』という状態です。",
+        "次に進める合図は2つあります。Backlogから1件だけTodoへ移すか、着手済みのブランチを1本PRにするかです。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと未検証",
+      "title": "確認したのは件数と状態だけ",
+      "body": "コードもLinearの課題も変更していません。次の一手は人が決める必要があります。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "対象プロジェクトの課題は21件で、続きのページは無し。内訳はTodo 0・Backlog 16・In Progress 4・In Review 1・Done 0。作業ツリーはtracked fileの変更なし。ブランチ・コミット・PR・Linear更新は未実施。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "Backlogの優先度と依存関係の妥当性、着手済み5件のブランチ内容とレビュー状況、In Review 1件の確認状況は未検証。BacklogをTodoへ移す判断は人が行う。"
+        }
+      ],
+      "paragraphs": [
+        "この資料の図は、Linearの状態名と件数だけを描いています。課題の本文・コメント・担当者名・ブランチ名・コードは載せていません。",
+        "解析精度・処理速度・費用の改善は、今回まったく測定していません。"
+      ]
+    }
+  ],
+  "layout": "reading"
+}
