@@ -1,0 +1,138 @@
+{
+  "title": "3回動いて、コード変更は0件だった",
+  "theme": "carbon-reading",
+  "subtitle": "issue worker 2026-11-13 01:25 JST ・ 対象21件を再取得 / 実装なし・状態変更なし",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "3回続けて、コード変更は0件だった",
+      "body": "workerはTodoが0件だと実装に入れません。今日は3回動き、公開した資料は2枚、コードは0行でした。",
+      "paragraphs": [
+        "対象は team TAA / プロジェクト「Thumaster｜最新解析技術の適用・検証」の21件。2026-11-13 01:25 JST に取り直しました。",
+        "着手条件を満たすTodoが無いため、今回はブランチ・コミット・PR・課題の状態変更をしていません。",
+        "代わりに、止まっている場所を数字で確かめました。issue-worker 名義の説明資料は、今回で40件目です。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "workerの1回と、今日止まった場所",
+      "body": "課題を選ぶ→実装する→Draft PR→レビュー→merge。今日は最初の「選ぶ」で0件になり、先へ進めませんでした。",
+      "flow": [
+        {
+          "title": "課題を選ぶ",
+          "body": "未着手のTodoから1件だけ選ぶ。今日は0件で、ここで停止。"
+        },
+        {
+          "title": "実装する",
+          "body": "mainからブランチを切り、テストを書いて通す。今回は未着手。"
+        },
+        {
+          "title": "Draft PR",
+          "body": "private remoteへpushし、下書きPRを作る。今回は未着手。"
+        },
+        {
+          "title": "レビュー",
+          "body": "人が確認してmergeする。workerはmergeもdeployもしない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "未着手で、実装してよい状態の課題。Backlogは計画までで、実装の対象外。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "下書きのまま出したPR。レビュー依頼前なので、確認されない限りmergeされない。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "MEASURE / 在庫と出口",
+      "title": "Todo 0件、Draft PR 8本、レビュー0件",
+      "body": "着手できる課題は0件。出したDraft PRは8本とも未レビューのまま、最長15.2日待っています。",
+      "image": "queue_and_prs.png",
+      "image_alt": "上段は課題21件の状態別の棒グラフで、Backlog 16件・In Progress 4件・In Review 1件・Todo 0件・Done 0件。下段はDraft PR 8本の作成からの経過日数で、#1〜#3が15.2日、#4〜#8が7.2日。",
+      "image_width": 1440,
+      "image_height": 1000,
+      "metrics": [
+        {
+          "name": "Todo",
+          "value": "0 件",
+          "note": "着手してよい課題"
+        },
+        {
+          "name": "Draft PR",
+          "value": "8 本",
+          "note": "すべて open・レビュー0件"
+        },
+        {
+          "name": "最長待ち",
+          "value": "15.2 日",
+          "note": "PR #1（TAA-44）"
+        }
+      ],
+      "paragraphs": [
+        "状態は Backlog 16 / In Progress 4 / In Review 1 / Todo 0 / Done 0。In Progress と In Review の5件は、すべてDraft PRを持っています。",
+        "PR #1 は TAA-44 として In Review のまま15日あまり止まり、依存する4件（TAA-45・46・48・49）をふさいでいます。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "MEASURE / 今日の3回",
+      "title": "3回の実行で、コードは0行増えた",
+      "body": "1回目はTAA-49の事前計測、2回目はBacklogの依存集計。どちらも資料1枚で終わり、実装には入っていません。",
+      "image": "runs_today.png",
+      "image_alt": "2026-11-13の3回の実行を時刻の帯で示した図。1回目は00:01開始でTAA-49事前計測の資料1枚、2回目は00:42開始でBacklog依存集計の資料1枚、3回目は01:21開始で今回の確認。",
+      "image_width": 1440,
+      "image_height": 800,
+      "metrics": [
+        {
+          "name": "実行",
+          "value": "3 回",
+          "note": "本日 00:01 / 00:42 / 01:21 開始"
+        },
+        {
+          "name": "公開資料",
+          "value": "2 枚",
+          "note": "いずれも集計と計画"
+        },
+        {
+          "name": "コード変更",
+          "value": "0 行",
+          "note": "3回とも実装なし"
+        }
+      ],
+      "paragraphs": [
+        "1回目は TAA-49 の費用計測、2回目は Backlog 16件の依存関係の集計。どちらも公開できる集計値だけで作りました。",
+        "3回目の今回も同じ確認に終わりました。着手できるTodoが増えない限り、この3手順が繰り返されます。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "STATUS / 確認済みと未検証",
+      "title": "分かったことと、まだ分からないこと",
+      "body": "状態・PR・レビュー件数は確認済み。解析の精度・処理時間・費用は今回まったく測っていません。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "課題21件の状態、Draft PR 8本が open かつレビュー0件、最長15.2日の滞留、本日3回の実行が実装0件だったこと。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "PRのレビューに必要な時間、TAA-44の内容の妥当性、解析精度・速度・費用の改善量。どれも今回の範囲外です。"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "NEXT / 次の行動",
+      "title": "人が1つ動かせば、次は実装に入れる",
+      "body": "依存の無いBacklogを1件Todoへ移すか、PR #1をレビューする。どちらかで次の実行は実装まで進めます。",
+      "visual": "NEXT"
+    }
+  ],
+  "layout": "reading"
+}
