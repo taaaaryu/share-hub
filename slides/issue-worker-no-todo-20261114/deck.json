@@ -1,7 +1,7 @@
 {
   "title": "Todoが0件で、workerは今日も動けなかった",
   "theme": "carbon-reading",
-  "subtitle": "team TAA / 対象プロジェクト21件を2026-11-14 01:29 JST・02:08 JSTに再取得 ・ 実装なし・状態変更なし・集計のみ",
+  "subtitle": "team TAA / 対象プロジェクト21件を2026-11-14 01:29・02:08・02:42 JSTに再取得 ・ 実装なし・状態変更なし・集計のみ",
   "slides": [
     {
       "kind": "takeaway",
@@ -11,8 +11,9 @@
       "paragraphs": [
         "workerは、LinearでTodoになっている課題だけを1件選び、実装してDraft PRまで進めます。Todoが無い日は、計画を勝手に動かさず、何も変更しません。",
         "今回の21件は Backlog 16件・In Progress 4件・In Review 1件・Todo 0件・Done 0件。着手条件を満たす課題はありませんでした。",
-        "02:08 JSTに同じprojectを2回目として再取得しても、Todo 0件・状態・依存・open Draft PR 8本に変化はありませんでした。",
-        "出したDraft PRは8本ともopenのまま、レビュー0件。最長は16.2日待っています。"
+        "02:08 JSTと02:42 JSTに同じprojectを再取得しても、Todo 0件・状態・依存・open Draft PR 8本に変化はありませんでした。",
+        "出したDraft PRは8本ともopenのまま、レビュー0件。最長は16.2日待っています。",
+        "本日のworker実行枠はこれで6/6回、上限に到達しました。今日はこれ以上、自動では進みません。"
       ],
       "items": [
         "Todo 0件",
@@ -132,7 +133,7 @@
       "columns": [
         {
           "heading": "確認済み",
-          "text": "team TAAと対象projectの一致、21件の状態、BacklogのblockedBy、open Draft PR 8本とその作成日。"
+          "text": "team TAAと対象projectの一致、21件の状態、BacklogのblockedBy、open Draft PR 8本とその作成日、本日のworker実行が6/6回で上限に達したこと。"
         },
         {
           "heading": "未検証・制約",
@@ -151,7 +152,8 @@
       "items": [
         "依存が空の7件から1件をTodoへ移す（推奨：TAA-35）",
         "In ReviewのPRを確認して、連鎖する6件を解放する",
-        "どちらも人が行う。workerはBacklogもレビューも動かさない"
+        "どちらも人が行う。workerはBacklogもレビューも動かさない",
+        "本日の自動実行枠は6/6で終了。次に動くのは翌日以降"
       ]
     }
   ],
