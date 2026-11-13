@@ -1,0 +1,158 @@
+{
+  "title": "Todoが0件で、workerは今日も動けなかった",
+  "theme": "carbon-reading",
+  "subtitle": "team TAA / 対象プロジェクト21件を2026-11-14 01:29 JSTに再取得 ・ 実装なし・状態変更なし・集計のみ",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "RESULT / 今回の結果",
+      "title": "Todoが0件。実装には入れなかった",
+      "body": "対象21件を再取得し、Todoは0件でした。branch・コード・PR・Linearの状態は何も変えていません。",
+      "paragraphs": [
+        "workerは、LinearでTodoになっている課題だけを1件選び、実装してDraft PRまで進めます。Todoが無い日は、計画を勝手に動かさず、何も変更しません。",
+        "今回の21件は Backlog 16件・In Progress 4件・In Review 1件・Todo 0件・Done 0件。着手条件を満たす課題はありませんでした。",
+        "出したDraft PRは8本ともopenのまま、レビュー0件。最長は16.2日待っています。"
+      ],
+      "items": [
+        "Todo 0件",
+        "Backlogは動かさない",
+        "今回の変更 0件"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / workerの1回",
+      "title": "5段の流れ。止まったのは最初の1段",
+      "body": "選ぶ→依存確認→実装→Draft PR→人のレビュー。Todoが0件なので、最初で止まります。",
+      "flow": [
+        {
+          "title": "選ぶ",
+          "body": "Todoを1件だけ選ぶ。0件ならここで終了する。"
+        },
+        {
+          "title": "依存確認",
+          "body": "未完了の前提課題があれば着手しない。"
+        },
+        {
+          "title": "実装",
+          "body": "issue番号のbranchで実装し、ローカルテストを通す。"
+        },
+        {
+          "title": "渡す",
+          "body": "private remoteへpushし、Draft PRを作る。"
+        },
+        {
+          "title": "確認",
+          "body": "人がレビューしてmergeする。workerはmergeしない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "workerが実装してよい唯一の状態。今日の作業台に載っている課題。"
+        },
+        {
+          "term": "Backlog",
+          "meaning": "計画の置き場。workerはBacklogをTodoへ移さない。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "下書きのPR。レビューされてmergeされるまで、成果にはならない。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "MEASURE / 在庫と出口",
+      "title": "Todo 0件、PR 8本、レビュー0件",
+      "body": "着手できる課題は0件。Draft PR 8本は未レビューのまま、最長16.2日待っています。",
+      "image": "queue.png",
+      "image_alt": "左は課題21件の状態別の棒グラフで、Backlog 16件・In Progress 4件・In Review 1件・Todo 0件・Done 0件。右はopenのDraft PR 8本の経過日数で、#1〜#3が16.2日、#4〜#8が8.2日。下にTodo 0件の注意帯。",
+      "image_width": 1400,
+      "image_height": 900,
+      "metrics": [
+        {
+          "name": "Todo",
+          "value": "0 件",
+          "note": "着手してよい課題"
+        },
+        {
+          "name": "Draft PR",
+          "value": "8 本",
+          "note": "すべて open・レビュー0件"
+        },
+        {
+          "name": "最長待ち",
+          "value": "16.2 日",
+          "note": "10/28 に作った3本"
+        }
+      ],
+      "paragraphs": [
+        "状態の内訳は Backlog 16 / In Progress 4 / In Review 1 / Todo 0 / Done 0。In ProgressとIn Reviewの5件は、いずれもDraft PRを持っています。",
+        "PRは10/28に3本、11/05に5本。8本すべて下書きで、レビューもmergeもされていません。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "MEASURE / 計画の在庫",
+      "title": "Backlog 16件のうち、すぐ動かせるのは7件",
+      "body": "依存が空の7件は、人がTodoへ移せば着手できます。8件は未完了の前提待ちです。",
+      "image": "readiness.png",
+      "image_alt": "Backlog 16件を依存の有無で分けた図。依存が空は7件、依存待ちは8件、Epicは1件。待ち8件のうち6件はIn Review 1件から連鎖していることを棒グラフで示し、依存が空の7件の課題番号を並べている。",
+      "image_width": 1400,
+      "image_height": 950,
+      "metrics": [
+        {
+          "name": "依存が空",
+          "value": "7 件",
+          "note": "人がTodoへ移せば着手可能"
+        },
+        {
+          "name": "依存待ち",
+          "value": "8 件",
+          "note": "未完了の前提がある"
+        },
+        {
+          "name": "Epic",
+          "value": "1 件",
+          "note": "見出し。実装の単位ではない"
+        }
+      ],
+      "paragraphs": [
+        "待ち8件のうち6件は、In Reviewの1件から連鎖しています。1件の確認が止まると、その先の実装も止まります。",
+        "すぐ動かせる7件は TAA-35 / 36 / 38 / 39 / 40 / 41 / 43。どれを先にするかは人の判断で、workerは状態を変えません。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "STATUS / 確認済みと未検証",
+      "title": "分かったことと、まだ分からないこと",
+      "body": "状態・PR・依存は再取得済み。解析の精度・速度・費用は、今回まったく測っていません。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "team TAAと対象projectの一致、21件の状態、BacklogのblockedBy、open Draft PR 8本とその作成日。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "7件それぞれの難易度・所要時間・費用対効果、PRレビューの所要時間、解析精度の改善量。"
+        }
+      ],
+      "paragraphs": [
+        "この資料の数字は、LinearとGitHubから取得した件数・日付だけです。課題の本文やコメントは公開していません。"
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "NEXT / 次の1手",
+      "title": "次の1手は、Todoを1件つくること",
+      "body": "依存が空の7件から1件をTodoへ移すか、In ReviewのPRを確認する。どちらかで次回は実装に入れます。",
+      "items": [
+        "依存が空の7件から1件をTodoへ移す（推奨：TAA-35）",
+        "In ReviewのPRを確認して、連鎖する6件を解放する",
+        "どちらも人が行う。workerはBacklogもレビューも動かさない"
+      ]
+    }
+  ],
+  "layout": "reading"
+}

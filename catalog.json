@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-no-todo-20261114",
+    "title": "Todoが0件で、workerは今日も動けなかった",
+    "description": "2026-11-14のworker実行。Todo 0件のため実装なし。課題21件の状態、未レビューのDraft PR 8本、Backlog 16件の依存関係を集計した資料"
+  },
+  {
     "slug": "taa36-cpu-ocr-premise-20261114",
     "title": "CPU OCRは既存の無料エンジンで間に合うのか",
     "description": "背景・全体像・変更・効果・検証を説明"
