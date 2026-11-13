@@ -1,7 +1,7 @@
 {
   "title": "Todoが0件で、workerは今日も動けなかった",
   "theme": "carbon-reading",
-  "subtitle": "team TAA / 対象プロジェクト21件を2026-11-14 01:29 JSTに再取得 ・ 実装なし・状態変更なし・集計のみ",
+  "subtitle": "team TAA / 対象プロジェクト21件を2026-11-14 01:29 JST・02:08 JSTに再取得 ・ 実装なし・状態変更なし・集計のみ",
   "slides": [
     {
       "kind": "takeaway",
@@ -11,6 +11,7 @@
       "paragraphs": [
         "workerは、LinearでTodoになっている課題だけを1件選び、実装してDraft PRまで進めます。Todoが無い日は、計画を勝手に動かさず、何も変更しません。",
         "今回の21件は Backlog 16件・In Progress 4件・In Review 1件・Todo 0件・Done 0件。着手条件を満たす課題はありませんでした。",
+        "02:08 JSTに同じprojectを2回目として再取得しても、Todo 0件・状態・依存・open Draft PR 8本に変化はありませんでした。",
         "出したDraft PRは8本ともopenのまま、レビュー0件。最長は16.2日待っています。"
       ],
       "items": [
