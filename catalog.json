@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-todo-zero-20261116",
+    "title": "Todoは今日も0件。21件は全部、確認か計画で止まっている",
+    "description": "2026-11-16のworker実行。Todo 0件のため実装なし。ボード21件（Backlog 16・In Progress 4・In Review 1）、未レビューのDraft PR 8本と最古19日、レビュー1本が6件を止める依存を図で説明"
+  },
+  {
     "slug": "issue-worker-taa38-rfdetr-plan-20261115",
     "title": "敵検出の候補を同じ土俵で比べる計画",
     "description": "背景・全体像・変更・効果・検証を説明"
