@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-run4-20261115",
+    "title": "4回目も0件。今日の残り2回も同じ結果になる",
+    "description": "2026-11-15のworker 4回目の実行。Todo 0件で実装なし。起動枠4/6、コード0行、依存で止まる5件とすぐ動かせる7件を図で説明"
+  },
+  {
     "slug": "issue-worker-standing-queue-20261115",
     "title": "報告44本・実装0件、18日ぶんの待ち行列",
     "description": "背景・全体像・変更・効果・検証を説明"
