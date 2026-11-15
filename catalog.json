@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-standing-queue-20261115",
+    "title": "報告44本・実装0件、18日ぶんの待ち行列",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-todo-zero-20261115",
     "title": "2日連続でTodoが0件、workerは今日も動けなかった",
     "description": "2026-11-15のworker実行。Todo 0件のため実装なし。課題21件の状態、未レビューのDraft PR 8本と待ち17.8日、Backlog 16件の待ち先3つ、前日との比較をまとめた資料"
