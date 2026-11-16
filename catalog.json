@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-todo-zero-20261117",
+    "title": "4日連続Todo 0件、ボード全体が止まっていた",
+    "description": "2026-11-17のworker実行。Todo 0件で実装なし。ボード21件（Backlog 16・In Progress 4・In Review 1）、着手済み5件が12〜20日動かず、Draft PR 8本と最古20日を図で説明"
+  },
+  {
     "slug": "issue-worker-todo-zero-20261116",
     "title": "Todoは今日も0件。21件は全部、確認か計画で止まっている",
     "description": "2026-11-16のworker実行。Todo 0件のため実装なし。ボード21件（Backlog 16・In Progress 4・In Review 1）、未レビューのDraft PR 8本と最古19日、レビュー1本が6件を止める依存を図で説明"

@@ -1,0 +1,166 @@
+{
+  "title": "4日連続Todo 0件、ボード全体が止まっていた",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-17 / issue worker 実行レポート。数値は Linear と GitHub から取得した実測値",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "今日も実装0件、理由は入口の空きだけではない",
+      "body": "workerはLinearのTodoを1件だけ実装する。2026-11-17もTodoは0件で、コードもPRも増えていない。",
+      "paragraphs": [
+        "この仕組みは、人が「やる」と決めたTodoの列から1件を選び、実装してDraft PRまで進めるところまでを受け持つ。Todoが空なら、正しく動いても仕事は生まれない。",
+        "今日は加えて、着手済みの列も12日から20日のあいだ動いていないことを確認した。入口だけでなく、出口も詰まっている。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "選定は4つの門。今日は2つ目の手前で全件落ちた",
+      "body": "21件を取得し、状態で絞った時点で0件になった。依存や担当の確認には進んでいない。",
+      "flow": [
+        {
+          "title": "入力",
+          "body": "Linearのプロジェクトから課題21件を取得する。"
+        },
+        {
+          "title": "状態フィルタ",
+          "body": "Todo以外を除外する門。Backlog16・In Progress4・In Review1が該当した。"
+        },
+        {
+          "title": "着手条件",
+          "body": "依存・担当・既存PR・作業ツリーを確認する門。対象0件なので到達しない。"
+        },
+        {
+          "title": "実装とPR",
+          "body": "1件だけ実装し、テストしてDraft PRにする。今日の実装は0件。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "「やると決めた」列。workerが選べるのはここだけ。"
+        },
+        {
+          "term": "Backlog",
+          "meaning": "計画の列。workerが勝手にTodoへ動かすのは禁止されている。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "merge前の提案。人がレビューして初めて次へ進む。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "BOARD / いまの状態",
+      "title": "21件はぜんぶ、Todo以外の列にいた",
+      "body": "Backlog 16・In Progress 4・In Review 1。Todoの列だけが空で、入口が閉じている。",
+      "image": "board.png",
+      "image_alt": "ボードの21件を1マス1件のタイルで並べた図。Backlog 16件・In Progress 4件・In Review 1件・Todo 0件で、作業者の入口であるTodoの列だけが空であることを示す。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "Backlog",
+          "value": "16件",
+          "note": "人が「やる」と決める前の列"
+        },
+        {
+          "name": "In Progress",
+          "value": "4件",
+          "note": "着手済み。Draft PRあり"
+        },
+        {
+          "name": "In Review",
+          "value": "1件",
+          "note": "レビュー待ち"
+        },
+        {
+          "name": "Todo",
+          "value": "0件",
+          "note": "作業者の入口"
+        }
+      ],
+      "paragraphs": [
+        "ボードには21件あるが、Todoは0件。Todoは「やると決めた」印なので、無いと作業者は動けない。",
+        "In Progressの4件はすでにDraft PRがあり、同じ課題を二重に実装しないため選ばない。",
+        "Backlogの16件は計画の列。ここを勝手に「やる」へ変えるのは、作業者の役割ではない。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STALL / 動いていない日数",
+      "title": "着手済み5件は12日から20日、止まったまま",
+      "body": "状態が変わった時刻とPR作成日から数えた実測値。この期間の状態変更は0件だった。",
+      "image": "frozen.png",
+      "image_alt": "着手済み5件の経過日数（In Review 1件が20日、In Progress 4件が12日）と、Draft PR 8本の待ち日数（3本が20日、5本が12日）を横棒で示した図。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "In Progress",
+          "value": "4件",
+          "note": "すべて11-05着手のまま12日"
+        },
+        {
+          "name": "In Review",
+          "value": "1件",
+          "note": "10-28から20日"
+        },
+        {
+          "name": "Draft PR",
+          "value": "8本",
+          "note": "すべてdraft、最古20日"
+        },
+        {
+          "name": "状態変更",
+          "value": "0件",
+          "note": "この期間に列が動いた課題"
+        }
+      ],
+      "paragraphs": [
+        "In Progressの4件はすべて2026-11-05に着手したまま。In Reviewの1件は2026-10-28からレビュー待ち。",
+        "Draft PRは8本すべてdraftで、古い3本が20日、残り5本が12日。チェック結果があるのは4本だけ。",
+        "日数はLinearの状態変更履歴とGitHubのPR作成日だけから計算した。PRの中身が今も正しいかは確認していない。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "ROLE / 役割の境界",
+      "title": "workerが動かせる範囲と、動かせない範囲",
+      "body": "止まっているのはworkerに権限がない部分。ここは人の判断が要る。",
+      "columns": [
+        {
+          "heading": "できる",
+          "text": "Todoから1件選ぶ。実装してテストする。Draft PRを出す。Linearに結果を記録する。今日は選ぶ段階で0件だった。"
+        },
+        {
+          "heading": "できない",
+          "text": "PRのレビューとmerge。BacklogをTodoへ変える判断。他人への依頼。本番deploy。だから待ちが解消しない。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 確認済みと未検証",
+      "title": "確認できたこと、まだ分からないこと",
+      "body": "数えた事実と、確かめていないことを分けて残す。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "Todo 0件（21件中）。内訳はBacklog 16・In Progress 4・In Review 1。Draft PR 8本はすべてdraft。blockedByの登録は0件。"
+        },
+        {
+          "heading": "未検証・次に必要なこと",
+          "text": "8本のPRが今も有効かは未確認。In Progress 4件の進捗も未確認。次回はTodoに1件入るか、PRがレビューされるかで結果が変わる。"
+        }
+      ],
+      "paragraphs": [
+        "今日変えたのはこの資料だけ。対象リポジトリのコードは1行も変更していない。",
+        "次に人がやること: Draft PRを1本レビューする、またはTodoを1件用意する。どちらかが起きるまで次の実行も同じ結果になる。"
+      ]
+    }
+  ]
+}
