@@ -1,5 +1,10 @@
 [
   {
+    "slug": "hud-trigger-plan-20261117",
+    "title": "HUDの数字を読む回数を、時間軸で絞る設計案",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-todo-zero-20261117",
     "title": "4日連続Todo 0件、ボード全体が止まっていた",
     "description": "2026-11-17のworker実行。Todo 0件で実装なし。ボード21件（Backlog 16・In Progress 4・In Review 1）、着手済み5件が12〜20日動かず、Draft PR 8本と最古20日を図で説明"
