@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:56:43Z",
+  "generated_at": "2026-11-16T16:02:14Z",
   "source": "shared/videos/training-range (2 clips), local CPU, OpenCV 5.0.0",
   "clips": [
     {
@@ -75,8 +75,8 @@
         ]
       },
       "cpu": {
-        "signature_and_compare_sec": 0.225,
-        "ms_per_frame": 0.159
+        "signature_and_compare_sec": 0.248,
+        "ms_per_frame": 0.175
       },
       "ratios": [
         0.0,
@@ -1713,8 +1713,8 @@
         ]
       },
       "cpu": {
-        "signature_and_compare_sec": 0.241,
-        "ms_per_frame": 0.165
+        "signature_and_compare_sec": 0.243,
+        "ms_per_frame": 0.166
       },
       "ratios": [
         0.0,
