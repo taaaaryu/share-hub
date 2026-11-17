@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-entry-map-20261118",
+    "title": "Todoは0件。詰まっているのは入口でなく出口",
+    "description": "Backlog 16件の依存関係と、Draft PR 8件の待ちを図解"
+  },
+  {
     "slug": "issue-worker-run-spend-20261118",
     "title": "空振り4回で0行、回し方を変える3つの選択肢",
     "description": "背景・全体像・変更・効果・検証を説明"
