@@ -193,6 +193,7 @@ def chain(path):
     arrow(d, c2 + NW, 298, c3, 470, GRAY, 5)                 # 49 -> 50
     arrow(d, c2 + NW, 518, c3, 518, GRAY, 5)                 # 47 -> 50
     arrow(d, c1 + NW + 4, 738, c3 + 30, 566, GRAY, 5)        # 48 -> 50
+    text(d, (c3 + NW // 2, 582), "※ TAA-35 も待つ", 21, SUB, anchor="ma")
 
     # annotation
     ax, ay, aw, ah = 120, 850, 1760, 190
