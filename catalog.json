@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-review-gate-20261118",
+    "title": "実装は8件、レビューは0件。出口で止まる工場",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-unblock-chain-20261117",
     "title": "レビュー1件が6件を止めていた依存の地図",
     "description": "2026-11-17のworker実行。Todo 0件で実装なし。21件の状態とBacklog全件のblockedByを取得し、In Review 1件の下流に6件が連なること、前提なしで着手できるHighの3件を示す図解"

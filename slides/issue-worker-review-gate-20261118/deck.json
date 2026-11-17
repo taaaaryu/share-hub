@@ -1,0 +1,132 @@
+{
+  "title": "実装は8件、レビューは0件。出口で止まる工場",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-18 / issue worker 実行レポート。Linear 21件と GitHub Draft PR 8件を実測",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "今日も実装は生まれなかった",
+      "body": "Todoが0件で、workerは1件も選べない。一方、出口には8件のDraft PRがたまっている。",
+      "paragraphs": [
+        "この仕組みは、人が「やる」と決めたTodoから1件を選び、実装してDraft PRまで出す。Todoが空なら、正しく動いても仕事は生まれない。",
+        "今回は入口だけでなく出口を数えた。作った仕事はあるのに、レビューとmergeの前で止まっている。"
+      ],
+      "metrics": [
+        { "name": "プロジェクトの課題", "value": "21件", "note": "2026-11-18時点" },
+        { "name": "Todo", "value": "0件", "note": "workerが選べる列" },
+        { "name": "Draft PR", "value": "8件", "note": "すべて未merge" },
+        { "name": "merge済み", "value": "0件", "note": "open以外にPRは無い" }
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "4つの関門と、今日の通過数",
+      "body": "入口で0件、出口で8件。同じ流れの両端で止まっている。",
+      "flow": [
+        { "title": "入力", "body": "Linearのプロジェクトから課題を取得する。今日は21件。" },
+        { "title": "状態の門", "body": "Todoだけを残す。Backlog 16・In Progress 4・In Review 1がここで落ち、0件。" },
+        { "title": "実装とDraft PR", "body": "過去の回が作った8件がすでに存在する。追加は約1.3万行。" },
+        { "title": "レビューとmerge", "body": "人が確認して初めて通る。ここは0件のまま。" }
+      ],
+      "image": "pipeline.png",
+      "image_alt": "4つの関門を左から右に並べた図。入力21件、状態の門で0件、実装とDraft PRで8件、レビューとmergeで0件。下にTodoが無いため1つ目で止まり、8件は出口の前で待っていると注記。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "paragraphs": [
+        "関門は4つあるが、今日評価できたのは1つ目だけ。Todoが0件なので、依存関係の確認にすら進んでいない。",
+        "2つ目の関門は「選ばない条件」、3つ目は実装、4つ目が人間のレビュー。作業者が止まっているのは1つ目、仕事が止まっているのは4つ目。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 出口の内訳",
+      "title": "Draft PR 8件の大きさと待ち時間",
+      "body": "古い3件は21日、新しい5件は13日。CIが緑なのは新しい4件だけ。",
+      "image": "pr_queue.png",
+      "image_alt": "Draft PR 8件の横棒グラフ。各PRの追加行数の概算、経過日数、GitHub Actionsの有無を示す。PR #1〜#3は21日でCIなし、PR #4は13日でCIなし、PR #5〜#8は13日でCI緑。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        { "name": "最長の待ち", "value": "21日", "note": "2026-10-28作成の3件" },
+        { "name": "新しい待ち", "value": "13日", "note": "2026-11-05作成の5件" },
+        { "name": "CIが緑", "value": "4件", "note": "test / unit などがpass" },
+        { "name": "CIが無い", "value": "4件", "note": "チェックが1件も無い" }
+      ],
+      "paragraphs": [
+        "PR #1〜#3は2026-10-28作成で21日経過。PR #4〜#8は2026-11-05作成で13日経過。",
+        "PR #5〜#8はtest・syntax・unit・offline-testsのCIがpassしている。PR #1〜#4はチェックが1件も無い。",
+        "8件すべてdraftかつmergeable=CLEANで、コードの衝突は起きていない。止めているのは人のレビュー待ちだけ。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "DEPENDENCY / 解除の範囲",
+      "title": "1件終わっても6件は戻らない",
+      "body": "TAA-44の完了で直接空くのは2件。残り4件には別の依存が残る。",
+      "image": "unlock.png",
+      "image_alt": "TAA-44を終えたときの依存の図。すぐ候補になるのはTAA-46とTAA-48の2件。TAA-45はTAA-43待ち、TAA-49とTAA-47はTAA-45待ち、TAA-50はTAA-35と47と48と49待ちとして残る。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        { "name": "直接ブロック", "value": "4件", "note": "TAA-45 / 46 / 48 / 49" },
+        { "name": "すぐ候補", "value": "2件", "note": "TAA-46 / 48" },
+        { "name": "連鎖で残る", "value": "4件", "note": "45 / 47 / 49 / 50" },
+        { "name": "Todo", "value": "0件", "note": "入口は空のまま" }
+      ],
+      "terms": [
+        { "term": "blockedBy", "meaning": "「この課題が終わるまで着手しない」というLinearの依存関係。" },
+        { "term": "連鎖", "meaning": "1件終わると次が空き、その次も空く、という依存のつながり。" }
+      ],
+      "paragraphs": [
+        "TAA-44（In Review）がblockedByで止めているのはTAA-45・46・48・49の4件。",
+        "TAA-44を終えるとTAA-46とTAA-48は候補になる。TAA-45はTAA-43待ち、TAA-49とTAA-47はTAA-45待ち、TAA-50は4件待ちのまま。",
+        "「1件レビューすれば6件動く」ではなく「1件で2件が動き、残りは連鎖で解ける」が正確。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "CHOICE / 次の一手",
+      "title": "人が1回判断すると何が変わるか",
+      "body": "レビューか、Todoへの移動か。どちらも作業者の権限外。",
+      "columns": [
+        { "heading": "いまのまま", "text": "Todo 0件が続く。workerは毎回なにも実装せず、Draft PR 8件とBacklog 16件が残る。" },
+        { "heading": "TAA-44をレビュー", "text": "mergeするとTAA-46と48が着手可能になり、連鎖で最大6件が視野に入る。" }
+      ],
+      "paragraphs": [
+        "別案は、blockedByが空のBacklog（TAA-35 / 36 / 38 / 39 / 40 / 41 / 42 / 43）を1件だけTodoへ移すこと。その回から実装が始まる。",
+        "workerはBacklogを勝手にTodoへ変えない。だからこの2つの選択肢は人が決める。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "確認した事実と、確かめていないこと",
+      "body": "数値はLinearとGitHubの実測。改善効果は測っていない。",
+      "columns": [
+        { "heading": "確認済み", "text": "21件の状態、Backlog全件のblockedBy、Draft PR 8件のdraft・mergeable・CI、作業ツリーがcleanであること。" },
+        { "heading": "未検証・制約", "text": "PRのコード内容のレビュー、CIが無い4件のローカルテスト、merge後の挙動、時間や費用の改善。" }
+      ],
+      "paragraphs": [
+        "今回はコード変更もPRも作っていない。実装対象が無かったためで、失敗ではない。",
+        "状態は2026-11-18時点のスナップショット。以後の更新は反映していない。"
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "NEXT / 次の作業",
+      "title": "次に必要なのは1回のレビュー",
+      "body": "PR #1を通せば、止まっている連鎖が動き出す。",
+      "paragraphs": [
+        "作業者が次に実装を始める条件は、Todoが1件あること。",
+        "この資料は判断材料で、mergeもdeployも行っていない。"
+      ],
+      "metrics": [
+        { "name": "必要な判断", "value": "1回", "note": "レビューかTodo移動" },
+        { "name": "作業者の権限", "value": "実装のみ", "note": "mergeはしない" }
+      ]
+    }
+  ]
+}
