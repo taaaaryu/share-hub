@@ -1,5 +1,10 @@
 [
   {
+    "slug": "thumaster-weekly-20261119",
+    "title": "11/19週例レポート：測定で絞った次の解析課題",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-entry-map-20261118",
     "title": "Todoは0件。詰まっているのは入口でなく出口",
     "description": "Backlog 16件の依存関係と、Draft PR 8件の待ちを図解"
