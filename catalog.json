@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-unlanded-code-20261119",
+    "title": "8本のDraft PRに、12,861行が待っている",
+    "description": "Todo 0件のrunで、未mergeのDraft PR 8本と12,861行を棚卸し"
+  },
+  {
     "slug": "thumaster-weekly-20261119",
     "title": "11/19週例レポート：測定で絞った次の解析課題",
     "description": "背景・全体像・変更・効果・検証を説明"
