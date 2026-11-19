@@ -1,0 +1,122 @@
+{
+  "title": "Todo 0件の日に書いた、TAA-43の準備計画",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-20 / issue worker 実行レポート。実装できなかった理由と、次に動かす前工程の段取り",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "今日もTodoは0件。だから実装せず、計画を書いた",
+      "body": "着手できる課題が無い日は実装しない。代わりに、次の一歩であるTAA-43の段取りを具体化した。",
+      "paragraphs": [
+        "対象projectの課題は21件。Backlog 16、In Progress 4、In Review 1で、Todoは0件だった。",
+        "workerが実装するのはTodoだけ。Backlogを勝手にTodoへ動かすのは人の判断なので、状態は変えていない。",
+        "この資料は実装報告ではない。空いた枠で、blockerの無い前工程TAA-43の進め方を整理したもの。"
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "EVIDENCE / 現在地",
+      "title": "課題21件のうち、着手できる状態は0件",
+      "body": "Todoが空なので、blocker・担当・既存PRを確認する候補自体が存在しない。",
+      "image": "status.png",
+      "image_alt": "課題21件の状態別の横棒グラフ。Backlog 16件、In Progress 4件、In Review 1件、Todo 0件。Todoの行だけ棒が無く、着手できる状態が空であることを示す。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "Todo",
+          "value": "0件",
+          "note": "workerが実装を始められる唯一の状態"
+        },
+        {
+          "name": "Backlog",
+          "value": "16件",
+          "note": "計画段階。workerは動かさない"
+        },
+        {
+          "name": "Draft PR",
+          "value": "8本",
+          "note": "レビュー0件・merge 0本"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 素材",
+      "title": "素材は2本・合計48秒・解像度1種類しかない",
+      "body": "TAA-43が必要とする10条件に対して、量も種類も足りない。ここが最初の詰まり。",
+      "image": "materials.png",
+      "image_alt": "左に手元の素材2本の実測値（各1280x720、23.64秒と24.36秒、合計48.0秒、59.94fps）。右にTAA-43が求める10条件の一覧。下部に48秒では10条件を網羅できないという計画上の結論。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "terms": [
+        {
+          "term": "条件",
+          "meaning": "静止、移動、急回転、明暗、スモーク、銃撃、桁変更、リセット、非表示、解像度差。"
+        },
+        {
+          "term": "素材の偏り",
+          "meaning": "同じ場面だけを使うと、正解データが実戦の多様さを表さなくなる。"
+        }
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "PLAN / 進め方",
+      "title": "計画は3段階。最初の関門は撮影",
+      "body": "素材が揃わないとラベル付けも評価も始められない。段階1は人の作業として残る。",
+      "flow": [
+        {
+          "title": "1. 素材を揃える",
+          "body": "条件ごとに短いクリップを撮る。担当は人。ここが未決。"
+        },
+        {
+          "title": "2. 正解ラベルを作る",
+          "body": "frame・値・安定開始などの7項目をJSONで固定する。担当はworker。"
+        },
+        {
+          "title": "3. 評価に使う",
+          "body": "差分検出のRecallと誤発火を測る土台にする。担当はworker。"
+        }
+      ],
+      "image": "plan.png",
+      "image_alt": "3段階の計画図。段階1が素材を揃える（担当は人）、段階2が正解ラベルを作る（担当はworker）、段階3が評価に使う（担当はworker）。下に未決定事項として撮影条件と担当が未定であることを示す。",
+      "image_width": 2000,
+      "image_height": 1125
+    },
+    {
+      "kind": "comparison",
+      "label": "CHANGE / 作業範囲",
+      "title": "今できること／Todoになった後にできること",
+      "body": "同じTAA-43でも、状態によってworkerの作業範囲は変わる。境界を分けて示す。",
+      "columns": [
+        {
+          "heading": "今（Todo 0件）",
+          "text": "できるのは計画まで。素材を実測し、段取りと不足を文章と図にする。コード・branch・PRは作らない。"
+        },
+        {
+          "heading": "TAA-43がTodoになった後",
+          "text": "素材が揃っていれば、ラベル生成スクリプトと検証テストを実装できる。揃っていなければ段階1で止まる。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "確認した事実と、まだ確かめていないこと",
+      "body": "数字は実測だが、条件の網羅性や検出精度は測っていない。未完了は未完了として残す。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "Linearの状態21件、素材2本の解像度・fps・尺は実測。gitのtracked変更は0件、公開ページと画像は200応答。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "48秒で10条件を網羅できるかは未計測。精度・速度・費用の改善も未測定。実装はTodo承認後。"
+        }
+      ]
+    }
+  ]
+}
