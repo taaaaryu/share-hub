@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-review-first-20261120",
+    "title": "資料は16本、mergeは0本。今日やるのはレビュー1本",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-taa43-plan-20261120",
     "title": "Todo 0件の日に書いた、TAA-43の準備計画",
     "description": "背景・全体像・変更・効果・検証を説明"
