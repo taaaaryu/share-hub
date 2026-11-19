@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-pr1-stale-20261120",
+    "title": "23日間レビュー0件のPR #1が、4件の着手を止めている",
+    "description": "Todo 0件のrunで、23日間レビュー0件のDraft PR #1を分解。変更13ファイル・+1317行、テスト104本の再実行結果"
+  },
+  {
     "slug": "pr1-review-guide-20261119",
     "title": "PR #1は、既存コードを1行も消していない",
     "description": "背景・全体像・変更・効果・検証を説明"

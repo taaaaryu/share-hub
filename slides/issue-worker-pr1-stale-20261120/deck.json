@@ -1,0 +1,155 @@
+{
+  "title": "23日間レビュー0件のPR #1が、4件の着手を止めている",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-20 / issue worker 実行レポート。Todo 0件の日に、出口の1件を分解して確かめた",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "今日もTodoは0件。動かない理由は、入口ではなく出口",
+      "body": "workerはTodoの課題だけを実装する。この21件のプロジェクトにTodoはない。Backlogは計画だけなので、実装には進めない。",
+      "paragraphs": [
+        "では何が止めているのか。出口を見ると、In Reviewの1件（TAA-44）が2026-10-28からDraft PRのまま残り、その完了を待つ4件がその後ろに並んでいる。",
+        "この資料は、その1件を「レビューする側」が短時間で判断できるように、PR #1の中身とテストの現状を今日あらためて確かめた記録。",
+        "今日の実行では、コード・Linearの状態・PRの状態を変更していない。数字は2026-11-20時点の読み取り値と、同日ローカルで実行したテスト結果。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "workerが1件を選ぶまでの3つの関門と、今日の結果",
+      "body": "状態・依存・競合のどれかで止まれば、その日は実装しない。今日は最初の関門で0件だった。",
+      "flow": [
+        {
+          "title": "① 状態がTodo",
+          "body": "Backlog / In Progress / In Review / Done は対象外。今日はTodoが0件で、ここで候補が尽きた。"
+        },
+        {
+          "title": "② blockerが完了",
+          "body": "blockedByの課題が全部終わっていないと選ばない。Backlogの多くは未完了の課題を待っている。"
+        },
+        {
+          "title": "③ 既存PRがない",
+          "body": "branchやPRがある課題は二重に着手しない。今は8本のDraft PRが開いたまま。"
+        },
+        {
+          "title": "結果: 今日は実装なし",
+          "body": "コード変更・merge・Draft解除・Linear更新は行っていない。代わりに出口の1件を調べた。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "これから着手する状態。workerが実装を始められる唯一の状態。"
+        },
+        {
+          "term": "Backlog",
+          "meaning": "まだ計画段階の置き場。workerは計画を書けても、勝手に実装へ進めない。"
+        },
+        {
+          "term": "blockedBy",
+          "meaning": "先に終わっていないと着手できない課題。Linearの依存関係で、「AがBを塞ぐ」はBのblockedByにAが入る。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "まだレビュー可能として公開していないPull Request。Draftのままだとmergeできない。"
+        },
+        {
+          "term": "mergeable",
+          "meaning": "GitHubが判定する「そのままmergeできるか」。CLEANなら競合なし。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / PR #1の中身",
+      "title": "消した行は0、足したテストは24本",
+      "body": "13ファイル・+1317行。内訳は共通部品とテストが中心で、既存の行を消していない。数値は2026-11-20時点のPR #1。",
+      "image": "pr1-diff.png",
+      "image_alt": "PR #1の変更内訳。core/hud_change.py 359行、detail/damage_timing.py 324行、test_hud_change.py 257行、test_damage_timing.py 159行、benchmark_hud_change.py 79行、docs 6ファイル134行、.gitignore 5行。テストはmainが80 passed、PRのheadが104 passedで+24本。mergeableはCLEAN、レビュー0件、コメント0件、CIチェック0件、Draftははい。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "変更",
+          "value": "13ファイル",
+          "note": "+1317行 / -0行"
+        },
+        {
+          "name": "テスト",
+          "value": "104 passed",
+          "note": "mainは80 passed。+24本、失敗0"
+        },
+        {
+          "name": "mergeable",
+          "value": "CLEAN",
+          "note": "競合なし"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 止まっている範囲",
+      "title": "23日間、レビューは0件。その後ろに4件",
+      "body": "PR #1は2026-10-28にDraftで作られ、今日まで同じ状態。この1件をblockedByに持つ4件が、着手できないまま残っている。",
+      "image": "pr1-wait.png",
+      "image_alt": "2026-10-28から2026-11-20までの23日間の時間軸。PR #1はレビュー0件・コメント0件のまま。TAA-44を待つ4件（TAA-45・TAA-46・TAA-48・TAA-49）が並ぶ。同じ時点のボードはTodo 0件、Backlog 16件、In Progress 4件、In Review 1件。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "経過",
+          "value": "23日",
+          "note": "2026-10-28 → 2026-11-20"
+        },
+        {
+          "name": "レビュー",
+          "value": "0件",
+          "note": "コメントも0件"
+        },
+        {
+          "name": "待ち",
+          "value": "4件",
+          "note": "blockedByにTAA-44を持つBacklog"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "CHANGE / 次の1手",
+      "title": "何もしない場合と、PR #1をレビューする場合",
+      "body": "workerはmergeしない決まりなので、この出口は人の操作でしか開かない。選べる手は大きく2つ。",
+      "columns": [
+        {
+          "heading": "このまま（今日と同じ）",
+          "text": "Todo 0件が続く限り、workerは毎回なにも実装しない。Draft PR 8本と4件の待ちはそのまま残り、日数だけ増える。"
+        },
+        {
+          "heading": "PR #1をレビューしてDraft解除",
+          "text": "中身は13ファイル・+1317行で競合なし、テストは104本通る。承認してmergeすればTAA-44が完了し、待ち4件のうち2件（TAA-46・TAA-48）がすぐ開く。"
+        },
+        {
+          "heading": "別の1件をTodoに移す",
+          "text": "PRを待たない独立課題（検出器・追跡・研究の比較など）をTodoに移せば、明日からworkerはそこへ着手できる。ただし移す判断は人が行う。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "今日確認できたことと、確かめていないこと",
+      "body": "テストは手元で実行した結果で、CIの結果ではない。精度・速度・費用の改善は測っていないので、良くなったとは言えない。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "PR #1は2026-11-20時点でopen・Draft・mergeable=CLEAN、レビュー0件・コメント0件・CIチェック0件。変更は13ファイル +1317/-0。ローカルのvenvで analysis/tests を実行し、mainが80 passed、PR #1のheadが104 passed（失敗0）。Linearの21件はTodo 0・Backlog 16・In Progress 4・In Review 1。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "CIが未設定のため、push時の自動検証はない。本番有効化、GUI/E2E、正解データによる認識精度評価、ECS/Fargateの実費評価は未実施（PR本文にも同旨の記載）。既存パイプラインへの有効化は含まれていない。mergeとDraft解除は行っていないので、4件は今日も開いていない。"
+        }
+      ]
+    }
+  ]
+}
