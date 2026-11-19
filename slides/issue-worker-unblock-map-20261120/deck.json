@@ -1,0 +1,112 @@
+{
+  "title": "Todoが0件の日、次に動かす1件はどれか",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-20 / issue worker 実行レポート。止まっている理由と、人が1操作で再開する選択肢を図で示す",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "今日も、実装できる課題が1件も無い",
+      "body": "Todoが0件で、workerが着手できる条件を満たす課題が無い。コード・PR・Linearは変更していない。",
+      "paragraphs": [
+        "プロジェクトの課題は21件。Backlog 16、In Progress 4、In Review 1で、Todoは0件だった。",
+        "workerが実装を始めるのはTodoだけ。Backlogは計画段階なので、勝手にTodoへ動かさない。",
+        "この資料は、止まっている理由と、人が1操作で再開させる選択肢を、依存関係の図で示す。"
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "EVIDENCE / 現在地",
+      "title": "21件のうち、着手できる状態は0件",
+      "body": "Todoが空なので、blocker・担当・既存PRを確認する候補自体が存在しない。",
+      "image": "status.png",
+      "image_alt": "課題21件の状態別の横棒グラフ。Backlog 16件、In Progress 4件、In Review 1件、Todo 0件。Todoの行だけ棒が無く、着手できる状態が空であることを示す。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "Todo",
+          "value": "0件",
+          "note": "workerが着手できる唯一の状態"
+        },
+        {
+          "name": "Backlog",
+          "value": "16件",
+          "note": "計画段階。実装しない"
+        },
+        {
+          "name": "Draft PR",
+          "value": "8本",
+          "note": "レビュー0件・merge 0本"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "OVERVIEW / 依存関係",
+      "title": "HUD系6件は、レビュー待ち1件で止まる",
+      "body": "TAA-44がIn Reviewのまま。後続はblocker未完了なので、Todoへ移しても選べない。",
+      "image": "deps.png",
+      "image_alt": "HUD変化検出まわりの依存関係図。TAA-44からTAA-46・45・48へ矢印が伸び、45と46からTAA-47、45からTAA-49、47・48・49からTAA-50へつながる。TAA-44だけがIn Reviewで青く塗られている。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "terms": [
+        {
+          "term": "blockedBy",
+          "meaning": "手前の課題が完了するまで着手できない関係。"
+        },
+        {
+          "term": "In Review",
+          "meaning": "PRを作った状態。mergeは人の作業なのでworkerは完了にしない。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "CANDIDATES / 着手可能",
+      "title": "blockerが無いBacklogは7件ある",
+      "body": "依存が空でもBacklogのままでは着手しない。Todoへ移すのは人の判断。",
+      "image": "candidates.png",
+      "image_alt": "blockerが無いBacklog 7件の一覧。TAA-43テストデータ、TAA-35ベースライン計測、TAA-36 CPU OCR、TAA-38敵検出の比較、TAA-39追跡の比較、TAA-40動画理解、TAA-41 3D復元。すべてBacklogと表示。",
+      "image_width": 2000,
+      "image_height": 1125
+    },
+    {
+      "kind": "comparison",
+      "label": "DECISION / 3つの選択肢",
+      "title": "再開させるなら、この3つから1つ選ぶ",
+      "body": "どれも人の操作は1回で済む。workerは代行しないので、選ぶのは人。",
+      "columns": [
+        {
+          "heading": "A. 出口を開ける",
+          "text": "PR #1をレビューしてDraftを解除する。TAA-44が完了すれば、後続4件が動き出す。"
+        },
+        {
+          "heading": "B. 入口を開ける（小）",
+          "text": "TAA-43をTodoへ移す。blockerが無く、正解クリップの整備から始まる。"
+        },
+        {
+          "heading": "C. 入口を開ける（計測）",
+          "text": "TAA-35をTodoへ移す。現行の精度と実費の基準を先に記録する。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "確認した事実と、確認していないこと",
+      "body": "LinearとPR一覧は読み取りのみ。実装・テスト・精度評価は行っていない。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "project内21件の状態とblockedBy関係、open PR 8本がすべてDraftでレビュー0件。すべて読み取り。"
+        },
+        {
+          "heading": "未確認・制約",
+          "text": "コード品質・E2E・精度や費用の測定は未実施。Todoが無いままだと次のrunも同じ結果になる。"
+        }
+      ]
+    }
+  ]
+}

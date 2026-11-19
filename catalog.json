@@ -1,5 +1,10 @@
 [
   {
+    "slug": "issue-worker-unblock-map-20261120",
+    "title": "Todoが0件の日、次に動かす1件はどれか",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-gate-20261120",
     "title": "8本のDraft PRは23日間レビュー0件、今日もTodoは0件",
     "description": "背景・全体像・経過日数・昨日との比較・次の1手を図で説明"
