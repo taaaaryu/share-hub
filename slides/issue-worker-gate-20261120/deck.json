@@ -1,0 +1,116 @@
+{
+  "title": "8本のDraft PRは23日間レビュー0件、今日もTodoは0件",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-20 / issue worker 実行レポート。実装できる課題が無い日の状態を、数字と図で確認する",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "自動実装レーンは入口と出口で止まっている",
+      "body": "workerはTodoの課題だけを実装する。今日のプロジェクトはTodoが0件で、選べる1件が無い。作ったPRもレビュー待ちのまま。",
+      "paragraphs": [
+        "止まっている場所は2つある。入口はTodoが空で次の1件を選べないこと。出口はDraft PR 8本がレビュー0件のまま開いていること。",
+        "この資料は、今日の実行で何を確認し、何を変えなかったかを示す。コード・Linearの状態・PRは一切変更していない。",
+        "数字は2026-11-20時点の読み取り値。課題本文やコードは公開していない。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "workerが着手するまでの3つの関門",
+      "body": "Todoでも、blockerが残る・担当が違う・既存PRがある場合は選ばない。Backlogは計画だけで、実装には進めない。",
+      "flow": [
+        {
+          "title": "① 状態がTodo",
+          "body": "Todoだけが実装の入口。Backlog / In Progress / In Review / Done は対象外。"
+        },
+        {
+          "title": "② blockerが完了",
+          "body": "blockedByの課題が全部Doneでないと選ばない。"
+        },
+        {
+          "title": "③ 競合がない",
+          "body": "担当が自分以外、既存branch/PRがある課題は選ばない。"
+        },
+        {
+          "title": "実装 → Draft PR",
+          "body": "テスト、コミット、private remoteへpush、Draft PR。mergeは人が行う。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "これから着手する状態。workerが選べる唯一の状態。"
+        },
+        {
+          "term": "Backlog",
+          "meaning": "計画段階の置き場。workerは勝手にTodoへ動かさない。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "まだレビューを依頼していないPR。merge前の状態。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 経過日数",
+      "title": "8本のDraft PRは、23日間レビュー0件",
+      "body": "10/28に3本、11/05に5本作成され、すべてDraftのまま。レビューもコメントも0件で、mergeは1本も無い。",
+      "image": "timeline.png",
+      "image_alt": "Draft PR 8本の経過日数を示す横棒グラフ。PR #1から#3は10月28日作成で23日、PR #4から#8は11月5日作成で15日。右側にTodo 0件、Draft PR 8本、In Review 1件、merge 0本のカード。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "Todo",
+          "value": "0件",
+          "note": "着手できる入口"
+        },
+        {
+          "name": "Draft PR",
+          "value": "8本",
+          "note": "すべてopen・レビュー0"
+        },
+        {
+          "name": "最古のPR",
+          "value": "23日",
+          "note": "PR #1（10/28作成）"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "CHANGE / 昨日との比較",
+      "title": "昨日から変わったこと・変わっていないこと",
+      "body": "課題の状態もPRの状態も変化が無い。今日の実行は読み取りと資料作成だけで、実装もmergeも行っていない。",
+      "columns": [
+        {
+          "heading": "変わったこと",
+          "text": "なし。Todoは0件のまま、Draft PR 8本もopenのまま、レビュー0件のまま。"
+        },
+        {
+          "heading": "変わっていないこと",
+          "text": "Backlog 17件は計画のみ。In Progress 4件、In Review 1件。状態の移動は起きていない。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 次の1手",
+      "title": "次に人間が動かす1手",
+      "body": "workerはTodoを勝手に作らない。再開には、PR #1のレビューか、独立したBacklog 1件のTodo化が必要。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "Todo 0件、Draft PR 8本すべてMERGEABLE、レビュー0件、merge 0本。Linearは読み取りのみ。"
+        },
+        {
+          "heading": "残作業（人の判断）",
+          "text": "PR #1のレビューとDraft解除、またはblockerの無いBacklog 1件をTodoへ移動。どちらも権限外なので未実施。"
+        }
+      ]
+    }
+  ]
+}
