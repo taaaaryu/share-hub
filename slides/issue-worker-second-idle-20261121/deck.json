@@ -1,0 +1,152 @@
+{
+  "title": "同じ日に2回空振り、使った枠は6回中2回",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-21 00:43 JST / issue worker 実行レポート。着手できるTodoが0件で、2回とも実装に入れなかった",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "今日2回目の空振り。コードは0行。",
+      "body": "着手できるTodoが0件で、workerは2回とも実装に入れなかった。今回もコード・PR・Linearは変えていない。",
+      "paragraphs": [
+        "workerはLinearのTodoだけを1件選んで実装する決まり。今日の対象プロジェクトは Backlog 16 / Todo 0 / In Progress 4 / In Review 1 / Done 0 の21件で、Todoが1件も無い。",
+        "0:13の1回目と同じ状態を、0:43に再確認した。件数もDraft PRの本数も変わっていなかった。つまり2回目は新しい発見が無く、実行枠だけを使った。",
+        "この資料は、何が起きたか、何を変えていないか、人間が決めるべき1手は何かを示す。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "workerの関門は5つ。今日は3つ目で止まった",
+      "body": "上から順に確認し、通らない関門があればそこで止まる。今日は「Todoを選ぶ」で候補0件だった。",
+      "flow": [
+        {
+          "title": "接続確認",
+          "body": "team TAA と対象プロジェクトを照合。通過。"
+        },
+        {
+          "title": "作業ツリー確認",
+          "body": "未コミットの変更が無いか確認。通過。"
+        },
+        {
+          "title": "Todo選択",
+          "body": "候補0件。ここで停止。"
+        },
+        {
+          "title": "実装とテスト",
+          "body": "未到達。"
+        },
+        {
+          "title": "Draft PRと記録",
+          "body": "未到達。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "「今から着手してよい」という印。BacklogからTodoへ移すのは人間の判断で、workerは自分で移さない。"
+        },
+        {
+          "term": "no_issue",
+          "meaning": "選べる課題が無かったという終了状態。失敗ではなく、実装対象が存在しないという記録。"
+        }
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "EVIDENCE / 関門の通過状況",
+      "title": "通過したのは2つ。実装の手前で止まった",
+      "body": "接続と作業ツリーは問題なし。Todoが0件なので、実装・テスト・PRの3関門は未到達のまま。",
+      "image": "gate_status.png",
+      "image_alt": "5つの関門を左から右に並べた図。接続確認と作業ツリー確認は青いチェックで通過、Todo選択は赤い停止印、実装とDraft PRは灰色の未到達として示されている。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "接続確認",
+          "value": "通過",
+          "note": "team TAA / project一致"
+        },
+        {
+          "name": "Todo候補",
+          "value": "0件",
+          "note": "21件を全件確認"
+        },
+        {
+          "name": "コード変更",
+          "value": "0行",
+          "note": "branch・commit無し"
+        },
+        {
+          "name": "Linear更新",
+          "value": "0件",
+          "note": "対象課題が無い"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 枠の使い方",
+      "title": "枠は2つ減り、成果物は増えていない",
+      "body": "1日の実行上限は6回。今日は2回使い、コード・PR・Linear更新はいずれも0。",
+      "image": "run_budget.png",
+      "image_alt": "左に1日6回の実行枠を6つの箱で示し、2つが使用済み、4つが残り。右に今日の成果物としてコード変更0行、新規PR 0本、Linear更新0件を並べ、下に課題21件の状態内訳を小さな帯で示した図。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "paragraphs": [
+        "これは作業の失敗ではなく、選べる課題が無い状態で起動した結果。同じ状態で起動を繰り返しても、枠とモデル利用量だけが減る。",
+        "なお、精度・速度・費用の改善は今回一切測定していない。この資料でも改善は主張しない。"
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "CHANGE / 次の一手",
+      "title": "次に選べる3つの手",
+      "body": "どれも人間の判断が要る。workerはBacklogをTodoへ移せず、Draft PRのレビューとmergeもできない。",
+      "columns": [
+        {
+          "heading": "A. Backlogを1件Todoへ",
+          "text": "依存の無いBacklogが7件ある。1件をTodoへ移せば、次の実行で実装に入れる。状態変更は人間の操作。"
+        },
+        {
+          "heading": "B. いったん止める",
+          "text": "PAUSEを置けば起動しない。レビューが進むまで枠とモデル利用量を温存できる。再開はPAUSEを外すだけ。"
+        },
+        {
+          "heading": "C. Draft PRを1本レビュー",
+          "text": "open中のDraft PRは8本、mergeは0本。レビューが進めば、待っている課題の入口も開く。"
+        }
+      ],
+      "items": [
+        "おすすめは C → A の順。まず出口を1本開け、そのあと着手可能な課題を1件作る。",
+        "Bは「今週は回さない」と決めた場合の選択。空振りの繰り返しを避けられる。"
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "確認済みと、確かめていないこと",
+      "body": "今回確認したのは状態の棚卸しだけ。実装・テスト・性能測定は行っていない。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "対象プロジェクト21件の状態内訳。Todo 0件。open Draft PR 8本、merge 0本。作業ツリーは未コミット変更なし。今日の実行は2回目。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "各Draft PRの中身とCI結果は未確認。実装・テスト・性能・費用の測定は未実施。Backlogの採否判断も未着手。"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "NEXT / お願い",
+      "title": "決めるのは1つだけ",
+      "body": "「今週回すか、止めるか」。回すならBacklogから1件をTodoへ。止めるならPAUSEを置く。",
+      "paragraphs": [
+        "workerは次回も同じ関門を上から確認する。Todoが増えていれば実装に入り、Draft PRと資料まで進む。増えていなければ、またno_issueで止まる。"
+      ]
+    }
+  ]
+}
