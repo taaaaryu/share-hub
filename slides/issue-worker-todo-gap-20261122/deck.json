@@ -1,0 +1,161 @@
+{
+  "title": "Todoが0件、動かせる高優先度は3件",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-22 / issue worker 実行レポート。着手できるTodoが0件だったため、実装に入らなかった回の記録",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "止まった理由は、候補が無いことではない",
+      "body": "workerは「Todo状態の課題を1件だけ選んで実装する」決まりで動く。今日の対象プロジェクトは21件で、Todoが0件だった。",
+      "paragraphs": [
+        "2026-11-22 の時点で、対象プロジェクトの課題は21件。内訳は Backlog 16 / Todo 0 / 進行中4 / レビュー待ち1。非公開リポジトリのPull Requestは8本で、すべてDraftのまま、mergeは0本。",
+        "選べるTodoが無いため、今回もコードを書く工程に入っていない。ブランチ・コミット・PRは作っていない。",
+        "この資料は今日確認した事実の整理で、精度・速度・費用の改善は測定していない。改善を主張しない。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "5つの関門の、3つ目で止まった",
+      "body": "workerは毎回同じ順番で関門を通る。今日は3つ目で候補0件となり、その先へ進めなかった。",
+      "flow": [
+        {
+          "title": "接続確認",
+          "body": "team TAA と対象プロジェクトIDを照合。一致したので通過。"
+        },
+        {
+          "title": "作業ツリー確認",
+          "body": "未コミットの変更が無いことを確認。通過。"
+        },
+        {
+          "title": "Todo選択",
+          "body": "Todo状態の課題を検索。0件だったのでここで停止。"
+        },
+        {
+          "title": "実装とテスト",
+          "body": "未到達。コードは1行も変えていない。"
+        },
+        {
+          "title": "Draft PRと記録",
+          "body": "未到達。PR作成とLinearの課題更新は発生しない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "「今すぐ着手してよい」という印。BacklogからTodoへ動かすのは人の判断で、workerは自分では動かさない。"
+        },
+        {
+          "term": "Backlog",
+          "meaning": "まだ着手しない課題の置き場。workerは計画案を書くところまでで、コードは書かない。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "レビューを依頼する前の下書きのPull Request。mergeしない限り本体のコードは変わらない。"
+        }
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "EVIDENCE / 状態の内訳",
+      "title": "21件中Todoは0件、PRは8本がDraftのまま",
+      "body": "課題の状態とPRの状態を、今日のスナップショットで並べた。",
+      "image": "state_breakdown.png",
+      "image_alt": "左に課題21件を状態ごとのマス目で示し、Todoのマスだけが赤い破線の空欄になっている。右に非公開リポジトリのPull Requestが8本すべてDraftで、merge済みが0本、8本ともMERGEABLE/CLEANであることを示す箱がある。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "対象プロジェクトの課題",
+          "value": "21件",
+          "note": "Backlog 16 / 進行中4 / レビュー待ち1"
+        },
+        {
+          "name": "Todo（実装してよい課題）",
+          "value": "0件",
+          "note": "状態フィルタで再確認"
+        },
+        {
+          "name": "Draft PR",
+          "value": "8本",
+          "note": "すべてMERGEABLE / CLEAN"
+        },
+        {
+          "name": "merge済み",
+          "value": "0本",
+          "note": "最終更新は10/28〜11/05"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 依存の内訳",
+      "title": "Backlog 16件のうち、今日動かせるのは3件",
+      "body": "Backlogを依存関係で分けると、すぐ着手できる高優先度は3件。8件は未完了の課題に依存して止まっている。",
+      "image": "unlock_map.png",
+      "image_alt": "Backlog 16件を、依存なしの高優先度3件、依存なしの中低4件、未完了の依存で停止8件、親課題1件に分けた棒グラフ。下に、レビュー待ちのPRを1本mergeすると依存が2件解けるが、その先の連鎖は未確定であることを示す流れ図がある。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "依存なし・高優先度",
+          "value": "3件",
+          "note": "どれも計画コメント済み"
+        },
+        {
+          "name": "未完了の依存で停止",
+          "value": "8件",
+          "note": "進行中・レビュー待ちが前提"
+        },
+        {
+          "name": "依存なし・中/低",
+          "value": "4件",
+          "note": "GPUや研究の前提が必要"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "CHANGE / 次の一手",
+      "title": "人の判断は2つだけ",
+      "body": "workerの外側にある2つの操作で、次のrunの結果が変わる。どちらも今日は実行していない。",
+      "columns": [
+        {
+          "heading": "A: Todoへ1件移す",
+          "text": "依存なし・高優先度の3件は、どれも計画コメントが付いている。1件をTodoへ移せば、次のrunで実装・テスト・Draft PRまで進む見込み。実装できるかは未検証。"
+        },
+        {
+          "heading": "B: Draft PRを1本レビューする",
+          "text": "8本はすべてMERGEABLE / CLEANで、17〜25日そのまま。1本mergeすると、依存で止まっている8件のうち2件は前提が外れる。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "確認したこと、していないこと",
+      "body": "数字はすべて今日の読み取り。コードは変更していないので、解析結果の良し悪しは何も測っていない。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "課題21件の状態別件数、Todoが0件であること、Backlog 16件の依存関係、PR 8本がDraftかつMERGEABLE / CLEANでmerge 0本であること。作業ツリーに未コミットの変更が無いこと。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "Todoへ移した課題が1回のrunで完成するか、PRをmergeした後も既存の解析が壊れないかは未検証。精度・速度・費用の改善は測っていない。mergeと本番反映はworkerの権限外。"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "NEXT / お願い",
+      "title": "決めるのは1つだけ",
+      "body": "Todoへ移す1件を選ぶ。候補は依存なし・高優先度の3件で、どれも計画は済んでいる。",
+      "paragraphs": [
+        "workerは次回も同じ関門を上から確認する。Todoが増えていれば実装に入り、Draft PRと資料まで進む。増えていなければ、また同じ場所で止まる。"
+      ]
+    }
+  ]
+}
