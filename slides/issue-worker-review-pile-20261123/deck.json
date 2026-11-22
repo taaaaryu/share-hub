@@ -1,0 +1,200 @@
+{
+  "title": "Draft PR 8本・merge 0本が入口を止めている",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-23 / issue worker 実行レポート。Todoが0件で実装に入らなかった回の、入口と出口の詰まり",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "入口は空、出口は詰まったまま",
+      "body": "Todoは0件で実装に入れない。前提なしで着手できるBacklogは5件、Draft PRは8本が未mergeのまま。",
+      "paragraphs": [
+        "workerは「Todo状態の課題を1件だけ選んで実装する」決まりで動く。2026-11-23 00:11 JST の時点で、対象プロジェクトの課題は21件。Todoは0件だった。",
+        "同じ時刻にBacklogの16件を前提関係で分けると、未完了の前提を持たないものが8件あった。うち優先度High/Mediumは5件。",
+        "出口側では、非公開リポジトリのopen PRが8本。すべてDraftで、merge済みは0本。作成から26日と18日が経過している。",
+        "この資料は今日読み取った件数と日数の整理で、精度・速度・費用の改善は測定していない。改善を主張しない。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "5つの関門のうち、3つ目で止まる",
+      "body": "接続と作業ツリーは通過。Todo選択が0件で、実装・テスト・PR作成には進んでいない。",
+      "flow": [
+        {
+          "title": "接続確認",
+          "body": "team TAA と対象プロジェクトIDを照合。一致したので通過。"
+        },
+        {
+          "title": "作業ツリー確認",
+          "body": "未コミットの変更が無いことを確認。通過。"
+        },
+        {
+          "title": "Todo選択",
+          "body": "Todo状態を検索して0件。ここで停止した。"
+        },
+        {
+          "title": "実装とテスト",
+          "body": "未到達。コードは1行も変えていない。"
+        },
+        {
+          "title": "Draft PRと記録",
+          "body": "未到達。PR作成も課題の状態更新も発生しない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "「今すぐ着手してよい」という印。BacklogからTodoへ動かすのは人の判断で、workerは動かさない。"
+        },
+        {
+          "term": "blockedBy（前提）",
+          "meaning": "始める前に終わっていなければならない課題。1つでも残っているとworkerは選ばない。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "レビューを依頼する前の下書きのPull Request。mergeしない限り本体のコードは変わらない。"
+        }
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "OVERVIEW / 流れの詰まり",
+      "title": "課題は入口で止まり、変更は出口に積まれる",
+      "body": "選べるTodoは0件。一方でopen Draft PRは8本、mergeは0本。両側が同時に詰まっている。",
+      "image": "funnel.png",
+      "image_alt": "左に課題の入口、右に変更の出口を並べた図。入口はBacklog16件が前提なし8件と前提あり8件に分かれ、Todo0件で停止している。出口はDraft PR8本からmerge0本へ進めず滞留している。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "Todo",
+          "value": "0件",
+          "note": "状態フィルタで再確認"
+        },
+        {
+          "name": "前提なしのBacklog",
+          "value": "8件",
+          "note": "うちHigh/Mediumは5件"
+        },
+        {
+          "name": "open Draft PR",
+          "value": "8本",
+          "note": "競合なし・CLEAN"
+        },
+        {
+          "name": "merge済み",
+          "value": "0本",
+          "note": "リポジトリ全体"
+        }
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "EVIDENCE / 状態の内訳",
+      "title": "21件のうち、Todoは0件",
+      "body": "Backlog 16件は前提なし8件と前提あり8件に分かれる。進行中4件とレビュー待ち1件は選択対象外。",
+      "image": "state_breakdown.png",
+      "image_alt": "21件の課題を状態ごとのマス目で示した図。前提なしのBacklogが緑8マス、前提ありが斜線入りの灰8マス、進行中が青4マス、レビュー待ちが橙1マス。Todoは赤い破線の空欄で0件。右側に状態ごとの件数の横棒グラフがある。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "Backlog（前提なし）",
+          "value": "8件",
+          "note": "High/Mediumが5件"
+        },
+        {
+          "name": "Backlog（前提あり）",
+          "value": "8件",
+          "note": "4件はレビュー待ち1件が前提"
+        },
+        {
+          "name": "進行中",
+          "value": "4件",
+          "note": "17日前から同じ状態"
+        },
+        {
+          "name": "レビュー待ち",
+          "value": "1件",
+          "note": "25日前から同じ状態"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "EVIDENCE / 出口の滞留",
+      "title": "open Draft PR 8本、mergeは0本",
+      "body": "8本すべてDraftで、競合は無く状態はCLEAN。作成から26日と18日、合計168 PR日が経過している。",
+      "image": "pr_aging.png",
+      "image_alt": "8本のopen Draft PRを、作成日から今日までの横棒で示した図。10月28日作成の3本が26日、11月5日作成の5本が18日の長さになっている。下にopen PR 8本、merge済み0本、最長待ち26日、合計待ち168 PR日の4つの数値枠がある。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "open PR",
+          "value": "8本",
+          "note": "すべてDraft"
+        },
+        {
+          "name": "最長待ち",
+          "value": "26日",
+          "note": "3本が該当"
+        },
+        {
+          "name": "合計待ち",
+          "value": "168 PR日",
+          "note": "8本の合計"
+        },
+        {
+          "name": "merge済み",
+          "value": "0本",
+          "note": "作成以来ゼロ"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "CHANGE / 次の一手",
+      "title": "開ける鍵は2つ、効くのはA",
+      "body": "どちらもworkerの外側の操作。workerは課題の状態もPRも自分では変えない。",
+      "columns": [
+        {
+          "heading": "A: レビューを1本片付ける",
+          "text": "Draftのまま25日止まっているレビュー待ち1件を確認してmergeする。これを前提にしている4件の入口が開く。既存の解析が壊れないかは未検証。"
+        },
+        {
+          "heading": "B: Backlogを1件Todoへ移す",
+          "text": "前提なしのHigh/Medium 5件から1件を選んでTodoへ移す。次のrunで実装・テスト・Draft PRまで進む見込み。どの1件が安全かは未検証。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "確認したこと、していないこと",
+      "body": "数字はすべて今日の読み取り。コードを変えていないので、解析の精度は何も測っていない。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "課題21件の状態別件数と最終更新（24時間以内の更新は0件）。Backlogの前提関係（前提なし8件、前提あり8件）。open PR 8本がすべてDraftで競合なし、mergeは0本。作業ツリーに未コミットの変更が無いこと。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "レビュー待ちのPRをmergeしても既存の解析が壊れないか。Todoへ移した課題が1回のrunで完成するか。精度・速度・費用の改善。mergeと本番反映はworkerの権限外。"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "NEXT / お願い",
+      "title": "次に決めるのは、レビュー1本",
+      "body": "ここが開くと、次のrunで選べる候補が4件増える。",
+      "paragraphs": [
+        "workerは次回も同じ関門を上から確認する。Todoが増えていれば実装に入り、Draft PRと資料まで進む。増えていなければ、また同じ場所で止まる。",
+        "課題の番号と本文は非公開のため、この資料では件数・状態・日数だけを示している。個別の番号はLinearの該当課題で確認できる。"
+      ]
+    }
+  ]
+}
