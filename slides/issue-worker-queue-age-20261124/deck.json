@@ -1,0 +1,168 @@
+{
+  "title": "Todo 0件のまま4週間、Doneも0件",
+  "theme": "carbon-reading",
+  "subtitle": "2026-11-24 / issue worker 実行レポート。Todoが0件で実装に入らなかった回の、待ち行列の年齢",
+  "layout": "reading",
+  "slides": [
+    {
+      "kind": "takeaway",
+      "label": "PURPOSE / 背景と目的",
+      "title": "4週間でDoneは0件、Todoも0件",
+      "body": "課題21件の状態はほぼ動かず、今日もworkerは1件も選べなかった。入口は空、出口には8本が残る。",
+      "paragraphs": [
+        "workerは「Todo状態の課題を1件だけ選んで実装する」決まりで動く。2026-11-24 の時点で、対象プロジェクトの課題は21件。内訳はBacklog 16件、進行中4件、レビュー待ち1件で、DoneとCanceledは0件、Todoも0件だった。",
+        "一番古いレビュー待ちは10月28日から27日間、同じ状態のまま。進行中の4件も11月5日から19日間、状態が変わっていない。前提の無いBacklog 8件も、10月28日の作成から一度もTodoへ移っていない。",
+        "その結果、workerは今日もコードを1行も変えていない。課題が無いのではなく、着手してよい印が付いていない状態が続いている。",
+        "この資料は今日読み取った件数と日数の整理。精度・速度・費用の改善は測っていないので、改善は主張しない。"
+      ]
+    },
+    {
+      "kind": "steps",
+      "label": "OVERVIEW / 全体像",
+      "title": "6つの関門、3つ目で止まる",
+      "body": "接続と作業ツリーは通過。Todo選択が0件で、実装・テスト・PR作成には進んでいない。",
+      "flow": [
+        {
+          "title": "接続確認",
+          "body": "team TAA と対象プロジェクトIDを照合。一致したので通過。"
+        },
+        {
+          "title": "作業ツリー確認",
+          "body": "未コミットの変更が無いことを確認。通過。"
+        },
+        {
+          "title": "Todo選択",
+          "body": "Todo状態を検索して0件。ここで停止した。"
+        },
+        {
+          "title": "実装とテスト",
+          "body": "未到達。コードは1行も変えていない。"
+        },
+        {
+          "title": "Draft PRと記録",
+          "body": "未到達。PR作成も課題の状態更新も発生しない。"
+        }
+      ],
+      "terms": [
+        {
+          "term": "Todo",
+          "meaning": "「今すぐ着手してよい」という印。BacklogからTodoへ動かすのは人の判断で、workerは動かさない。"
+        },
+        {
+          "term": "blockedBy（前提）",
+          "meaning": "始める前に終わっていなければならない課題。1つでも残っているとworkerは選ばない。"
+        },
+        {
+          "term": "Draft PR",
+          "meaning": "レビューを依頼する前の下書きのPull Request。mergeしない限り本体のコードは変わらない。"
+        }
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "OVERVIEW / 流れの詰まり",
+      "title": "入口は0件、出口は8本",
+      "body": "着手できるTodoは0件。一方、mergeされていないDraft PRは8本で、最長27日たっている。",
+      "image": "funnel.png",
+      "image_alt": "左に課題の入口、右に変更の出口を並べた図。入口はBacklog16件が前提なし8件と前提あり8件に分かれ、Todo0件で停止している。出口はDraft PR8本からmerge0本へ進めず滞留している。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "Todo",
+          "value": "0件",
+          "note": "状態フィルタで再確認"
+        },
+        {
+          "name": "前提なしのBacklog",
+          "value": "8件",
+          "note": "うちHigh/Mediumは6件"
+        },
+        {
+          "name": "open Draft PR",
+          "value": "8本",
+          "note": "競合なし"
+        },
+        {
+          "name": "merge済み",
+          "value": "0本",
+          "note": "リポジトリ全体"
+        }
+      ]
+    },
+    {
+      "kind": "metrics",
+      "label": "EVIDENCE / 滞留の年齢",
+      "title": "待ち行列は4週間分たまっている",
+      "body": "レビュー待ち27日、進行中19日、着手可能なBacklogも27日。Doneは0件のまま。",
+      "image": "aging.png",
+      "image_alt": "状態ごとに、その状態に入ってから今日までの日数を横棒で示した図。レビュー待ち1件が27日、進行中4件が19日、着手可能なBacklog8件が27日。Doneは0件で赤い空欄。下に課題21件、Todo0件、open PR8本、合計待ち176 PR日の数値枠がある。",
+      "image_width": 2000,
+      "image_height": 1125,
+      "metrics": [
+        {
+          "name": "レビュー待ち",
+          "value": "27日",
+          "note": "10/28から同じ状態"
+        },
+        {
+          "name": "進行中",
+          "value": "19日",
+          "note": "11/5に着手したまま"
+        },
+        {
+          "name": "前提なしのBacklog",
+          "value": "27日",
+          "note": "Todoへ未移動"
+        },
+        {
+          "name": "Done",
+          "value": "0件",
+          "note": "4週間で増えていない"
+        }
+      ]
+    },
+    {
+      "kind": "comparison",
+      "label": "CHANGE / 次の一手",
+      "title": "空く鍵は2つ、効くのはレビュー1本",
+      "body": "どちらもworkerの外側の操作。workerは課題の状態もPRも自分では変えない。",
+      "columns": [
+        {
+          "heading": "A: レビュー1本をmergeする",
+          "text": "27日止まっているレビュー待ちを確認してmergeする。前提の残る8件のうち、他に前提の無い2件がすぐ着手可能になる。既存の解析が壊れないかは未検証。"
+        },
+        {
+          "heading": "B: Backlogを1件Todoへ移す",
+          "text": "前提なしの8件（High/Mediumが6件）から1件を選んでTodoへ移す。次のrunで1件を実装・テスト・Draft PRまで進められる。どの1件が安全かは未検証。"
+        }
+      ]
+    },
+    {
+      "kind": "evidence",
+      "label": "STATUS / 検証と制約",
+      "title": "確認したこと、していないこと",
+      "body": "数字はすべて今日の読み取り。コードを変えていないので、解析の精度は何も測っていない。",
+      "columns": [
+        {
+          "heading": "確認済み",
+          "text": "課題21件の状態別件数、Done・Canceledが0件であること。前提なしBacklog 8件（High/Medium 6件）と前提あり8件の内訳。レビュー待ち27日・進行中19日の経過。open PR 8本がすべてDraftで競合なし、mergeは0本。作業ツリーに未コミットの変更が無いこと。"
+        },
+        {
+          "heading": "未検証・制約",
+          "text": "レビュー待ちをmergeしても既存の解析が壊れないか。Todoへ移した課題が1回のrunで完成するか。精度・速度・費用の改善。mergeと本番反映はworkerの権限外。"
+        }
+      ]
+    },
+    {
+      "kind": "closing",
+      "label": "NEXT / お願い",
+      "title": "次に決めるのは、レビュー1本",
+      "body": "ここが開くと、他に前提の無い2件が着手できるようになる。",
+      "paragraphs": [
+        "workerは次回も同じ関門を上から確認する。Todoが増えていれば実装に入り、Draft PRと資料まで進む。増えていなければ、また同じ場所で止まる。",
+        "課題の番号と本文は非公開のため、この資料では件数・状態・日数だけを示している。個別の番号はLinearの該当課題で確認できる。"
+      ]
+    }
+  ]
+}
