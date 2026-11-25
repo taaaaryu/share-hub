@@ -1,5 +1,10 @@
 [
   {
+    "slug": "thumaster-weekly-20261126",
+    "title": "11/26週例レポート：計測の証拠と、動かすための判断",
+    "description": "背景・全体像・変更・効果・検証を説明"
+  },
+  {
     "slug": "issue-worker-queue-age-20261124",
     "title": "Todo 0件のまま4週間、Doneも0件",
     "description": "背景・全体像・変更・効果・検証を説明"
