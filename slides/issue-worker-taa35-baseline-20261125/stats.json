@@ -1,0 +1,219 @@
+{
+  "generated_at": "2026-11-24T15:19:42Z",
+  "host": {
+    "python": "3.9.6",
+    "opencv": "5.0.0",
+    "cpu": "arm64"
+  },
+  "price_source": {
+    "bedrock": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrockFoundationModels/current/ap-northeast-1/index.json",
+    "fargate": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/current/ap-northeast-1/index.json",
+    "published": "2026-11-23"
+  },
+  "prices": {
+    "per_mtok_usd": {
+      "haiku-4.5": {
+        "input": 1.1,
+        "output": 5.5,
+        "label": "Claude Haiku 4.5 (regional)"
+      },
+      "sonnet-4.6": {
+        "input": 3.3,
+        "output": 16.5,
+        "label": "Claude Sonnet 4.6 (regional)"
+      }
+    },
+    "fargate_arm_usd_per_hour": {
+      "vcpu": 0.04045,
+      "gb": 0.00442,
+      "task_2vcpu_4gb": 0.09858
+    }
+  },
+  "recorded_runs": [
+    {
+      "run": "reports/battle-royale-damage-20261014/continuous-pipeline",
+      "model": "sonnet-4.6",
+      "items": 14,
+      "chunks": 2,
+      "tokens_in": 3314,
+      "tokens_out": 322,
+      "llm_ms": 4515,
+      "frames": 192,
+      "fps": 60.0,
+      "stage_sec": {
+        "artifact_sec": 2.075,
+        "openai_sec": 4.744,
+        "scan_sec": 2.118,
+        "hydrate_sec": 1.8,
+        "damage_transition_sec": 0.0,
+        "llm_events_sec": 4.744,
+        "enrich_sec": 3.369,
+        "pipeline_total_sec": 13.3
+      },
+      "bedrock_usd": 0.016249,
+      "cpu_usd": 0.000364
+    },
+    {
+      "run": "reports/battle-royale-damage-20261014/final-pipeline",
+      "model": "sonnet-4.6",
+      "items": 14,
+      "chunks": 2,
+      "tokens_in": 3314,
+      "tokens_out": 322,
+      "llm_ms": 4089,
+      "frames": 240,
+      "fps": 60.0,
+      "stage_sec": {
+        "artifact_sec": 2.032,
+        "openai_sec": 4.313,
+        "scan_sec": 2.617,
+        "hydrate_sec": 1.806,
+        "damage_transition_sec": 0.0,
+        "llm_events_sec": 4.313,
+        "enrich_sec": 3.204,
+        "pipeline_total_sec": 13.692
+      },
+      "bedrock_usd": 0.016249,
+      "cpu_usd": 0.000375
+    },
+    {
+      "run": "reports/battle-royale-damage-20261014/full-pipeline",
+      "model": "haiku-4.5",
+      "items": 6,
+      "chunks": 1,
+      "tokens_in": 633,
+      "tokens_out": 158,
+      "llm_ms": 1368,
+      "frames": 540,
+      "fps": 30.0,
+      "stage_sec": {
+        "artifact_sec": 0.192,
+        "openai_sec": 1.429,
+        "scan_sec": 1.38,
+        "hydrate_sec": 0.121,
+        "damage_transition_sec": 0.0,
+        "llm_events_sec": 1.429,
+        "enrich_sec": 3.45,
+        "pipeline_total_sec": 6.91
+      },
+      "bedrock_usd": 0.001565,
+      "cpu_usd": 0.000189
+    },
+    {
+      "run": "reports/battle-royale-damage-20261014/full-pipeline-48s-20261022/result",
+      "model": "sonnet-4.6",
+      "items": 87,
+      "chunks": 9,
+      "tokens_in": 18308,
+      "tokens_out": 1999,
+      "llm_ms": 22946,
+      "frames": 2881,
+      "fps": 60.0,
+      "stage_sec": {
+        "artifact_sec": 4.005,
+        "openai_sec": 24.498
+      },
+      "bedrock_usd": 0.0934,
+      "cpu_usd": null
+    },
+    {
+      "run": "reports/battle-royale-damage-20261014/full-pipeline-hd",
+      "model": "haiku-4.5",
+      "items": 26,
+      "chunks": 3,
+      "tokens_in": 5400,
+      "tokens_out": 754,
+      "llm_ms": 5857,
+      "frames": 1080,
+      "fps": 60.0,
+      "stage_sec": {
+        "artifact_sec": 3.588,
+        "openai_sec": 6.186,
+        "scan_sec": 12.161,
+        "hydrate_sec": 3.367,
+        "damage_transition_sec": 0.0,
+        "llm_events_sec": 6.186,
+        "enrich_sec": 3.011,
+        "pipeline_total_sec": 26.834
+      },
+      "bedrock_usd": 0.010087,
+      "cpu_usd": 0.000735
+    },
+    {
+      "run": "reports/battle-royale-damage-20261014/standalone-pipeline",
+      "model": "sonnet-4.6",
+      "items": 14,
+      "chunks": 2,
+      "tokens_in": 3232,
+      "tokens_out": 322,
+      "llm_ms": 4383,
+      "frames": 192,
+      "fps": 60.0,
+      "stage_sec": {
+        "artifact_sec": 0.55,
+        "openai_sec": 4.699
+      },
+      "bedrock_usd": 0.015979,
+      "cpu_usd": null
+    },
+    {
+      "run": "reports/battle-royale-damage-20261014/verified-pipeline",
+      "model": "sonnet-4.6",
+      "items": 14,
+      "chunks": 2,
+      "tokens_in": 3314,
+      "tokens_out": 322,
+      "llm_ms": 4029,
+      "frames": 192,
+      "fps": 60.0,
+      "stage_sec": {
+        "artifact_sec": 2.284,
+        "openai_sec": 4.278,
+        "scan_sec": 2.114,
+        "hydrate_sec": 1.98,
+        "damage_transition_sec": 0.0,
+        "llm_events_sec": 4.278,
+        "enrich_sec": 3.175,
+        "pipeline_total_sec": 12.918
+      },
+      "bedrock_usd": 0.016249,
+      "cpu_usd": 0.000354
+    }
+  ],
+  "summary": {
+    "runs": 7,
+    "bedrock_usd_median": 0.016249,
+    "bedrock_usd_max": 0.0934,
+    "bedrock_share_median": 0.978,
+    "usd_per_event_median": 0.001141,
+    "cpu_usd_max": 0.000735
+  },
+  "local_scan": [
+    {
+      "clip": "demo_test_short1.mp4",
+      "frames": 1417,
+      "fps": 59.94,
+      "decoded": 1417,
+      "decode_sec": 4.322,
+      "scan_sec": 42.592,
+      "ms_per_frame": 30.06,
+      "candidates": 32,
+      "fine_intervals": 1,
+      "scan_usd_on_fargate": 0.001166,
+      "decode_usd_on_fargate": 0.000118
+    },
+    {
+      "clip": "demo_test_short2.mp4",
+      "frames": 1460,
+      "fps": 59.94,
+      "decoded": 1460,
+      "decode_sec": 4.36,
+      "scan_sec": 46.188,
+      "ms_per_frame": 31.64,
+      "candidates": 72,
+      "fine_intervals": 1,
+      "scan_usd_on_fargate": 0.001265,
+      "decode_usd_on_fargate": 0.000119
+    }
+  ]
+}
